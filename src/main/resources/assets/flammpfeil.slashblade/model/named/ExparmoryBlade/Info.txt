@@ -1,0 +1,38 @@
+package LocalObject;
+
+import com.google.common.collect.Maps;
+import cpw.mods.fml.common.registry.GameRegistry;
+import mods.flammpfeil.slashblade.named.NamedBladeManager;
+import mods.flammpfeil.slashblade.stats.AchievementList;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.init.Items;
+import net.minecraft.inventory.InventoryCrafting;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.ShapedRecipes;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
+import net.minecraft.nbt.NBTTagString;
+import net.minecraft.stats.Achievement;
+import net.minecraft.util.StatCollector;
+import net.minecraft.world.World;
+
+import java.util.Map;
+import mods.flammpfeil.slashblade.RecipeWrapBlade;
+
+public class RecipeWrapBlade extends ShapedRecipes {
+    ItemStack proudSoul;
+    public static Map<String,String> wrapableTextureNames = Maps.newHashMap();
+    private static Map<String,Float> wrapableBaseAttackModifiers = Maps.newHashMap();
+    public RecipeWrapBlade()
+    {
+        super(3, 3, new ItemStack[] {
+                null, null, GameRegistry.findItemStack(SlashBlade.modid,SlashBlade.ProudSoulStr,1),
+                null, new ItemStack(SlashBlade.wrapBlade, 1, 0), 
+				null , new ItemStack(Items.wooden_sword), null, null }
+                , new ItemStack(SlashBlade.wrapBlade, 1, 0));
+
+        proudSoul = new ItemStack(SlashBlade.proudSoul,1,0);
+		
+        RegisterWrapable("exparmory:katana.adamantium",  "ExparmoryAdamantium", 12.0f);
+    }
