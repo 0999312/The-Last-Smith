@@ -36,7 +36,7 @@ public class ItemSlashblade_943 {
 	      ItemSlashBlade.setBaseAttackModifier(tag, 10.0F);
 	      ItemSlashBlade.TextureName.set(tag, "named/Arthurs/texture_943");
 	      ItemSlashBlade.ModelName.set(tag, "named/sange/sange");
-	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(20011116));
+	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(267));
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);
 	      customblade.addEnchantment(Enchantments.UNBREAKING,10);

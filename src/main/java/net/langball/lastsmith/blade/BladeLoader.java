@@ -151,6 +151,7 @@ public BladeLoader(FMLPreInitializationEvent event){
     
 	blade_tls = (new ItemSlashbladeNamed_smith(ToolMaterial.IRON, 4.0F)).setRegistryName("blade_tls");
   	ForgeRegistries.ITEMS.register(blade_tls);
+  		SlashBlade.InitEventBus.register(new SALoader());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_sakuya());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_sakuya2());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_sakuya3());

@@ -27,20 +27,20 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public class ItemSlashblade_Smith4 {
 		@SubscribeEvent
 	   public void init(InitEvent event) {
-		   ItemSlashBlade.specialAttacks.put(Integer.valueOf(20011116), new Sakuya2());
+
 		    String name = "flammpfeil.slashblade.named.smith_last";
 	      String name2 = "flammpfeil.slashblade.named.smith_3";
 	      ItemStack customblade = new ItemStack(BladeLoader.blade_tls, 1, 0);
 	      NBTTagCompound tag = new NBTTagCompound();
 	      customblade.setTagCompound(tag);
 	      ItemSlashBladeNamedSS.CurrentItemName.set(tag, name);
-	      ItemSlashBladeNamedSS.CustomMaxDamage.set(tag, Integer.valueOf(256));
+	      ItemSlashBladeNamedSS.CustomMaxDamage.set(tag, Integer.valueOf(50));
 	      ItemSlashBlade.AttackAmplifier.set(tag, 2F);
 	      ItemSlashBlade.setBaseAttackModifier(tag, 20.0F);
 	      ItemSlashBladeNamedSS.IsDefaultBewitched.set(tag, Boolean.valueOf(true));
 	      ItemSlashBlade.TextureName.set(tag, "named/smith/smith_3");
 	      ItemSlashBlade.ModelName.set(tag, "named/agito");
-	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(20011116));
+	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(267));
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);
 	      customblade.addEnchantment(Enchantments.POWER, 10);

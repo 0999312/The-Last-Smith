@@ -34,7 +34,7 @@ public class ItemSlashblade_BambooLight_yin {
 	      ItemSlashBlade.setBaseAttackModifier(tag, 7.0F + ToolMaterial.IRON.getAttackDamage());
 	      ItemSlashBlade.TextureName.set(tag, "named/bamboolight/bamboo_yin");
 	      ItemSlashBlade.ModelName.set(tag, "named/yamato");
-	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(0));
+	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(273));
 	      ItemSlashBlade.StandbyRenderType.set(tag, Integer.valueOf(3));
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);
@@ -49,8 +49,6 @@ public class ItemSlashblade_BambooLight_yin {
 	      ItemStack itemSphereBladeSoul = SlashBlade.findItemStack("flammpfeil.slashblade", "sphere_bladesoul", 1);
 	      ItemStack ingot = SlashBlade.findItemStack("flammpfeil.slashblade", "ingot_bladesoul", 1);
 	      SlashBlade.addRecipe(name, new RecipeAwakeBlade((new ResourceLocation(SlashBlade.modid,name)),louguan, custombladeReqired, new Object[]{"D D", " B ", "A A", Character.valueOf('A'), ingot, Character.valueOf('B'), custombladeReqired, Character.valueOf('D'), new ItemStack(Items.ENDER_PEARL)}));
-	      NamedBladeManager.registerBladeSoul(tag, "bamboolight_yin");
-	  
 	   }
 
 }

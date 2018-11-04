@@ -30,12 +30,13 @@ public class ItemSlashblade_kogawa3 {
 	      NBTTagCompound tag = new NBTTagCompound();
 	      customblade.setTagCompound(tag);
 	      ItemSlashBladeNamedSS.CurrentItemName.set(tag, name);
-	      ItemSlashBladeNamedSS.CustomMaxDamage.set(tag, Integer.valueOf(113));
+	      ItemSlashBladeNamedSS.CustomMaxDamage.set(tag, Integer.valueOf(61));
 	      ItemSlashBlade.AttackAmplifier.set(tag, 2F);
 	      ItemSlashBlade.setBaseAttackModifier(tag, 11.0F);
 	      ItemSlashBladeNamedSS.IsDefaultBewitched.set(tag, true);
 	      ItemSlashBlade.TextureName.set(tag, "named/Kogawa/texture_super");
 	      ItemSlashBlade.ModelName.set(tag, "named/Kogawa/model");
+	      ItemSlashBlade.SpecialAttackType.set(tag, 8);
 	      ItemSlashBlade.StandbyRenderType.set(tag, Integer.valueOf(3));
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);

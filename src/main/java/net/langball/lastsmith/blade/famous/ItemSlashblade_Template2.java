@@ -27,7 +27,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public class ItemSlashblade_Template2 {
 		@SubscribeEvent
 	   public void init(InitEvent event) {
-		   ItemSlashBlade.specialAttacks.put(Integer.valueOf(100), new SlashDimension_old());
+		 
 	      String name = "flammpfeil.slashblade.named.template_re2";
 	      String name2 = "flammpfeil.slashblade.named.template_re2_fake";
 	      ItemStack customblade = new ItemStack(BladeLoader.bladeNamed, 1, 0);

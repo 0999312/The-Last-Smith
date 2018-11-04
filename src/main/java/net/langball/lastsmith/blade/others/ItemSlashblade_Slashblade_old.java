@@ -32,7 +32,7 @@ public class ItemSlashblade_Slashblade_old {
 	      ItemSlashBlade.setBaseAttackModifier(tag, 6.0F);
 	      ItemSlashBlade.TextureName.set(tag, "named/slashblade/1");
 	      ItemSlashBlade.ModelName.set(tag, "named/slashblade/1");
-	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(100));
+	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(264));
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);
 	      ItemStack custombladeReqired = new ItemStack(SlashBlade.weapon);

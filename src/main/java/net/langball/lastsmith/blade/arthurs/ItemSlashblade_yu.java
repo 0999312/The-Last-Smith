@@ -36,7 +36,7 @@ public class ItemSlashblade_yu {
 	      ItemSlashBlade.setBaseAttackModifier(tag, 10.0F);
 	      ItemSlashBlade.TextureName.set(tag, "named/Arthurs/texture_zombie");
 	      ItemSlashBlade.ModelName.set(tag, "named/Arthurs/model_zombie");
-	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(20011116));
+	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(267));
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);
 	      customblade.addEnchantment(Enchantments.SMITE,10);

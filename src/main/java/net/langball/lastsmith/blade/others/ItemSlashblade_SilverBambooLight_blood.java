@@ -34,7 +34,7 @@ public class ItemSlashblade_SilverBambooLight_blood {
 	      ItemSlashBlade.setBaseAttackModifier(tag, 6.0F + ToolMaterial.IRON.getAttackDamage());
 	      ItemSlashBlade.TextureName.set(tag, "named/silverbamboolight/silverbamboo_blood");
 	      ItemSlashBlade.ModelName.set(tag, "named/yamato");
-	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(7));
+	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(9));
 	      ItemSlashBlade.StandbyRenderType.set(tag, Integer.valueOf(3));
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);

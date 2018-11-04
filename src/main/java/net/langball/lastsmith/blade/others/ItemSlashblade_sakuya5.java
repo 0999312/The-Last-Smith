@@ -35,7 +35,7 @@ public class ItemSlashblade_sakuya5 {
 	      ItemSlashBlade.setBaseAttackModifier(tag, 12.0F);
 	      ItemSlashBlade.TextureName.set(tag, "named/sakuya/texture_xiuluo");
 	      ItemSlashBlade.ModelName.set(tag, "named/famous/1");
-	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(7436));
+	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(266));
 	      ItemSlashBlade.StandbyRenderType.set(tag, Integer.valueOf(3));
 	      ItemSlashBlade.SummonedSwordColor.set(tag, Integer.valueOf(0xFF0033));
 	      BladeLoader.registerCustomItemStack(name, customblade);

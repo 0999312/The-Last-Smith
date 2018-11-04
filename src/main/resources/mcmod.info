@@ -1,0 +1,18 @@
+﻿[
+{
+  "modid": "lastsmith",
+  "name": "The Last Smith",
+  "description":"",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authors": [ "Syameimaru_Zheng,R_Liu(Art)"],
+  "credits": "Ferne&Furia",
+  "logoFile": "",
+  "parent":"",
+  "screenshots": [],
+  "requiredMods": ["MinecraftForge,SlashBlade-mc1.12-r15"],
+  "dependencies": []
+}
+]

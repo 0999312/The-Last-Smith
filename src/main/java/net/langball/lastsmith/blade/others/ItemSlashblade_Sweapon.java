@@ -23,7 +23,6 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public class ItemSlashblade_Sweapon {
 	   @SubscribeEvent
 	   public void init(InitEvent event) {
-		   ItemSlashBlade.specialAttacks.put(Integer.valueOf(100), new SlashDimension_old());
 	      String name = "flammpfeil.slashblade.named.sweapon";
 	      ItemStack customblade = new ItemStack(BladeLoader.bladeNamed, 1, 0);
 	      NBTTagCompound tag = new NBTTagCompound();
@@ -34,7 +33,7 @@ public class ItemSlashblade_Sweapon {
 	      ItemSlashBlade.setBaseAttackModifier(tag, 4.0F);
 	      ItemSlashBlade.TextureName.set(tag, "named/sweapon/texture");
 	      ItemSlashBlade.ModelName.set(tag, "named/sweapon/model");
-	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(100));
+	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(264));
 	      ItemSlashBlade.StandbyRenderType.set(tag, Integer.valueOf(3));
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);

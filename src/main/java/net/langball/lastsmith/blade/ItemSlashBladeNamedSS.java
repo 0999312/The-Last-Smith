@@ -120,10 +120,8 @@ public class ItemSlashBladeNamedSS extends ItemSlashBlade{
 				EntityLivingBase par3EntityLivingBase) {
 	    	 if(!par2EntityLivingBase.isEntityAlive() && par2EntityLivingBase.deathTime == 0){
 	         	Random random = new Random();
-	         	int i=random.nextInt(20);
-	         	int i2=random.nextInt(100);
+	         	int i=random.nextInt(40);
 	         	if(i<2) dropItem(new ItemStack(ItemLoader.sakura), par2EntityLivingBase.world, par2EntityLivingBase);
-	         	if(i2>98) dropItem(new ItemStack(ItemLoader.paper_arthurs), par2EntityLivingBase.world, par2EntityLivingBase);
 	         }
 			return super.hitEntity(par1ItemStack, par2EntityLivingBase, par3EntityLivingBase);
 		}

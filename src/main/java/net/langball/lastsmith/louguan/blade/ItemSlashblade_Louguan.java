@@ -24,7 +24,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public class ItemSlashblade_Louguan {
 	@SubscribeEvent
 	   public void init(InitEvent event) {
-		   ItemSlashBlade.specialAttacks.put(Integer.valueOf(159), new SAxianshizhan());
+		  
 	      String name = "flammpfeil.slashblade.named.roukan";
 	      String namefake = "flammpfeil.slashblade.named.louguan_old2";
 	      ItemStack customblade = new ItemStack(BladeLoader.bladeNamed, 1, 0);
@@ -36,7 +36,7 @@ public class ItemSlashblade_Louguan {
 	      ItemSlashBladeNamedSS.IsDefaultBewitched.set(tag, Boolean.valueOf(true));
 	      ItemSlashBlade.TextureName.set(tag, "named/louguan/texture");
 	      ItemSlashBlade.ModelName.set(tag, "named/louguan/model");
-	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(159));
+	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(271));
 	      ItemSlashBlade.StandbyRenderType.set(tag, Integer.valueOf(3));
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);

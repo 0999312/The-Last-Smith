@@ -36,7 +36,7 @@ public class ItemSlashblade_irsoft {
 	      ItemSlashBlade.setBaseAttackModifier(tag, 10.0F);
 	      ItemSlashBlade.TextureName.set(tag, "named/Arthurs/texture_irsoft");
 	      ItemSlashBlade.ModelName.set(tag, "named/Arthurs/model_irsort");
-	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(20011116));
+	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(267));
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);
 	      customblade.addEnchantment(Enchantments.UNBREAKING,10);

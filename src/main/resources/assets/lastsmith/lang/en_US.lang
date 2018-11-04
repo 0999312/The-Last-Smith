@@ -1,43 +1,69 @@
-﻿#en_US
+﻿///////////
 
-#arthurs things
-item.flammpfeil.slashblade.named.liu.name=R_Liu's Balde
-item.flammpfeil.slashblade.named.yile.name=Yile's Blade
+item.flammpfeil.slashblade.named.sweapon.name=Sweapon
+item.flammpfeil.slashblade.named.slashblade_old.name=SlashBlade-- -old-
+item.flammpfeil.slashblade.named.louguan_old.name=Heirloom-Guanlou-
+item.flammpfeil.slashblade.named.louguan_old2.name=Heirloom-Roukanken-
+item.flammpfeil.slashblade.named.template_re.name=Sharpness-Blue Plum-
+item.flammpfeil.slashblade.named.template_re2.name=Sharpness-Red Plum-
+item.flammpfeil.slashblade.named.eievui.name=The balde of Eievui
+item.flammpfeil.slashblade.named.louguan_fake.name=Roukanken-Fake-
+item.flammpfeil.slashblade.named.bailou.name=Hakurouken
+item.flammpfeil.slashblade.named.roukan.name=Roukanken
+item.flammpfeil.slashblade.named.louguan_tx.name=Hell Realm Sword-Roukanken-
+item.flammpfeil.slashblade.named.bailou_tx.name=Hell Realm Sword-Hakurouken-
+item.flammpfeil.slashblade.named.roukan_xf.name=RoukanSenpuuzin
+item.flammpfeil.slashblade.named.bailou_xf.name=HakurouSenpuuzin
+item.flammpfeil.slashblade.named.sakuyablade.name=Sakuya Blade
+item.flammpfeil.slashblade.unnamedBlade.name=Noted Origin
+item.flammpfeil.slashblade.model_Blade.name=Model-No Soul-
+item.flammpfeil.slashblade.model_Blade_1.name=Model-Powerful-
+item.flammpfeil.slashblade.named.namedblade_basic.name=Anonymity-White-
+
+item.flammpfeil.slashblade.named.smith_1.name=Own-Waitting-
+item.flammpfeil.slashblade.named.smith_2.name=Own-Thinking-
+item.flammpfeil.slashblade.named.smith_3.name=Own-Ordinary-
+item.flammpfeil.slashblade.named.smith_last.name=-Destiny-
+item.flammpfeil.slashblade.named.ginkgoblade.name=Ginkgo Blade
+item.flammpfeil.slashblade.named.nanosaber.name=Nano Blade
+item.flammpfeil.slashblade.named.quantumsaber.name=Quantum Blade
+item.flammpfeil.slashblade.named.yingjian.name=Spring of Sakuya
+item.flammpfeil.slashblade.named.wenshi.name=Wen Shi
+item.flammpfeil.slashblade.named.snowblade.name=Snow Blade
+item.flammpfeil.slashblade.named.doubleblade.name=Double Blade
+item.flammpfeil.slashblade.named.shurablade.name=Shura Blade
+item.flammpfeil.slashblade.named.sagequoia.name=Sagequoia
+item.flammpfeil.slashblade.named.murakumo.name=Murakumo
+item.flammpfeil.slashblade.named.Ikaruga.name=Ikaruga
 
 item.flammpfeil.slashblade.named.zheng.name=0999312's Balde
 item.flammpfeil.slashblade.named.zombie.name=AbbyQAQ's Balde
 item.flammpfeil.slashblade.named.luli.name=luli's Balde
 item.flammpfeil.slashblade.named.pear.name=Bubinga Blade
+item.flammpfeil.slashblade.named.liu.name=R_Liu's Balde
+item.flammpfeil.slashblade.named.yile.name=Yile's Blade
 item.flammpfeil.slashblade.named.117.name=1179384677's Blade
 item.flammpfeil.slashblade.named.nethop.name=The blade of praetor
 item.flammpfeil.slashblade.named.irsoft.name=irsoft's Balde
+item.flammpfeil.slashblade.named.kogawa_normal.name=Normal-Blade-
+item.flammpfeil.slashblade.named.kogawa_rare.name=Rare-Blade-
+item.flammpfeil.slashblade.named.kogawa_super.name=Super-Blade-
+item.flammpfeil.slashblade.named.acid.name=Tartaric Acid's Balde
 
-item.flammpfeil.slashblade.named.acid.name=The acid Balde
+flammpfeil.swaepon.info.fake=Fake
+item.flammpfeil.slashblade.named.void_blade.name=Nameless-Void-
 
-achievement.flammpfeil.slashblade.flammpfeil.slashblade.named.acid=§f943 only
-achievement.flammpfeil.slashblade.flammpfeil.slashblade.named.acid.desc=23x41=943!
+blades.ps.model=This blade is not very good.
+blades.crafter=Smith name
+the_last_smith.name=Nameless smith
+smith_hammer.name=Smithes like this hammer very much.
+smith_hammer.name.ps=Unbreakable.
 
-achievement.flammpfeil.slashblade.flammpfeil.slashblade.named.yile=§9The cute furry
-achievement.flammpfeil.slashblade.flammpfeil.slashblade.named.yile.desc=Got the Yile's Blade.
-achievement.flammpfeil.slashblade.flammpfeil.slashblade.named.liu=§9The Eevee
-achievement.flammpfeil.slashblade.flammpfeil.slashblade.named.liu.desc=Got the R_Liu's Balde.
-
-achievement.flammpfeil.slashblade.flammpfeil.slashblade.named.zheng=§fThe Cooly
-achievement.flammpfeil.slashblade.flammpfeil.slashblade.named.zheng.desc=Got 0999312's blade.
-achievement.flammpfeil.slashblade.flammpfeil.slashblade.named.pear=§fThe friendly guy
-achievement.flammpfeil.slashblade.flammpfeil.slashblade.named.pear.desc=Got the Bubinga Blade.
-achievement.flammpfeil.slashblade.flammpfeil.slashblade.named.117=§fThe only one who made mod package
-achievement.flammpfeil.slashblade.flammpfeil.slashblade.named.117.desc=Got the 1179384677's Blade.<br>§6This time to play GT.
-achievement.flammpfeil.slashblade.flammpfeil.slashblade.named.irsoft=§fCycber puzzle piece
-achievement.flammpfeil.slashblade.flammpfeil.slashblade.named.irsoft.desc=Got irsoft's Balde.
-achievement.flammpfeil.slashblade.flammpfeil.slashblade.named.zombie=§fZombies never die
-achievement.flammpfeil.slashblade.flammpfeil.slashblade.named.zombie.desc=Got the AbbyQAQ's Balde.<br>The evil with in.
-achievement.flammpfeil.slashblade.flammpfeil.slashblade.named.luli=§fThe Recorder
-achievement.flammpfeil.slashblade.flammpfeil.slashblade.named.luli.desc=Got the luli's Balde.
-achievement.flammpfeil.slashblade.flammpfeil.slashblade.named.nethop=§fLegacy of the Duelist
-achievement.flammpfeil.slashblade.flammpfeil.slashblade.named.nethop.desc=Got The blade of praetor.
-
-#SE&SA
+item.flammpfeil.slashblade.named.bamboolight_nice.name=Top -Bamboo-
+item.flammpfeil.slashblade.named.bamboolight_yin.name=-Recluse Bamboo-
+item.flammpfeil.slashblade.named.silverbamboolight_nice.name=Top -Silver Bamboo-
+item.flammpfeil.slashblade.named.silverbamboolight_gold.name=Heirloom -Golden Bamboo-
+item.flammpfeil.slashblade.named.silverbamboolight_blood.name=-Bloody Bamboo-
 
 slashblade.seffect.name.ManaRepair=ManaRepair
 
@@ -49,12 +75,9 @@ flammpfeil.slashblade.specialattack.miwang2=Delusion of Enlightenment
 flammpfeil.slashblade.specialattack.spear2=Heart Carving Cut
 flammpfeil.slashblade.specialattack.sakuyaSA=Sword skill
 flammpfeil.slashblade.specialattack.IaiSA=Iai
-flammpfeil.slashblade.specialattack.Iai_speed=Speed Iai
 flammpfeil.slashblade.specialattack.SsakuyaSA=Power up sword skill
 flammpfeil.slashblade.specialattack.flyintosky=Slashing a Flower Upon One's Head 
-flammpfeil.slashblade.specialattack.mitu=Mitu overkill
 
-#Misc
 item.lastsmith.blade.name=Bad Blade
 item.lastsmith.blade_2.name=Steel Blade
 item.lastsmith.blade_3.name=Good Blade
@@ -69,62 +92,12 @@ item.lastsmith.steel_ingot.name=Steel Ingot
 item.lastsmith.crashed_iron.name=Crushed Iron Ore
 item.lastsmith.wooden_blade.name=Wooden Blade
 item.lastsmith.paper_arthurs.name=Arthurs Paper
+
+item.flammpfeil.slashblade.wooden_saya.name=Wooden Sheath
+item.flammpfeil.slashblade.named.template_re_fake.name=Fake -Blue Plum-
+item.flammpfeil.slashblade.named.template_re2_fake.name=Fake -Red Plum-
+
+item.wrap.BambooMod.katana_fake.name=Fake -Ruby-
+item.wrap.BambooMod.katana_tls.name=Ruby -nameless-
+
 itemGroup.lastsmith=The Last Smith
-
-blades.ps.model=This blade is not very good.
-
-flammpfeil.swaepon.info.fake=Fake
-blades.crafter=Smith name
-the_last_smith.name=Nameless smith
-smith_hammer.name=Smithes like this hammer very much.
-smith_hammer.name.ps=Unbreakable.
-#Blade Arts
-
-#Blade
-
-item.flammpfeil.slashblade.named.sweapon.name=Sweapon
-item.flammpfeil.slashblade.named.slashblade_old.name=SlashBlade--[old]
-item.flammpfeil.slashblade.named.louguan_old.name=Heirloom-Guanlou
-item.flammpfeil.slashblade.named.louguan_old2.name=Heirloom-Roukanken
-item.flammpfeil.slashblade.named.template_re.name=Sharpness-Blue Plum-
-item.flammpfeil.slashblade.named.template_re2.name=Sharpness-Red Plum-
-item.flammpfeil.slashblade.named.eievui.name=The balde of Eievui
-item.flammpfeil.slashblade.named.louguan_fake.name=Roukanken[Fake]
-item.flammpfeil.slashblade.named.bailou.name=Hakurouken
-item.flammpfeil.slashblade.named.roukan.name=Roukanken
-item.flammpfeil.slashblade.named.louguan_tx.name=Hell Realm Sword[Roukanken]
-item.flammpfeil.slashblade.named.bailou_tx.name=Hell Realm Sword[Hakurouken]
-item.flammpfeil.slashblade.named.roukan_xf.name=RoukanSenpuuzin
-item.flammpfeil.slashblade.named.bailou_xf.name=HakurouSenpuuzin
-item.flammpfeil.slashblade.named.sakuyablade.name=Sakuya Blade
-item.flammpfeil.slashblade.unnamedBlade.name=Noted Origin
-item.flammpfeil.slashblade.model_Blade.name=Model-No Soul-
-item.flammpfeil.slashblade.model_Blade_1.name=Model-Powerful-
-item.flammpfeil.slashblade.named.namedblade_basic.name=Anonymity-White-
-item.flammpfeil.slashblade.named.smith_1.name=Own[Waitting]
-item.flammpfeil.slashblade.named.smith_2.name=Own[Thinking]
-item.flammpfeil.slashblade.named.smith_3.name=Own[Ordinary]
-item.flammpfeil.slashblade.named.smith_last.name=[Destiny]
-item.flammpfeil.slashblade.named.ginkgoblade.name=Ginkgo Blade
-item.flammpfeil.slashblade.named.nanosaber.name=Nano Blade
-item.flammpfeil.slashblade.named.quantumsaber.name=Quantum Blade
-item.flammpfeil.slashblade.named.yingjian.name=Spring of Sakuya
-item.flammpfeil.slashblade.named.wenshi.name=Wen Shi
-item.flammpfeil.slashblade.named.snowblade.name=Snow Blade
-item.flammpfeil.slashblade.named.doubleblade.name=Double Blade
-item.flammpfeil.slashblade.named.shurablade.name=Shura Blade
-item.flammpfeil.slashblade.named.sagequoia.name=Sagequoia
-item.flammpfeil.slashblade.named.murakumo.name=Murakumo
-item.flammpfeil.slashblade.named.Ikaruga.name=Ikaruga
-
-item.flammpfeil.slashblade.named.kogawa_normal.name=Normal[Blade]
-item.flammpfeil.slashblade.named.kogawa_rare.name=Rare[Blade]
-item.flammpfeil.slashblade.named.kogawa_super.name=Super[Blade]
-
-item.flammpfeil.slashblade.named.void_blade.name=Nameless-Void-
-
-item.flammpfeil.slashblade.named.bamboolight_nice.name=上品「竹光」
-item.flammpfeil.slashblade.named.bamboolight_yin.name=「隐者之竹光」
-item.flammpfeil.slashblade.named.silverbamboolight_nice.name=名刀「银纸竹光」上品
-item.flammpfeil.slashblade.named.silverbamboolight_gold.name=名刀「金纸竹光」
-item.flammpfeil.slashblade.named.silverbamboolight_blood.name=妖刀「血纸竹光」

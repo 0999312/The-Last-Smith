@@ -24,7 +24,7 @@ public class ItemSlashblade_Bailou_tx {
 	   public void init(InitEvent event) {
 	      String name = "flammpfeil.slashblade.named.bailou";
 	      String nameTx1 = "flammpfeil.slashblade.named.bailou_tx";
-		   ItemSlashBlade.specialAttacks.put(Integer.valueOf(424), new SAbailou2());
+
 	      ItemStack customblade = new ItemStack(BladeLoader.bladeNamed, 1, 0);
 	      NBTTagCompound tag = new NBTTagCompound();
 	      customblade.setTagCompound(tag);
@@ -34,7 +34,7 @@ public class ItemSlashblade_Bailou_tx {
 	      ItemSlashBladeNamedSS.IsDefaultBewitched.set(tag, Boolean.valueOf(true));
 	      ItemSlashBlade.TextureName.set(tag, "named/bailou/texture_tx");
 	      ItemSlashBlade.ModelName.set(tag, "named/bailou/model");
-	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(424));
+	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(269));
 	      ItemSlashBlade.StandbyRenderType.set(tag, Integer.valueOf(2));
 	      BladeLoader.registerCustomItemStack(nameTx1, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add("flammpfeil.slashblade:" + nameTx1);

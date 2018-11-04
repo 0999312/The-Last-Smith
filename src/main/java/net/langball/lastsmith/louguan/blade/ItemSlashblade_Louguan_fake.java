@@ -12,7 +12,6 @@ import net.langball.lastsmith.Last_worker;
 import net.langball.lastsmith.blade.BladeLoader;
 import net.langball.lastsmith.blade.ItemSlashBladeNamedSS;
 import net.langball.lastsmith.items.ItemLoader;
-import net.langball.lastsmith.sa.Spear2;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -36,7 +35,6 @@ public class ItemSlashblade_Louguan_fake {
 	      ItemSlashBlade.setBaseAttackModifier(tag, 7.0F);
 	      ItemSlashBlade.TextureName.set(tag, "named/oldlouguan/texture_1");
 	      ItemSlashBlade.ModelName.set(tag, "named/agito");
-	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(100));
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);
 	      ItemStack custombladeReqired = new ItemStack(BladeLoader.blade);

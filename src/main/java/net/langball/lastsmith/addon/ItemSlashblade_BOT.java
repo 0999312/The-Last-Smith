@@ -22,7 +22,6 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public class ItemSlashblade_BOT {
 	   @SubscribeEvent
 	   public void init(InitEvent event) {
-		   ItemSlashBlade.specialAttacks.put(Integer.valueOf(56709), new SAbailou3());
 	      String name = "flammpfeil.slashblade.named.yingjian";
 	      String name2 = "flammpfeil.slashblade.named.roukan";
 	      ItemStack customblade = new ItemStack(BladeLoader.bladeNamed, 1, 0);

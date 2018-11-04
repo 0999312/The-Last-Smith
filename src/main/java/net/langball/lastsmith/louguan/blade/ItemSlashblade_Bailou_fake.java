@@ -25,7 +25,6 @@ public class ItemSlashblade_Bailou_fake {
 		@SubscribeEvent
 	   public void init(InitEvent event) {
 	      String name = "flammpfeil.slashblade.named.bailou_fake";
-		  ItemSlashBlade.specialAttacks.put(Integer.valueOf(423), new SAbailou1());
 	      ItemStack customblade = new ItemStack(BladeLoader.bladeNamed, 1, 0);
 	      NBTTagCompound tag = new NBTTagCompound();
 	      customblade.setTagCompound(tag);

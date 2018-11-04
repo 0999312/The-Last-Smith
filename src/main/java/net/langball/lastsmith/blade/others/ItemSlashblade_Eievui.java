@@ -25,7 +25,6 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class ItemSlashblade_Eievui {
 	@SubscribeEvent
 	   public void init(InitEvent event) {
-		   ItemSlashBlade.specialAttacks.put(Integer.valueOf(100), new SlashDimension_old());
 	      String name = "flammpfeil.slashblade.named.eievui";
 	      ItemStack customblade = new ItemStack(BladeLoader.bladeNamed, 1, 0);
 	      NBTTagCompound tag = new NBTTagCompound();
@@ -37,7 +36,7 @@ public class ItemSlashblade_Eievui {
 	      ItemSlashBlade.setBaseAttackModifier(tag, 6.0F);
 	      ItemSlashBlade.TextureName.set(tag, "named/eievui/texture");
 	      ItemSlashBlade.ModelName.set(tag, "named/eievui/model");
-	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(100));
+	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(264));
 	      ItemSlashBlade.StandbyRenderType.set(tag, Integer.valueOf(3));
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);

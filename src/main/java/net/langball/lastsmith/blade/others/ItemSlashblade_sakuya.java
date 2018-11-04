@@ -25,7 +25,6 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public class ItemSlashblade_sakuya {
 	   @SubscribeEvent
 	   public void init(InitEvent event) {
-		   ItemSlashBlade.specialAttacks.put(Integer.valueOf(7436), new Sakuya());
 	      String name = "flammpfeil.slashblade.named.sakuyablade";
 	      ItemStack customblade = new ItemStack(BladeLoader.bladeNamed, 1, 0);
 	      NBTTagCompound tag = new NBTTagCompound();
@@ -37,7 +36,7 @@ public class ItemSlashblade_sakuya {
 	      ItemSlashBlade.setBaseAttackModifier(tag,8.0F);
 	      ItemSlashBlade.TextureName.set(tag, "named/sakuya/texture");
 	      ItemSlashBlade.ModelName.set(tag, "named/sakuya/work");
-	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(7436));
+	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(266));
 	      ItemSlashBlade.StandbyRenderType.set(tag, Integer.valueOf(3));
 	      ItemSlashBlade.SummonedSwordColor.set(tag, Integer.valueOf(0xffc6c8));
 	      BladeLoader.registerCustomItemStack(name, customblade);

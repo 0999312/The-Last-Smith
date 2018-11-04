@@ -24,13 +24,12 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public class ItemSlashblade_kogawa {
 	   @SubscribeEvent
 	   public void init(InitEvent event) {
-		  ItemSlashBlade.specialAttacks.put(Integer.valueOf(100), new SlashDimension_old());
 	      String name = "flammpfeil.slashblade.named.kogawa_normal";
 	      ItemStack customblade = new ItemStack(BladeLoader.bladeNamed, 1, 0);
 	      NBTTagCompound tag = new NBTTagCompound();
 	      customblade.setTagCompound(tag);
 	      ItemSlashBladeNamedSS.CurrentItemName.set(tag, name);
-	      ItemSlashBladeNamedSS.CustomMaxDamage.set(tag, Integer.valueOf(113));
+	      ItemSlashBladeNamedSS.CustomMaxDamage.set(tag, Integer.valueOf(61));
 	      ItemSlashBlade.AttackAmplifier.set(tag, 2F);
 	      ItemSlashBlade.setBaseAttackModifier(tag, 7.0F);
 	      ItemSlashBlade.TextureName.set(tag, "named/Kogawa/texture_normal");

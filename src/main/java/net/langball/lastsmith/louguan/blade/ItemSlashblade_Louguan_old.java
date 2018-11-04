@@ -35,7 +35,7 @@ public class ItemSlashblade_Louguan_old {
 	      ItemSlashBlade.setBaseAttackModifier(tag, 7.0F);
 	      ItemSlashBlade.TextureName.set(tag, "named/oldlouguan/texture_1");
 	      ItemSlashBlade.ModelName.set(tag, "named/agito");
-	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(100));
+	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(264));
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);
 	      ItemStack custombladeReqired =  BladeLoader.findItemStack(Last_worker.MODID, name1, 1);

@@ -36,6 +36,9 @@ public class RecipeLoader {
 		RecipesUtil.addRecipe("blast", new ShapedOreRecipe(new ResourceLocation(""), BlockLoader.BlastItem, new Object[]{
 				" I ","BBB","BFB",'I',"blockIron",'B',Blocks.BRICK_BLOCK,'F',Blocks.FURNACE
 		}));
+		RecipesUtil.addRecipe("paper_arthurs", new ShapedOreRecipe(new ResourceLocation(""), ItemLoader.paper_arthurs, new Object[]{
+				"BBB","BIB","BBB",'B',ItemLoader.sakura,'I',"paper"
+		}));
 		RecipesUtil.addRecipe("steel_ingot", new ShapelessOreRecipe(new ResourceLocation(""), ItemLoader.steel_ingot, new Object[]{ItemLoader.hammer,ItemLoader.tamahagane,ItemLoader.tamahagane}));
 		RecipesUtil.addRecipe("crushed_iron", new ShapelessOreRecipe(new ResourceLocation(""), ItemLoader.crashed_iron, new Object[]{ItemLoader.hammer,"oreIron","gemCoal"}));
 		RecipesUtil.addRecipe("red_dye", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(Items.DYE,1,1), new Object[]{ItemLoader.sakura,ItemLoader.sakura}));
