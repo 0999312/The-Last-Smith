@@ -2,8 +2,10 @@ package net.langball.lastsmith.recipe;
 
 import mods.flammpfeil.slashblade.RecipeUpgradeBlade;
 import mods.flammpfeil.slashblade.SlashBlade;
+import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.item.crafting.BladeIngredient;
 import mods.flammpfeil.slashblade.item.crafting.RecipeCustomBlade;
+import net.langball.lastsmith.Last_worker;
 import net.langball.lastsmith.blade.BladeLoader;
 import net.langball.lastsmith.blocks.BlastRecipes;
 import net.langball.lastsmith.blocks.BlockLoader;
@@ -39,9 +41,11 @@ public class RecipeLoader {
 		RecipesUtil.addRecipe("paper_arthurs", new ShapedOreRecipe(new ResourceLocation(""), ItemLoader.paper_arthurs, new Object[]{
 				"BBB","BIB","BBB",'B',ItemLoader.sakura,'I',"paper"
 		}));
+		
 		RecipesUtil.addRecipe("steel_ingot", new ShapelessOreRecipe(new ResourceLocation(""), ItemLoader.steel_ingot, new Object[]{ItemLoader.hammer,ItemLoader.tamahagane,ItemLoader.tamahagane}));
-		RecipesUtil.addRecipe("crushed_iron", new ShapelessOreRecipe(new ResourceLocation(""), ItemLoader.crashed_iron, new Object[]{ItemLoader.hammer,"oreIron","gemCoal"}));
+		RecipesUtil.addRecipe("crushed_iron", new ShapelessOreRecipe(new ResourceLocation(""), ItemLoader.crashed_iron, new Object[]{ItemLoader.hammer,"oreIron"}));
 		RecipesUtil.addRecipe("red_dye", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(Items.DYE,1,1), new Object[]{ItemLoader.sakura,ItemLoader.sakura}));
+		
 		RecipesUtil.addRecipe("wooden_blade", new ShapedOreRecipe(new ResourceLocation(""), ItemLoader.wooden_blade, new Object[]{
 				" PP","PP ","L  ",'P',"plankWood",'L',"logWood"
 		}));
@@ -89,6 +93,14 @@ public class RecipeLoader {
 		}));
 		SlashBlade.addRecipe("slashbladeWhite3",new ShapedOreRecipe(new ResourceLocation(SlashBlade.modid,"white3"), new ItemStack(SlashBlade.bladeWhiteSheath, 1) , new Object[]{
 				"  W"," B ","L H",Character.valueOf('W'),BladeLoader.wrapper,Character.valueOf('B'),ItemLoader.blade_3,Character.valueOf('L'),new BladeIngredient(new ItemStack(SlashBlade.bladeWood,1)),'H',ItemLoader.hammer
+		}));
+
+        ItemStack brokenBladeWhite = new ItemStack(SlashBlade.bladeWhiteSheath,1,0);
+        brokenBladeWhite.setItemDamage(brokenBladeWhite.getMaxDamage());
+        ItemSlashBlade.IsBroken.set(brokenBladeWhite.getTagCompound(), true);
+        ItemStack itemSphereBladeSoul = SlashBlade.findItemStack(SlashBlade.modid,SlashBlade.SphereBladeSoulStr,1);
+		RecipesUtil.addRecipe(BladeLoader.blade, new ShapedOreRecipe(new ResourceLocation(""), new ItemStack(BladeLoader.blade, 1) , new Object[]{
+				"P W"," B ","L H",'P',itemSphereBladeSoul,Character.valueOf('W'),BladeLoader.wrapper,Character.valueOf('B'),ItemLoader.blade_3,Character.valueOf('L'),new BladeIngredient(brokenBladeWhite),'H',ItemLoader.hammer
 		}));
 	}
 }
