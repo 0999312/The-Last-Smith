@@ -101,3 +101,33 @@ item.wrap.BambooMod.katana_fake.name=伪物「红玉」
 item.wrap.BambooMod.katana_tls.name=利刀「无名」红玉
 
 itemGroup.lastsmith=最后的太刀匠人
+
+research.FIRSTBLADE.title=第一振刀
+research.WOODENBLADE.title=无铭刀「木偶」
+research.BLADES.title=不同的刀刃
+research.WHITESHEATH.title=利刀「白鞘」
+research.SLASHBLADE.title=大太刀「」
+research.UNNAMEDBLADE.title=自铭「起源」
+
+research.FIRSTBLADE.text.stage.1=这本手册原本只有一些神秘学的高深玩意，直到我发现手册后面还有大片的空白。<BR>总之，成为刀匠的第一步是制作木刀，那么制作实木的刀条就是第一件事情了。
+research.FIRSTBLADE.text.stage.2=很好，这就是第一振刀的刀刃了。<BR>我记录了一把木刀所需要的配件，以及它们的合成方法。组合起来就是一把木刀了。
+
+research.WOODENBLADE.text.stage.1=有了刀刃，就要准备刀鞘。<BR>制作一个刀条和一个实木鞘，这样我就可以做一把崭新的木刀了。
+research.WOODENBLADE.text.stage.2=不错，现在只需要组合起来就好了。
+research.WOODENBLADE.text.stage.3=好了，这就是木刀了。<BR>无铭刀「木偶」，这是曾经的匠人为它起过的名字。为了纪念先辈们，我也这么起名好了。
+
+research.BLADES.text.stage.1=我应该做几把铁刀的，不过我手头没有趁手的工具和钢铁。<BR>凭我的手艺，自己重新制作或许会好很多。<BR>给自己一个炼钢炉和锤子，这样我就可以继续我的工作。
+research.BLADES.text.stage.2=好的，工具和炼钢炉都齐了。<BR>需要钢锭的话我用炼钢炉拿待冶炼铁矿熔炼出玉钢，再进行敲打就可以了。<BR>我应该拿不同的原料制作刀条，这样可以比较出不同材料的优越性。
+research.BLADES.text.stage.3=我发现耀魂铁锭作为刀刃的材料是最为优越的。<BR>不过，其他的刀刃材料也可以用于批量生产。因为我察觉到这种铁锭非常的稀有与昂贵。<BR>配方已经记录下来了，这样我就可以随时查阅这些资料。
+
+research.WHITESHEATH.text.stage.1=这，应该就是我的处女作了吧。<BR>现在这个木头刀刃可以扔掉了，我要换上亲手打造的最优质的刀刃。
+research.WHITESHEATH.text.stage.2=我现在只要将刀刃取下，换上新的刀刃就可以了。
+research.WHITESHEATH.text.stage.3=现在这把刀就这样完成了。<BR>我非常的自豪，但我也应该察觉到我需要的不止是这些。<BR>嘛，总之先把配方都记录下来吧。
+
+research.SLASHBLADE.text.stage.1=有传言说大太刀的制造需要用断掉的白鞘来进行。<BR>我觉得我可以来亲自试验一下，先让我找一把白鞘出来好了。
+research.SLASHBLADE.text.stage.2=按照别人提供的配方，这样合成出来就好。
+research.SLASHBLADE.text.stage.3=我的试验证明了传言是真实的。<BR>不过即便这样这把大太刀的装具也是非常的普通，而且感觉不到什么特别的气息。<BR>总之先把配方都记录下来吧。
+
+research.UNNAMEDBLADE.text.stage.1=我试着做一把新刀，先拿白鞘下手好了。
+research.UNNAMEDBLADE.text.stage.2=这把白鞘，刀刃的质量不行。<BR>它轻而易举的就断掉了，所以我需要给它换上新的刀条。<BR>等等，我也许可以改一些小东西。。。。。。
+research.UNNAMEDBLADE.text.stage.3=完成，通过最上级的刀刃和贵重的白鞘组合而成。<BR>我把它起名为 自铭「起源」，这就是一切的开始。。。。。。

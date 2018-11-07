@@ -7,6 +7,7 @@ import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.named.NamedBladeManager;
 import mods.flammpfeil.slashblade.named.Yamato;
 import mods.flammpfeil.slashblade.named.event.LoadEvent.InitEvent;
+import net.langball.lastsmith.Last_worker;
 import net.langball.lastsmith.blade.BladeLoader;
 import net.langball.lastsmith.blade.ItemSlashBladeNamedSS;
 import net.langball.lastsmith.sa.SAxianshizhan;
@@ -17,8 +18,13 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import thaumcraft.api.ThaumcraftApi;
+import thaumcraft.api.aspects.Aspect;
+import thaumcraft.api.aspects.AspectList;
+import thaumcraft.api.crafting.InfusionRecipe;
 
 public class ItemSlashblade_Louguan_xf {
 	   @SubscribeEvent
@@ -41,6 +47,16 @@ public class ItemSlashblade_Louguan_xf {
 	      customblade.addEnchantment(Enchantments.POWER, 6);
 	      customblade.addEnchantment(Enchantments.SHARPNESS, 7);
 	      customblade.addEnchantment(Enchantments.PUNCH, 5);
+
+			ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(name), new InfusionRecipe("BASEINFUSION", BladeLoader.findItemStack(Last_worker.MODID,name,1), 1, new AspectList()
+		    	      .add(Aspect.ENERGY, 30).add(Aspect.SOUL, 30).add(Aspect.AVERSION,30), SlashBlade.findItemStack(SlashBlade.modid,"slashbladeNamed",1), 
+		    	      new Object[] {
+		    	    		  SlashBlade.findItemStack("flammpfeil.slashblade", SlashBlade.ProudSoulStr, 1)
+		    	    		 ,SlashBlade.findItemStack("flammpfeil.slashblade", SlashBlade.ProudSoulStr, 1)
+		    	    		 ,SlashBlade.findItemStack("flammpfeil.slashblade", SlashBlade.IngotBladeSoulStr, 1)
+		    	    		 ,SlashBlade.findItemStack("flammpfeil.slashblade", SlashBlade.IngotBladeSoulStr, 1)
+		    	    		 ,BladeLoader.findItemStack(Last_worker.MODID,name2,1) }
+			));
 
 	   }
 

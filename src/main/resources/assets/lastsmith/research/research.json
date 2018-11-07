@@ -1,0 +1,200 @@
+{
+   "entries" : [
+      {
+         "key" : "FIRSTBLADE",
+         "name" : "research.FIRSTBLADE.title",
+         "icons" : [ "lastsmith:wooden_blade" ],
+         "category" : "KATANA",
+         "location" : [ -8, 2 ],
+         "parents" : [ "FIRSTSTEPS" ],
+         "stages" : [
+            {
+               "text" : "research.FIRSTBLADE.text.stage.1",
+               "required_craft" : [ "lastsmith:wooden_blade" ]
+            },
+            {
+               "text" : "research.FIRSTBLADE.text.stage.2",
+               "recipes" : [
+                  "lastsmith:wooden_blade",
+                  "lastsmith:wooden_saya",
+                  "flammpfeil.slashblade:recipexes"
+               ]
+            }
+         ]
+      },
+      {
+         "key" : "WOODENBLADE",
+         "name" : "research.WOODENBLADE.title",
+         "icons" : [ "flammpfeil.slashblade:slashbladeWood" ],
+         "category" : "KATANA",
+         "location" : [ -6, 2 ],
+         "parents" : [ "FIRSTBLADE" ],
+         "stages" : [
+            {
+               "text" : "research.WOODENBLADE.text.stage.1",
+               "required_craft" : [ "lastsmith:wooden_blade", "lastsmith:wooden_saya" ]
+            },
+            {
+               "text" : "research.WOODENBLADE.text.stage.2",
+               "required_craft" : [ "flammpfeil.slashblade:slashbladeWood" ]
+            },
+            {
+               "text" : "research.WOODENBLADE.text.stage.3",
+               "recipes" : [ "flammpfeil.slashblade:recipexes" ]
+            }
+         ]
+      },
+      {
+         "key" : "BLADES",
+         "name" : "research.BLADES.title",
+         "icons" : [ "lastsmith:blade_2" ],
+         "category" : "KATANA",
+         "location" : [ -4, 2 ],
+         "parents" : [ "WOODENBLADE" ],
+         "stages" : [
+            {
+               "text" : "research.BLADES.text.stage.1",
+               "required_craft" : [ "lastsmith:smith_hammer", "lastsmith:blast" ]
+            },
+            {
+               "text" : "research.BLADES.text.stage.2",
+               "recipes" : [ "lastsmith:blast", "lastsmith:hammer" ],
+               "required_craft" : [ "lastsmith:blade", "lastsmith:blade_2", "lastsmith:blade_3" ]
+            },
+            {
+               "text" : "research.BLADES.text.stage.3",
+               "recipes" : [
+                  "lastsmith:blast",
+                  "lastsmith:smith_hammer",
+                  "lastsmith:blade_unfinished",
+                  "lastsmith:blade_2_unfinished",
+                  "lastsmith:blade_3_unfinished",
+                  "lastsmith:blade",
+                  "lastsmith:blade_2",
+                  "lastsmith:blade_3"
+               ]
+            }
+         ]
+      },
+      {
+         "key" : "WHITESHEATH",
+         "name" : "research.WHITESHEATH.title",
+         "icons" : [ "flammpfeil.slashblade:slashbladeWhite" ],
+         "category" : "KATANA",
+         "location" : [ -2, 2 ],
+         "parents" : [ "BLADES" ],
+         "stages" : [
+            {
+               "text" : "research.WHITESHEATH.text.stage.1",
+               "required_craft" : [ "lastsmith:blade_3", "flammpfeil.slashblade:slashbladeWood" ]
+            },
+            {
+               "text" : "research.WHITESHEATH.text.stage.2",
+               "required_craft" : [ "flammpfeil.slashblade:slashbladeWhite" ]
+            },
+            {
+               "text" : "research.WHITESHEATH.text.stage.3",
+               "recipes" : [
+                  "lastsmith:blast",
+                  "lastsmith:smith_hammer",
+                  "lastsmith:blade_unfinished",
+                  "lastsmith:blade_2_unfinished",
+                  "lastsmith:blade_3_unfinished",
+                  "lastsmith:blade",
+                  "lastsmith:blade_2",
+                  "lastsmith:blade_3",
+                  "flammpfeil.slashblade:white",
+                  "flammpfeil.slashblade:white2",
+                  "flammpfeil.slashblade:white3"
+               ]
+            }
+         ]
+      },
+      {
+         "key" : "SLASHBLADE",
+         "name" : "research.SLASHBLADE.title",
+         "icons" : [ "flammpfeil.slashblade:slashblade" ],
+         "category" : "KATANA",
+         "location" : [ 0, 4 ],
+         "parents" : [ "WHITESHEATH" ],
+         "stages" : [
+            {
+               "text" : "research.SLASHBLADE.text.stage.1",
+               "required_craft" : [ "flammpfeil.slashblade:slashbladeWhite" ]
+            },
+            {
+               "text" : "research.SLASHBLADE.text.stage.2",
+               "required_craft" : [ "flammpfeil.slashblade:slashblade" ]
+            },
+            {
+               "text" : "research.SLASHBLADE.text.stage.3",
+               "recipes" : [
+                  "flammpfeil.slashblade:white",
+                  "flammpfeil.slashblade:white2",
+                  "flammpfeil.slashblade:white3",
+                  "flammpfeil.slashblade:slashblade"
+               ]
+            }
+         ]
+      },
+      {
+         "key" : "UNNAMEDBLADE",
+         "name" : "research.UNNAMEDBLADE.title",
+         "icons" : [ "lastsmith:UnnamedBlade" ],
+         "category" : "KATANA",
+         "location" : [ 0, 0 ],
+         "parents" : [ "WHITESHEATH" ],
+         "stages" : [
+            {
+               "text" : "research.UNNAMEDBLADE.text.stage.1",
+               "required_craft" : [ "flammpfeil.slashblade:slashbladeWhite" ]
+            },
+            {
+               "text" : "research.UNNAMEDBLADE.text.stage.2",
+               "required_craft" : [ "lastsmith:UnnamedBlade" ]
+            },
+            {
+               "text" : "research.UNNAMEDBLADE.text.stage.3",
+               "recipes" : [
+                  "flammpfeil.slashblade:white",
+                  "flammpfeil.slashblade:white2",
+                  "flammpfeil.slashblade:white3",
+                  "lastsmith:lastsmith.UnnamedBlade"
+               ]
+            }
+         ]
+      },
+      {
+         "key" : "NAMEDBALDE",
+         "name" : "research.NAMEDBALDE.title",
+         "icons" : [ "flammpfeil.slashblade:slashblade" ],
+         "category" : "KATANA",
+         "meta" : [ "SPIKY" ],
+         "location" : [ 0, 6 ],
+         "parents" : [ "SLASHBLADE" ],
+         "stages" : [
+            {
+               "text" : "research.NAMEDBALDE.text.stage.1",
+               "required_craft" : [ "flammpfeil.slashblade:slashblade" ],
+               "required_knowledge" : [ "THEORY;KATANA;5", "THEORY;BASICS;2" ]
+            },
+            {
+               "text" : "research.NAMEDBALDE.text.stage.2",
+               "recipes" : [
+                  "flammpfeil.slashblade:slashblade",
+                  "flammpfeil.slashblade:tagayasan",
+                  "flammpfeil.slashblade:yamato",
+                  "flammpfeil.slashblade:tukumo",
+                  "flammpfeil.slashblade:agito",
+                  "flammpfeil.slashblade:agito_ex",
+                  "flammpfeil.slashblade:agito2",
+                  "flammpfeil.slashblade:muramasa",
+                  "flammpfeil.slashblade:recipex",
+                  "flammpfeil.slashblade:recipexx",
+                  "flammpfeil.slashblade:doutanuki"
+               ]
+            }
+         ]
+      }
+   ]
+}

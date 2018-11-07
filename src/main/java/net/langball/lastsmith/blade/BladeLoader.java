@@ -166,8 +166,6 @@ public BladeLoader(FMLPreInitializationEvent event){
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_Bailou());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_Louguan_tx());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_Bailou_tx());
-		 SlashBlade.InitEventBus.register(new ItemSlashblade_Louguan_xf());
-		 SlashBlade.InitEventBus.register(new ItemSlashblade_Bailou_xf());
 	if(Loader.isModLoaded(Thaumcraft.MODID)){
 		windBlade = (new ItemSlashBladeWind(ToolMaterial.IRON, 4.0F)).setRegistryName("WindBlade");
 		    	 ForgeRegistries.ITEMS.register(windBlade);

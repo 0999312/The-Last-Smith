@@ -52,6 +52,12 @@ import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 import net.minecraftforge.registries.GameData;
+import thaumcraft.Thaumcraft;
+import thaumcraft.api.ThaumcraftApi;
+import thaumcraft.api.aspects.Aspect;
+import thaumcraft.api.aspects.AspectList;
+import thaumcraft.api.research.ResearchCategories;
+import thaumcraft.common.lib.research.ResearchManager;
 import vazkii.botania.api.BotaniaAPI;
 import vazkii.botania.api.recipe.RecipeRuneAltar;
 import vazkii.botania.common.Botania;
@@ -72,6 +78,10 @@ public class CommonProxy {
     { 
     	new GuiLoader();
     	new RecipeLoader();
+    	if(Loader.isModLoaded(Thaumcraft.MODID)){
+    		 ThaumcraftApi.registerResearchLocation(new ResourceLocation(Last_worker.MODID+":research/research.json"));
+        	 ResearchCategories.registerCategory("KATANA", null, new AspectList().add(Aspect.SOUL, 1), new ResourceLocation(Last_worker.MODID+":textures/research/yamatooo.png"), new ResourceLocation(Last_worker.MODID+":textures/research/guislashblade.jpg"));
+    	}
     }
 
     public void postInit(FMLPostInitializationEvent event)

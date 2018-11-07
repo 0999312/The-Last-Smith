@@ -15,7 +15,7 @@ item.flammpfeil.slashblade.named.bailou_tx.name=Hell Realm Sword-Hakurouken-
 item.flammpfeil.slashblade.named.roukan_xf.name=RoukanSenpuuzin
 item.flammpfeil.slashblade.named.bailou_xf.name=HakurouSenpuuzin
 item.flammpfeil.slashblade.named.sakuyablade.name=Sakuya Blade
-item.flammpfeil.slashblade.unnamedBlade.name=Noted Origin
+item.flammpfeil.slashblade.unnamedBlade.name=Noted-Origin-
 item.flammpfeil.slashblade.model_Blade.name=Model-No Soul-
 item.flammpfeil.slashblade.model_Blade_1.name=Model-Powerful-
 item.flammpfeil.slashblade.named.namedblade_basic.name=Anonymity-White-
@@ -101,3 +101,33 @@ item.wrap.BambooMod.katana_fake.name=Fake -Ruby-
 item.wrap.BambooMod.katana_tls.name=Ruby -nameless-
 
 itemGroup.lastsmith=The Last Smith
+
+research.FIRSTBLADE.title=Fisrt Blade
+research.WOODENBLADE.title=Anonymity-Wood-
+research.BLADES.title=Different Blades
+research.WHITESHEATH.title=Sharpness-White-
+research.SLASHBLADE.title=SlashBlade--
+research.UNNAMEDBLADE.title=Noted-Origin-
+
+research.FIRSTBLADE.text.stage.1=This manual originally had only a few thaumic things, until I found a large blank behind the manual.<BR>In short, the first step to becoming a swordsmith is to make a wooden blade, so the blade of solid wood is the first thing.
+research.FIRSTBLADE.text.stage.2=Good,Now this is the first blade.<BR>I recorded the accessories needed for a wooden blade and how they were crafted. The combination is a wooden blade.
+
+research.WOODENBLADE.text.stage.1=Got blade,now need a sheath<BR>Craft a wooden blade, and a wooden sheath, so I can make a brand new wooden blade.
+research.WOODENBLADE.text.stage.2=Good, it only needs to be combined now.
+research.WOODENBLADE.text.stage.3=All right,every things finished now.<BR>Anonymity-Wood-,This is the name that the former smithes have played for it. In order to commemorate them, I am also so famous.
+
+research.BLADES.text.stage.1=I should make some steel blades, but I don't have the tools and steel to pick up.<BR>It may be a lot better to recreate myself by my craft.<BR>Give myself a blast furnace and hammer so I can continue my work.
+research.BLADES.text.stage.2=OK,tool and furnace are there.<BR>For steel ingot,use Crushed iron ore to blast furnace, then get tamahagane and hammer it.<BR>I should make the blade with different materials so that I can compare the superiority of different materials.
+research.BLADES.text.stage.3=I found that BladeSoulIngot is the best one.<BR>However, other blade materials can also be used for mass production. Because I realized that this kind of ingot is very rare and expensive.<BR>The recipe has been recorded so that I can access it at any time.
+
+research.WHITESHEATH.text.stage.1=This, is my first one.<BR>Now that the wood blade can be thrown away, I have to replace it with the best quality blade I have created.
+research.WHITESHEATH.text.stage.2=I just need to remove the blade and replace it with a new one.
+research.WHITESHEATH.text.stage.3=And now, new blade completed.<BR>I am very proud, but I should also notice that I need more than that.<BR>I will always record the recipes first.
+
+research.SLASHBLADE.text.stage.1=There are rumors that the manufacture of the SlashBalde to be carried out with a broken white sheath.<BR>I think I can come and test it myself. Let me find a white sheath first.
+research.SLASHBLADE.text.stage.2=According to the recipe provided by others, it is better to craft it.
+research.SLASHBLADE.text.stage.3=My experiment proved that the rumors are true.<BR>But even this is a very common saya for the SlashBalde, and I don't feel any special breath.<BR>I will always record the recipes first.
+
+research.UNNAMEDBLADE.text.stage.1=I tried to make a new blade, and I started with a white sheath.
+research.UNNAMEDBLADE.text.stage.2=This white sheath, the quality of the blade is not good. <BR> It's broken easily, so I need to replace it with a new one. <BR> Wait, I may be able to change some small things......
+research.UNNAMEDBLADE.text.stage.3=Done, the best quality of blade and best sheath that I have.<BR>Noted-Origin-, the beginning of these stories......
