@@ -8,8 +8,9 @@ item.flammpfeil.slashblade.named.template_re.name=利刀「苍梅」
 item.flammpfeil.slashblade.named.template_re2.name=利刀「赤梅」
 item.flammpfeil.slashblade.named.eievui.name=伊布之刃
 item.flammpfeil.slashblade.named.louguan_fake.name=伪物「观楼剑」
-item.flammpfeil.slashblade.named.bailou.name=白楼剑
-item.flammpfeil.slashblade.named.roukan.name=楼观剑
+item.flammpfeil.slashblade.named.bailou_fake.name=伪物「白楼剑」
+item.flammpfeil.slashblade.named.bailou.name=「白楼剑」
+item.flammpfeil.slashblade.named.roukan.name=「楼观剑」
 item.flammpfeil.slashblade.named.louguan_tx.name=狱界剑「楼观剑」
 item.flammpfeil.slashblade.named.bailou_tx.name=狱界剑「白楼剑」
 item.flammpfeil.slashblade.named.roukan_xf.name=楼观旋风刃
@@ -86,12 +87,15 @@ item.lastsmith.blade_unfinished.name=未完成刀条
 item.lastsmith.blade_2_unfinished.name=未完成刀条
 item.lastsmith.blade_3_unfinished.name=未完成刀条
 item.lastsmith.smith_hammer.name=工匠锤
-item.lastsmith.sakura.name=樱花
+item.lastsmith.sakura.name=樱花瓣
 item.lastsmith.tamahagane.name=玉钢
 item.lastsmith.steel_ingot.name=钢锭
 item.lastsmith.crashed_iron.name=待冶炼铁矿
 item.lastsmith.wooden_blade.name=实木刀条
 item.lastsmith.paper_arthurs.name=制作者名单
+item.lastsmith.sakura_full.name=樱
+item.lastsmith.sakura_ingot_unfinished.name=未精炼樱色钢锭
+item.lastsmith.sakura_ingot.name=樱色钢锭
 
 item.flammpfeil.slashblade.wooden_saya.name=实木鞘
 item.flammpfeil.slashblade.named.template_re_fake.name=伪物「苍梅」
@@ -108,6 +112,16 @@ research.BLADES.title=不同的刀刃
 research.WHITESHEATH.title=利刀「白鞘」
 research.SLASHBLADE.title=大太刀「」
 research.UNNAMEDBLADE.title=自铭「起源」
+
+research.NAMEDBALDE.title=名刀
+research.SAKURABALDE.title=樱之刃
+research.ROUKAN.title=「楼观剑」
+research.HAKUROU.title=「白楼剑」
+research.OLDBLADES.title=古时之刃
+research.OTHERSBLADE.title=零散之刃
+
+research.ROUKANSENPUUZIN.title=楼观旋风刃
+research.HAKUROUSENPUUZIN.title=白楼旋风刃
 
 research.FIRSTBLADE.text.stage.1=这本手册原本只有一些神秘学的高深玩意，直到我发现手册后面还有大片的空白。<BR>总之，成为刀匠的第一步是制作木刀，那么制作实木的刀条就是第一件事情了。
 research.FIRSTBLADE.text.stage.2=很好，这就是第一振刀的刀刃了。<BR>我记录了一把木刀所需要的配件，以及它们的合成方法。组合起来就是一把木刀了。
@@ -131,3 +145,28 @@ research.SLASHBLADE.text.stage.3=我的试验证明了传言是真实的。<BR>�
 research.UNNAMEDBLADE.text.stage.1=我试着做一把新刀，先拿白鞘下手好了。
 research.UNNAMEDBLADE.text.stage.2=这把白鞘，刀刃的质量不行。<BR>它轻而易举的就断掉了，所以我需要给它换上新的刀条。<BR>等等，我也许可以改一些小东西。。。。。。
 research.UNNAMEDBLADE.text.stage.3=完成，通过最上级的刀刃和贵重的白鞘组合而成。<BR>我把它起名为 自铭「起源」，这就是一切的开始。。。。。。
+
+research.NAMEDBALDE.text.stage.1=有很多名刀都是故事或传记中的常客。<BR>这些刀并不是容易获得的，现有的资料无法完全证明它们的存在。
+research.NAMEDBALDE.text.stage.2=这些刀的存在已经被证实，并记录了所有制作这些刀的方式。
+
+research.SAKURABALDE.text.stage.1=曾经有两族，在一场战争中同时被毁灭了。。。。。。<BR>他们留下了五振名刀，最出名的则莫过于樱之刃。<BR>然而，现有的资料无法完全证明它们的存在。
+research.SAKURABALDE.text.stage.2=“樱之刃”——能够驱除一切邪恶的秘密之剑。<BR>驱魔家族秘密中保存着这把剑，并将其传给他们的后代……<BR>然而事实上，驱魔家族与魔族的战争导致了两族的灭亡，不复存在。而且不仅仅是樱之刃，五振名刀都具有相似的能力。尽管驱魔家族成功保管住了樱之刃，也无法挽救他们的一切。。。。。。
+
+research.ROUKAN.text.stage.1=楼观剑，据传是可以斩断一切的极其锋利的妖刀。<BR>值得一提的是，市面上其实有很多挂着楼观剑牌子的刀都是劣质的仿制品。真品却无从得知了。
+research.ROUKAN.text.stage.2=仿制品里，较为成功的会被称为观楼剑。<BR>而楼观剑真品，则在西行寺家的庭师手中。<BR>制作这样的一把妖刀，是极其耗费财力的。<BR>我们虽然有能力打造出一把几乎完全一致的刀，也没有办法得到她手里的那一振了。
+
+
+research.HAKUROU.text.stage.1=(WIP)
+research.HAKUROU.text.stage.2=(WIP)
+
+research.SLASHBLADE.text.stage.1=(WIP)
+research.SLASHBLADE.text.stage.2=(WIP)
+
+research.OTHERSBLADE.text.stage.1=有一些零散的刀，它们没有一个成型的发展路线，潜力也不是很大。<BR>现有的资料无法完全证明它们的存在。
+research.OTHERSBLADE.text.stage.2=这些零散的刀没有什么特别的地方，但是它们却更容易获得。<BR>对于没有能力打造强力兵器的普通人，这会是他们的首选。
+
+research.ROUKANSENPUUZIN.text.stage.1=(WIP)
+research.ROUKANSENPUUZIN.text.stage.2=(WIP)
+
+research.HAKUROUSENPUUZIN.text.stage.1=(WIP)
+research.HAKUROUSENPUUZIN.text.stage.2=(WIP)

@@ -39,7 +39,7 @@ public class ItemSlashblade_Smith2 {
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);
 	      ItemStack custombladeReqired =BladeLoader.findItemStack(Last_worker.MODID, name2, 1);
 	      NBTTagCompound reqTag = ItemSlashBlade.getItemTagCompound(custombladeReqired);
-	      ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(50));
+	      ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(250));
 	      ItemSlashBlade.RepairCount.set(reqTag, Integer.valueOf(1));
 	      ItemStack louguan = BladeLoader.findItemStack(Last_worker.MODID, name, 1);
 	      ItemStack itemSphereBladeSoul = SlashBlade.findItemStack("flammpfeil.slashblade", "sphere_bladesoul", 1);

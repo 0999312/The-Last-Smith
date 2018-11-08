@@ -105,7 +105,6 @@ public class ItemSlashBladeNamedSS extends ItemSlashBlade{
 	    @Override
 	    public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> subItems) {
 	        if (!this.isInCreativeTab(tab)) return;
-	        //super.getSubItems(itemIn, tab, subItems);
 	        
 	        for(String bladename : NamedBlades){
 	            ItemStack blade = BladeLoader.getCustomBlade(bladename);
@@ -114,7 +113,6 @@ public class ItemSlashBladeNamedSS extends ItemSlashBlade{
 	            if(!blade.isEmpty()) subItems.add(blade);
 	        }
 	    }
-	    
 	    @Override
 		public boolean hitEntity(ItemStack par1ItemStack, EntityLivingBase par2EntityLivingBase,
 				EntityLivingBase par3EntityLivingBase) {

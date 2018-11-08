@@ -17,6 +17,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
@@ -39,9 +40,15 @@ public class RecipeLoader {
 				" I ","BBB","BFB",'I',"blockIron",'B',Blocks.BRICK_BLOCK,'F',Blocks.FURNACE
 		}));
 		RecipesUtil.addRecipe("paper_arthurs", new ShapedOreRecipe(new ResourceLocation(""), ItemLoader.paper_arthurs, new Object[]{
-				"BBB","BIB","BBB",'B',ItemLoader.sakura,'I',"paper"
+				"BBB","BIB","BBB",'B',ItemLoader.sakura_full,'I',"paper"
 		}));
-		
+		RecipesUtil.addRecipe("sakura_ingot_unfinished", new ShapedOreRecipe(new ResourceLocation(""), ItemLoader.sakura_ingot_unfinished, new Object[]{
+				"BFB","FIF","BFB",'B',ItemLoader.sakura_full,'I',SlashBlade.findItemStack("flammpfeil.slashblade",SlashBlade.IngotBladeSoulStr, 1),'F',SlashBlade.findItemStack("flammpfeil.slashblade",SlashBlade.ProudSoulStr, 1)
+		}));
+		GameRegistry.addSmelting(ItemLoader.sakura_ingot_unfinished, new ItemStack(ItemLoader.sakura_ingot), 0F);
+		RecipesUtil.addRecipe("sakura_full", new ShapedOreRecipe(new ResourceLocation(""), ItemLoader.sakura_full, new Object[]{
+				"BBB","BIB","BBB",'B',ItemLoader.sakura,'I',SlashBlade.findItemStack("flammpfeil.slashblade",SlashBlade.ProudSoulStr, 1)
+		}));
 		RecipesUtil.addRecipe("steel_ingot", new ShapelessOreRecipe(new ResourceLocation(""), ItemLoader.steel_ingot, new Object[]{ItemLoader.hammer,ItemLoader.tamahagane,ItemLoader.tamahagane}));
 		RecipesUtil.addRecipe("crushed_iron", new ShapelessOreRecipe(new ResourceLocation(""), ItemLoader.crashed_iron, new Object[]{ItemLoader.hammer,"oreIron"}));
 		RecipesUtil.addRecipe("red_dye", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(Items.DYE,1,1), new Object[]{ItemLoader.sakura,ItemLoader.sakura}));

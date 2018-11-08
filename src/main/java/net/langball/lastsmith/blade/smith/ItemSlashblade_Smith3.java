@@ -33,7 +33,7 @@ public class ItemSlashblade_Smith3 {
 	      ItemSlashBladeNamedSS.CurrentItemName.set(tag, name);
 	      ItemSlashBladeNamedSS.CustomMaxDamage.set(tag, Integer.valueOf(95));
 	      ItemSlashBlade.AttackAmplifier.set(tag, 2F);
-	      ItemSlashBlade.setBaseAttackModifier(tag, 15.0F);
+	      ItemSlashBlade.setBaseAttackModifier(tag, 16.0F);
 	      ItemSlashBlade.TextureName.set(tag, "named/smith/smith_2");
 	      ItemSlashBlade.ModelName.set(tag, "named/muramasa/muramasa");
 	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(0));
@@ -43,8 +43,12 @@ public class ItemSlashblade_Smith3 {
 	      customblade.addEnchantment(Enchantments.UNBREAKING,8);
 	      customblade.addEnchantment(Enchantments.SHARPNESS,8);
 	      ItemStack reqiredMain = BladeLoader.getCustomBlade("flammpfeil.slashblade.named.bamboolight_yin");
-	      ItemStack reqiredSub = BladeLoader.getCustomBlade("flammpfeil.slashblade.named.louguan_fake");
+	      ItemStack reqiredSub = BladeLoader.getCustomBlade("flammpfeil.slashblade.named.roukan");
 	      ItemStack sb = BladeLoader.getCustomBlade(name2);
+	      NBTTagCompound reqTag = ItemSlashBlade.getItemTagCompound(sb);
+	      ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(1000));
+	      ItemSlashBlade.ProudSoul.set(reqTag, Integer.valueOf(5000));
+	      ItemSlashBlade.RepairCount.set(reqTag, Integer.valueOf(5));
 	      NBTTagCompound tag1 = ItemSlashBlade.getItemTagCompound(reqiredMain);
 	      if (tag1.hasKey("ench")) {
 	        tag1.removeTag("ench");
@@ -55,7 +59,6 @@ public class ItemSlashblade_Smith3 {
 	      }
 	      IRecipe recipe = new RecipeBx(new ResourceLocation(SlashBlade.modid,name),customblade, reqiredMain, reqiredSub, new Object[] { "DFD", "ACB", "DFD", Character.valueOf('A'), reqiredMain, Character.valueOf('B'), reqiredSub, Character.valueOf('C'), sb, Character.valueOf('D'), new ItemStack(Blocks.IRON_BLOCK), Character.valueOf('F'), new ItemStack(Blocks.GOLD_BLOCK) });	      
 	      SlashBlade.addRecipe(name, recipe);
-//	      AchievementListTHW.registerCraftingAchievement(name,13,7,customblade,AchievementListTHW.getAchievement(name2));
 	   }
 	   }
 

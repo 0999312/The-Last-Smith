@@ -47,7 +47,7 @@ public class ItemSlashblade_Bailou {
 	      ItemSlashBlade.ProudSoul.set(reqTag, Integer.valueOf(7500));
 	      ItemStack louguan = BladeLoader.findItemStack(Last_worker.MODID, name, 1);
 	      ItemStack itemSphereBladeSoul = SlashBlade.findItemStack("flammpfeil.slashblade", "sphere_bladesoul", 1);
-	      SlashBlade.addRecipe(name, new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid,name),louguan, custombladeReqired, new Object[]{"DAD", "ABA", "EAE", Character.valueOf('A'), itemSphereBladeSoul, Character.valueOf('B'), custombladeReqired, Character.valueOf('D'), new ItemStack(Items.GOLD_INGOT), Character.valueOf('E'), new ItemStack(ItemLoader.sakura)}));
+	      SlashBlade.addRecipe(name, new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid,name),louguan, custombladeReqired, new Object[]{"DAD", "ABA", "EAE", Character.valueOf('A'), itemSphereBladeSoul, Character.valueOf('B'), custombladeReqired, Character.valueOf('D'), new ItemStack(Items.GOLD_INGOT), Character.valueOf('E'), new ItemStack(ItemLoader.sakura_full)}));
 
 	   }
 

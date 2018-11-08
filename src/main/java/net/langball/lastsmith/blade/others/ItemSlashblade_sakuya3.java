@@ -11,6 +11,7 @@ import net.langball.lastsmith.CommonProxy;
 import net.langball.lastsmith.Last_worker;
 import net.langball.lastsmith.blade.BladeLoader;
 import net.langball.lastsmith.blade.ItemSlashBladeNamedSS;
+import net.langball.lastsmith.items.ItemLoader;
 import net.langball.lastsmith.sa.Sakuya;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.init.Blocks;
@@ -47,7 +48,7 @@ public class ItemSlashblade_sakuya3 {
 	      ItemStack louguan = BladeLoader.findItemStack(Last_worker.MODID, name, 1);
 	      ItemStack itemSphereBladeSoul = SlashBlade.findItemStack("flammpfeil.slashblade", "sphere_bladesoul", 1);
 	      ItemStack ingot = SlashBlade.findItemStack("flammpfeil.slashblade", "ingot_bladesoul", 1);
-	      SlashBlade.addRecipe(name, new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid,name),louguan, custombladeReqired, new Object[]{"DAD", "CBC", "DAD", Character.valueOf('A'), itemSphereBladeSoul, Character.valueOf('B'), custombladeReqired, Character.valueOf('C'), itemSphereBladeSoul, Character.valueOf('D'), new ItemStack(Blocks.SNOW)}));
+	      SlashBlade.addRecipe(name, new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid,name),louguan, custombladeReqired, new Object[]{"DAD", "FBF", "DAD", Character.valueOf('A'), itemSphereBladeSoul, Character.valueOf('B'), custombladeReqired, Character.valueOf('D'), new ItemStack(ItemLoader.sakura),'F',Blocks.SNOW}));
 	   }
 
 }

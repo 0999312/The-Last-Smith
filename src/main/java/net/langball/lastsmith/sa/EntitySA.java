@@ -41,24 +41,16 @@ import java.util.Random;
  * Created by Furia on 14/05/08.
  */
 public class EntitySA extends Entity implements IThrowableEntity {
-    /**
-     * ★撃った人
-     */
+
     protected Entity thrower;
 
     protected ItemStack blade = ItemStack.EMPTY;
 
-    /**
-     * ★多段Hit防止用List
-     */
     protected List<Entity> alreadyHitEntity = new ArrayList<Entity>();
 
     protected float AttackLevel = 0.0f;
 
-    /**
-     * ■コンストラクタ
-     * @param par1World
-     */
+
     public EntitySA(World par1World)
     {
         super(par1World);
@@ -78,7 +70,6 @@ public class EntitySA extends Entity implements IThrowableEntity {
 
         this.AttackLevel = AttackLevel;
 
-        //■撃った人
         thrower = entityLiving;
 
         blade = entityLiving.getHeldItemMainhand();
@@ -86,16 +77,13 @@ public class EntitySA extends Entity implements IThrowableEntity {
             blade = ItemStack.EMPTY;
         }
 
-        //■撃った人と、撃った人が（に）乗ってるEntityも除外
         alreadyHitEntity.clear();
         alreadyHitEntity.add(thrower);
         alreadyHitEntity.add(thrower.getRidingEntity());
         alreadyHitEntity.addAll(thrower.getPassengers());
 
-        //■生存タイマーリセット
         ticksExisted = 0;
 
-        //■サイズ変更
         setSize(4.0F, 4.0F);
 
     }
@@ -111,27 +99,18 @@ public class EntitySA extends Entity implements IThrowableEntity {
     private static final DataParameter<Integer> INTERVAL = EntityDataManager.<Integer>createKey(EntitySA.class, DataSerializers.VARINT);
     private static final DataParameter<Integer> COLOR = EntityDataManager.<Integer>createKey(EntitySA.class, DataSerializers.VARINT);
 
-    /**
-     * ■イニシャライズ
-     */
     @Override
     protected void entityInit() {
-        //lifetime
         this.getDataManager().register(LIFETIME, 20);
 
-        //isMultiHit
         this.getDataManager().register(SINGLE_HIT, false);
 
-        //lifetime
         this.getDataManager().register(IS_SLASH_DIMENSION, false);
 
-        //EntityId
         this.getDataManager().register(THROWER_ENTITY_ID, 0);
 
-        //interval
         this.getDataManager().register(INTERVAL, 7);
 
-        //color
         this.getDataManager().register(COLOR, 0x3333FF);
 
     }
@@ -178,7 +157,6 @@ public class EntitySA extends Entity implements IThrowableEntity {
         this.getDataManager().set(THROWER_ENTITY_ID, entityid);
     }
 
-    //■毎回呼ばれる。移動処理とか当り判定とかもろもろ。
     @Override
     public void onUpdate()
     {
@@ -325,16 +303,8 @@ public class EntitySA extends Entity implements IThrowableEntity {
             }
 
 
-            //地形衝突で消失
-            /*
-            if(!world.getCollisionBoxes(this, this.getEntityBoundingBox()).isEmpty()) {
-                this.setDead();
-            }
-            */
-
         }
 
-        //■死亡チェック
         if(ticksExisted >= getLifeTime()) {
             alreadyHitEntity.clear();
             alreadyHitEntity = null;
@@ -342,70 +312,40 @@ public class EntitySA extends Entity implements IThrowableEntity {
         }
     }
 
-    /**
-     * ■Random
-     * @return
-     */
     public Random getRand()
     {
         return this.rand;
     }
 
-    /**
-     * ■Checks if the offset position from the entity's current position is inside of liquid. Args: x, y, z
-     * Liquid = 流体
-     */
     @Override
     public boolean isOffsetPositionInLiquid(double par1, double par3, double par5)
     {
-        //AxisAlignedBB axisalignedbb = this.boundingBox.getOffsetBoundingBox(par1, par3, par5);
-        //List list = this.world.getCollidingBoundingBoxes(this, axisalignedbb);
-        //return !list.isEmpty() ? false : !this.world.isAnyLiquid(axisalignedbb);
         return false;
     }
 
-    /**
-     * ■Tries to moves the entity by the passed in displacement. Args: x, y, z
-     */
     @Override
     public void move(MoverType moverType, double par1, double par3, double par5) {}
 
-    /**
-     * ■Will deal the specified amount of damage to the entity if the entity isn't immune to fire damage. Args:
-     * amountDamage
-     */
     @Override
     protected void dealFireDamage(int par1) {}
 
-    /**
-     * ■Returns if this entity is in water and will end up adding the waters velocity to the entity
-     */
     @Override
     public boolean handleWaterMovement()
     {
         return false;
     }
 
-    /**
-     * ■Checks if the current block the entity is within of the specified material type
-     */
     @Override
     public boolean isInsideOfMaterial(Material par1Material)
     {
         return false;
     }
 
-    /**
-     * ■Whether or not the current entity is in lava
-     */
     @Override
     public boolean isInLava() {
         return false;
     }
 
-    /**
-     * ■環境光による暗さの描画（？）
-     */
     @SideOnly(Side.CLIENT)
     @Override
     public int getBrightnessForRender()
@@ -435,10 +375,6 @@ public class EntitySA extends Entity implements IThrowableEntity {
         return j | k << 16;
     }
 
-    /**
-     * ■Gets how bright this entity is.
-     *    EntityPortalFXのぱくり
-     */
     @Override
     public float getBrightness()
     {
@@ -446,39 +382,21 @@ public class EntitySA extends Entity implements IThrowableEntity {
         float f2 = 0.9F;
         f2 = f2 * f2 * f2 * f2;
         return f1 * (1.0F - f2) + f2;
-        //return super.getBrightness();
     }
 
-    /**
-     * ■NBTの読込
-     */
     @Override
     protected void readEntityFromNBT(NBTTagCompound nbttagcompound) {}
 
-    /**
-     * ■NBTの書出
-     */
     @Override
     protected void writeEntityToNBT(NBTTagCompound nbttagcompound) {}
 
-    /**
-     * ■Sets the position and rotation. Only difference from the other one is no bounding on the rotation. Args: posX,
-     * posY, posZ, yaw, pitch
-     */
     @SideOnly(Side.CLIENT)
     public void setPositionAndRotation2(double par1, double par3, double par5, float par7, float par8, int par9) {}
 
-    /**
-     * ■Called by portal blocks when an entity is within it.
-     */
     @Override
     public void setPortal(BlockPos pos) {
-        //super.setPortal(pos);
     }
 
-    /**
-     * ■Returns true if the entity is on fire. Used by render to add the fire effect on rendering.
-     */
     @Override
     public boolean isBurning()
     {
@@ -497,8 +415,6 @@ public class EntitySA extends Entity implements IThrowableEntity {
     @Override
     public void setInWeb() {}
 
-
-    //IThrowableEntity
     @Override
     public Entity getThrower() {
         if(this.thrower == null){

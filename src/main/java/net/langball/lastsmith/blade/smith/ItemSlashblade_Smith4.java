@@ -36,7 +36,7 @@ public class ItemSlashblade_Smith4 {
 	      ItemSlashBladeNamedSS.CurrentItemName.set(tag, name);
 	      ItemSlashBladeNamedSS.CustomMaxDamage.set(tag, Integer.valueOf(50));
 	      ItemSlashBlade.AttackAmplifier.set(tag, 2F);
-	      ItemSlashBlade.setBaseAttackModifier(tag, 20.0F);
+	      ItemSlashBlade.setBaseAttackModifier(tag,18.0F);
 	      ItemSlashBladeNamedSS.IsDefaultBewitched.set(tag, Boolean.valueOf(true));
 	      ItemSlashBlade.TextureName.set(tag, "named/smith/smith_3");
 	      ItemSlashBlade.ModelName.set(tag, "named/agito");
@@ -45,7 +45,7 @@ public class ItemSlashblade_Smith4 {
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);
 	      customblade.addEnchantment(Enchantments.POWER, 10);
 	      customblade.addEnchantment(Enchantments.UNBREAKING, 5);
-	      customblade.addEnchantment(Enchantments.SHARPNESS, 21);
+	      customblade.addEnchantment(Enchantments.SHARPNESS, 18);
 	      customblade.addEnchantment(Enchantments.FIRE_ASPECT, 2);
 	      customblade.addEnchantment(Enchantments.SMITE, 12);
 	      customblade.addEnchantment(Enchantments.THORNS, 2);
@@ -55,8 +55,8 @@ public class ItemSlashblade_Smith4 {
 	      ItemStack reqiredSub = BladeLoader.getCustomBlade("flammpfeil.slashblade.named.silverbamboolight_blood");
 	      ItemStack sb = BladeLoader.getCustomBlade(name2);
 	      NBTTagCompound reqTag = ItemSlashBlade.getItemTagCompound(sb);
-	      ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(1000));
-	      ItemSlashBlade.ProudSoul.set(reqTag, Integer.valueOf(5000));
+	      ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(5000));
+	      ItemSlashBlade.ProudSoul.set(reqTag, Integer.valueOf(50000));
 	      ItemSlashBlade.RepairCount.set(reqTag, Integer.valueOf(10));
 	      NBTTagCompound tag1 = ItemSlashBlade.getItemTagCompound(reqiredMain);
 	      if (tag1.hasKey("ench")) {

@@ -10,6 +10,7 @@ import mods.flammpfeil.slashblade.named.event.LoadEvent.InitEvent;
 import net.langball.lastsmith.Last_worker;
 import net.langball.lastsmith.blade.BladeLoader;
 import net.langball.lastsmith.blade.ItemSlashBladeNamedSS;
+import net.langball.lastsmith.items.ItemLoader;
 import net.langball.lastsmith.sa.SAxianshizhan;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.init.Blocks;
@@ -26,7 +27,7 @@ public class ItemSlashblade_Louguan {
 	   public void init(InitEvent event) {
 		  
 	      String name = "flammpfeil.slashblade.named.roukan";
-	      String namefake = "flammpfeil.slashblade.named.louguan_old2";
+	      String namefake = "flammpfeil.slashblade.named.louguan_old";
 	      ItemStack customblade = new ItemStack(BladeLoader.bladeNamed, 1, 0);
 	      NBTTagCompound tag = new NBTTagCompound();
 	      customblade.setTagCompound(tag);
@@ -49,8 +50,8 @@ public class ItemSlashblade_Louguan {
 	      ItemSlashBlade.RepairCount.set(reqTag, Integer.valueOf(5));
 	      ItemStack louguan = BladeLoader.findItemStack(Last_worker.MODID, name, 1);
 	      ItemStack itemSphereBladeSoul = SlashBlade.findItemStack("flammpfeil.slashblade", "sphere_bladesoul", 1);
-	      ItemStack ingot = SlashBlade.findItemStack("flammpfeil.slashblade", "ingot_bladesoul", 1);
-	      SlashBlade.addRecipe("fucking_recipessssssssssssssssssss", new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid,"fucking_recipessssssssssssssssssss"),louguan, custombladeReqired, new Object[]{"DAD", "CBC", "DCD", Character.valueOf('A'), ingot, Character.valueOf('B'), custombladeReqired, Character.valueOf('C'), itemSphereBladeSoul, Character.valueOf('D'), new ItemStack(Blocks.DIAMOND_BLOCK)}));//标准的合成表
+	      ItemStack ingot = new ItemStack(ItemLoader.sakura_ingot);
+	      SlashBlade.addRecipe(name, new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid,name),louguan, custombladeReqired, new Object[]{"DAD", "CBC", "DCD", Character.valueOf('A'), ingot, Character.valueOf('B'), custombladeReqired, Character.valueOf('C'), itemSphereBladeSoul, Character.valueOf('D'), new ItemStack(Blocks.DIAMOND_BLOCK)}));
 
 	   }
 

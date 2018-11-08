@@ -159,7 +159,6 @@ public BladeLoader(FMLPreInitializationEvent event){
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_sakuya5());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_Louguan_fake());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_Louguan_old());
-		 SlashBlade.InitEventBus.register(new ItemSlashblade_Louguan_old2());
 
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_Louguan());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_Bailou_fake());

@@ -26,6 +26,9 @@ public class ItemLoader {
 	public static Item blade_3 = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"blade_3");
 
 	public static Item sakura = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"sakura");
+	public static Item sakura_full = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"sakura_full");
+	public static Item sakura_ingot_unfinished = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"sakura_ingot_unfinished");
+	public static Item sakura_ingot = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"sakura_ingot");
 	
 	public static Item paper_arthurs = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"paper_arthurs");
 	
@@ -34,6 +37,9 @@ public class ItemLoader {
 	public ItemLoader(FMLPreInitializationEvent event) {
 		register(hammer);
 		register(sakura);
+		register(sakura_full);
+		register(sakura_ingot_unfinished);
+		register(sakura_ingot);
 		register(crashed_iron);
 		register(tamahagane);
 		register(steel_ingot);
@@ -46,11 +52,15 @@ public class ItemLoader {
 		register(blade_2);
 		register(blade_3);
 		OreDictionary.registerOre("ingotSteel", steel_ingot);
+		OreDictionary.registerOre("ingotSakura", sakura_ingot);
 	}
 	@SideOnly(Side.CLIENT)
 	public static void registerRender() {
 		registerRender(hammer);
 		registerRender(sakura);
+		registerRender(sakura_full);
+		registerRender(sakura_ingot);
+		registerRender(sakura_ingot_unfinished);
 		registerRender(crashed_iron);
 		registerRender(tamahagane);
 		registerRender(steel_ingot);

@@ -33,7 +33,7 @@ public class ItemSlashblade_Blade_bamboo_fake {
 	      ItemSlashBladeNamedSS.CustomMaxDamage.set(tag, Integer.valueOf(45));
 	      ItemSlashBladeNamedSS.IsFakeBlade.set(tag, true);
 	      ItemSlashBlade.AttackAmplifier.set(tag, 2F);
-	      ItemSlashBlade.setBaseAttackModifier(tag, 5.0F);
+	      ItemSlashBlade.setBaseAttackModifier(tag, 6.0F);
 	      ItemSlashBlade.TextureName.set(tag, "BambooKatana");
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);

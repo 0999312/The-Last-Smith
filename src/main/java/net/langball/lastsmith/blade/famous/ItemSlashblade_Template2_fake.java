@@ -46,7 +46,7 @@ public class ItemSlashblade_Template2_fake {
 	      ItemStack louguan = BladeLoader.findItemStack(Last_worker.MODID, name, 1);
 	      ItemStack itemSphereBladeSoul = SlashBlade.findItemStack("flammpfeil.slashblade", "sphere_bladesoul", 1);
 	      ItemStack ingot = SlashBlade.findItemStack("flammpfeil.slashblade", "ingot_bladesoul", 1);
-	      SlashBlade.addRecipe(name, new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid,name),customblade, custombladeReqired, new Object[]{" DA", "DA ", "BCH",Character.valueOf('H'), ItemLoader.hammer,Character.valueOf('A'),ingot, Character.valueOf('B'), custombladeReqired, Character.valueOf('C'), "dyeRed", Character.valueOf('D'),"ingotIron"}));
+	      SlashBlade.addRecipe(name, new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid,name),customblade, custombladeReqired, new Object[]{" DA", "DAH", "BCH",Character.valueOf('H'), ItemLoader.hammer,Character.valueOf('A'),ingot, Character.valueOf('B'), custombladeReqired, Character.valueOf('C'), "dyeRed", Character.valueOf('D'),"ingotIron"}));
 
 	   }
 

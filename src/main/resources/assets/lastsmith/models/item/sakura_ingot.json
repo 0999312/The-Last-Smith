@@ -1,6 +1,6 @@
 {
    "parent" : "item/generated",
    "textures" : {
-      "layer0" : "lastsmith:items/sakura"
+      "layer0" : "lastsmith:items/sakura_ingot"
    }
 }

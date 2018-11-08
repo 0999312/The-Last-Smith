@@ -33,7 +33,7 @@ public class ItemSlashblade_Louguan_old {
 	      ItemSlashBladeNamedSS.CustomMaxDamage.set(tag, Integer.valueOf(50));
 	      ItemSlashBlade.AttackAmplifier.set(tag, 2F);
 	      ItemSlashBlade.setBaseAttackModifier(tag, 7.0F);
-	      ItemSlashBlade.TextureName.set(tag, "named/oldlouguan/texture_1");
+	      ItemSlashBlade.TextureName.set(tag, "named/oldlouguan/texture_2");
 	      ItemSlashBlade.ModelName.set(tag, "named/agito");
 	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(264));
 	      BladeLoader.registerCustomItemStack(name, customblade);
@@ -45,7 +45,7 @@ public class ItemSlashblade_Louguan_old {
 	      ItemStack louguan = BladeLoader.findItemStack(Last_worker.MODID, name, 1);
 	      ItemStack itemSphereBladeSoul = SlashBlade.findItemStack("flammpfeil.slashblade", "sphere_bladesoul", 1);
 	      ItemStack ingot = SlashBlade.findItemStack("flammpfeil.slashblade", "ingot_bladesoul", 1);
-	      SlashBlade.addRecipe(name, new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid,name),customblade, custombladeReqired, new Object[]{"ADA", "DBD", "ADA", Character.valueOf('A'),ingot, Character.valueOf('B'), custombladeReqired, Character.valueOf('D'), new ItemStack(ItemLoader.sakura)}));
+	      SlashBlade.addRecipe(name, new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid,name),customblade, custombladeReqired, new Object[]{"ADA", "DBD", "ADA", Character.valueOf('A'),itemSphereBladeSoul, Character.valueOf('B'), custombladeReqired, Character.valueOf('D'), new ItemStack(ItemLoader.sakura_full)}));
 	   }
 
 }

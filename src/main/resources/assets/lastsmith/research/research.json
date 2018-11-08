@@ -167,7 +167,19 @@
       {
          "key" : "NAMEDBALDE",
          "name" : "research.NAMEDBALDE.title",
-         "icons" : [ "flammpfeil.slashblade:slashblade" ],
+         "icons" : [
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/muramasa/muramasa\",TextureName: \"named/muramasa/muramasa\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/muramasa/muramasa\",TextureName: \"named/muramasa/doutanuki\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/agito\",TextureName: \"named/agito_false\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/agito\",TextureName: \"named/agito_true\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/agito\",TextureName: \"named/orotiagito\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/agito\",TextureName: \"named/a_tukumo\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/yamato\",TextureName: \"named/yamato\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{TextureName: \"named/tagayasan\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{TextureName: \"BambooKatana\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/sange/sange\",TextureName: \"named/sange/black\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/sange/sange\",TextureName: \"named/sange/white\"}"
+         ],
          "category" : "KATANA",
          "meta" : [ "SPIKY" ],
          "location" : [ 0, 6 ],
@@ -191,8 +203,209 @@
                   "flammpfeil.slashblade:muramasa",
                   "flammpfeil.slashblade:recipex",
                   "flammpfeil.slashblade:recipexx",
-                  "flammpfeil.slashblade:doutanuki"
+                  "flammpfeil.slashblade:doutanuki",
+                  "flammpfeil.slashblade:wrap.BambooMod.katana_fake",
+                  "flammpfeil.slashblade:wrap.BambooMod.katana_tls",
+                  "flammpfeil.slashblade:flammpfeil.slashblade.named.fox.black",
+                  "flammpfeil.slashblade:flammpfeil.slashblade.named.fox.white"
                ]
+            }
+         ]
+      },
+      {
+         "key" : "SAKURABALDE",
+         "name" : "research.SAKURABALDE.title",
+         "icons" : [
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/sakuya/work\",TextureName: \"named/sakuya/texture\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/sakuya/work\",TextureName: \"named/sakuya/texture_1\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/sakuya/work\",TextureName: \"named/sakuya/texture_snow\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/famous/1\",TextureName: \"named/sakuya/texture_double\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/famous/1\",TextureName: \"named/sakuya/texture_xiuluo\"}"
+         ],
+         "category" : "KATANA",
+         "meta" : [ "SPIKY" ],
+         "location" : [ -2, -2 ],
+         "parents" : [ "UNNAMEDBLADE" ],
+         "stages" : [
+            {
+               "text" : "research.SAKURABALDE.text.stage.1",
+               "required_craft" : [ "lastsmith:UnnamedBlade" ],
+               "required_knowledge" : [ "THEORY;KATANA;5", "THEORY;BASICS;2" ]
+            },
+            {
+               "text" : "research.SAKURABALDE.text.stage.2",
+               "recipes" : [
+                  "flammpfeil.slashblade:flammpfeil.slashblade.named.sakuyablade",
+                  "flammpfeil.slashblade:flammpfeil.slashblade.named.ginkgoblade",
+                  "flammpfeil.slashblade:flammpfeil.slashblade.named.snowblade",
+                  "flammpfeil.slashblade:flammpfeil.slashblade.named.doubleblade",
+                  "flammpfeil.slashblade:flammpfeil.slashblade.named.shurablade"
+               ]
+            }
+         ]
+      },
+      {
+         "key" : "ROUKAN",
+         "name" : "research.ROUKAN.title",
+         "icons" : [
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/agito\",TextureName: \"named/oldlouguan/texture_1\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/agito\",TextureName: \"named/oldlouguan/texture_2\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/louguan/model\",TextureName: \"named/louguan/texture\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/louguan/model\",TextureName: \"named/louguan/texture_tx\"}"
+         ],
+         "category" : "KATANA",
+         "meta" : [ "SPIKY" ],
+         "location" : [ -1, -2 ],
+         "parents" : [ "UNNAMEDBLADE" ],
+         "stages" : [
+            {
+               "text" : "research.ROUKAN.text.stage.1",
+               "required_craft" : [ "lastsmith:UnnamedBlade" ],
+               "required_knowledge" : [ "THEORY;KATANA;5", "THEORY;BASICS;2" ]
+            },
+            {
+               "text" : "research.ROUKAN.text.stage.2",
+               "recipes" : [
+                  "flammpfeil.slashblade:flammpfeil.slashblade.named.louguan_fake",
+                  "flammpfeil.slashblade:flammpfeil.slashblade.named.louguan_old",
+                  "flammpfeil.slashblade:flammpfeil.slashblade.named.roukan",
+                  "flammpfeil.slashblade:flammpfeil.slashblade.named.louguan_tx"
+               ]
+            }
+         ]
+      },
+      {
+         "key" : "HAKUROU",
+         "name" : "research.HAKUROU.title",
+         "icons" : [
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/bailou/model\",TextureName: \"named/bailou/texture\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/bailou/model\",TextureName: \"named/bailou/texture_tx\"}"
+         ],
+         "category" : "KATANA",
+         "meta" : [ "SPIKY" ],
+         "location" : [ 0, -2 ],
+         "parents" : [ "UNNAMEDBLADE" ],
+         "stages" : [
+            {
+               "text" : "research.HAKUROU.text.stage.1",
+               "required_craft" : [ "lastsmith:UnnamedBlade" ],
+               "required_knowledge" : [ "THEORY;KATANA;5", "THEORY;BASICS;2" ]
+            },
+            {
+               "text" : "research.HAKUROU.text.stage.2",
+               "recipes" : [
+                  "flammpfeil.slashblade:flammpfeil.slashblade.named.bailou_fake",
+                  "flammpfeil.slashblade:flammpfeil.slashblade.named.bailou",
+                  "flammpfeil.slashblade:flammpfeil.slashblade.named.bailou_tx"
+               ]
+            }
+         ]
+      },
+      {
+         "key" : "OLDBLADES",
+         "name" : "research.OLDBLADES.title",
+         "icons" : [
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/sweapon/model\",TextureName: \"named/sweapon/texture\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/slashblade/1\",TextureName: \"named/slashblade/1\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/muramasa/muramasa\",TextureName: \"named/famous/5\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/muramasa/muramasa\",TextureName: \"named/famous/6\"}"
+         ],
+         "category" : "KATANA",
+         "meta" : [ "SPIKY" ],
+         "location" : [ 1, -2 ],
+         "parents" : [ "UNNAMEDBLADE" ],
+         "stages" : [
+            {
+               "text" : "research.OLDBLADES.text.stage.1",
+               "required_craft" : [ "lastsmith:UnnamedBlade" ],
+               "required_knowledge" : [ "THEORY;KATANA;5", "THEORY;BASICS;2" ]
+            },
+            {
+               "text" : "research.OLDBLADES.text.stage.2",
+               "recipes" : [
+                  "flammpfeil.slashblade:flammpfeil.slashblade.named.slashblade_old",
+                  "flammpfeil.slashblade:flammpfeil.slashblade.named.sweapon",
+                  "flammpfeil.slashblade:flammpfeil.slashblade.named.template_re_fake",
+                  "flammpfeil.slashblade:flammpfeil.slashblade.named.template_re",
+                  "flammpfeil.slashblade:flammpfeil.slashblade.named.template_re2_fake",
+                  "flammpfeil.slashblade:flammpfeil.slashblade.named.template_re2"
+               ]
+            }
+         ]
+      },
+      {
+         "key" : "OTHERSBLADE",
+         "name" : "research.OTHERSBLADE.title",
+         "icons" : [
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/eievui/model\",TextureName: \"named/eievui/texture\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/sagequoia/model\",TextureName: \"named/sagequoia/texture\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/Kogawa/model\",TextureName: \"named/Kogawa/texture_normal\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/Kogawa/model\",TextureName: \"named/Kogawa/texture_rare\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/Kogawa/model\",TextureName: \"named/Kogawa/texture_super\"}"
+         ],
+         "category" : "KATANA",
+         "meta" : [ "SPIKY" ],
+         "location" : [ 2, -2 ],
+         "parents" : [ "UNNAMEDBLADE" ],
+         "stages" : [
+            {
+               "text" : "research.OLDBLADES.text.stage.1",
+               "required_craft" : [ "lastsmith:UnnamedBlade" ],
+               "required_knowledge" : [ "THEORY;KATANA;5", "THEORY;BASICS;2" ]
+            },
+            {
+               "text" : "research.OLDBLADES.text.stage.2",
+               "recipes" : [
+                  "flammpfeil.slashblade:flammpfeil.slashblade.named.eievui",
+                  "flammpfeil.slashblade:flammpfeil.slashblade.named.sagequoia",
+                  "flammpfeil.slashblade:flammpfeil.slashblade.named.kogawa_normal",
+                  "flammpfeil.slashblade:flammpfeil.slashblade.named.kogawa_rare",
+                  "flammpfeil.slashblade:flammpfeil.slashblade.named.kogawa_super"
+               ]
+            }
+         ]
+      },
+      {
+         "key" : "ROUKANSENPUUZIN",
+         "name" : "research.ROUKANSENPUUZIN.title",
+         "icons" : [
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/louguan/model\",TextureName: \"named/louguan/texture_xf\"}"
+         ],
+         "category" : "KATANA",
+         "meta" : [ "SPIKY" ],
+         "location" : [ -1, -4 ],
+         "parents" : [ "UNNAMEDBLADE" ],
+         "stages" : [
+            {
+               "text" : "research.ROUKANSENPUUZIN.text.stage.1",
+               "required_knowledge" : [ "THEORY;KATANA;7", "THEORY;BASICS;2", "THEORY;INFUSION;1" ],
+               "required_research" : [ "ROUKAN", "ELEMENTALTOOLS" ]
+            },
+            {
+               "text" : "research.ROUKANSENPUUZIN.text.stage.2",
+               "recipes" : [ "flammpfeil.slashblade:flammpfeil.slashblade.named.roukan_xf_fake" ]
+            }
+         ]
+      },
+      {
+         "key" : "HAKUROUSENPUUZIN",
+         "name" : "research.HAKUROUSENPUUZIN.title",
+         "icons" : [
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/bailou/model\",TextureName: \"named/bailou/texture_xf\"}"
+         ],
+         "category" : "KATANA",
+         "meta" : [ "SPIKY" ],
+         "location" : [ 0, -4 ],
+         "parents" : [ "UNNAMEDBLADE" ],
+         "stages" : [
+            {
+               "text" : "research.HAKUROUSENPUUZIN.text.stage.1",
+               "required_research" : [ "HAKUROU", "ELEMENTALTOOLS" ],
+               "required_knowledge" : [ "THEORY;KATANA;7", "THEORY;BASICS;2", "THEORY;INFUSION;1" ]
+            },
+            {
+               "text" : "research.HAKUROUSENPUUZIN.text.stage.2",
+               "recipes" : [ "flammpfeil.slashblade:flammpfeil.slashblade.named.bailou_xf_fake" ]
             }
          ]
       }

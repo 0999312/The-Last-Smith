@@ -48,7 +48,7 @@ public class ItemSlashblade_SilverBambooLight_blood {
 	      ItemStack louguan = BladeLoader.findItemStack(Last_worker.MODID, name, 1);
 	      ItemStack itemSphereBladeSoul = SlashBlade.findItemStack("flammpfeil.slashblade", "sphere_bladesoul", 1);
 	      ItemStack ingot = SlashBlade.findItemStack("flammpfeil.slashblade", "ingot_bladesoul", 1);
-	      SlashBlade.addRecipe(name, new RecipeAwakeBlade((new ResourceLocation(SlashBlade.modid,name)),louguan, custombladeReqired, new Object[]{"DAD", "ABA", "DAD", Character.valueOf('A'), ingot, Character.valueOf('B'), custombladeReqired, Character.valueOf('D'), new ItemStack(Blocks.NETHER_BRICK)}));
+	      SlashBlade.addRecipe(name, new RecipeAwakeBlade((new ResourceLocation(SlashBlade.modid,name)),louguan, custombladeReqired, new Object[]{"DAD", "ABA", "DAD", Character.valueOf('A'), "ingotSakura", Character.valueOf('B'), custombladeReqired, Character.valueOf('D'), new ItemStack(Blocks.NETHER_BRICK)}));
 	      NamedBladeManager.registerBladeSoul(tag, "silverbamboolight_blood");
 	   
 	   }

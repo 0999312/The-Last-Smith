@@ -21,10 +21,13 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.OreDictionary;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.crafting.InfusionRecipe;
+import thaumcraft.api.items.ItemsTC;
+import thaumcraft.common.config.ConfigItems;
 
 public class ItemSlashblade_Louguan_xf {
 	   @SubscribeEvent
@@ -48,14 +51,29 @@ public class ItemSlashblade_Louguan_xf {
 	      customblade.addEnchantment(Enchantments.SHARPNESS, 7);
 	      customblade.addEnchantment(Enchantments.PUNCH, 5);
 
-			ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(name), new InfusionRecipe("BASEINFUSION", BladeLoader.findItemStack(Last_worker.MODID,name,1), 1, new AspectList()
-		    	      .add(Aspect.ENERGY, 30).add(Aspect.SOUL, 30).add(Aspect.AVERSION,30), SlashBlade.findItemStack(SlashBlade.modid,"slashbladeNamed",1), 
+	      ItemStack blade=BladeLoader.findItemStack(Last_worker.MODID,name2,1);
+	      blade.setItemDamage(OreDictionary.WILDCARD_VALUE);
+			ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(SlashBlade.modid,name), new InfusionRecipe("BASEINFUSION",BladeLoader.findItemStack(Last_worker.MODID,name,1), 1, new AspectList()
+		    	      .add(Aspect.ENERGY, 30).add(Aspect.SOUL, 30).add(Aspect.AVERSION,30),blade, 
 		    	      new Object[] {
 		    	    		  SlashBlade.findItemStack("flammpfeil.slashblade", SlashBlade.ProudSoulStr, 1)
 		    	    		 ,SlashBlade.findItemStack("flammpfeil.slashblade", SlashBlade.ProudSoulStr, 1)
 		    	    		 ,SlashBlade.findItemStack("flammpfeil.slashblade", SlashBlade.IngotBladeSoulStr, 1)
 		    	    		 ,SlashBlade.findItemStack("flammpfeil.slashblade", SlashBlade.IngotBladeSoulStr, 1)
-		    	    		 ,BladeLoader.findItemStack(Last_worker.MODID,name2,1) }
+		    	    		 , new ItemStack(ItemsTC.nuggets, 1, 10)
+		    	    		 , ConfigItems.AIR_CRYSTAL
+		    	    		 }
+			));
+			ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(SlashBlade.modid,name+"_fake"), new InfusionRecipe("BASEINFUSION", BladeLoader.findItemStack(Last_worker.MODID,name,1), 1, new AspectList()
+		    	      .add(Aspect.ENERGY, 30).add(Aspect.SOUL, 30).add(Aspect.AVERSION,30),BladeLoader.findItemStack(Last_worker.MODID,name2,1), 
+		    	      new Object[] {
+		    	    		  SlashBlade.findItemStack("flammpfeil.slashblade", SlashBlade.ProudSoulStr, 1)
+		    	    		 ,SlashBlade.findItemStack("flammpfeil.slashblade", SlashBlade.ProudSoulStr, 1)
+		    	    		 ,SlashBlade.findItemStack("flammpfeil.slashblade", SlashBlade.IngotBladeSoulStr, 1)
+		    	    		 ,SlashBlade.findItemStack("flammpfeil.slashblade", SlashBlade.IngotBladeSoulStr, 1)
+		    	    		 , new ItemStack(ItemsTC.nuggets, 1, 10)
+		    	    		 , ConfigItems.AIR_CRYSTAL
+		    	    		 }
 			));
 
 	   }
