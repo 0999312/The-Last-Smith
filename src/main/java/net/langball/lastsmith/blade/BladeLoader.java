@@ -39,6 +39,7 @@ import net.langball.lastsmith.blade.smith.*;
 import net.langball.lastsmith.eusaber.*;
 import net.langball.lastsmith.items.*;
 import net.langball.lastsmith.louguan.blade.*;
+import net.langball.lastsmith.recipe.FakeRecipeLoader;
 import net.langball.lastsmith.sa.EntitySA;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
@@ -165,6 +166,7 @@ public BladeLoader(FMLPreInitializationEvent event){
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_Bailou());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_Louguan_tx());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_Bailou_tx());
+		 SlashBlade.InitEventBus.register(new FakeRecipeLoader());
 	if(Loader.isModLoaded(Thaumcraft.MODID)){
 		windBlade = (new ItemSlashBladeWind(ToolMaterial.IRON, 4.0F)).setRegistryName("WindBlade");
 		    	 ForgeRegistries.ITEMS.register(windBlade);
