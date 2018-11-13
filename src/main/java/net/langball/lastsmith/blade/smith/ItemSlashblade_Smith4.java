@@ -43,14 +43,12 @@ public class ItemSlashblade_Smith4 {
 	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(267));
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);
-	      customblade.addEnchantment(Enchantments.POWER, 10);
+	      customblade.addEnchantment(Enchantments.POWER, 8);
 	      customblade.addEnchantment(Enchantments.UNBREAKING, 5);
-	      customblade.addEnchantment(Enchantments.SHARPNESS, 18);
+	      customblade.addEnchantment(Enchantments.SHARPNESS,15);
 	      customblade.addEnchantment(Enchantments.FIRE_ASPECT, 2);
-	      customblade.addEnchantment(Enchantments.SMITE, 12);
+	      customblade.addEnchantment(Enchantments.SMITE, 6);
 	      customblade.addEnchantment(Enchantments.THORNS, 2);
-	      customblade.addEnchantment(Enchantments.KNOCKBACK, 3);
-	      customblade.addEnchantment(Enchantments.LOOTING, 2);
 	      ItemStack reqiredMain = BladeLoader.getCustomBlade("flammpfeil.slashblade.named.louguan_tx");
 	      ItemStack reqiredSub = BladeLoader.getCustomBlade("flammpfeil.slashblade.named.silverbamboolight_blood");
 	      ItemStack sb = BladeLoader.getCustomBlade(name2);

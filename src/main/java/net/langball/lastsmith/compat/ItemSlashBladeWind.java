@@ -1,4 +1,4 @@
-package net.langball.lastsmith.addon;
+package net.langball.lastsmith.compat;
 
 import java.util.EnumSet;
 import java.util.List;

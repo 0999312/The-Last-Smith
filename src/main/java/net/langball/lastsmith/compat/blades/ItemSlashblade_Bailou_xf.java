@@ -1,4 +1,4 @@
-package net.langball.lastsmith.louguan.blade;
+package net.langball.lastsmith.compat.blades;
 
 import mods.flammpfeil.slashblade.RecipeAwakeBlade;
 import mods.flammpfeil.slashblade.SlashBlade;
@@ -28,6 +28,7 @@ import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.crafting.InfusionRecipe;
 import thaumcraft.api.items.ItemsTC;
 import thaumcraft.common.config.ConfigItems;
+import thaumcraft.common.lib.enchantment.EnumInfusionEnchantment;
 
 public class ItemSlashblade_Bailou_xf {
 
@@ -47,10 +48,9 @@ public class ItemSlashblade_Bailou_xf {
 	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(270));
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);
-	      customblade.addEnchantment(Enchantments.POWER, 4);
-	      customblade.addEnchantment(Enchantments.SMITE, 12);
-	      customblade.addEnchantment(Enchantments.PUNCH, 5);
-	      
+	      customblade.addEnchantment(Enchantments.POWER, 2);
+	      customblade.addEnchantment(Enchantments.SMITE,7);
+	      EnumInfusionEnchantment.addInfusionEnchantment(customblade, EnumInfusionEnchantment.ARCING, 3);
 	      ItemStack blade=BladeLoader.findItemStack(Last_worker.MODID,name1,1);
 	      NBTTagCompound reqTag = ItemSlashBlade.getItemTagCompound(blade);
 	      ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(2500));

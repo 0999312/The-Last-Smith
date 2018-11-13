@@ -1,4 +1,4 @@
-package net.langball.lastsmith.addon;
+package net.langball.lastsmith.compat;
 
 import java.util.List;
 
@@ -18,13 +18,13 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import thaumcraft.api.items.IWarpingGear;
 
-public class ItemSlashBladeVoid extends ItemSlashBladeNamedSS implements IWarpingGear{
+public class ItemSlashBladeCrimson extends ItemSlashBladeNamedSS implements IWarpingGear{
 
-	public ItemSlashBladeVoid(ToolMaterial par2EnumToolMaterial, float baseAttackModifiers) {
+	public ItemSlashBladeCrimson(ToolMaterial par2EnumToolMaterial, float baseAttackModifiers) {
 		super(par2EnumToolMaterial, baseAttackModifiers);
 		// TODO Auto-generated constructor stub
 	}
-	 public void onUpdate(ItemStack stack, World world, Entity entity, int p_77663_4_, boolean p_77663_5_)
+	public void onUpdate(ItemStack stack, World world, Entity entity, int p_77663_4_, boolean p_77663_5_)
 	  {
 	    super.onUpdate(stack, world, entity, p_77663_4_, p_77663_5_);
 	    if ((stack.isItemDamaged()) && (entity != null) && (entity.ticksExisted % 20 == 0) && ((entity instanceof EntityLivingBase))) {
@@ -39,6 +39,7 @@ public class ItemSlashBladeVoid extends ItemSlashBladeNamedSS implements IWarpin
 	      try
 	      {
 	        target.addPotionEffect(new PotionEffect(MobEffects.WEAKNESS, 60));
+	        target.addPotionEffect(new PotionEffect(MobEffects.HUNGER, 120));
 	      }
 	      catch (Exception localException) {}
 	    }
@@ -47,13 +48,13 @@ public class ItemSlashBladeVoid extends ItemSlashBladeNamedSS implements IWarpin
 	  
 	  public int getWarp(ItemStack itemstack, EntityPlayer player)
 	  {
-	    return 1;
+	    return 2;
 	  }
-	@Override
-	public void addInformation(ItemStack arg0, World arg1, List arg2, ITooltipFlag arg3) {
-		arg2.add(TextFormatting.GOLD + I18n.translateToLocal("enchantment.special.sapless"));
-		super.addInformation(arg0, arg1, arg2, arg3);
-	}
 	  
-
+	  @SideOnly(Side.CLIENT)
+	  public void addInformation(ItemStack stack, World worldIn, List tooltip, ITooltipFlag flagIn)
+	  {
+	    tooltip.add(TextFormatting.GOLD + I18n.translateToLocal("enchantment.special.sapgreat"));
+	    super.addInformation(stack, worldIn, tooltip, flagIn);
+	  }
 }

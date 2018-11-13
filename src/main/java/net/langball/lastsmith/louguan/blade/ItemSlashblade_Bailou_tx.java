@@ -39,13 +39,14 @@ public class ItemSlashblade_Bailou_tx {
 	      BladeLoader.registerCustomItemStack(nameTx1, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add("flammpfeil.slashblade:" + nameTx1);
 	      customblade.addEnchantment(Enchantments.POWER, 4);
-	      customblade.addEnchantment(Enchantments.SMITE, 12);
+	      customblade.addEnchantment(Enchantments.SMITE,9);
 	      customblade.addEnchantment(Enchantments.FIRE_ASPECT, 1);
 	      customblade.addEnchantment(Enchantments.THORNS, 1);
+
 	      ItemStack custombladeReqired = BladeLoader.findItemStack(Last_worker.MODID,name,1);
 	      NBTTagCompound reqTag = ItemSlashBlade.getItemTagCompound(custombladeReqired);
 	      ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(4000));
-	      ItemSlashBlade.ProudSoul.set(reqTag, Integer.valueOf(20000));
+	      ItemSlashBlade.ProudSoul.set(reqTag, Integer.valueOf(50000));
 	      ItemSlashBlade.RepairCount.set(reqTag, Integer.valueOf(5));
 	      ItemStack louguan = BladeLoader.findItemStack(Last_worker.MODID, nameTx1, 1);
 	      ItemStack itemSphereBladeSoul = SlashBlade.findItemStack("flammpfeil.slashblade", "sphere_bladesoul", 1);

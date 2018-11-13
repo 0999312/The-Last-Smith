@@ -1,4 +1,4 @@
-package net.langball.lastsmith.addon;
+package net.langball.lastsmith.compat;
 
 import mods.flammpfeil.slashblade.RecipeAwakeBlade;
 import mods.flammpfeil.slashblade.SlashBlade;

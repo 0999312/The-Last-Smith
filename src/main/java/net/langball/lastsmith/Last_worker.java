@@ -8,7 +8,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid=Last_worker.MODID, name=Last_worker.NAME, version=Last_worker.VERSION, dependencies="required-after:flammpfeil.slashblade@[mc1.12-r15,);required-after:patchouli;")
+@Mod(modid=Last_worker.MODID, name=Last_worker.NAME, version=Last_worker.VERSION, dependencies="required-after:flammpfeil.slashblade@[mc1.12-r15,);after:patchouli;")
 public class Last_worker {
 	public static final String MODID = "lastsmith";
     public static final String NAME = "The Last Smith";

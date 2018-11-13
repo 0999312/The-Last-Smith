@@ -1,4 +1,4 @@
-package net.langball.lastsmith.addon;
+package net.langball.lastsmith.compat;
 
 import mods.flammpfeil.slashblade.entity.EntityBladeStand;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;

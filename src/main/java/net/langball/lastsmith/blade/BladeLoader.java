@@ -13,14 +13,12 @@ import mods.flammpfeil.slashblade.util.ResourceLocationRaw;
 import mods.flammpfeil.slashblade.util.SlashBladeHooks;
 import net.langball.lastsmith.CommonProxy;
 import net.langball.lastsmith.Last_worker;
-import net.langball.lastsmith.addon.*;
 import net.langball.lastsmith.blade.*;
 import net.langball.lastsmith.blade.arthurs.*;
 import net.langball.lastsmith.blade.famous.*;
 import net.langball.lastsmith.blade.others.ItemSlashblade_BambooLight_nice;
 import net.langball.lastsmith.blade.others.ItemSlashblade_BambooLight_yin;
 import net.langball.lastsmith.blade.others.ItemSlashblade_Eievui;
-import net.langball.lastsmith.blade.others.ItemSlashblade_Scorn;
 import net.langball.lastsmith.blade.others.ItemSlashblade_SilverBambooLight_blood;
 import net.langball.lastsmith.blade.others.ItemSlashblade_SilverBambooLight_gold;
 import net.langball.lastsmith.blade.others.ItemSlashblade_SilverBambooLight_nice;
@@ -37,6 +35,13 @@ import net.langball.lastsmith.blade.others.ItemSlashblade_sakuya3;
 import net.langball.lastsmith.blade.others.ItemSlashblade_sakuya4;
 import net.langball.lastsmith.blade.others.ItemSlashblade_sakuya5;
 import net.langball.lastsmith.blade.smith.*;
+import net.langball.lastsmith.compat.*;
+import net.langball.lastsmith.compat.blades.ItemSlashblade_Bailou_xf;
+import net.langball.lastsmith.compat.blades.ItemSlashblade_Louguan_xf;
+import net.langball.lastsmith.compat.blades.ItemSlashblade_Scorn;
+import net.langball.lastsmith.compat.blades.ItemSlashblade_Scorn_2;
+import net.langball.lastsmith.compat.blades.ItemSlashblade_Scorn_3;
+import net.langball.lastsmith.compat.blades.ItemSlashblade_Scorn_4;
 import net.langball.lastsmith.eusaber.*;
 import net.langball.lastsmith.items.*;
 import net.langball.lastsmith.louguan.blade.*;
@@ -223,6 +228,10 @@ public BladeLoader(FMLPreInitializationEvent event){
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_kogawa());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_kogawa2());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_kogawa3());
+		 
+		 SlashBlade.InitEventBus.register(new ItemSlashblade_Scorn_2());
+		 SlashBlade.InitEventBus.register(new ItemSlashblade_Scorn_3());
+		 SlashBlade.InitEventBus.register(new ItemSlashblade_Scorn_4());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_Scorn());
 }
 }

@@ -40,7 +40,7 @@ public class ItemSlashblade_Bailou {
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);
 	      customblade.addEnchantment(Enchantments.POWER, 2);
-	      customblade.addEnchantment(Enchantments.SMITE, 8);
+	      customblade.addEnchantment(Enchantments.SMITE, 7);
 	      ItemStack custombladeReqired = BladeLoader.findItemStack(Last_worker.MODID, name1, 1);
 	      NBTTagCompound reqTag = ItemSlashBlade.getItemTagCompound(custombladeReqired);
 	      ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(500));

@@ -51,6 +51,11 @@ item.flammpfeil.slashblade.named.kogawa_rare.name=Rare-Blade-
 item.flammpfeil.slashblade.named.kogawa_super.name=Super-Blade-
 item.flammpfeil.slashblade.named.acid.name=Tartaric Acid's Balde
 
+item.flammpfeil.slashblade.named.Scorn.seald.name=Heirloom-Dead-
+item.flammpfeil.slashblade.named.Scorn.fake.name=Fake-Dead-
+item.flammpfeil.slashblade.named.Scorn.rust.name=Fake-Dead-
+item.flammpfeil.slashblade.named.Scorn.name=-Requiem-
+
 flammpfeil.swaepon.info.fake=Fake
 item.flammpfeil.slashblade.named.void_blade.name=Nameless-Void-
 
@@ -106,6 +111,7 @@ item.wrap.BambooMod.katana_tls.name=Ruby -nameless-
 
 itemGroup.lastsmith=The Last Smith
 
+tc.research_category.KATANA=BladeArt
 research.FIRSTBLADE.title=Fisrt Blade
 research.WOODENBLADE.title=Anonymity-Wood-
 research.BLADES.title=Different Blades
@@ -146,27 +152,26 @@ research.UNNAMEDBLADE.text.stage.1=I tried to make a new blade, and I started wi
 research.UNNAMEDBLADE.text.stage.2=This white sheath, the quality of the blade is not good. <BR> It's broken easily, so I need to replace it with a new one. <BR> Wait, I may be able to change some small things......
 research.UNNAMEDBLADE.text.stage.3=Done, the best quality of blade and best sheath that I have.<BR>Noted-Origin-, the beginning of these stories......
 
-research.NAMEDBALDE.text.stage.1=(WIP)
-research.NAMEDBALDE.text.stage.2=(WIP)
+research.NAMEDBALDE.text.stage.1=Some Heirloom Blade is frequent characters in stories or biographies.<BR>The available information does not fully prove their existence.
+research.NAMEDBALDE.text.stage.2=The existence of these Blades has been confirmed and all the recipes of blades have been recorded.
 
-research.SAKURABALDE.text.stage.1=(WIP)
-research.SAKURABALDE.text.stage.2=(WIP)
+research.SAKURABALDE.text.stage.1=There were two families that were simultaneously destroyed in a war. . . . . .<BR>But they still kept the five blades down, and the most famous is Sakura Blade.<BR>However, the available information does not fully prove their existence.
+research.SAKURABALDE.text.stage.2="Sakura Blade" -- Secret sword to purge all evil.<BR>There were entire families who kept the sword in secret, passing it on to their offspring with each generation.<BR>In fact, the war of two families cause their extinct. And not only Sakura Blade, the other four blades have similar abilities.Even though they protect the blade, they can’t save their everything at last.
 
-research.ROUKAN.text.stage.1=(WIP)
-research.ROUKAN.text.stage.2=(WIP)
+research.ROUKAN.text.stage.1=Roukanken, the Bewitched Blade that can slash everything.<BR>It is worth mentioning that there are actually many blades on the market that are hanging this brand are fakes. And no one really know where the true is.
+research.ROUKAN.text.stage.2=In fake blades, more successful will be called kanrouken.<BR>The Roukanken, is in Court division of Saigyouji family.<BR>It’s very costly to make such a weapon.<BR>Although we have the ability to create an almost identical blade, there is no way to get the one in her hand.
 
+research.HAKUROU.text.stage.1=Konpaku family's blade,Hakurouken.<BR>As the guard of Saigyouji, this blade's usage is not to kill lifes.<BR>Even so, we don't know the rest of the blade.
+research.HAKUROU.text.stage.2=This blade has no sharp edge but can cut someone's confuse. And for ghost, they will "dead" after been slashed.<BR>We don't know why Saigyouji family's Missy not, maybe she has no confusion at all. . . . . .
 
-research.HAKUROU.text.stage.1=(WIP)
-research.HAKUROU.text.stage.2=(WIP)
+research.OTHERSBLADE.text.stage.1=There are some scattered blades, have no potential in it.<BR>But the available information does not fully prove their existence.
+research.OTHERSBLADE.text.stage.2=These scattered blades, have no potential in it. But easier to get them.<BR>For ordinary people who are not capable of building powerful weapons, this will be their first choice.
 
-research.OTHERSBLADE.text.stage.1=(WIP)
-research.OTHERSBLADE.text.stage.2=(WIP)
+research.ROUKANSENPUUZIN.text.stage.1=When you study the element tools, you think of some strange ideas.<BR>If a SlashBlade is given the power of the element, what would it be like?
+research.ROUKANSENPUUZIN.text.stage.2=This blade, is a element tool based on Roukanken.<BR>Obviously, it's has ability like Sword of zephyr, but more powerful.
 
-research.ROUKANSENPUUZIN.text.stage.1=(WIP)
-research.ROUKANSENPUUZIN.text.stage.2=(WIP)
-
-research.HAKUROUSENPUUZIN.text.stage.1=(WIP)
-research.HAKUROUSENPUUZIN.text.stage.2=(WIP)
+research.HAKUROUSENPUUZIN.text.stage.1=When you study the element tools, you think of some strange ideas.<BR>If a SlashBlade is given the power of the element, what would it be like?
+research.HAKUROUSENPUUZIN.text.stage.2=This blade, is a element tool based on Hakurouken.<BR>Obviously, it's has ability like Sword of zephyr, but more powerful.
 
 guide.smith_guide.title=Smithes' Guide
-guide.smith_guide.landing_text=Welcome to Smithes' Guide.
+guide.smith_guide.landing_text=Welcome to Smithes' Guide. This is still WIP book because we are planing for the whole story.
