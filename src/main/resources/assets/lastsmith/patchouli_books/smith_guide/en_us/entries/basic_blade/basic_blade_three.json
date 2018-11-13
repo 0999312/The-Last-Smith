@@ -1,0 +1,27 @@
+{
+   "name" : "Different Blades",
+   "icon" : "lastsmith:blade_3",
+   "category" : "basic_blade",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "When you want a nice SlashBlade,you have to make steel blade for next step.$(br)You always need at least one BladeSoulIngot for your blade, and quality will be determined by your materials. Quality will determine the durability of Sharpness-White-"
+      },
+      {
+         "type" : "crafting",
+         "recipe" : "lastsmith:blade_unfinished",
+         "recipe2" : "lastsmith:blade"
+      },
+      {
+         "type" : "crafting",
+         "recipe" : "lastsmith:blade_2_unfinished",
+         "recipe2" : "lastsmith:blade_2"
+      },
+      {
+         "type" : "crafting",
+         "recipe" : "lastsmith:blade_3_unfinished",
+         "recipe2" : "lastsmith:blade_3"
+      }
+   ],
+   "sortnum" : "2"
+}

@@ -38,7 +38,6 @@ public class ItemSlashblade_2 {
 	      ItemSlashBlade.StandbyRenderType.set(tag, Integer.valueOf(2));
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);
-	      customblade.addEnchantment(Enchantments.POWER, 5);
 	      ItemStack custombladeReqired = BladeLoader.findItemStack(Last_worker.MODID, "flammpfeil.slashblade.named.nanosaber", 1);
 	      NBTTagCompound reqTag = ItemSlashBlade.getItemTagCompound(custombladeReqired);
 	      ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(1000));

@@ -1,0 +1,16 @@
+{
+   "name" : "Anonymity-Wood-",
+   "icon" : "flammpfeil.slashblade:slashbladeWood",
+   "category" : "basic_blade",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "Anonymity-Wood- is the easiest SlashBlade that you can get. It is not as powerful as you think. "
+      },
+      {
+         "type" : "crafting",
+         "recipe" : "flammpfeil.slashblade:recipexes"
+      }
+   ],
+   "sortnum" : "1"
+}

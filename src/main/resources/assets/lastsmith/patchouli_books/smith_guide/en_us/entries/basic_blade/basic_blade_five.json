@@ -1,0 +1,17 @@
+{
+   "name" : "Noted-Origin-",
+   "icon" : "lastsmith:UnnamedBlade",
+   "category" : "basic_blade",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "This is The Last Smith's first SlashBlade you will have.$(br)In this addon, your blades that from TLS will noted your username when you crafted it.$(br)You need it to make more powerful blade."
+      },
+      {
+         "type" : "crafting",
+         "recipe" : "lastsmith:blade_3",
+         "recipe2" : "lastsmith:lastsmith.UnnamedBlade"
+      }
+   ],
+   "sortnum" : "4"
+}

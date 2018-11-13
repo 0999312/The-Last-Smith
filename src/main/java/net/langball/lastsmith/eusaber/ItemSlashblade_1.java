@@ -37,7 +37,6 @@ public class ItemSlashblade_1 {
 	      ItemSlashBlade.StandbyRenderType.set(tag, Integer.valueOf(2));
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);
-	      customblade.addEnchantment(Enchantments.POWER, 2);
 	      ItemStack custombladeReqired = new ItemStack(BladeLoader.blade);
 	      NBTTagCompound reqTag = ItemSlashBlade.getItemTagCompound(custombladeReqired);
 	      ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(100));

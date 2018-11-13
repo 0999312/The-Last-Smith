@@ -2,7 +2,7 @@ version:1343
 invertYMouse:false
 mouseSensitivity:0.5
 fov:0.0
-gamma:0.0
+gamma:1.0
 saturation:0.0
 renderDistance:12
 guiScale:0
@@ -18,7 +18,7 @@ renderClouds:true
 resourcePacks:[]
 incompatibleResourcePacks:[]
 lastServer:
-lang:zh_cn
+lang:en_us
 chatVisibility:0
 chatColors:true
 chatLinks:true

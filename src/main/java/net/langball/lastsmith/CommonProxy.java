@@ -25,6 +25,7 @@ import net.langball.lastsmith.louguan.blade.*;
 import net.langball.lastsmith.recipe.RecipeLoader;
 import net.langball.lastsmith.sa.EntitySA;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.EntitySkeleton;
 import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.entity.passive.EntityVillager.ITradeList;
@@ -43,6 +44,7 @@ import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.EntityEntry;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -82,6 +84,7 @@ public class CommonProxy {
     		 ThaumcraftApi.registerResearchLocation(new ResourceLocation(Last_worker.MODID+":research/research.json"));
         	 ResearchCategories.registerCategory("KATANA", null, new AspectList().add(Aspect.SOUL, 1), new ResourceLocation(Last_worker.MODID+":textures/research/yamatooo.png"), new ResourceLocation(Last_worker.MODID+":textures/research/guislashblade.jpg"));
     	}
+
     }
 
     public void postInit(FMLPostInitializationEvent event)

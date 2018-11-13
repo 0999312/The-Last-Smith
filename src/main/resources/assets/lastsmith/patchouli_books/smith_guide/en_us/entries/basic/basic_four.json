@@ -1,0 +1,36 @@
+{
+   "name" : "ProudSoul",
+   "icon" : "flammpfeil.slashblade:proudsoul",
+   "category" : "basic",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "ProudSoul, it's a very mysterious substance that we can not fully understand. $(br) It can enchant your blade if has Enchantment. And it also can also be used as a special material, for crafting, fixing  by using anvil, and something we don't know."
+      },
+      {
+         "type" : "text",
+         "text" : "Another point, proudsoul can make oak fence change to blade stand. Just sneaking and right-click fence with proudsoul.$(br) Different proudsouls bring different styles"
+      },
+      {
+         "type" : "spotlight",
+         "text" : "To get ProudSoul, use your slashblade and when the blade break,you will get 1~9 proudsouls,depend on blade's Proudsoul number.",
+         "item" : "flammpfeil.slashblade:proudsoul"
+      },
+      {
+         "type" : "crafting",
+         "recipe" : "flammpfeil.slashblade:ps_soul2tiny",
+         "recipe2" : "flammpfeil.slashblade:ps_tiny2soul"
+      },
+      {
+         "type" : "crafting",
+         "recipe" : "flammpfeil.slashblade:ps_soul2ingot",
+         "recipe2" : "flammpfeil.slashblade:ps_tiny2ingot"
+      },
+      {
+         "type" : "smelting",
+         "recipe" : "flammpfeil.slashblade:proudsoul:1",
+         "text" : "How to get BladeSoulSphere"
+      }
+   ],
+   "sortnum" : "3"
+}

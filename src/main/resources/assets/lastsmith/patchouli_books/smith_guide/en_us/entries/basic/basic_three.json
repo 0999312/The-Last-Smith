@@ -1,0 +1,27 @@
+{
+   "name" : "Tamahagane",
+   "icon" : "lastsmith:tamahagane",
+   "category" : "basic",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "Tamahagane is a steelmaking material. It's not particularly expensive, but a little hard to get.\r\n $(br)First, try to make a blast furnace."
+      },
+      {
+         "type" : "crafting",
+         "recipe" : "lastsmith:blast",
+         "recipe2" : "lastsmith:crushed_iron"
+      },
+      {
+         "type" : "spotlight",
+         "text" : "To get tamahagane, you need Crushed Iron Ore, and put it in Blast furnace.$(br)Don't forget fuel, it's necessary.",
+         "item" : "lastsmith:tamahagane"
+      },
+      {
+         "type" : "crafting",
+         "recipe" : "lastsmith:steel_ingot",
+         "text" : "Now you get steel ingot, try to make your blade now."
+      }
+   ],
+   "sortnum" : "2"
+}

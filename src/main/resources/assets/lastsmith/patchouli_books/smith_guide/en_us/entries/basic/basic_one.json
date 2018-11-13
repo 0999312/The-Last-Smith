@@ -1,0 +1,17 @@
+{
+   "name" : "Hammer Time",
+   "icon" : "lastsmith:smith_hammer",
+   "category" : "basic",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "Smithes need tool to forge their blade.$(br)Hammer, it's a useful tool that unbreakable. You always need it, you know."
+      },
+      {
+         "type" : "crafting",
+         "text" : "How to make a hammer",
+         "recipe" : "lastsmith:hammer"
+      }
+   ],
+   "sortnum" : "0"
+}

@@ -1,0 +1,35 @@
+{
+   "name" : "Sakura",
+   "icon" : "lastsmith:sakura_full",
+   "category" : "basic",
+   "pages" : [
+      {
+         "type" : "text",
+         "text" : "Sakura, the flower of life, and hope.$(br)But, it also a good material for steel and blades. We don't know why, but know how.$(br)This will be a bit expensive, but it is also very worthwhile."
+      },
+      {
+         "type" : "spotlight",
+         "item" : "lastsmith:sakura",
+         "text" : "Killing mobs with lastsmith's named blade. Whether it is fake or not."
+      },
+      {
+         "type" : "crafting",
+         "recipe" : "lastsmith:sakura_full",
+         "recipe2" : "lastsmith:paper_arthurs"
+      },
+      {
+         "type" : "crafting",
+         "recipe" : "lastsmith:sakura_ingot_unfinished",
+         "recipe2" : "lastsmith:red_dye"
+      },
+      {
+         "type" : "smelting",
+         "recipe" : "lastsmith:sakura_ingot_unfinished"
+      },
+      {
+         "type" : "empty",
+         "draw_filler" : "false"
+      }
+   ],
+   "sortnum" : "1"
+}

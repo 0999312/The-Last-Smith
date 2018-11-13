@@ -9,6 +9,7 @@ item.flammpfeil.slashblade.named.template_re2.name=Sharpness-Red Plum-
 item.flammpfeil.slashblade.named.eievui.name=The balde of Eievui
 item.flammpfeil.slashblade.named.louguan_fake.name=Roukanken-Fake-
 item.flammpfeil.slashblade.named.bailou.name=Hakurouken
+item.flammpfeil.slashblade.named.bailou_fake.name=Fake-Hakurouken-
 item.flammpfeil.slashblade.named.roukan.name=Roukanken
 item.flammpfeil.slashblade.named.louguan_tx.name=Hell Realm Sword-Roukanken-
 item.flammpfeil.slashblade.named.bailou_tx.name=Hell Realm Sword-Hakurouken-
@@ -137,9 +138,9 @@ research.WHITESHEATH.text.stage.1=This, is my first one.<BR>Now that the wood bl
 research.WHITESHEATH.text.stage.2=I just need to remove the blade and replace it with a new one.
 research.WHITESHEATH.text.stage.3=And now, new blade completed.<BR>I am very proud, but I should also notice that I need more than that.<BR>I will always record the recipes first.
 
-research.SLASHBLADE.text.stage.1=There are rumors that the manufacture of the SlashBalde to be carried out with a broken white sheath.<BR>I think I can come and test it myself. Let me find a white sheath first.
+research.SLASHBLADE.text.stage.1=There are rumors that the manufacture of the SlashBlade to be carried out with a broken white sheath.<BR>I think I can come and test it myself. Let me find a white sheath first.
 research.SLASHBLADE.text.stage.2=According to the recipe provided by others, it is better to craft it.
-research.SLASHBLADE.text.stage.3=My experiment proved that the rumors are true.<BR>But even this is a very common saya for the SlashBalde, and I don't feel any special breath.<BR>I will always record the recipes first.
+research.SLASHBLADE.text.stage.3=My experiment proved that the rumors are true.<BR>But even this is a very common saya for the SlashBlade, and I don't feel any special breath.<BR>I will always record the recipes first.
 
 research.UNNAMEDBLADE.text.stage.1=I tried to make a new blade, and I started with a white sheath.
 research.UNNAMEDBLADE.text.stage.2=This white sheath, the quality of the blade is not good. <BR> It's broken easily, so I need to replace it with a new one. <BR> Wait, I may be able to change some small things......
@@ -166,3 +167,6 @@ research.ROUKANSENPUUZIN.text.stage.2=(WIP)
 
 research.HAKUROUSENPUUZIN.text.stage.1=(WIP)
 research.HAKUROUSENPUUZIN.text.stage.2=(WIP)
+
+guide.smith_guide.title=Smithes' Guide
+guide.smith_guide.landing_text=Welcome to Smithes' Guide.
