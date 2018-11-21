@@ -33,3 +33,6 @@ logs
 resourcepacks
 screenshots
 config
+world
+*.json
+*.txt
