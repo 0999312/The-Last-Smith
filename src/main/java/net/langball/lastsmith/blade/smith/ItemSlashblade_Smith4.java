@@ -11,7 +11,6 @@ import net.langball.lastsmith.CommonProxy;
 import net.langball.lastsmith.RecipeBx;
 import net.langball.lastsmith.blade.BladeLoader;
 import net.langball.lastsmith.blade.ItemSlashBladeNamedSS;
-import net.langball.lastsmith.sa.SAxianshizhan2;
 import net.langball.lastsmith.sa.Sakuya2;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.init.Blocks;
@@ -39,7 +38,7 @@ public class ItemSlashblade_Smith4 {
 	      ItemSlashBlade.setBaseAttackModifier(tag,18.0F);
 	      ItemSlashBladeNamedSS.IsDefaultBewitched.set(tag, Boolean.valueOf(true));
 	      ItemSlashBlade.TextureName.set(tag, "named/smith/smith_3");
-	      ItemSlashBlade.ModelName.set(tag, "named/agito");
+	      ItemSlashBlade.ModelName.set(tag, "named/smith/model");
 	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(267));
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);
@@ -66,6 +65,5 @@ public class ItemSlashblade_Smith4 {
 	      }
 	      IRecipe recipe = new RecipeBx(new ResourceLocation(SlashBlade.modid,name),customblade, reqiredMain, reqiredSub, new Object[] { "DDD", "ACB", "DDD", Character.valueOf('A'), reqiredMain, Character.valueOf('B'), reqiredSub, Character.valueOf('C'), sb, Character.valueOf('D'), new ItemStack(Blocks.DIAMOND_BLOCK) });	      
 	      SlashBlade.addRecipe(name, recipe);
-//	      AchievementListTHW.registerCraftingAchievement(name,15,7,customblade,AchievementListTHW.getAchievement(name2));
 	   }
 }

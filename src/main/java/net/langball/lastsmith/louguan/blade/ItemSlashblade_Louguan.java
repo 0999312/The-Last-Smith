@@ -11,7 +11,6 @@ import net.langball.lastsmith.Last_worker;
 import net.langball.lastsmith.blade.BladeLoader;
 import net.langball.lastsmith.blade.ItemSlashBladeNamedSS;
 import net.langball.lastsmith.items.ItemLoader;
-import net.langball.lastsmith.sa.SAxianshizhan;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Enchantments;
@@ -37,7 +36,7 @@ public class ItemSlashblade_Louguan {
 	      ItemSlashBladeNamedSS.IsDefaultBewitched.set(tag, Boolean.valueOf(true));
 	      ItemSlashBlade.TextureName.set(tag, "named/louguan/texture");
 	      ItemSlashBlade.ModelName.set(tag, "named/louguan/model");
-	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(271));
+	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(3));
 	      ItemSlashBlade.StandbyRenderType.set(tag, Integer.valueOf(3));
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);

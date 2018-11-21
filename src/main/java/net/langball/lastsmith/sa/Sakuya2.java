@@ -58,9 +58,9 @@ public class Sakuya2 extends SpecialAttackBase {
             ItemSlashBlade.setComboSequence(tag, ItemSlashBlade.ComboSequence.Battou);
 
         }else{
-        	final int cost = -20;
+        	final int cost = -30;
             if(!ItemSlashBlade.ProudSoul.tryAdd(tag,cost,false)){
-                ItemSlashBlade.damageItem(stack, 10, player);
+                ItemSlashBlade.damageItem(stack, 15, player);
             }
         if(!world.isRemote){
         	
@@ -77,10 +77,10 @@ public class Sakuya2 extends SpecialAttackBase {
                 world.spawnEntity(entityDrive);
             }
             }
-            for(int i = 0; i < 4;i++){
-                EntityDrive entityDrive = new EntityDrive(world, player, magicDamage,false,0);
+            for(int i = 0; i < 2;i++){
+                EntityDrive entityDrive = new EntityDrive(world, player, magicDamage-2F,false,0);
                 entityDrive.setInitialSpeed(2f);
-                entityDrive.setRoll(i*45);
+                entityDrive.setRoll(i*90);
                 if (entityDrive != null) {
                     world.spawnEntity(entityDrive);
                 } 
@@ -94,15 +94,6 @@ public class Sakuya2 extends SpecialAttackBase {
                         world.spawnEntity(entityDrive);
                     }
                 }
-            	 Random random = new Random();
-            	for(int i = 0; i <2;i++){
-               	EntitySA dim = new EntitySA(world, player, magicDamage+3);
-                   if(dim != null){
-                       dim.setPosition(target.posX,target.posY + target.height / 2.0,target.posZ);
-                       dim.setLifeTime(20);
-                       world.spawnEntity(dim);
-                   }
-               }
             }
         }
         }

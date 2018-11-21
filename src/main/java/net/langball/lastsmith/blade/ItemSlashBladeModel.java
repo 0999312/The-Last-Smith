@@ -24,6 +24,7 @@ public class ItemSlashBladeModel extends ItemSlashBladeDetune{
 
 	@Override
 	public void addInformation(ItemStack arg0, World arg1, List arg2, ITooltipFlag arg3) {
+		arg2.add(I18n.format("flammpfeil.swaepon.info.fake"));
 		super.addInformation(arg0, arg1, arg2, arg3);
 		arg2.add(TextFormatting.WHITE + I18n.format("blades.ps.model"));
 	}

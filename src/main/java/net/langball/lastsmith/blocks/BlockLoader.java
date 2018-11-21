@@ -19,10 +19,18 @@ public class BlockLoader {
 	   public static Block Blast_on = new BlockBlast(true).setRegistryName("blast_on").setLightLevel(0.875F).setUnlocalizedName("blast");
 	   public static Item BlastItem = new ItemBlock(Blast).setRegistryName("blast_off").setUnlocalizedName("blast");
 	 
+	   public static Block Blast_top = new BlockBlastTop().setRegistryName("blast_top").setUnlocalizedName("blast_top").setCreativeTab(CommonProxy.tab);
+	   public static Item BlastTopItem = new ItemBlock(Blast_top).setRegistryName("blast_top").setUnlocalizedName("blast_top");
+	  
+	   public static Block Casket = new BlockCasket().setRegistryName("casket").setUnlocalizedName("casket").setCreativeTab(CommonProxy.tab);
+	   public static Item CasketItem = new ItemBlock(Casket).setRegistryName("casket").setUnlocalizedName("casket");
+	   
 	   public BlockLoader(FMLPreInitializationEvent event)
 	    {
+	        register(Blast_top,BlastTopItem);
 	        register(Blast,BlastItem);
 	        register(Blast_on,null);
+	        register(Casket,CasketItem);
 	    }
 
 	    @SideOnly(Side.CLIENT)
@@ -30,6 +38,8 @@ public class BlockLoader {
 	    {
 	        registerRender(Blast);
 	        registerRender(Blast_on);
+	        registerRender(Blast_top);
+	        registerRender(Casket);
 	    }
 
 	    private static void register(Block block,Item itemBlock)

@@ -34,7 +34,7 @@ public class ItemSlashblade_Smith {
 	      ItemSlashBlade.AttackAmplifier.set(tag, 2F);
 	      ItemSlashBlade.setBaseAttackModifier(tag, 7.0F);
 	      ItemSlashBlade.TextureName.set(tag, "named/smith/smith_0");
-	      ItemSlashBlade.ModelName.set(tag, "named/muramasa/muramasa");
+	      ItemSlashBlade.ModelName.set(tag, "named/smith/model");
 	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(0));
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);

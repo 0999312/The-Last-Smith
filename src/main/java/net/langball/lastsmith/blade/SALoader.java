@@ -6,9 +6,6 @@ import net.langball.lastsmith.sa.Iai;
 import net.langball.lastsmith.sa.SAbailou1;
 import net.langball.lastsmith.sa.SAbailou2;
 import net.langball.lastsmith.sa.SAbailou3;
-import net.langball.lastsmith.sa.SAxianshizhan;
-import net.langball.lastsmith.sa.SAxianshizhan2;
-import net.langball.lastsmith.sa.SAxianshizhan3;
 import net.langball.lastsmith.sa.Sakuya;
 import net.langball.lastsmith.sa.Sakuya2;
 import net.langball.lastsmith.sa.SlashDimension_old;
@@ -23,9 +20,6 @@ public class SALoader {
 			ItemSlashBlade.specialAttacks.put(Integer.valueOf(267), new Sakuya2());
 			ItemSlashBlade.specialAttacks.put(Integer.valueOf(268), new SAbailou1());
 			ItemSlashBlade.specialAttacks.put(Integer.valueOf(269), new SAbailou2());
-			ItemSlashBlade.specialAttacks.put(Integer.valueOf(270), new SAxianshizhan3());
-			ItemSlashBlade.specialAttacks.put(Integer.valueOf(271), new SAxianshizhan());
-			ItemSlashBlade.specialAttacks.put(Integer.valueOf(272), new SAxianshizhan2());
-			ItemSlashBlade.specialAttacks.put(Integer.valueOf(273), new Iai());
+			ItemSlashBlade.specialAttacks.put(Integer.valueOf(270), new Iai());
 	}
 }

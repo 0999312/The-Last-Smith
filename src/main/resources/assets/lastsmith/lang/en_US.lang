@@ -82,15 +82,35 @@ flammpfeil.slashblade.specialattack.spear2=Heart Carving Cut
 flammpfeil.slashblade.specialattack.sakuyaSA=Sword skill
 flammpfeil.slashblade.specialattack.IaiSA=Iai
 flammpfeil.slashblade.specialattack.SsakuyaSA=Power up sword skill
-flammpfeil.slashblade.specialattack.flyintosky=Slashing a Flower Upon One's Head 
+flammpfeil.slashblade.specialattack.flyintosky=Slashing a Flower Upon One's Head
 
 item.lastsmith.blade.name=Bad Blade
 item.lastsmith.blade_2.name=Steel Blade
 item.lastsmith.blade_3.name=Good Blade
 tile.blast.name=Blast Furnace
-item.lastsmith.blade_unfinished.name=Unfinished Blade
-item.lastsmith.blade_2_unfinished.name=Unfinished Blade
-item.lastsmith.blade_3_unfinished.name=Unfinished Blade
+tile.blast_top.name=Blast Furnace Chimney
+tile.casket.name=Water Casket
+
+item.lastsmith.blade_unfinished.name=Unfinished Blade(1/5)
+item.lastsmith.blade_2_unfinished.name=Unfinished Blade(1/5)
+item.lastsmith.blade_3_unfinished.name=Unfinished Blade(1/5)
+item.lastsmith.blade_unfinished_2.name=Unfinished Blade(2/5)
+item.lastsmith.blade_2_unfinished_2.name=Unfinished Blade(2/5)
+item.lastsmith.blade_3_unfinished_2.name=Unfinished Blade(2/5)
+item.lastsmith.blade_unfinished_3.name=Unfinished Blade(3/5)
+item.lastsmith.blade_2_unfinished_3.name=Unfinished Blade(3/5)
+item.lastsmith.blade_3_unfinished_3.name=Unfinished Blade(3/5)
+item.lastsmith.blade_unfinished_4.name=Unfinished Blade(4/5)
+item.lastsmith.blade_2_unfinished_4.name=Unfinished Blade(4/5)
+item.lastsmith.blade_3_unfinished_4.name=Unfinished Blade(4/5)
+item.lastsmith.blade_unfinished_5.name=Unfinished Blade(5/5)
+item.lastsmith.blade_2_unfinished_5.name=Unfinished Blade(5/5)
+item.lastsmith.blade_3_unfinished_5.name=Unfinished Blade(5/5)
+
+lastsmith.tip.heatted_blade=Right-click on Water Casket to cool down.
+lastsmith.tip.blast_top=Need Blast Furnace chimney on the top.
+jei.lastsmith.category.blast=Blast Furnace
+
 item.lastsmith.smith_hammer.name=Smith Hammer
 item.lastsmith.sakura.name=Sakura
 item.lastsmith.tamahagane.name=Tamahagane
@@ -163,6 +183,9 @@ research.ROUKAN.text.stage.2=In fake blades, more successful will be called kanr
 
 research.HAKUROU.text.stage.1=Konpaku family's blade,Hakurouken.<BR>As the guard of Saigyouji, this blade's usage is not to kill lifes.<BR>Even so, we don't know the rest of the blade.
 research.HAKUROU.text.stage.2=This blade has no sharp edge but can cut someone's confuse. And for ghost, they will "dead" after been slashed.<BR>We don't know why Saigyouji family's Missy not, maybe she has no confusion at all. . . . . .
+
+research.OLDBLADES.text.stage.1=Some Blades are from SlashBlade's oldder version. Oh,no recipes there now.
+research.OLDBLADES.text.stage.2=The existence of these Blades has been confirmed and all the recipes of blades have been recorded.
 
 research.OTHERSBLADE.text.stage.1=There are some scattered blades, have no potential in it.<BR>But the available information does not fully prove their existence.
 research.OTHERSBLADE.text.stage.2=These scattered blades, have no potential in it. But easier to get them.<BR>For ordinary people who are not capable of building powerful weapons, this will be their first choice.

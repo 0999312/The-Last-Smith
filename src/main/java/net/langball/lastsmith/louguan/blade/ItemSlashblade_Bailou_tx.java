@@ -37,7 +37,7 @@ public class ItemSlashblade_Bailou_tx {
 	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(269));
 	      ItemSlashBlade.StandbyRenderType.set(tag, Integer.valueOf(2));
 	      BladeLoader.registerCustomItemStack(nameTx1, customblade);
-	      ItemSlashBladeNamedSS.NamedBlades.add("flammpfeil.slashblade:" + nameTx1);
+	      ItemSlashBladeNamedSS.NamedBlades.add(nameTx1);
 	      customblade.addEnchantment(Enchantments.POWER, 4);
 	      customblade.addEnchantment(Enchantments.SMITE,9);
 	      customblade.addEnchantment(Enchantments.FIRE_ASPECT, 1);

@@ -21,10 +21,25 @@ public class ItemLoader {
 	public static Item blade_unfinished = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"blade_unfinished");
 	public static Item blade_2_unfinished = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"blade_2_unfinished");
 	public static Item blade_3_unfinished = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"blade_3_unfinished");
+	
+	public static Item blade_unfinished_2 = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"blade_unfinished_2");
+	public static Item blade_2_unfinished_2 = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"blade_2_unfinished_2");
+	public static Item blade_3_unfinished_2 = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"blade_3_unfinished_2");
+	public static Item blade_unfinished_3 = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"blade_unfinished_3");
+	public static Item blade_2_unfinished_3 = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"blade_2_unfinished_3");
+	public static Item blade_3_unfinished_3 = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"blade_3_unfinished_3");
+	public static Item blade_unfinished_5 = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"blade_unfinished_5");
+	public static Item blade_2_unfinished_5 = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"blade_2_unfinished_5");
+	public static Item blade_3_unfinished_5 = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"blade_3_unfinished_5");
+	public static Item blade_unfinished_4 = new ItemHeattedBlade(blade_unfinished_5).setUnlocalizedName(Last_worker.MODID+'.'+"blade_unfinished_4");
+	public static Item blade_2_unfinished_4 = new ItemHeattedBlade(blade_2_unfinished_5).setUnlocalizedName(Last_worker.MODID+'.'+"blade_2_unfinished_4");
+	public static Item blade_3_unfinished_4 = new ItemHeattedBlade(blade_3_unfinished_5).setUnlocalizedName(Last_worker.MODID+'.'+"blade_3_unfinished_4");
+	
+	
 	public static Item blade = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"blade");
 	public static Item blade_2 = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"blade_2");
 	public static Item blade_3 = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"blade_3");
-
+	public static Item yakibatsuchi = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"yakibatsuchi");
 	public static Item sakura = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"sakura");
 	public static Item sakura_full = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"sakura_full");
 	public static Item sakura_ingot_unfinished = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"sakura_ingot_unfinished");
@@ -36,18 +51,33 @@ public class ItemLoader {
 	
 	public ItemLoader(FMLPreInitializationEvent event) {
 		register(hammer);
+		register(yakibatsuchi);
 		register(sakura);
 		register(sakura_full);
 		register(sakura_ingot_unfinished);
 		register(sakura_ingot);
+		register(paper_arthurs);	
 		register(crashed_iron);
 		register(tamahagane);
 		register(steel_ingot);
 		register(wooden_blade);
+		
 		register(blade_unfinished);
 		register(blade_2_unfinished);
 		register(blade_3_unfinished);
-		register(paper_arthurs);
+		register(blade_unfinished_2);
+		register(blade_2_unfinished_2);
+		register(blade_3_unfinished_2);
+		register(blade_unfinished_3);
+		register(blade_2_unfinished_3);
+		register(blade_3_unfinished_3);
+		register(blade_unfinished_5);
+		register(blade_2_unfinished_5);
+		register(blade_3_unfinished_5);
+		register(blade_unfinished_4);
+		register(blade_2_unfinished_4);
+		register(blade_3_unfinished_4);
+
 		register(blade);
 		register(blade_2);
 		register(blade_3);
@@ -72,6 +102,19 @@ public class ItemLoader {
 		registerRender(blade);
 		registerRender(blade_2);
 		registerRender(blade_3);
+		registerRender(yakibatsuchi);
+		registerRender(blade_unfinished_2);
+		registerRender(blade_2_unfinished_2);
+		registerRender(blade_3_unfinished_2);
+		registerRender(blade_unfinished_3);
+		registerRender(blade_2_unfinished_3);
+		registerRender(blade_3_unfinished_3);
+		registerRender(blade_unfinished_4);
+		registerRender(blade_2_unfinished_4);
+		registerRender(blade_3_unfinished_4);
+		registerRender(blade_unfinished_5);
+		registerRender(blade_2_unfinished_5);
+		registerRender(blade_3_unfinished_5);
 	}
 	private static void register(Item item)
     {

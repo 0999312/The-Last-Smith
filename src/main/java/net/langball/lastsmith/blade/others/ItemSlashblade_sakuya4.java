@@ -33,8 +33,8 @@ public class ItemSlashblade_sakuya4 {
 	      ItemSlashBlade.AttackAmplifier.set(tag, 2F);
 	      ItemSlashBladeNamedSS.IsDefaultBewitched.set(tag, true);
 	      ItemSlashBlade.setBaseAttackModifier(tag, 10.0F);
-	      ItemSlashBlade.TextureName.set(tag, "named/sakuya/texture_double");
-	      ItemSlashBlade.ModelName.set(tag, "named/famous/1");
+	      ItemSlashBlade.TextureName.set(tag, "named/sakura/texture_double");
+	      ItemSlashBlade.ModelName.set(tag, "named/sakura/work");
 	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(266));
 	      ItemSlashBlade.StandbyRenderType.set(tag, Integer.valueOf(3));
 	      ItemSlashBlade.SummonedSwordColor.set(tag, Integer.valueOf(0xDD0033));

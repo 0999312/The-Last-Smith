@@ -88,6 +88,29 @@ item.lastsmith.blade.name=劣质刀条
 item.lastsmith.blade_2.name=钢刀条
 item.lastsmith.blade_3.name=优质刀条
 tile.blast.name=炼钢炉
+tile.blast_top.name=炼钢炉烟囱
+tile.casket.name=水槽
+
+item.lastsmith.blade_unfinished.name=未完成刀条（1/5）
+item.lastsmith.blade_2_unfinished.name=未完成刀条（1/5）
+item.lastsmith.blade_3_unfinished.name=未完成刀条（1/5）
+item.lastsmith.blade_unfinished_2.name=未完成刀条（2/5）
+item.lastsmith.blade_2_unfinished_2.name=未完成刀条（2/5）
+item.lastsmith.blade_3_unfinished_2.name=未完成刀条（2/5）
+item.lastsmith.blade_unfinished_3.name=未完成刀条（3/5）
+item.lastsmith.blade_2_unfinished_3.name=未完成刀条（3/5）
+item.lastsmith.blade_3_unfinished_3.name=未完成刀条（3/5）
+item.lastsmith.blade_unfinished_4.name=未完成刀条（4/5）
+item.lastsmith.blade_2_unfinished_4.name=未完成刀条（4/5）
+item.lastsmith.blade_3_unfinished_4.name=未完成刀条（4/5）
+item.lastsmith.blade_unfinished_5.name=未完成刀条（5/5）
+item.lastsmith.blade_2_unfinished_5.name=未完成刀条（5/5）
+item.lastsmith.blade_3_unfinished_5.name=未完成刀条（5/5）
+
+lastsmith.tip.heatted_blade=在水槽上右键以冷却刀条
+lastsmith.tip.blast_top=上方需要烟囱。
+jei.lastsmith.category.blast=炼钢炉
+
 item.lastsmith.blade_unfinished.name=未完成刀条
 item.lastsmith.blade_2_unfinished.name=未完成刀条
 item.lastsmith.blade_3_unfinished.name=未完成刀条
@@ -163,6 +186,9 @@ research.ROUKAN.text.stage.2=仿制品里，较为成功的会被称为观楼剑
 
 research.HAKUROU.text.stage.1=白楼剑，魂魄家的家传宝刀。<BR>作为西行寺家的护卫，这振刀的实际用途并不是用于斩杀生灵。<BR>即便如此，我们也不知道这振刀的其余信息。
 research.HAKUROU.text.stage.2=这振刀确实没有很锋利的刀刃。<BR>取而代之的是，这振刀能够解开对方的迷茫，幽灵则直接成佛。<BR>西行寺家的大小姐为什么至今未成佛，可能她的心里根本没有迷茫而已吧。。。。。。
+
+research.OLDBLADES.text.stage.1=有几把刀是来自于旧版拔刀剑的，不过这里没有合成
+research.OLDBLADES.text.stage.2=这些刀的存在已经被证实，并记录了所有制作这些刀的方式。
 
 research.OTHERSBLADE.text.stage.1=有一些零散的刀，它们没有一个成型的发展路线，潜力也不是很大。<BR>现有的资料无法完全证明它们的存在。
 research.OTHERSBLADE.text.stage.2=这些零散的刀没有什么特别的地方，但是它们却更容易获得。<BR>对于没有能力打造强力兵器的普通人，这会是他们的首选。

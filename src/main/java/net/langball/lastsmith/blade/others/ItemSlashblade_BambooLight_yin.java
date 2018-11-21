@@ -10,6 +10,7 @@ import mods.flammpfeil.slashblade.named.event.LoadEvent.InitEvent;
 import net.langball.lastsmith.Last_worker;
 import net.langball.lastsmith.blade.BladeLoader;
 import net.langball.lastsmith.blade.ItemSlashBladeNamedSS;
+import net.langball.lastsmith.items.ItemLoader;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Enchantments;
@@ -34,7 +35,7 @@ public class ItemSlashblade_BambooLight_yin {
 	      ItemSlashBlade.setBaseAttackModifier(tag, 7.0F + ToolMaterial.IRON.getAttackDamage());
 	      ItemSlashBlade.TextureName.set(tag, "named/bamboolight/bamboo_yin");
 	      ItemSlashBlade.ModelName.set(tag, "named/yamato");
-	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(273));
+	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(270));
 	      ItemSlashBlade.StandbyRenderType.set(tag, Integer.valueOf(3));
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);
@@ -43,12 +44,12 @@ public class ItemSlashblade_BambooLight_yin {
 	      customblade.addEnchantment(Enchantments.KNOCKBACK, 3);
 	      ItemStack custombladeReqired = BladeLoader.findItemStack(Last_worker.MODID, name1, 1);
 	      NBTTagCompound reqTag = ItemSlashBlade.getItemTagCompound(custombladeReqired);
-	      ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(500));
-	      ItemSlashBlade.ProudSoul.set(reqTag, Integer.valueOf(500));
-	      ItemStack louguan = SlashBlade.findItemStack("flammpfeil.slashblade", name, 1);
+	      ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(1000));
+	      ItemSlashBlade.ProudSoul.set(reqTag, Integer.valueOf(5000));
+	      ItemStack louguan = BladeLoader.findItemStack(Last_worker.MODID, name, 1);
 	      ItemStack itemSphereBladeSoul = SlashBlade.findItemStack("flammpfeil.slashblade", "sphere_bladesoul", 1);
 	      ItemStack ingot = SlashBlade.findItemStack("flammpfeil.slashblade", "ingot_bladesoul", 1);
-	      SlashBlade.addRecipe(name, new RecipeAwakeBlade((new ResourceLocation(SlashBlade.modid,name)),louguan, custombladeReqired, new Object[]{"D D", " B ", "A A", Character.valueOf('A'), ingot, Character.valueOf('B'), custombladeReqired, Character.valueOf('D'), new ItemStack(Items.ENDER_PEARL)}));
+	      SlashBlade.addRecipe(name, new RecipeAwakeBlade((new ResourceLocation(SlashBlade.modid,name)),louguan, custombladeReqired, new Object[]{"DFD", "FBF", "AFA", Character.valueOf('A'), ingot, Character.valueOf('B'), custombladeReqired, Character.valueOf('D'), new ItemStack(Items.ENDER_PEARL), Character.valueOf('F'), new ItemStack(ItemLoader.sakura_full)}));
 	   }
 
 }

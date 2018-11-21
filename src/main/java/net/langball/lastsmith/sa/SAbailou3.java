@@ -23,7 +23,6 @@ public class SAbailou3 extends SpecialAttackBase {
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return "relife";
 	}
 

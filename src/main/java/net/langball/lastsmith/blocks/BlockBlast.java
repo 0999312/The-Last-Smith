@@ -10,6 +10,7 @@ import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -29,6 +30,8 @@ import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.TextComponentString;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
@@ -44,17 +47,16 @@ public class BlockBlast extends BlockContainer {
 	        super(Material.ROCK);
 	        this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 	        this.isBurning = isBurning;
+	        this.setHardness(1F);
 	    }
 
 	    @Override
 		public boolean isOpaqueCube(IBlockState state) {
-			// TODO Auto-generated method stub
 			return false;
 		}
 
 		@Override
 		public boolean isNormalCube(IBlockState state, IBlockAccess world, BlockPos pos) {
-			// TODO Auto-generated method stub
 			return false;
 		}
 	    
@@ -155,6 +157,7 @@ public class BlockBlast extends BlockContainer {
 	        }
 	        else
 	        {
+	        	if(worldIn.getBlockState(new BlockPos(pos.getX(), pos.getY()+1, pos.getZ())).getBlock() == BlockLoader.Blast_top){
 	            TileEntity tileentity = worldIn.getTileEntity(pos);
 
 	            if (tileentity instanceof TileEntityBlast)
@@ -163,6 +166,11 @@ public class BlockBlast extends BlockContainer {
 	            }
 
 	            return true;
+	            }else{
+	            	playerIn.sendMessage(new TextComponentString(TextFormatting.UNDERLINE + I18n.format("lastsmith.tip.blast_top")));
+	            	return true;
+	            }
+	        	
 	        }
 	    }
 
@@ -222,7 +230,7 @@ public class BlockBlast extends BlockContainer {
 
 	            if (tileentity instanceof TileEntityBlast)
 	            {
-	                ((TileEntityFurnace)tileentity).setCustomInventoryName(stack.getDisplayName());
+	                ((TileEntityBlast)tileentity).setCustomInventoryName(stack.getDisplayName());
 	            }
 	        }
 	    }

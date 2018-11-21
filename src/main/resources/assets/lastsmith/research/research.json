@@ -349,12 +349,12 @@
          "parents" : [ "UNNAMEDBLADE" ],
          "stages" : [
             {
-               "text" : "research.OLDBLADES.text.stage.1",
+               "text" : "research.OTHERSBLADE.text.stage.1",
                "required_craft" : [ "lastsmith:UnnamedBlade" ],
                "required_knowledge" : [ "THEORY;KATANA;5", "THEORY;BASICS;2" ]
             },
             {
-               "text" : "research.OLDBLADES.text.stage.2",
+               "text" : "research.OTHERSBLADE.text.stage.2",
                "recipes" : [
                   "flammpfeil.slashblade:flammpfeil.slashblade.named.eievui",
                   "flammpfeil.slashblade:flammpfeil.slashblade.named.sagequoia",

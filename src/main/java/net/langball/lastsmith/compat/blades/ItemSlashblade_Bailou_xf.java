@@ -10,8 +10,6 @@ import net.langball.lastsmith.Last_worker;
 import net.langball.lastsmith.blade.BladeLoader;
 import net.langball.lastsmith.blade.ItemSlashBladeNamedSS;
 import net.langball.lastsmith.recipe.InfusionRecipeAwakeBlade;
-import net.langball.lastsmith.sa.SAbailou1;
-import net.langball.lastsmith.sa.SAxianshizhan3;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Enchantments;
@@ -45,7 +43,7 @@ public class ItemSlashblade_Bailou_xf {
 	      ItemSlashBladeNamedSS.IsDefaultBewitched.set(tag, Boolean.valueOf(true));
 	      ItemSlashBlade.TextureName.set(tag, "named/bailou/texture_xf");
 	      ItemSlashBlade.ModelName.set(tag, "named/bailou/model");
-	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(270));
+	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(3));
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);
 	      customblade.addEnchantment(Enchantments.POWER, 2);
