@@ -1,13 +1,16 @@
-package net.langball.lastsmith.compat;
+package net.langball.lastsmith.eusaber;
 
+import ic2.api.item.IC2Items;
 import mods.flammpfeil.slashblade.RecipeAwakeBlade;
 import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.named.NamedBladeManager;
 import mods.flammpfeil.slashblade.named.event.LoadEvent.InitEvent;
 import net.langball.lastsmith.CommonProxy;
+import net.langball.lastsmith.Last_worker;
 import net.langball.lastsmith.blade.BladeLoader;
 import net.langball.lastsmith.blade.ItemSlashBladeNamedSS;
+import net.langball.lastsmith.items.ItemLoader;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Enchantments;
@@ -19,7 +22,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-public class ItemSlashblade_RFL {
+public class ItemSlashblade_3 {
 	   @SubscribeEvent
 	   public void init(InitEvent event) {
 	      String name = "flammpfeil.slashblade.named.wenshi";
@@ -33,22 +36,22 @@ public class ItemSlashblade_RFL {
 	      ItemSlashBladeNamedSS.IsDefaultBewitched.set(tag, Boolean.valueOf(true));
 	      ItemSlashBlade.TextureName.set(tag, "named/RFlouguan/texture");
 	      ItemSlashBlade.ModelName.set(tag, "named/RFlouguan/model");
-	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(324));
+	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(9));
 	      ItemSlashBlade.StandbyRenderType.set(tag, Integer.valueOf(2));
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);
 	      customblade.addEnchantment(Enchantments.POWER, 8);
 	      customblade.addEnchantment(Enchantments.SHARPNESS, 6);
 	      customblade.addEnchantment(Enchantments.LOOTING, 2);
-	      ItemStack custombladeReqired = SlashBlade.findItemStack(SlashBlade.modid,name2,1);
+	      ItemStack custombladeReqired =  BladeLoader.findItemStack(Last_worker.MODID,name2,1);
 	      NBTTagCompound reqTag = ItemSlashBlade.getItemTagCompound(custombladeReqired);
-	      ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(1000));
-	      ItemSlashBlade.ProudSoul.set(reqTag, Integer.valueOf(500));
+	      ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(2000));
+	      ItemSlashBlade.ProudSoul.set(reqTag, Integer.valueOf(10000));
 	      ItemSlashBlade.RepairCount.set(reqTag, Integer.valueOf(5));
-	      ItemStack louguan = SlashBlade.findItemStack("flammpfeil.slashblade", name, 1);
+	      ItemStack louguan =  BladeLoader.findItemStack(Last_worker.MODID, name, 1);
 	      ItemStack itemSphereBladeSoul = SlashBlade.findItemStack("flammpfeil.slashblade", "sphere_bladesoul", 1);
 	      ItemStack ingot = SlashBlade.findItemStack("flammpfeil.slashblade", "ingot_bladesoul", 1);
-	      SlashBlade.addRecipe(name, new RecipeAwakeBlade(new ResourceLocation(name), louguan, custombladeReqired, new Object[]{"DAD", "CBC", "ECE", Character.valueOf('A'), ingot, Character.valueOf('B'), custombladeReqired, Character.valueOf('C'), itemSphereBladeSoul, Character.valueOf('D'), new ItemStack(Blocks.IRON_BLOCK), Character.valueOf('E'), Items.BOOK}));
+	      SlashBlade.addRecipe(name, new RecipeAwakeBlade(new ResourceLocation(name), louguan, custombladeReqired, new Object[]{"DAD", "CBC", "ECE", Character.valueOf('A'), ItemLoader.sakura_ingot, Character.valueOf('B'), custombladeReqired, Character.valueOf('C'), itemSphereBladeSoul, Character.valueOf('D'),IC2Items.getItem("crafting", "iridium"), Character.valueOf('E'),IC2Items.getItem("crafting", "alloy")}));
 
 	   }
 	   

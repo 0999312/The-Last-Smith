@@ -190,6 +190,7 @@ public BladeLoader(FMLPreInitializationEvent event){
     	 ForgeRegistries.ITEMS.register(euBlade);
     	 SlashBlade.InitEventBus.register(new ItemSlashblade_1());
     	 SlashBlade.InitEventBus.register(new ItemSlashblade_2());
+    	 SlashBlade.InitEventBus.register(new ItemSlashblade_3());
     	}
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_BambooLight_nice());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_BambooLight_yin());

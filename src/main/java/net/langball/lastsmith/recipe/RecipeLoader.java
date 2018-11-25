@@ -48,6 +48,8 @@ public class RecipeLoader {
 		RecipesUtil.addRecipe("casket", new ShapedOreRecipe(new ResourceLocation(""), BlockLoader.CasketItem, new Object[]{
 				"BIB","BPB","B B",'I',Items.WATER_BUCKET,'B',"logWood",'P',"plankWood"
 		}));
+		RecipesUtil.addRecipe("yakibatsuchi", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.yakibatsuchi), new Object[]{Items.CLAY_BALL,"dustCoal","dustCoal"}));
+		RecipesUtil.addRecipe("coal_dust", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.coal_dust), new Object[]{ItemLoader.hammer,"gemCoal"}));
 		
 		RecipesUtil.addRecipe("paper_arthurs", new ShapedOreRecipe(new ResourceLocation(""), ItemLoader.paper_arthurs, new Object[]{
 				"BBB","BIB","BBB",'B',ItemLoader.sakura_full,'I',"paper"

@@ -125,6 +125,9 @@ item.lastsmith.sakura_full.name=樱
 item.lastsmith.sakura_ingot_unfinished.name=未精炼樱色钢锭
 item.lastsmith.sakura_ingot.name=樱色钢锭
 
+item.lastsmith.yakibatsuchi.name=烧刃土
+item.lastsmith.coal_dust.name=煤粉
+
 item.flammpfeil.slashblade.wooden_saya.name=实木鞘
 item.flammpfeil.slashblade.named.template_re_fake.name=伪物「苍梅」
 item.flammpfeil.slashblade.named.template_re2_fake.name=伪物「赤梅」

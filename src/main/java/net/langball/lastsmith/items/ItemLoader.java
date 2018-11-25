@@ -4,7 +4,9 @@ import net.langball.lastsmith.CommonProxy;
 import net.langball.lastsmith.Last_worker;
 import net.langball.lastsmith.util.JSON_Creator;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
@@ -40,6 +42,7 @@ public class ItemLoader {
 	public static Item blade_2 = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"blade_2");
 	public static Item blade_3 = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"blade_3");
 	public static Item yakibatsuchi = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"yakibatsuchi");
+	public static Item coal_dust = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"coal_dust");
 	public static Item sakura = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"sakura");
 	public static Item sakura_full = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"sakura_full");
 	public static Item sakura_ingot_unfinished = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"sakura_ingot_unfinished");
@@ -51,15 +54,16 @@ public class ItemLoader {
 	
 	public ItemLoader(FMLPreInitializationEvent event) {
 		register(hammer);
+		register(crashed_iron);
+		register(tamahagane);
+		register(steel_ingot);
+		register(coal_dust);
 		register(yakibatsuchi);
 		register(sakura);
 		register(sakura_full);
 		register(sakura_ingot_unfinished);
 		register(sakura_ingot);
 		register(paper_arthurs);	
-		register(crashed_iron);
-		register(tamahagane);
-		register(steel_ingot);
 		register(wooden_blade);
 		
 		register(blade_unfinished);
@@ -82,6 +86,9 @@ public class ItemLoader {
 		register(blade_2);
 		register(blade_3);
 		OreDictionary.registerOre("ingotSteel", steel_ingot);
+		OreDictionary.registerOre("dustCoal", coal_dust);
+		OreDictionary.registerOre("gemCoal", new ItemStack(Items.COAL,1,0));
+		OreDictionary.registerOre("gemCoal", new ItemStack(Items.COAL,1,1));
 		OreDictionary.registerOre("ingotSakura", sakura_ingot);
 	}
 	@SideOnly(Side.CLIENT)
@@ -93,6 +100,7 @@ public class ItemLoader {
 		registerRender(sakura_ingot_unfinished);
 		registerRender(crashed_iron);
 		registerRender(tamahagane);
+		registerRender(coal_dust);
 		registerRender(steel_ingot);
 		registerRender(wooden_blade);
 		registerRender(blade_unfinished);

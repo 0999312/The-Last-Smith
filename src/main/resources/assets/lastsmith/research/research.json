@@ -216,11 +216,11 @@
          "key" : "SAKURABALDE",
          "name" : "research.SAKURABALDE.title",
          "icons" : [
-            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/sakuya/work\",TextureName: \"named/sakuya/texture\"}",
-            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/sakuya/work\",TextureName: \"named/sakuya/texture_1\"}",
-            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/sakuya/work\",TextureName: \"named/sakuya/texture_snow\"}",
-            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/famous/1\",TextureName: \"named/sakuya/texture_double\"}",
-            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/famous/1\",TextureName: \"named/sakuya/texture_xiuluo\"}"
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/sakura/work\",TextureName: \"named/sakura/texture\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/sakura/work\",TextureName: \"named/sakura/texture_1\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/sakura/work\",TextureName: \"named/sakura/texture_snow\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/sakura/work\",TextureName: \"named/sakura/texture_double\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/sakura/work\",TextureName: \"named/sakura/texture_xiuluo\"}"
          ],
          "category" : "KATANA",
          "meta" : [ "SPIKY" ],

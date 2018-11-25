@@ -119,8 +119,12 @@ item.lastsmith.crashed_iron.name=Crushed Iron Ore
 item.lastsmith.wooden_blade.name=Wooden Blade
 item.lastsmith.paper_arthurs.name=Arthurs Paper
 item.lastsmith.sakura_full.name=Blossomed Sakura
-item.lastsmith.sakura_ingot_unfinished.name=Unfinished Sakura Ingot
-item.lastsmith.sakura_ingot.name=Sakura Ingot
+
+item.lastsmith.paper_arthurs.name=Arthurs Paper
+item.lastsmith.sakura_full.name=Blossomed Sakura
+
+item.lastsmith.yakibatsuchi.name=Yakibatsuchi
+item.lastsmith.coal_dust.name=Coal Dust
 
 item.flammpfeil.slashblade.wooden_saya.name=Wooden Sheath
 item.flammpfeil.slashblade.named.template_re_fake.name=Fake -Blue Plum-
