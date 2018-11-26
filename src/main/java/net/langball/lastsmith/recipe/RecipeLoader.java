@@ -41,7 +41,7 @@ public class RecipeLoader {
 		RecipesUtil.addRecipe("blast", new ShapedOreRecipe(new ResourceLocation(""), BlockLoader.BlastItem, new Object[]{
 				"BBB","BFB","BIB",'I',"blockIron",'B',Blocks.BRICK_BLOCK,'F',Blocks.FURNACE
 		}));
-		RecipesUtil.addRecipe("blast_top", new ShapedOreRecipe(new ResourceLocation(""), BlockLoader.BlastItem, new Object[]{
+		RecipesUtil.addRecipe("blast_top", new ShapedOreRecipe(new ResourceLocation(""), BlockLoader.BlastTopItem, new Object[]{
 				"BIB","BIB","BIB",'I',"blockIron",'B',Blocks.BRICK_BLOCK
 		}));
 		
