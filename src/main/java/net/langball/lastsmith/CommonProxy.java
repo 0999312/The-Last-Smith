@@ -84,7 +84,6 @@ public class CommonProxy {
     		 ThaumcraftApi.registerResearchLocation(new ResourceLocation(Last_worker.MODID+":research/research.json"));
         	 ResearchCategories.registerCategory("KATANA", null, new AspectList().add(Aspect.SOUL, 1), new ResourceLocation(Last_worker.MODID+":textures/research/yamatooo.png"), new ResourceLocation(Last_worker.MODID+":textures/research/guislashblade.jpg"));
     	}
-
     }
 
     public void postInit(FMLPostInitializationEvent event)

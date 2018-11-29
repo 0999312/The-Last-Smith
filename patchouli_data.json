@@ -1,1 +1,45 @@
-{"bookGuiScale":0,"clickedVisualize":false,"bookData":{}}
+{
+  "bookGuiScale": 0,
+  "clickedVisualize": false,
+  "bookData": {
+    "lastsmith:smith_guide": {
+      "viewedEntries": [
+        "lastsmith:basic/basic_one",
+        "lastsmith:basic/basic_two",
+        "lastsmith:basic/basic_three",
+        "lastsmith:basic/basic_four",
+        "lastsmith:basic_blade/basic_blade_five",
+        "lastsmith:basic_blade/basic_blade_three",
+        "lastsmith:basic_blade/basic_blade_four",
+        "lastsmith:basic_blade/basic_blade_two",
+        "lastsmith:basic_blade/basic_blade_one",
+        "lastsmith:origin/origin_one",
+        "lastsmith:origin/origin_three",
+        "lastsmith:origin/origin_four",
+        "lastsmith:origin/origin_two",
+        "lastsmith:origin/origin_six",
+        "lastsmith:origin/origin_five",
+        "lastsmith:origin/origin_eight",
+        "lastsmith:origin/origin_ten",
+        "lastsmith:origin/origin_nine",
+        "lastsmith:origin/origin_seven"
+      ],
+      "bookmarks": [],
+      "history": [
+        "lastsmith:origin/origin_seven",
+        "lastsmith:origin/origin_nine",
+        "lastsmith:origin/origin_ten",
+        "lastsmith:origin/origin_eight",
+        "lastsmith:origin/origin_six",
+        "lastsmith:origin/origin_five",
+        "lastsmith:origin/origin_four",
+        "lastsmith:basic_blade/basic_blade_five",
+        "lastsmith:origin/origin_one",
+        "lastsmith:origin/origin_three",
+        "lastsmith:origin/origin_two",
+        "lastsmith:basic_blade/basic_blade_three",
+        "lastsmith:basic_blade/basic_blade_one"
+      ]
+    }
+  }
+}

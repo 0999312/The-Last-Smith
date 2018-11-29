@@ -10,7 +10,7 @@
       {
          "type" : "crafting",
          "recipe" : "lastsmith:blast",
-         "recipe2" : "lastsmith:crushed_iron"
+         "recipe2" : "lastsmith:blast_top"
       },
       {
          "type" : "spotlight",
@@ -20,8 +20,9 @@
       {
          "type" : "crafting",
          "recipe" : "lastsmith:steel_ingot",
+         "recipe2" : "lastsmith:crushed_iron",
          "text" : "Now you get steel ingot, try to make your blade now."
       }
    ],
-   "sortnum" : "2"
+   "sortnum" : 2
 }

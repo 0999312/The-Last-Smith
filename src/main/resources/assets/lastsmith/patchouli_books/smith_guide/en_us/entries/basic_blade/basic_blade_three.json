@@ -5,23 +5,54 @@
    "pages" : [
       {
          "type" : "text",
-         "text" : "When you want a nice SlashBlade,you have to make steel blade for next step.$(br)You always need at least one BladeSoulIngot for your blade, and quality will be determined by your materials. Quality will determine the durability of Sharpness-White-"
+         "text" : "SOON(WIP)"
       },
       {
          "type" : "crafting",
          "recipe" : "lastsmith:blade_unfinished",
-         "recipe2" : "lastsmith:blade"
+         "recipe2" : "lastsmith:blade_unfinished_2"
       },
       {
          "type" : "crafting",
          "recipe" : "lastsmith:blade_2_unfinished",
-         "recipe2" : "lastsmith:blade_2"
+         "recipe2" : "lastsmith:blade_2_unfinished_2"
       },
       {
          "type" : "crafting",
          "recipe" : "lastsmith:blade_3_unfinished",
+         "recipe2" : "lastsmith:blade_3_unfinished_2"
+      },
+      {
+         "type" : "crafting",
+         "recipe" : "lastsmith:blade_unfinished_3",
+         "recipe2" : "lastsmith:blade"
+      },
+      {
+         "type" : "crafting",
+         "recipe" : "lastsmith:blade_2_unfinished_3",
+         "recipe2" : "lastsmith:blade_2"
+      },
+      {
+         "type" : "crafting",
+         "recipe" : "lastsmith:blade_3_unfinished_3",
          "recipe2" : "lastsmith:blade_3"
+      },
+      {
+         "type" : "spotlight",
+         "text" : "To get this, put Unfinished Blade(3/5) in Blast furnace.$(br)Don't forget fuel, it's necessary.",
+         "item" : "lastsmith:blade_unfinished_4"
+      },
+
+      {
+         "type" : "spotlight",
+         "text" : "To get this, and put Unfinished Blade(3/5) in Blast furnace.$(br)Don't forget fuel, it's necessary.",
+         "item" : "lastsmith:blade_2_unfinished_4"
+      },
+      {
+         "type" : "spotlight",
+         "text" : "To get this, and put Unfinished Blade(3/5) in Blast furnace.$(br)Don't forget fuel, it's necessary.",
+         "item" : "lastsmith:blade_3_unfinished_4"
       }
    ],
-   "sortnum" : "2"
+   "sortnum" :2
 }

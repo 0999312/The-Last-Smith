@@ -1,4 +1,4 @@
-package net.langball.lastsmith;
+package net.langball.lastsmith.recipe;
 
 import java.util.Iterator;
 import java.util.Map;

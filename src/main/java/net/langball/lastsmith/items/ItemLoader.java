@@ -19,6 +19,7 @@ public class ItemLoader {
 	public static Item tamahagane = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"tamahagane");
 	public static Item steel_ingot = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"steel_ingot");
 	public static Item wooden_blade = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"wooden_blade");
+	public static Item bamboo_blade = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"bamboo_blade");
 	
 	public static Item blade_unfinished = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"blade_unfinished");
 	public static Item blade_2_unfinished = new Item().setUnlocalizedName(Last_worker.MODID+'.'+"blade_2_unfinished");
@@ -65,6 +66,7 @@ public class ItemLoader {
 		register(sakura_ingot);
 		register(paper_arthurs);	
 		register(wooden_blade);
+		register(bamboo_blade);
 		
 		register(blade_unfinished);
 		register(blade_2_unfinished);
@@ -97,6 +99,7 @@ public class ItemLoader {
 		registerRender(sakura);
 		registerRender(sakura_full);
 		registerRender(sakura_ingot);
+		registerRender(bamboo_blade);
 		registerRender(sakura_ingot_unfinished);
 		registerRender(crashed_iron);
 		registerRender(tamahagane);

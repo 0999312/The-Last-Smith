@@ -69,7 +69,7 @@ import vazkii.botania.common.core.BotaniaCreativeTab;
 public class BladeLoader {
 	public static Item blade,blade_model,blade_model_1,blade_tls;
 	public static Item euBlade,bladeNamed,windBlade,voidBlade;
-	public static ItemSlashBladeSaya wrapper;
+	public static ItemSlashBladeSaya wrapper,wrapper_bamboo;
 	
 	static public Map<ResourceLocationRaw, ItemStack> BladeRegistry = Maps.newHashMap();
 
@@ -114,13 +114,19 @@ public class BladeLoader {
 	        return getCustomBlade(modid,name);
 	    }
 public BladeLoader(FMLPreInitializationEvent event){
-
   	 wrapper = (ItemSlashBladeSaya)(new ItemSlashBladeSaya(ToolMaterial.IRON))
              .setMaxDamage(40)
              .setUnlocalizedName("flammpfeil.slashblade.wooden_saya")
              .setCreativeTab(CommonProxy.tab)
              .setRegistryName("slashbladeSaya");
      ForgeRegistries.ITEMS.register(wrapper);
+  	 wrapper_bamboo = (ItemSlashBladeSaya)(new ItemSlashBladeSaya(ToolMaterial.IRON))
+  			 .setModelTexture(new ResourceLocationRaw("flammpfeil.slashblade","model/bamboo_saya.png"))
+             .setMaxDamage(40)
+             .setUnlocalizedName("flammpfeil.slashblade.bamboo_saya")
+             .setCreativeTab(CommonProxy.tab)
+             .setRegistryName("slashbladeSayaBamboo");
+     ForgeRegistries.ITEMS.register(wrapper_bamboo);
 	blade= (new ItemSlashBladeBasic(ToolMaterial.IRON,6))
             .setDestructable(false)
             .setModelTexture(new ResourceLocationRaw("flammpfeil.slashblade","model/unnamed/texture.png"))

@@ -5,7 +5,7 @@
    "pages" : [
       {
          "type" : "text",
-         "text" : "Smithes need tool to forge their blade.$(br)Hammer, it's a useful tool that unbreakable. You always need it, you know."
+         "text" : "SOON(WIP)"
       },
       {
          "type" : "crafting",
@@ -13,5 +13,5 @@
          "recipe" : "lastsmith:hammer"
       }
    ],
-   "sortnum" : "0"
+   "sortnum" : 0
 }

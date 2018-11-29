@@ -69,7 +69,7 @@ public class ItemSlashblade_Louguan_xf {
 		    	    		 , ConfigItems.AIR_CRYSTAL
 		    	    		 }
 			));
-			ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(SlashBlade.modid,name+"_fake"), new InfusionRecipe("ROUKANSENPUUZIN", BladeLoader.findItemStack(Last_worker.MODID,name,1), 1, new AspectList()
+			ThaumcraftApi.addFakeCraftingRecipe(new ResourceLocation(SlashBlade.modid,name+"_fake"), new InfusionRecipe("ROUKANSENPUUZIN", BladeLoader.findItemStack(Last_worker.MODID,name,1), 1, new AspectList()
 		    	      .add(Aspect.ENERGY, 30).add(Aspect.SOUL, 30).add(Aspect.AVERSION,30),blade, 
 		    	      new Object[] {
 		    	    		  SlashBlade.findItemStack("flammpfeil.slashblade", SlashBlade.ProudSoulStr, 1)

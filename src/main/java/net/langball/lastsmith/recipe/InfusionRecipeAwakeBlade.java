@@ -135,6 +135,8 @@ public class InfusionRecipeAwakeBlade extends InfusionRecipe {
                return false;
            if(0 < tagValueCompare(ItemSlashBlade.RepairCount, reqTag, srcTag))
                return false;
+		}else{
+			 return false;
 		}
 		return true;
 	}

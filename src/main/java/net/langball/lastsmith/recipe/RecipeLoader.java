@@ -114,16 +114,31 @@ public class RecipeLoader {
 		RecipesUtil.addRecipe("blade_3", new ShapedOreRecipe(new ResourceLocation(""), ItemLoader.blade_3, new Object[]{
 				"  C"," I ","B H",'I',"ingotGold",'H',ItemLoader.hammer,'B',ItemLoader.blade_3_unfinished_5,'C',"cobblestone"
 		}));
+		
+
+		
 		if(OreDictionary.getOres("bamboo").isEmpty()){
+			RecipesUtil.addRecipe("bamboo_blade", new ShapedOreRecipe(new ResourceLocation(""), ItemLoader.bamboo_blade, new Object[]{
+					" BP","BP ","L  ",'B',Items.REEDS,'L',ItemLoader.wooden_blade,'P',"plankWood"
+			}));
+			RecipesUtil.addRecipe("bamboo_saya", new ShapedOreRecipe(new ResourceLocation(""),BladeLoader.wrapper_bamboo, new Object[]{
+					" PL","PBP","LP ",'P',Items.REEDS,'L',"logWood",'B',BladeLoader.wrapper
+			}));
             SlashBlade.addRecipe("slashbladeBambooLight",
                     new RecipeUpgradeBlade(new ResourceLocation(SlashBlade.modid,"bamboolight"),
                             new ItemStack(SlashBlade.bladeBambooLight),new Object[]{
-				" LB","LB ","D  ",Character.valueOf('L'),"logWood",Character.valueOf('B'),Items.REEDS,'D',new BladeIngredient(new ItemStack(SlashBlade.bladeWood,1))
+				" PW","PBP","DP ",Character.valueOf('P'),Items.REEDS,Character.valueOf('B'),ItemLoader.bamboo_blade,'W',BladeLoader.wrapper_bamboo,'D',new BladeIngredient(new ItemStack(SlashBlade.bladeWood,1))
 		}));}else{
+			RecipesUtil.addRecipe("bamboo_blade", new ShapedOreRecipe(new ResourceLocation(""), ItemLoader.bamboo_blade, new Object[]{
+					" BP","BP ","L  ",'B',"bamboo",'L',ItemLoader.wooden_blade,'P',"plankWood"
+			}));
+			RecipesUtil.addRecipe("bamboo_saya", new ShapedOreRecipe(new ResourceLocation(""),BladeLoader.wrapper_bamboo, new Object[]{
+					" PL","PBP","LP ",'P',"bamboo",'L',"logWood",'B',BladeLoader.wrapper
+			}));
             SlashBlade.addRecipe("slashbladeBambooLight",
                     new RecipeUpgradeBlade(new ResourceLocation(SlashBlade.modid,"bamboolight"),
                             new ItemStack(SlashBlade.bladeBambooLight),new Object[]{
-				" LB","LB ","D  ",Character.valueOf('L'),"logWood",Character.valueOf('B'),"bamboo",'D',new BladeIngredient(new ItemStack(SlashBlade.bladeWood,1))
+				" PW","PBP","DP ",Character.valueOf('P'),"bamboo",Character.valueOf('B'),ItemLoader.bamboo_blade,'W',BladeLoader.wrapper_bamboo,'D',new BladeIngredient(new ItemStack(SlashBlade.bladeWood,1))
 		}));}
 		
 		SlashBlade.addRecipe("slashbladeWhite",new ShapedOreRecipe(new ResourceLocation(SlashBlade.modid,"white"), new ItemStack(SlashBlade.bladeWhiteSheath, 1, SlashBlade.bladeWhiteSheath.getMaxDamage() / 3) , new Object[]{

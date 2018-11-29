@@ -31,6 +31,11 @@ public class ItemSlashBladeSaya extends ItemSlashBlade {
     public ResourceLocationRaw getModelTexture(){
         return texture;
     }
+    public ItemSlashBladeSaya setModelTexture(ResourceLocationRaw loc){
+		this.texture = loc;
+		return this;
+	}
+
 
     @Override
     public ComboSequence getNextComboSeq(ItemStack itemStack, ComboSequence current, boolean isRightClick, EntityPlayer player) {

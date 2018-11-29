@@ -88,5 +88,5 @@ repositories {
 }
 
 dependencies {
-    compile "vazkii.patchouli:Patchouli:1.0-8.32"
+    compile "vazkii.patchouli:Patchouli:1.0-10.51"
 }

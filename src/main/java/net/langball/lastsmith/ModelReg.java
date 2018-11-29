@@ -30,6 +30,7 @@ public class ModelReg {
         Slashblade_model(BladeLoader.blade_model_1);
         Slashblade_model(BladeLoader.blade_tls);
         Slashblade_model(BladeLoader.wrapper);
+        Slashblade_model(BladeLoader.wrapper_bamboo);
         if(Loader.isModLoaded(IC2.MODID)){
         Slashblade_model(BladeLoader.euBlade);
         }

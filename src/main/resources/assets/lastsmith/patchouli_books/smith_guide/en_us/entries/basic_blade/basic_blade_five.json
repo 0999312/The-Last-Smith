@@ -9,9 +9,8 @@
       },
       {
          "type" : "crafting",
-         "recipe" : "lastsmith:blade_3",
-         "recipe2" : "lastsmith:lastsmith.UnnamedBlade"
+         "recipe" : "lastsmith:lastsmith.UnnamedBlade"
       }
    ],
-   "sortnum" : "4"
+   "sortnum" : 4
 }
