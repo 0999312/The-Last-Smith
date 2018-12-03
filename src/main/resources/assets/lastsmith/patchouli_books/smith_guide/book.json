@@ -3,7 +3,6 @@
    "landing_text" : "guide.smith_guide.landing_text",
    "subtitle" : "guide.smith_guide.subtitle",
    "version" : "1",
-   "creative_tab" : "lastsmith",
    "model" : "lastsmith:smith_guide",
    "book_texture" : "lastsmith:textures/gui/smith_guide.png"
 }

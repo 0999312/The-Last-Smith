@@ -35,11 +35,7 @@ public class BlockCasket extends Block {
 	public boolean isNormalCube(IBlockState state, IBlockAccess world, BlockPos pos) {
 		return false;
 	}
-    
-    /**
-     * Called after the block is set in the Chunk data, but before the Tile Entity is set
-     */
-	
+
     public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state)
     {
         this.setDefaultFacing(worldIn, pos, state);
@@ -75,36 +71,23 @@ public class BlockCasket extends Block {
             worldIn.setBlockState(pos, state.withProperty(FACING, enumfacing), 2);
         }
     }
-    /**
-     * Called by ItemBlocks just before a block is actually set in the world, to allow for adjustments to the
-     * IBlockstate
-     */
+
     public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
     {
         return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing().getOpposite());
     }
 
-    /**
-     * Called by ItemBlocks after a block is set in the world, to allow post-place logic
-     */
     public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack)
     {
         worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing().getOpposite()), 2);
 
     }
 
-    /**
-     * The type of render function called. MODEL for mixed tesr and static model, MODELBLOCK_ANIMATED for TESR-only,
-     * LIQUID for vanilla liquids, INVISIBLE to skip all rendering
-     */
     public EnumBlockRenderType getRenderType(IBlockState state)
     {
         return EnumBlockRenderType.MODEL;
     }
 
-    /**
-     * Convert the given metadata into a BlockState for this Block
-     */
     public IBlockState getStateFromMeta(int meta)
     {
         EnumFacing enumfacing = EnumFacing.getFront(meta);
@@ -117,27 +100,16 @@ public class BlockCasket extends Block {
         return this.getDefaultState().withProperty(FACING, enumfacing);
     }
 
-    /**
-     * Convert the BlockState into the correct metadata value
-     */
     public int getMetaFromState(IBlockState state)
     {
         return ((EnumFacing)state.getValue(FACING)).getIndex();
     }
 
-    /**
-     * Returns the blockstate with the given rotation from the passed blockstate. If inapplicable, returns the passed
-     * blockstate.
-     */
     public IBlockState withRotation(IBlockState state, Rotation rot)
     {
         return state.withProperty(FACING, rot.rotate((EnumFacing)state.getValue(FACING)));
     }
 
-    /**
-     * Returns the blockstate with the given mirror of the passed blockstate. If inapplicable, returns the passed
-     * blockstate.
-     */
     public IBlockState withMirror(IBlockState state, Mirror mirrorIn)
     {
         return state.withRotation(mirrorIn.toRotation((EnumFacing)state.getValue(FACING)));

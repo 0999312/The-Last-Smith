@@ -39,12 +39,12 @@ public class ItemSlashblade_117 {
 	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(267));
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);
-	      customblade.addEnchantment(Enchantments.UNBREAKING,10);
-	      customblade.addEnchantment(Enchantments.SHARPNESS,8);
-	      customblade.addEnchantment(Enchantments.POWER,7);
+	      customblade.addEnchantment(Enchantments.UNBREAKING,6);
+	      customblade.addEnchantment(Enchantments.SHARPNESS,6);
+	      customblade.addEnchantment(Enchantments.POWER,3);
 	      ItemStack custombladeReqired = new ItemStack(SlashBlade.weapon);
 	      NBTTagCompound reqTag = ItemSlashBlade.getItemTagCompound(custombladeReqired);
-	      ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(1111));
+	      ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(1000));
 	      ItemStack louguan = BladeLoader.findItemStack(Last_worker.MODID, name, 1);
 	      ItemStack itemSphereBladeSoul = SlashBlade.findItemStack("flammpfeil.slashblade", "sphere_bladesoul", 1);
 	      ItemStack ingot = SlashBlade.findItemStack("flammpfeil.slashblade", "ingot_bladesoul", 1);

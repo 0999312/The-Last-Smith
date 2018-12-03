@@ -36,3 +36,4 @@ config
 world
 *.json
 *.txt
+patchouli_books

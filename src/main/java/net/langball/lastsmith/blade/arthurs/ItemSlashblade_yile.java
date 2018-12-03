@@ -39,9 +39,9 @@ public class ItemSlashblade_yile {
 	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(267));
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);
-	      customblade.addEnchantment(Enchantments.UNBREAKING,10);
-	      customblade.addEnchantment(Enchantments.SHARPNESS,8);
-	      customblade.addEnchantment(Enchantments.POWER,7);
+	      customblade.addEnchantment(Enchantments.UNBREAKING,6);
+	      customblade.addEnchantment(Enchantments.SHARPNESS,6);
+	      customblade.addEnchantment(Enchantments.POWER,3);
 	      ItemStack custombladeReqired = new ItemStack(SlashBlade.weapon);
 	      NBTTagCompound reqTag = ItemSlashBlade.getItemTagCompound(custombladeReqired);
 	      ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(1000));

@@ -120,6 +120,7 @@ item.lastsmith.tamahagane.name=玉钢
 item.lastsmith.steel_ingot.name=钢锭
 item.lastsmith.crashed_iron.name=待冶炼铁矿
 item.lastsmith.wooden_blade.name=实木刀条
+item.lastsmith.bamboo_blade.name=竹刀条
 item.lastsmith.paper_arthurs.name=制作者名单
 item.lastsmith.sakura_full.name=樱
 item.lastsmith.sakura_ingot_unfinished.name=未精炼樱色钢锭
@@ -129,6 +130,7 @@ item.lastsmith.yakibatsuchi.name=烧刃土
 item.lastsmith.coal_dust.name=煤粉
 
 item.flammpfeil.slashblade.wooden_saya.name=实木鞘
+item.flammpfeil.slashblade.bamboo_saya.name=竹鞘
 item.flammpfeil.slashblade.named.template_re_fake.name=伪物「苍梅」
 item.flammpfeil.slashblade.named.template_re2_fake.name=伪物「赤梅」
 

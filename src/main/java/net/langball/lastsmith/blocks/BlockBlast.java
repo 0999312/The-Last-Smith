@@ -39,7 +39,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockBlast extends BlockContainer {
 	   public static final PropertyDirection FACING = BlockHorizontal.FACING;
-	    private final boolean isBurning;
+	    public final boolean isBurning;
 	    private static boolean keepInventory;
 
 	    protected BlockBlast(boolean isBurning)
