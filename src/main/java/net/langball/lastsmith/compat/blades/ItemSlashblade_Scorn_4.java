@@ -57,7 +57,7 @@ public class ItemSlashblade_Scorn_4 {
 	    				  "ADA", "DBD", "ADA", 
 	    				  Character.valueOf('A'), itemSphereBladeSoul
 	    				, Character.valueOf('B'), custombladeReqired
-	    				, Character.valueOf('D'), new ItemStack(ItemLoader.sakura_full)}));
+	    				, Character.valueOf('D'), new ItemStack(ItemLoader.material,1,8)}));
 	   }
 	   
 

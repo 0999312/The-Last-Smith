@@ -3,6 +3,7 @@ package net.langball.lastsmith.compat;
 import java.util.List;
 
 import net.langball.lastsmith.blade.ItemSlashBladeNamedSS;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -11,7 +12,6 @@ import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.text.TextFormatting;
-import net.minecraft.util.text.translation.I18n;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.relauncher.Side;
@@ -54,7 +54,7 @@ public class ItemSlashBladeCrimson extends ItemSlashBladeNamedSS implements IWar
 	  @SideOnly(Side.CLIENT)
 	  public void addInformation(ItemStack stack, World worldIn, List tooltip, ITooltipFlag flagIn)
 	  {
-	    tooltip.add(TextFormatting.GOLD + I18n.translateToLocal("enchantment.special.sapgreat"));
+	    tooltip.add(TextFormatting.GOLD +  I18n.format("enchantment.special.sapgreat"));
 	    super.addInformation(stack, worldIn, tooltip, flagIn);
 	  }
 }

@@ -84,9 +84,47 @@ processResources {
     }
 }
 repositories {
-    maven { url 'https://maven.blamejared.com' }
+    maven {
+	url 'https://maven.blamejared.com' 
+	}
+	maven {
+        name = "CoFH Maven"
+        url = "http://maven.covers1624.net"
+    }
+	  	maven {
+    name = "Chickenbones maven"
+    url = "http://chickenbones.net/maven/"
+	}
+	maven {
+    // location of the maven that hosts JEI files
+    name = "Progwml6 maven"
+    url = "http://dvs1.progwml6.com/files/maven"
+	}
+
+	maven {
+    // location of a maven mirror for JEI files, as a fallback
+    name = "ModMaven"
+    url = "modmaven.k-4u.nl"
+	}
+
+    maven {
+        name = "CurseForge"
+        url = "https://minecraft.curseforge.com/api/maven/"
+    }
+
 }
 
 dependencies {
+	deobfCompile "slashblade:SlashBlade:mc1.12:r15"
     compile "vazkii.patchouli:Patchouli:1.0-10.51"
+	deobfCompile "cofh:RedstoneFlux:1.12-2.1.0.6:universal"
+	deobfCompile "cofh:CoFHCore:1.12.2-4.6.1.22:universal"
+	deobfCompile "cofh:CoFHWorld:1.12.2-1.3.0.6:universal"
+	deobfCompile "codechicken:CodeChickenLib:1.12.2-3.2.2.354:universal"
+	deobfCompile "cofh:ThermalFoundation:1.12.2-2.6.1.22:universal"
+	deobfCompile "cofh:ThermalExpansion:1.12.2-5.5.2.39:universal"
+	// compile against the JEI API but do not include it at runtime
+    deobfProvided "mezz.jei:jei_1.12.2:4.14.3.238:api"
+    // at runtime, use the full JEI jar
+    runtime "mezz.jei:jei_1.12.2:4.14.3.238"
 }

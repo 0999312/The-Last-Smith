@@ -1,6 +1,5 @@
-package net.langball.lastsmith.eusaber;
+package net.langball.lastsmith.compat.RF;
 
-import ic2.api.item.IC2Items;
 import mods.flammpfeil.slashblade.RecipeAwakeBlade;
 import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
@@ -27,7 +26,7 @@ public class ItemSlashblade_3 {
 	   public void init(InitEvent event) {
 	      String name = "flammpfeil.slashblade.named.wenshi";
 	      String name2 = "flammpfeil.slashblade.named.roukan";
-	      ItemStack customblade = new ItemStack(BladeLoader.euBlade, 1, 0);
+	      ItemStack customblade = new ItemStack(BladeLoader.rfblade, 1, 0);
 	      NBTTagCompound tag = new NBTTagCompound();
 	      customblade.setTagCompound(tag);
 	      ItemSlashBladeNamedSS.CurrentItemName.set(tag, name);
@@ -51,7 +50,7 @@ public class ItemSlashblade_3 {
 	      ItemStack louguan =  BladeLoader.findItemStack(Last_worker.MODID, name, 1);
 	      ItemStack itemSphereBladeSoul = SlashBlade.findItemStack("flammpfeil.slashblade", "sphere_bladesoul", 1);
 	      ItemStack ingot = SlashBlade.findItemStack("flammpfeil.slashblade", "ingot_bladesoul", 1);
-	      SlashBlade.addRecipe(name, new RecipeAwakeBlade(new ResourceLocation(name), louguan, custombladeReqired, new Object[]{"DAD", "CBC", "ECE", Character.valueOf('A'), ItemLoader.sakura_ingot, Character.valueOf('B'), custombladeReqired, Character.valueOf('C'), itemSphereBladeSoul, Character.valueOf('D'),IC2Items.getItem("crafting", "iridium"), Character.valueOf('E'),IC2Items.getItem("crafting", "alloy")}));
+	      SlashBlade.addRecipe(name, new RecipeAwakeBlade(new ResourceLocation(name), louguan, custombladeReqired, new Object[]{"DAD", "CBC", "ECE", Character.valueOf('A'), "ingotSakura", Character.valueOf('B'), custombladeReqired, Character.valueOf('C'), itemSphereBladeSoul, Character.valueOf('D'),"blockIron", Character.valueOf('E'),"blockRedStone"}));
 
 	   }
 	   

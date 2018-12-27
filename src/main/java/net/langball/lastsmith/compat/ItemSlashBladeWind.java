@@ -24,7 +24,6 @@ public class ItemSlashBladeWind extends ItemSlashBladeNamedSS {
 
 	public ItemSlashBladeWind(ToolMaterial par2EnumToolMaterial, float baseAttackModifiers) {
 		super(par2EnumToolMaterial, baseAttackModifiers);
-		// TODO Auto-generated constructor stub
 	}
 	
 	public void onUsingTick(ItemStack stack, EntityLivingBase player, int count)

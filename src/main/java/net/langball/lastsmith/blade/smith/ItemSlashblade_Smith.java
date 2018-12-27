@@ -24,8 +24,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public class ItemSlashblade_Smith {
 		@SubscribeEvent
 	   public void init(InitEvent event) {
-		    String name = "flammpfeil.slashblade.named.smith_1";
-	      String name2 = "flammpfeil.slashblade.named.blade_old";
+		  String name = "flammpfeil.slashblade.named.smith_1";
 	      ItemStack customblade = new ItemStack(BladeLoader.blade_tls, 1, 0);
 	      NBTTagCompound tag = new NBTTagCompound();
 	      customblade.setTagCompound(tag);
@@ -43,7 +42,7 @@ public class ItemSlashblade_Smith {
 	      ItemStack louguan = BladeLoader.findItemStack(Last_worker.MODID, name, 1);
 	      ItemStack itemSphereBladeSoul = SlashBlade.findItemStack("flammpfeil.slashblade", "sphere_bladesoul", 1);
 	      ItemStack ingot = SlashBlade.findItemStack("flammpfeil.slashblade", "ingot_bladesoul", 1);
-	      SlashBlade.addRecipe(name, new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid,name),customblade, custombladeReqired, new Object[]{" DA", "DA ", "BSH", Character.valueOf('A'),"ingotSakura", Character.valueOf('B'), custombladeReqired, Character.valueOf('D'), new ItemStack(Blocks.COAL_BLOCK),'S',ItemLoader.sakura_full,'H',ItemLoader.hammer}));
+	      SlashBlade.addRecipe(name, new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid,name),customblade, custombladeReqired, new Object[]{" DA", "DA ", "BSH", Character.valueOf('A'),"ingotSakura", Character.valueOf('B'), custombladeReqired, Character.valueOf('D'), new ItemStack(Blocks.COAL_BLOCK),'S',new ItemStack(ItemLoader.material,1,8),'H',ItemLoader.hammer}));
 	   }
 
 }

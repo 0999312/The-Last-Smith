@@ -42,7 +42,7 @@ public class ItemSlashblade_Blade_bamboo {
 	      ItemStack louguan = BladeLoader.findItemStack(Last_worker.MODID, name, 1);
 	      ItemStack itemSphereBladeSoul = SlashBlade.findItemStack("flammpfeil.slashblade", "sphere_bladesoul", 1);
 	      ItemStack ingot = SlashBlade.findItemStack("flammpfeil.slashblade", "ingot_bladesoul", 1);
-	      SlashBlade.addRecipe(name, new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid,name),customblade, custombladeReqired, new Object[]{"ADA", "DBD", "AHA",Character.valueOf('H'), ItemLoader.hammer, Character.valueOf('A'),ingot, Character.valueOf('B'), custombladeReqired, Character.valueOf('D'), new ItemStack(ItemLoader.sakura)}));
+	      SlashBlade.addRecipe(name, new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid,name),customblade, custombladeReqired, new Object[]{"ADA", "DBD", "AHA",Character.valueOf('H'), ItemLoader.hammer, Character.valueOf('A'),ingot, Character.valueOf('B'), custombladeReqired, Character.valueOf('D'), new ItemStack(ItemLoader.material,1,7)}));
 
 	      ItemStack foxbladeReqired =BladeLoader.findItemStack(Last_worker.MODID, name, 1);
 	      foxbladeReqired.addEnchantment(Enchantments.LOOTING,1);
@@ -51,7 +51,7 @@ public class ItemSlashblade_Blade_bamboo {
           ItemSlashBlade.ProudSoul.set(reqTag1,1000);
           ItemSlashBlade.RepairCount.set(reqTag1,1);
 	      ItemStack fox = SlashBlade.findItemStack(SlashBlade.modid,"flammpfeil.slashblade.named.fox.white", 1);
-	      SlashBlade.addRecipe("fox_white_tls", new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid,"flammpfeil.slashblade.named.fox.white"),fox, foxbladeReqired, new Object[]{"DAD", "DBD", "DHD",Character.valueOf('H'),itemSphereBladeSoul, Character.valueOf('A'),ingot, Character.valueOf('B'), foxbladeReqired, Character.valueOf('D'), new ItemStack(ItemLoader.sakura_full)}));
+	      SlashBlade.addRecipe("fox_white_tls", new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid,"flammpfeil.slashblade.named.fox.white"),fox, foxbladeReqired, new Object[]{"DAD", "DBD", "DHD",Character.valueOf('H'),itemSphereBladeSoul, Character.valueOf('A'),ingot, Character.valueOf('B'), foxbladeReqired, Character.valueOf('D'), new ItemStack(ItemLoader.material,1,8)}));
 
 	      ItemStack foxblade2Reqired =BladeLoader.findItemStack(Last_worker.MODID, name, 1);
 	      foxblade2Reqired.addEnchantment(Enchantments.SMITE,1);
@@ -60,7 +60,7 @@ public class ItemSlashblade_Blade_bamboo {
           ItemSlashBlade.ProudSoul.set(reqTag1,1000);
           ItemSlashBlade.RepairCount.set(reqTag1,1);
 	      ItemStack fox2 = SlashBlade.findItemStack(SlashBlade.modid,"flammpfeil.slashblade.named.fox.black", 1);
-	      SlashBlade.addRecipe("fox_black_tls", new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid,"flammpfeil.slashblade.named.fox.black"),fox2, foxblade2Reqired, new Object[]{"DAD", "DBD", "DHD",Character.valueOf('H'),itemSphereBladeSoul, Character.valueOf('A'),ingot, Character.valueOf('B'), foxblade2Reqired, Character.valueOf('D'), new ItemStack(ItemLoader.sakura)}));
+	      SlashBlade.addRecipe("fox_black_tls", new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid,"flammpfeil.slashblade.named.fox.black"),fox2, foxblade2Reqired, new Object[]{"DAD", "DBD", "DHD",Character.valueOf('H'),itemSphereBladeSoul, Character.valueOf('A'),ingot, Character.valueOf('B'), foxblade2Reqired, Character.valueOf('D'), new ItemStack(ItemLoader.material,1,8)}));
 
 	   }
 

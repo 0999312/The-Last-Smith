@@ -3,7 +3,7 @@
       {
          "key" : "FIRSTBLADE",
          "name" : "research.FIRSTBLADE.title",
-         "icons" : [ "lastsmith:wooden_blade" ],
+         "icons" : [ "lastsmith:itemMaterials;1;3" ],
          "category" : "KATANA",
          "location" : [ -8, 2 ],
          "parents" : [ "FIRSTSTEPS" ],
@@ -47,7 +47,11 @@
       {
          "key" : "BLADES",
          "name" : "research.BLADES.title",
-         "icons" : [ "lastsmith:blade_2" ],
+         "icons" : [
+            "lastsmith:itemBlade;1;0",
+            "lastsmith:itemBlade;1;1",
+            "lastsmith:itemBlade;1;2"
+         ],
          "category" : "KATANA",
          "location" : [ -4, 2 ],
          "parents" : [ "WOODENBLADE" ],
@@ -188,7 +192,7 @@
             {
                "text" : "research.NAMEDBALDE.text.stage.1",
                "required_craft" : [ "flammpfeil.slashblade:slashblade" ],
-               "required_knowledge" : [ "THEORY;KATANA;5", "THEORY;BASICS;2" ]
+               "required_knowledge" : [ "THEORY;KATANA;1", "THEORY;BASICS;1" ]
             },
             {
                "text" : "research.NAMEDBALDE.text.stage.2",
@@ -230,7 +234,7 @@
             {
                "text" : "research.SAKURABALDE.text.stage.1",
                "required_craft" : [ "lastsmith:UnnamedBlade" ],
-               "required_knowledge" : [ "THEORY;KATANA;5", "THEORY;BASICS;2" ]
+               "required_knowledge" : [ "THEORY;KATANA;1", "THEORY;BASICS;1" ]
             },
             {
                "text" : "research.SAKURABALDE.text.stage.2",
@@ -261,7 +265,7 @@
             {
                "text" : "research.ROUKAN.text.stage.1",
                "required_craft" : [ "lastsmith:UnnamedBlade" ],
-               "required_knowledge" : [ "THEORY;KATANA;5", "THEORY;BASICS;2" ]
+               "required_knowledge" : [ "THEORY;KATANA;1", "THEORY;BASICS;1" ]
             },
             {
                "text" : "research.ROUKAN.text.stage.2",
@@ -289,7 +293,7 @@
             {
                "text" : "research.HAKUROU.text.stage.1",
                "required_craft" : [ "lastsmith:UnnamedBlade" ],
-               "required_knowledge" : [ "THEORY;KATANA;5", "THEORY;BASICS;2" ]
+               "required_knowledge" : [ "THEORY;KATANA;1", "THEORY;BASICS;1" ]
             },
             {
                "text" : "research.HAKUROU.text.stage.2",
@@ -318,7 +322,7 @@
             {
                "text" : "research.OLDBLADES.text.stage.1",
                "required_craft" : [ "lastsmith:UnnamedBlade" ],
-               "required_knowledge" : [ "THEORY;KATANA;5", "THEORY;BASICS;2" ]
+               "required_knowledge" : [ "THEORY;KATANA;1", "THEORY;BASICS;1" ]
             },
             {
                "text" : "research.OLDBLADES.text.stage.2",
@@ -351,7 +355,7 @@
             {
                "text" : "research.OTHERSBLADE.text.stage.1",
                "required_craft" : [ "lastsmith:UnnamedBlade" ],
-               "required_knowledge" : [ "THEORY;KATANA;5", "THEORY;BASICS;2" ]
+               "required_knowledge" : [ "THEORY;KATANA;1", "THEORY;BASICS;1" ]
             },
             {
                "text" : "research.OTHERSBLADE.text.stage.2",
@@ -374,11 +378,11 @@
          "category" : "KATANA",
          "meta" : [ "SPIKY" ],
          "location" : [ -1, -4 ],
-         "parents" : [ "UNNAMEDBLADE" ],
+         "parents" : [ "ROUKAN" ],
          "stages" : [
             {
                "text" : "research.ROUKANSENPUUZIN.text.stage.1",
-               "required_knowledge" : [ "THEORY;KATANA;7", "THEORY;BASICS;2", "THEORY;INFUSION;1" ],
+               "required_knowledge" : [ "THEORY;KATANA;2", "THEORY;BASICS;2", "THEORY;INFUSION;1" ],
                "required_research" : [ "ROUKAN", "ELEMENTALTOOLS" ]
             },
             {
@@ -396,16 +400,51 @@
          "category" : "KATANA",
          "meta" : [ "SPIKY" ],
          "location" : [ 0, -4 ],
-         "parents" : [ "UNNAMEDBLADE" ],
+         "parents" : [ "HAKUROU" ],
          "stages" : [
             {
                "text" : "research.HAKUROUSENPUUZIN.text.stage.1",
                "required_research" : [ "HAKUROU", "ELEMENTALTOOLS" ],
-               "required_knowledge" : [ "THEORY;KATANA;7", "THEORY;BASICS;2", "THEORY;INFUSION;1" ]
+               "required_knowledge" : [ "THEORY;KATANA;2", "THEORY;BASICS;2", "THEORY;INFUSION;1" ]
             },
             {
                "text" : "research.HAKUROUSENPUUZIN.text.stage.2",
                "recipes" : [ "flammpfeil.slashblade:flammpfeil.slashblade.named.bailou_xf_fake" ]
+            }
+         ]
+      },
+      {
+         "key" : "THAUMBLADE",
+         "name" : "research.THAUMBLADE.title",
+         "icons" : [
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/smith/model\",TextureName: \"named/thaum/ModelKatanaThaumium\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/smith/model\",TextureName: \"named/thaum/ModelKatanaVoidmetal\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/smith/model\",TextureName: \"named/thaum/ModelKatanaElemental\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/smith/model\",TextureName: \"named/thaum/ModelKatanaCrimson\"}"
+         ],
+         "category" : "KATANA",
+         "location" : [ 3, 2 ],
+         "parents" : [ "WHITESHEATH" ],
+         "stages" : [
+            {
+               "text" : "research.THAUMBLADE.text.stage.1",
+               "required_knowledge" : [ "THEORY;KATANA;2", "THEORY;INFUSION;2" ],
+               "required_item" : [
+                  "thaumcraft:thaumium_sword;1;0",
+                  "thaumcraft:void_sword;1;0",
+                  "thaumcraft:elemental_sword;1;0",
+                  "thaumcraft:crimson_blade;1;0"
+               ],
+               "required_research" : [ "ARMORFORTRESS", "ELEMENTALTOOLS" ]
+            },
+            {
+               "text" : "research.THAUMBLADE.text.stage.2",
+               "recipes" : [
+                  "flammpfeil.slashblade:flammpfeil.slashblade.named.fortress.thaumium",
+                  "flammpfeil.slashblade:flammpfeil.slashblade.named.fortress.void",
+                  "flammpfeil.slashblade:flammpfeil.slashblade.named.fortress.elemental",
+                  "flammpfeil.slashblade:flammpfeil.slashblade.named.fortress.crimson"
+               ]
             }
          ]
       }

@@ -44,7 +44,7 @@ public class ItemSlashBladeNamedSS extends ItemSlashBlade{
 		public ResourceLocationRaw getModelTexture() {
 			return texture;
 		}
-		
+
 		@Override
 		public void addInformation(ItemStack arg0, World arg1, List arg2, ITooltipFlag arg3) {
 			NBTTagCompound tag = getItemTagCompound(arg0);
@@ -105,7 +105,7 @@ public class ItemSlashBladeNamedSS extends ItemSlashBlade{
 	    @Override
 	    public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> subItems) {
 	        if (!this.isInCreativeTab(tab)) return;
-	        
+	        if (this.isInCreativeTab(CreativeTabs.COMBAT)) return;
 	        for(String bladename : NamedBlades){
 	            ItemStack blade = BladeLoader.getCustomBlade(bladename);
 	            if(blade.getItemDamage() == OreDictionary.WILDCARD_VALUE)
@@ -119,7 +119,7 @@ public class ItemSlashBladeNamedSS extends ItemSlashBlade{
 	    	 if(!par2EntityLivingBase.isEntityAlive() && par2EntityLivingBase.deathTime == 0){
 	         	Random random = new Random();
 	         	int i=random.nextInt(40);
-	         	if(i<2) dropItem(new ItemStack(ItemLoader.sakura), par2EntityLivingBase.world, par2EntityLivingBase);
+	         	if(i<2) dropItem(new ItemStack(ItemLoader.material,1,7), par2EntityLivingBase.world, par2EntityLivingBase);
 	         }
 			return super.hitEntity(par1ItemStack, par2EntityLivingBase, par3EntityLivingBase);
 		}
@@ -222,7 +222,6 @@ public class ItemSlashBladeNamedSS extends ItemSlashBlade{
 				set.remove(SwordType.Bewitched);
 				set.remove(SwordType.SoulEeater);
 			}
-
 			return set;
 		}
 }

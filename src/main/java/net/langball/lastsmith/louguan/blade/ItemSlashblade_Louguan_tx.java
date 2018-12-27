@@ -52,7 +52,7 @@ public class ItemSlashblade_Louguan_tx {
 	      ItemStack louguan = BladeLoader.findItemStack(Last_worker.MODID, nametx, 1);
 	      ItemStack itemSphereBladeSoul = SlashBlade.findItemStack("flammpfeil.slashblade", "sphere_bladesoul", 1);
 	      ItemStack ingot = BladeLoader.findItemStack(Last_worker.MODID, "ingot_bladesoul", 1);
-	      SlashBlade.addRecipe(nametx, new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid,nametx),louguan, custombladeReqired, new Object[]{"DAD", "CBC", "DCD", Character.valueOf('A'),ItemLoader.sakura_ingot,Character.valueOf('B'), custombladeReqired, Character.valueOf('C'), itemSphereBladeSoul, Character.valueOf('D'), new ItemStack(Blocks.DIAMOND_BLOCK)}));
+	      SlashBlade.addRecipe(nametx, new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid,nametx),louguan, custombladeReqired, new Object[]{"DAD", "CBC", "DCD", Character.valueOf('A'),"ingotSakura",Character.valueOf('B'), custombladeReqired, Character.valueOf('C'), itemSphereBladeSoul, Character.valueOf('D'), new ItemStack(Blocks.DIAMOND_BLOCK)}));
 	   }
 
 }

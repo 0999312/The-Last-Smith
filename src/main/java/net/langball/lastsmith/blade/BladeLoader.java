@@ -4,6 +4,7 @@ import java.util.Map;
 
 import com.google.common.collect.Maps;
 
+import cofh.CoFHCore;
 import ic2.api.recipe.IMachineRecipeManager;
 import ic2.core.IC2;
 import mods.flammpfeil.slashblade.ItemSlashBladeDetune;
@@ -36,12 +37,18 @@ import net.langball.lastsmith.blade.others.ItemSlashblade_sakuya4;
 import net.langball.lastsmith.blade.others.ItemSlashblade_sakuya5;
 import net.langball.lastsmith.blade.smith.*;
 import net.langball.lastsmith.compat.*;
-import net.langball.lastsmith.compat.blades.ItemSlashblade_Bailou_xf;
-import net.langball.lastsmith.compat.blades.ItemSlashblade_Louguan_xf;
+import net.langball.lastsmith.compat.RF.ItemSlashBladeRF;
+import net.langball.lastsmith.compat.RF.ItemSlashblade_3;
 import net.langball.lastsmith.compat.blades.ItemSlashblade_Scorn;
 import net.langball.lastsmith.compat.blades.ItemSlashblade_Scorn_2;
 import net.langball.lastsmith.compat.blades.ItemSlashblade_Scorn_3;
 import net.langball.lastsmith.compat.blades.ItemSlashblade_Scorn_4;
+import net.langball.lastsmith.compat.blades.thaum.ItemSlashblade_Bailou_xf;
+import net.langball.lastsmith.compat.blades.thaum.ItemSlashblade_CrimsonFortress;
+import net.langball.lastsmith.compat.blades.thaum.ItemSlashblade_ElementalFortress;
+import net.langball.lastsmith.compat.blades.thaum.ItemSlashblade_Louguan_xf;
+import net.langball.lastsmith.compat.blades.thaum.ItemSlashblade_ThaumFortress;
+import net.langball.lastsmith.compat.blades.thaum.ItemSlashblade_VoidFortress;
 import net.langball.lastsmith.eusaber.*;
 import net.langball.lastsmith.items.*;
 import net.langball.lastsmith.louguan.blade.*;
@@ -60,6 +67,8 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 import thaumcraft.Thaumcraft;
+import thaumcraft.api.ThaumcraftMaterials;
+import thaumcraft.common.items.tools.ItemCrimsonBlade;
 import vazkii.botania.api.BotaniaAPI;
 import vazkii.botania.api.recipe.RecipeRuneAltar;
 import vazkii.botania.common.Botania;
@@ -67,8 +76,8 @@ import vazkii.botania.common.core.BotaniaCreativeTab;
 
 
 public class BladeLoader {
-	public static Item blade,blade_model,blade_model_1,blade_tls;
-	public static Item euBlade,bladeNamed,windBlade,voidBlade;
+	public static Item blade,blade_tls;
+	public static Item euBlade,bladeNamed,thaumiumBlade,windBlade,voidBlade,rfblade,crimsonBlade;
 	public static ItemSlashBladeSaya wrapper,wrapper_bamboo;
 	
 	static public Map<ResourceLocationRaw, ItemStack> BladeRegistry = Maps.newHashMap();
@@ -136,25 +145,7 @@ public BladeLoader(FMLPreInitializationEvent event){
             .setRegistryName("UnnamedBlade")
             .setCreativeTab(CommonProxy.tab);
 	ForgeRegistries.ITEMS.register(blade);
-	blade_model=(new ItemSlashBladeModel(ToolMaterial.IRON,5))
-            .setDestructable(false)
-            .setModelTexture(new ResourceLocationRaw("flammpfeil.slashblade","model/unnamed/texture_model.png"))
-            .setRepairMaterialOreDic("ingotSteel","nuggetSteel")
-            .setMaxDamage(51)
-            .setUnlocalizedName("flammpfeil.slashblade.model_Blade")
-            .setRegistryName("modelBlade")
-            .setCreativeTab(CommonProxy.tab);
-	ForgeRegistries.ITEMS.register(blade_model);
-	blade_model_1= new ItemSlashBladeModel(ToolMaterial.IRON,7)
-            .setDestructable(false)
-            .setModelTexture(new ResourceLocationRaw("flammpfeil.slashblade","model/unnamed/texture_model_1.png"))
-            .setRepairMaterialOreDic("ingotSteel","nuggetSteel")
-            .setMaxDamage(71)
-            .setUnlocalizedName("flammpfeil.slashblade.model_Blade_1")
-            .setRegistryName("modelBlade_1")
-            .setCreativeTab(CommonProxy.tab);
-	ForgeRegistries.ITEMS.register(blade_model_1);
-	
+
     bladeNamed = (ItemSlashBladeNamedSS)(new ItemSlashBladeNamedSS(ToolMaterial.IRON, 4.0f))
             .setMaxDamage(40)
             .setUnlocalizedName("flammpfeil.slashblade.named")
@@ -180,13 +171,21 @@ public BladeLoader(FMLPreInitializationEvent event){
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_Bailou_tx());
 		 SlashBlade.InitEventBus.register(new FakeRecipeLoader());
 	if(Loader.isModLoaded(Thaumcraft.MODID)){
-		windBlade = (new ItemSlashBladeWind(ToolMaterial.IRON, 4.0F)).setRegistryName("WindBlade");
-		    	 ForgeRegistries.ITEMS.register(windBlade);
-		 voidBlade = (new ItemSlashBladeVoid(ToolMaterial.IRON, 4.0F)).setRegistryName("VoidBlade");
-		    	 ForgeRegistries.ITEMS.register(voidBlade);
-				 SlashBlade.InitEventBus.register(new ItemSlashblade_Louguan_xf());
-				 SlashBlade.InitEventBus.register(new ItemSlashblade_Bailou_xf());
-		    	}
+		thaumiumBlade = (new ItemSlashBladeNamedSS(ThaumcraftMaterials.TOOLMAT_THAUMIUM, 4.0F)).setRegistryName("ThaumiumBlade");
+   	 	ForgeRegistries.ITEMS.register(thaumiumBlade);
+		windBlade = (new ItemSlashBladeWind(ThaumcraftMaterials.TOOLMAT_ELEMENTAL, 4.0F)).setRegistryName("WindBlade");
+		ForgeRegistries.ITEMS.register(windBlade);
+		voidBlade = (new ItemSlashBladeVoid(ThaumcraftMaterials.TOOLMAT_VOID, 4.0F)).setRegistryName("VoidBlade");
+		ForgeRegistries.ITEMS.register(voidBlade);
+		crimsonBlade = (new ItemSlashBladeVoid(ItemCrimsonBlade.toolMatCrimsonVoid, 4.0F)).setRegistryName("CrimsonBlade");
+	    ForgeRegistries.ITEMS.register(crimsonBlade);
+		SlashBlade.InitEventBus.register(new ItemSlashblade_Louguan_xf());
+		SlashBlade.InitEventBus.register(new ItemSlashblade_Bailou_xf());
+		SlashBlade.InitEventBus.register(new ItemSlashblade_ThaumFortress());
+		SlashBlade.InitEventBus.register(new ItemSlashblade_VoidFortress());
+		SlashBlade.InitEventBus.register(new ItemSlashblade_ElementalFortress());
+		SlashBlade.InitEventBus.register(new ItemSlashblade_CrimsonFortress());
+	}
 	if(Loader.isModLoaded("botania")){
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_BOT());
 			}
@@ -196,8 +195,13 @@ public BladeLoader(FMLPreInitializationEvent event){
     	 ForgeRegistries.ITEMS.register(euBlade);
     	 SlashBlade.InitEventBus.register(new ItemSlashblade_1());
     	 SlashBlade.InitEventBus.register(new ItemSlashblade_2());
-    	 SlashBlade.InitEventBus.register(new ItemSlashblade_3());
+
     	}
+    if(Loader.isModLoaded(CoFHCore.MOD_ID)){
+    	rfblade = new ItemSlashBladeRF(ToolMaterial.IRON, 4.0F).setRegistryName("slashBlade_RF");
+    	ForgeRegistries.ITEMS.register(rfblade);
+   	 SlashBlade.InitEventBus.register(new ItemSlashblade_3());
+    }
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_BambooLight_nice());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_BambooLight_yin());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_SilverBambooLight_nice());

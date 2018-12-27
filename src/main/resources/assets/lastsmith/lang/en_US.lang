@@ -5,7 +5,7 @@ item.flammpfeil.slashblade.named.slashblade_old.name=SlashBlade-Old School-
 item.flammpfeil.slashblade.named.louguan_old.name=Kanrouken
 item.flammpfeil.slashblade.named.template_re.name=Sharpness-Blue Plum-
 item.flammpfeil.slashblade.named.template_re2.name=Sharpness-Red Plum-
-item.flammpfeil.slashblade.named.eievui.name=The balde of Eievui
+item.flammpfeil.slashblade.named.eievui.name=The blade of Eievui
 item.flammpfeil.slashblade.named.louguan_fake.name=Roukanken-Fake-
 item.flammpfeil.slashblade.named.bailou.name=Hakurouken
 item.flammpfeil.slashblade.named.bailou_fake.name=Fake-Hakurouken-
@@ -56,7 +56,6 @@ item.flammpfeil.slashblade.named.Scorn.rust.name=Fake-Dead-
 item.flammpfeil.slashblade.named.Scorn.name=-Requiem-
 
 flammpfeil.swaepon.info.fake=Fake
-item.flammpfeil.slashblade.named.void_blade.name=Nameless-Void-
 
 blades.ps.model=This blade is not very good.
 blades.crafter=Smith name
@@ -133,7 +132,17 @@ item.flammpfeil.slashblade.named.template_re2_fake.name=Fake -Red Plum-
 item.wrap.BambooMod.katana_fake.name=Fake -Ruby-
 item.wrap.BambooMod.katana_tls.name=Ruby -nameless-
 
+info.flammpfeil.slashblade.tool.chargeOff=§ePress (%s) to Quell§r
+info.flammpfeil.slashblade.tool.chargeOn=§bPress (%s) to Empower§r
+info.flammpfeil.slashblade.tool.energyPerUse=RF Per Use
+info.flammpfeil.slashblade.tool.user=User
+
 itemGroup.lastsmith=The Last Smith
+
+item.flammpfeil.slashblade.named.fortress.thaumium.name=Thaumium Fortress Katana
+item.flammpfeil.slashblade.named.fortress.void.name=Void Fortress Katana
+item.flammpfeil.slashblade.named.fortress.elemental.name=Elemental Fortress Katana
+item.flammpfeil.slashblade.named.fortress.crimson.name=Crimson Fortress Katana
 
 tc.research_category.KATANA=BladeArt
 research.FIRSTBLADE.title=Fisrt Blade
@@ -149,9 +158,13 @@ research.ROUKAN.title=Roukanken
 research.HAKUROU.title=Hakurouken
 research.OLDBLADES.title=Old Blades
 research.OTHERSBLADE.title=Other Blades
-
 research.ROUKANSENPUUZIN.title=RoukanSenpuuzin
 research.HAKUROUSENPUUZIN.title=HakurouSenpuuzin
+research.THAUMBLADE.title=Fortress Katana
+
+research.THAUMBLADE.text.stage.1=I got the inspiration from Fortress Armor, and now I think I need relevant knowledge.
+research.THAUMBLADE.text.stage.2=I set out to improve weapons and I think I have outdone myself.<BR>I learned from swordsmith, came up with a new set of theories, and designed these beautiful weapons.<BR>They have lower durability but more powerful,and they still have their own features.
+
 
 research.FIRSTBLADE.text.stage.1=This manual originally had only a few thaumic things, until I found a large blank behind the manual.<BR>In short, the first step to becoming a swordsmith is to make a wooden blade, so the blade of solid wood is the first thing.
 research.FIRSTBLADE.text.stage.2=Good,Now this is the first blade.<BR>I recorded the accessories needed for a wooden blade and how they were crafted. The combination is a wooden blade.

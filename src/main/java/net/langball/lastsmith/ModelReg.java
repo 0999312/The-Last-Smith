@@ -1,5 +1,6 @@
 package net.langball.lastsmith;
 
+import cofh.CoFHCore;
 import ic2.core.IC2;
 import mods.flammpfeil.slashblade.client.model.BladeModel;
 import mods.flammpfeil.slashblade.client.model.BladeSpecialRender;
@@ -25,18 +26,18 @@ public class ModelReg {
 
     public ModelReg() {
         Slashblade_model(BladeLoader.blade);
-        Slashblade_model(BladeLoader.blade_model);
         Slashblade_model(BladeLoader.bladeNamed);
-        Slashblade_model(BladeLoader.blade_model_1);
         Slashblade_model(BladeLoader.blade_tls);
+        
         Slashblade_model(BladeLoader.wrapper);
         Slashblade_model(BladeLoader.wrapper_bamboo);
-        if(Loader.isModLoaded(IC2.MODID)){
-        Slashblade_model(BladeLoader.euBlade);
-        }
+        if(Loader.isModLoaded(IC2.MODID)) Slashblade_model(BladeLoader.euBlade);
+        if(Loader.isModLoaded(CoFHCore.MOD_ID)) Slashblade_model(BladeLoader.rfblade);
         if(Loader.isModLoaded(Thaumcraft.MODID)){
-        Slashblade_model(BladeLoader.windBlade);
-        Slashblade_model(BladeLoader.voidBlade);
+            Slashblade_model(BladeLoader.thaumiumBlade);
+            Slashblade_model(BladeLoader.windBlade);
+            Slashblade_model(BladeLoader.voidBlade);
+            Slashblade_model(BladeLoader.crimsonBlade);
         }
     }
     @SideOnly(Side.CLIENT)

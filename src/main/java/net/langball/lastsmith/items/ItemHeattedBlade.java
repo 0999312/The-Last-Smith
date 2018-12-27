@@ -22,9 +22,11 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
-public class ItemHeattedBlade extends Item {
-	private Item cold;
-	public ItemHeattedBlade(Item colded) {
+public class ItemHeattedBlade extends ItemBase {
+
+	private ItemStack[] cold;
+	public ItemHeattedBlade(String[] subNames,ItemStack... colded) {
+		super("itemHeattedBlade", 1, subNames);
 		cold = colded;
 	}
 	@Override
@@ -32,7 +34,8 @@ public class ItemHeattedBlade extends Item {
 			EnumFacing facing, float hitX, float hitY, float hitZ) {
 		if(worldIn.getBlockState(pos).getBlock() == BlockLoader.Casket){
 			if(!worldIn.isRemote){
-				player.setHeldItem(hand, new ItemStack(cold));
+				ItemStack item = cold[getDamage(player.getHeldItem(hand))];
+				player.setHeldItem(hand, item);
 			}
 			worldIn.playSound(player,player.posX,player.posY,player.posZ,SoundEvents.BLOCK_FIRE_AMBIENT,SoundCategory.PLAYERS, 1.0F, 1.0F);
 		}

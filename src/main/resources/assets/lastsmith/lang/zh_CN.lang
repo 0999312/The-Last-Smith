@@ -137,7 +137,18 @@ item.flammpfeil.slashblade.named.template_re2_fake.name=伪物「赤梅」
 item.wrap.BambooMod.katana_fake.name=伪物「红玉」
 item.wrap.BambooMod.katana_tls.name=利刀「无名」红玉
 
+info.flammpfeil.slashblade.tool.chargeOff=§e按下 (%s) to 休眠§r
+info.flammpfeil.slashblade.tool.chargeOn=§b按下 (%s) to 充能§r
+info.flammpfeil.slashblade.tool.energyPerUse=RF/次使用
+info.flammpfeil.slashblade.tool.user=所有者
+
 itemGroup.lastsmith=最后的太刀匠人
+
+item.flammpfeil.slashblade.named.fortress.thaumium.name=神秘要塞日本刀
+item.flammpfeil.slashblade.named.fortress.void.name=虚空要塞日本刀
+item.flammpfeil.slashblade.named.fortress.elemental.name=元素要塞日本刀
+item.flammpfeil.slashblade.named.fortress.crimson.name=血腥要塞日本刀
+
 
 tc.research_category.KATANA=刀艺学
 research.FIRSTBLADE.title=第一振刀
@@ -156,6 +167,11 @@ research.OTHERSBLADE.title=零散之刃
 
 research.ROUKANSENPUUZIN.title=楼观旋风刃
 research.HAKUROUSENPUUZIN.title=白楼旋风刃
+
+research.THAUMBLADE.title=要塞日本刀
+
+research.THAUMBLADE.text.stage.1=我从要塞甲胄中得到了一些灵感。而且我需要一些相关的知识。
+research.THAUMBLADE.text.stage.2=我着手改进这些武器，并且应该是小有成效了<BR>我从刀匠处学习，提出一套全新的理论并设计出这些优美的武器。<BR>它们拥有更强劲的力量，但更低的耐久。它们也保留着它们自己原本的特性。
 
 research.FIRSTBLADE.text.stage.1=这本手册原本只有一些神秘学的高深玩意，直到我发现手册后面还有大片的空白。<BR>总之，成为刀匠的第一步是制作木刀，那么制作实木的刀条就是第一件事情了。
 research.FIRSTBLADE.text.stage.2=很好，这就是第一振刀的刀刃了。<BR>我记录了一把木刀所需要的配件，以及它们的合成方法。组合起来就是一把木刀了。

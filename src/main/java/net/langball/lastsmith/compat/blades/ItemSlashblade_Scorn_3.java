@@ -57,7 +57,7 @@ public class ItemSlashblade_Scorn_3 {
 	    				  Character.valueOf('A'), proudSoul
 	    				, Character.valueOf('B'), custombladeReqired
 	    				, Character.valueOf('C'), "ingotIron"
-	    				, Character.valueOf('D'), new ItemStack(ItemLoader.sakura)}));
+	    				, Character.valueOf('D'), new ItemStack(ItemLoader.material,1,7)}));
 	
 	   }
 	 

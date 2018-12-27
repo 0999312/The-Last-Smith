@@ -60,10 +60,10 @@ public class ItemSlashblade_Scorn {
 	      SlashBlade.addRecipe(name, new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid,name),
 	    		  louguan, custombladeReqired, new Object[]{
 	    				  "ACD", "CBC", "DCA", 
-	    				  Character.valueOf('A'), new ItemStack(ItemLoader.sakura_ingot)
+	    				  Character.valueOf('A'), "ingotSakura"
 	    				, Character.valueOf('B'), custombladeReqired
 	    				, Character.valueOf('C'), itemSphereBladeSoul
-	    				, Character.valueOf('D'), new ItemStack(ItemLoader.sakura_full)}));
+	    				, Character.valueOf('D'), new ItemStack(ItemLoader.material,1,8)}));
 	   }
 
 }
