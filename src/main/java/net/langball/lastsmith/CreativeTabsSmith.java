@@ -2,7 +2,6 @@ package net.langball.lastsmith;
 
 import net.langball.lastsmith.blade.BladeLoader;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 public class CreativeTabsSmith extends CreativeTabs {

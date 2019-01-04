@@ -1,24 +1,11 @@
 package net.langball.lastsmith.blade;
 
-import net.minecraft.util.NonNullList;
-import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagList;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.util.ResourceLocationRaw;
-import net.minecraftforge.oredict.OreDictionary;
-import org.omg.CORBA.Current;
-
 import java.util.EnumSet;
-import java.util.List;
 
 public class ItemSlashBladeSaya extends ItemSlashBlade {
 
@@ -52,12 +39,6 @@ public class ItemSlashBladeSaya extends ItemSlashBlade {
     }
 
     @Override
-    public int getMaxDamage(ItemStack stack)
-    {
-        return this.getMaxDamage();
-    }
-
-    @Override
     public boolean hitEntity(ItemStack par1ItemStack, EntityLivingBase par2EntityLivingBase, EntityLivingBase par3EntityLivingBase) {
         ComboSequence comboSec = getComboSequence(getItemTagCompound(par1ItemStack));
         switch (comboSec) {
@@ -74,7 +55,6 @@ public class ItemSlashBladeSaya extends ItemSlashBlade {
 
     @Override
     public void setDamage(ItemStack stack, int damage) {
-        NBTTagCompound tag = getItemTagCompound(stack);
             super.setDamage(stack,0);
     }
 

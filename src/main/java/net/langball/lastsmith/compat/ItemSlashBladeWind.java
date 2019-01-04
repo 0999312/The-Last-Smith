@@ -1,17 +1,13 @@
 package net.langball.lastsmith.compat;
 
-import java.util.EnumSet;
 import java.util.List;
 
 import net.langball.lastsmith.blade.ItemSlashBladeNamedSS;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
@@ -42,12 +38,12 @@ public class ItemSlashBladeWind extends ItemSlashBladeNamedSS {
 	    if ((player instanceof EntityPlayerMP)) {
 	      EntityUtils.resetFloatCounter((EntityPlayerMP)player);
 	    }
-	    List targets = player.world.getEntitiesWithinAABBExcludingEntity(player, player
+	    List<Entity> targets = player.world.getEntitiesWithinAABBExcludingEntity(player, player
 	      .getEntityBoundingBox().grow(2.5D, 2.5D, 2.5D));
 	    if (targets.size() > 0) {
 	      for (int var9 = 0; var9 < targets.size(); var9++)
 	      {
-	        Entity entity = (Entity)targets.get(var9);
+	        Entity entity = targets.get(var9);
 	        if ((!(entity instanceof EntityPlayer)) && ((entity instanceof EntityLivingBase)) && 
 	          (!entity.isDead) && (
 	          (player.getRidingEntity() == null) || (player.getRidingEntity() != entity)))

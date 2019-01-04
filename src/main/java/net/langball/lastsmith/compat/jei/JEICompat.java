@@ -1,10 +1,10 @@
 package net.langball.lastsmith.compat.jei;
 
+import mezz.jei.api.IGuiHelper;
 import mezz.jei.api.IJeiHelpers;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.IModRegistry;
 import mezz.jei.api.JEIPlugin;
-import mezz.jei.api.ingredients.IIngredientRegistry;
 import mezz.jei.api.recipe.IRecipeCategory;
 import mezz.jei.api.recipe.IRecipeCategoryRegistration;
 import mezz.jei.api.recipe.transfer.IRecipeTransferRegistry;
@@ -17,7 +17,6 @@ import net.minecraft.item.ItemStack;
 public class JEICompat implements IModPlugin {
 	@Override
 	public void register(IModRegistry registry) {
-		IIngredientRegistry ingredientRegistry = registry.getIngredientRegistry();
 		IJeiHelpers jeiHelpers = registry.getJeiHelpers();
 		IRecipeTransferRegistry recipeTransferRegistry = registry.getRecipeTransferRegistry();
 		registry.addRecipes(BlastRecipeMaker.getRecipes(jeiHelpers),"lastsmith.blast");
@@ -27,9 +26,12 @@ public class JEICompat implements IModPlugin {
 
 	}
 	
+	@SuppressWarnings("rawtypes")
 	public void registerCategories(IRecipeCategoryRegistration registry) {
+		final IJeiHelpers jeiHelpers = registry.getJeiHelpers();
+		final IGuiHelper guiHelper = jeiHelpers.getGuiHelper();
 		registry.addRecipeCategories(new IRecipeCategory[]{
-				new CategoryBlast(registry.getJeiHelpers().getGuiHelper()),
+				new CategoryBlast(guiHelper),
 		}
 	);
 		

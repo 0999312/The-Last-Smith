@@ -5,9 +5,7 @@ import net.langball.lastsmith.blocks.TileEntityBlast;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.inventory.ContainerFurnace;
 import net.minecraft.inventory.IInventory;
-import net.minecraft.tileentity.TileEntityFurnace;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -16,15 +14,15 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class GuiBlast extends GuiContainer
 {
     private static final ResourceLocation FURNACE_GUI_TEXTURES = new ResourceLocation(Last_worker.MODID+":textures/gui/blastfurnace.png");
-    /** The player inventory bound to this GUI. */
+
     private final InventoryPlayer playerInventory;
     private final IInventory tileFurnace;
 
     public GuiBlast(InventoryPlayer playerInv, IInventory furnaceInv)
     {
         super(new ContainerBlast(playerInv, furnaceInv));
-        this.playerInventory = playerInv;
-        this.tileFurnace = furnaceInv;
+        playerInventory = playerInv;
+        tileFurnace = furnaceInv;
     }
 
     /**
@@ -83,4 +81,8 @@ public class GuiBlast extends GuiContainer
 
         return this.tileFurnace.getField(0) * pixels / i;
     }
+
+	public InventoryPlayer getPlayerInventory() {
+		return playerInventory;
+	}
 }

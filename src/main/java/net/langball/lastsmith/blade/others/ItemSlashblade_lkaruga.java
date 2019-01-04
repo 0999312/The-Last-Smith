@@ -2,29 +2,24 @@ package net.langball.lastsmith.blade.others;
 
 import mods.flammpfeil.slashblade.RecipeAwakeBlade;
 import mods.flammpfeil.slashblade.SlashBlade;
-import mods.flammpfeil.slashblade.SlashBladeTab;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.named.NamedBladeManager;
-import mods.flammpfeil.slashblade.named.Yamato;
 import mods.flammpfeil.slashblade.named.event.LoadEvent.InitEvent;
-import net.langball.lastsmith.CommonProxy;
+import mods.flammpfeil.slashblade.named.event.LoadEvent.PostInitEvent;
 import net.langball.lastsmith.blade.BladeLoader;
 import net.langball.lastsmith.blade.ItemSlashBladeNamedSS;
-import net.langball.lastsmith.sa.SlashDimension_old;
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.init.Blocks;
 import net.minecraft.init.Enchantments;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemSlashblade_lkaruga {
+    String name = "flammpfeil.slashblade.named.Ikaruga";
 	   @SubscribeEvent
 	   public void init(InitEvent event) {
-	      String name = "flammpfeil.slashblade.named.Ikaruga";
+
 	      ItemStack customblade = new ItemStack(BladeLoader.bladeNamed, 1, 0);
 	      NBTTagCompound tag = new NBTTagCompound();
 	      customblade.setTagCompound(tag);
@@ -43,7 +38,15 @@ public class ItemSlashblade_lkaruga {
 	      customblade.addEnchantment(Enchantments.SHARPNESS,7);
 	      customblade.addEnchantment(Enchantments.KNOCKBACK,5);
 	      NamedBladeManager.registerBladeSoul(tag, "Ikaruga");
+	   }
+	   @SubscribeEvent
+	   public void initrecipe(PostInitEvent event){
+		    ItemStack soul = SlashBlade.findItemStack("flammpfeil.slashblade", SlashBlade.SphereBladeSoulStr, 1);
+		    ItemStack blade = BladeLoader.getCustomBlade(name);
+		    ItemStack blade_req = SlashBlade.getCustomBlade("flammpfeil.slashblade.named.darkraven");
+		      NBTTagCompound reqTag = ItemSlashBlade.getItemTagCompound(blade_req);
+	          ItemSlashBlade.KillCount.set(reqTag,1000);
+		    SlashBlade.addRecipe(name, new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid,name),blade, blade_req, new Object[]{"SFS", "EBE", "SFS",Character.valueOf('S'),soul, Character.valueOf('F'),"feather", Character.valueOf('B'), blade_req, Character.valueOf('E'), new ItemStack(Items.ENDER_EYE)}));
 
 	   }
-
 }

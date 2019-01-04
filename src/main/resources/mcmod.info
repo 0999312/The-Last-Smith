@@ -2,7 +2,7 @@
 {
   "modid": "lastsmith",
   "name": "The Last Smith",
-  "description":"",
+  "description":"This is a story of a nameless swordsmith......",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",

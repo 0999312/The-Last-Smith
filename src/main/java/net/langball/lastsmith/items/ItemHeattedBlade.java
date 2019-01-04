@@ -1,18 +1,12 @@
 package net.langball.lastsmith.items;
 
-import java.io.IOException;
 import java.util.List;
 
-import net.langball.lastsmith.CommonProxy;
-import net.langball.lastsmith.Last_worker;
 import net.langball.lastsmith.blocks.BlockLoader;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;

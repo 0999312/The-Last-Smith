@@ -24,7 +24,8 @@ public class InfusionRecipeAwakeBlade extends InfusionRecipe {
 		super(research, outputResult, inst, aspects2, centralItem, recipe);
 		 this.requiredStateBlade = centralItem;
 	}
-	 int tagValueCompare(TagPropertyAccessor access, NBTTagCompound reqTag, NBTTagCompound srcTag){
+	 @SuppressWarnings("unchecked")
+	int tagValueCompare(TagPropertyAccessor<?> access, NBTTagCompound reqTag, NBTTagCompound srcTag){
 	        return access.get(reqTag).compareTo(access.get(srcTag));
 	    }
 	@Override
@@ -122,7 +123,7 @@ public class InfusionRecipeAwakeBlade extends InfusionRecipe {
                    return false;
                }
            }
-
+           requiredStateBlade.setItemDamage(Short.MAX_VALUE);
            NBTTagCompound reqTag = ItemSlashBlade.getItemTagCompound(requiredStateBlade);
            NBTTagCompound srcTag = ItemSlashBlade.getItemTagCompound(central);
 

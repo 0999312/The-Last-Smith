@@ -1,33 +1,21 @@
 package net.langball.lastsmith.sa;
 
 import mods.flammpfeil.slashblade.ability.StylishRankManager;
-import mods.flammpfeil.slashblade.ability.UntouchableTime;
-import mods.flammpfeil.slashblade.entity.EntityJudgmentCutManager;
 import mods.flammpfeil.slashblade.entity.EntitySlashDimension;
 import mods.flammpfeil.slashblade.entity.selector.EntitySelectorAttackable;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.specialattack.SpecialAttackBase;
-import net.minecraft.block.Block;
-import net.minecraft.client.Minecraft;
-import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Enchantments;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.server.MinecraftServer;
-import net.minecraft.stats.StatBase;
 import net.minecraft.util.*;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
-import net.minecraftforge.client.MinecraftForgeClient;
-import net.minecraftforge.common.MinecraftForge;
-
-import java.util.EnumSet;
 import java.util.List;
 
 public class SlashDimension_old extends SpecialAttackBase{
@@ -129,7 +117,6 @@ public class SlashDimension_old extends SpecialAttackBase{
     }
 
     private void spawnParticle(World world, Entity target){
-        //target.spawnExplosionParticle();
         world.spawnParticle(EnumParticleTypes.EXPLOSION_LARGE,
                 target.posX,
                 target.posY + target.height,

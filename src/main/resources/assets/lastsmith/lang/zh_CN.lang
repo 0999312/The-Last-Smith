@@ -4,8 +4,7 @@ item.flammpfeil.slashblade.named.sweapon.name=带鞘直刀
 item.flammpfeil.slashblade.named.slashblade_old.name=太刀
 item.flammpfeil.slashblade.named.louguan_old.name=名刀「观楼剑」
 item.flammpfeil.slashblade.named.louguan_old2.name=「观楼剑」
-item.flammpfeil.slashblade.named.template_re.name=利刀「苍梅」
-item.flammpfeil.slashblade.named.template_re2.name=利刀「赤梅」
+
 item.flammpfeil.slashblade.named.eievui.name=伊布之刃
 item.flammpfeil.slashblade.named.louguan_fake.name=伪物「观楼剑」
 item.flammpfeil.slashblade.named.bailou_fake.name=伪物「白楼剑」
@@ -57,7 +56,6 @@ item.flammpfeil.slashblade.named.Scorn.rust.name=伪物「亡者」
 item.flammpfeil.slashblade.named.Scorn.name=「镇魂曲」
 
 flammpfeil.swaepon.info.fake=伪
-item.flammpfeil.slashblade.named.void_blade.name=无铭「虚无」
 
 blades.ps.model=这把刀并没有灵魂，只是随手的粗制滥造
 blades.crafter=刀匠
@@ -149,6 +147,10 @@ item.flammpfeil.slashblade.named.fortress.void.name=虚空要塞日本刀
 item.flammpfeil.slashblade.named.fortress.elemental.name=元素要塞日本刀
 item.flammpfeil.slashblade.named.fortress.crimson.name=血腥要塞日本刀
 
+item.flammpfeil.slashblade.named.fortress.thaumium.update.name=神秘要塞日本刀
+item.flammpfeil.slashblade.named.fortress.void.update.name=虚空要塞日本刀
+item.flammpfeil.slashblade.named.fortress.elemental.update.name=元素要塞日本刀
+item.flammpfeil.slashblade.named.fortress.crimson.update.name=血腥要塞日本刀
 
 tc.research_category.KATANA=刀艺学
 research.FIRSTBLADE.title=第一振刀
@@ -172,6 +174,11 @@ research.THAUMBLADE.title=要塞日本刀
 
 research.THAUMBLADE.text.stage.1=我从要塞甲胄中得到了一些灵感。而且我需要一些相关的知识。
 research.THAUMBLADE.text.stage.2=我着手改进这些武器，并且应该是小有成效了<BR>我从刀匠处学习，提出一套全新的理论并设计出这些优美的武器。<BR>它们拥有更强劲的力量，但更低的耐久。它们也保留着它们自己原本的特性。
+
+research.BLADEUPDATE.title=刀之铭
+
+research.BLADEUPDATE.text.stage.1=目前的要塞太刀是没有灵魂的，我需要赐予它一个全新的铭。
+research.BLADEUPDATE.text.stage.2=现在，这些无铭之刃被赐予了新的灵魂。
 
 research.FIRSTBLADE.text.stage.1=这本手册原本只有一些神秘学的高深玩意，直到我发现手册后面还有大片的空白。<BR>总之，成为刀匠的第一步是制作木刀，那么制作实木的刀条就是第一件事情了。
 research.FIRSTBLADE.text.stage.2=很好，这就是第一振刀的刀刃了。<BR>我记录了一把木刀所需要的配件，以及它们的合成方法。组合起来就是一把木刀了。

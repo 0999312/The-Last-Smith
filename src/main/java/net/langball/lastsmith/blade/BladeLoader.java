@@ -5,16 +5,11 @@ import java.util.Map;
 import com.google.common.collect.Maps;
 
 import cofh.CoFHCore;
-import ic2.api.recipe.IMachineRecipeManager;
 import ic2.core.IC2;
-import mods.flammpfeil.slashblade.ItemSlashBladeDetune;
 import mods.flammpfeil.slashblade.SlashBlade;
-import mods.flammpfeil.slashblade.item.crafting.RecipeCustomBlade;
 import mods.flammpfeil.slashblade.util.ResourceLocationRaw;
-import mods.flammpfeil.slashblade.util.SlashBladeHooks;
 import net.langball.lastsmith.CommonProxy;
 import net.langball.lastsmith.Last_worker;
-import net.langball.lastsmith.blade.*;
 import net.langball.lastsmith.blade.arthurs.*;
 import net.langball.lastsmith.blade.famous.*;
 import net.langball.lastsmith.blade.others.ItemSlashblade_BambooLight_nice;
@@ -45,38 +40,29 @@ import net.langball.lastsmith.compat.blades.ItemSlashblade_Scorn_3;
 import net.langball.lastsmith.compat.blades.ItemSlashblade_Scorn_4;
 import net.langball.lastsmith.compat.blades.thaum.ItemSlashblade_Bailou_xf;
 import net.langball.lastsmith.compat.blades.thaum.ItemSlashblade_CrimsonFortress;
+import net.langball.lastsmith.compat.blades.thaum.ItemSlashblade_CrimsonFortressUpdate;
 import net.langball.lastsmith.compat.blades.thaum.ItemSlashblade_ElementalFortress;
+import net.langball.lastsmith.compat.blades.thaum.ItemSlashblade_ElementalFortressUpdate;
 import net.langball.lastsmith.compat.blades.thaum.ItemSlashblade_Louguan_xf;
 import net.langball.lastsmith.compat.blades.thaum.ItemSlashblade_ThaumFortress;
+import net.langball.lastsmith.compat.blades.thaum.ItemSlashblade_ThaumFortressUpdate;
 import net.langball.lastsmith.compat.blades.thaum.ItemSlashblade_VoidFortress;
+import net.langball.lastsmith.compat.blades.thaum.ItemSlashblade_VoidFortressUpdate;
 import net.langball.lastsmith.eusaber.*;
-import net.langball.lastsmith.items.*;
 import net.langball.lastsmith.louguan.blade.*;
 import net.langball.lastsmith.recipe.FakeRecipeLoader;
-import net.langball.lastsmith.sa.EntitySA;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.*;
 import net.minecraft.item.Item.ToolMaterial;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.gen.structure.MapGenStructureIO;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
-import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.oredict.OreDictionary;
 import thaumcraft.Thaumcraft;
 import thaumcraft.api.ThaumcraftMaterials;
 import thaumcraft.common.items.tools.ItemCrimsonBlade;
-import vazkii.botania.api.BotaniaAPI;
-import vazkii.botania.api.recipe.RecipeRuneAltar;
-import vazkii.botania.common.Botania;
-import vazkii.botania.common.core.BotaniaCreativeTab;
 
 
 public class BladeLoader {
-	public static Item blade,blade_tls;
+	public static Item blade;
 	public static Item euBlade,bladeNamed,thaumiumBlade,windBlade,voidBlade,rfblade,crimsonBlade;
 	public static ItemSlashBladeSaya wrapper,wrapper_bamboo;
 	
@@ -153,9 +139,7 @@ public BladeLoader(FMLPreInitializationEvent event){
             .setRegistryName("slashbladeNamedSS");
     ForgeRegistries.ITEMS.register(bladeNamed);
     
-	blade_tls = (new ItemSlashbladeNamed_smith(ToolMaterial.IRON, 4.0F)).setRegistryName("blade_tls");
-  	ForgeRegistries.ITEMS.register(blade_tls);
-  		SlashBlade.InitEventBus.register(new SALoader());
+  		 SlashBlade.InitEventBus.register(new SALoader());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_sakuya());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_sakuya2());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_sakuya3());
@@ -185,6 +169,11 @@ public BladeLoader(FMLPreInitializationEvent event){
 		SlashBlade.InitEventBus.register(new ItemSlashblade_VoidFortress());
 		SlashBlade.InitEventBus.register(new ItemSlashblade_ElementalFortress());
 		SlashBlade.InitEventBus.register(new ItemSlashblade_CrimsonFortress());
+		
+		SlashBlade.InitEventBus.register(new ItemSlashblade_ThaumFortressUpdate());
+		SlashBlade.InitEventBus.register(new ItemSlashblade_VoidFortressUpdate());
+		SlashBlade.InitEventBus.register(new ItemSlashblade_ElementalFortressUpdate());
+		SlashBlade.InitEventBus.register(new ItemSlashblade_CrimsonFortressUpdate());
 	}
 	if(Loader.isModLoaded("botania")){
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_BOT());
@@ -212,18 +201,9 @@ public BladeLoader(FMLPreInitializationEvent event){
     	 SlashBlade.InitEventBus.register(new ItemSlashblade_lkaruga());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_Sweapon());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_Slashblade_old());
-		 SlashBlade.InitEventBus.register(new ItemSlashblade_Smith());
-		 SlashBlade.InitEventBus.register(new ItemSlashblade_Smith2());
-		 SlashBlade.InitEventBus.register(new ItemSlashblade_Smith3());
-		 SlashBlade.InitEventBus.register(new ItemSlashblade_Smith4());
+
 		 
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_Blade_basic());
-    	 SlashBlade.InitEventBus.register(new ItemSlashblade_Blade_bamboo_fake());
-	     SlashBlade.InitEventBus.register(new ItemSlashblade_Blade_bamboo());
-	 	 SlashBlade.InitEventBus.register(new ItemSlashblade_Template_fake());
-	 	 SlashBlade.InitEventBus.register(new ItemSlashblade_Template2_fake());
-	 	 SlashBlade.InitEventBus.register(new ItemSlashblade_Template());
-		 SlashBlade.InitEventBus.register(new ItemSlashblade_Template2());
 		 
 	     SlashBlade.InitEventBus.register(new ItemSlashblade_zheng());
 	 	 SlashBlade.InitEventBus.register(new ItemSlashblade_pear());
@@ -244,5 +224,10 @@ public BladeLoader(FMLPreInitializationEvent event){
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_Scorn_3());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_Scorn_4());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_Scorn());
-}
+		 
+		 SlashBlade.InitEventBus.register(new ItemSlashblade_Smith());
+		 SlashBlade.InitEventBus.register(new ItemSlashblade_Smith2());
+		 SlashBlade.InitEventBus.register(new ItemSlashblade_Smith3());
+		 SlashBlade.InitEventBus.register(new ItemSlashblade_Smith4());
+	}
 }

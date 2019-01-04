@@ -2,22 +2,16 @@ package net.langball.lastsmith.sa;
 
 import java.util.List;
 
-import mods.flammpfeil.slashblade.entity.EntityBlisteringSwords;
 import mods.flammpfeil.slashblade.entity.EntityDrive;
-import mods.flammpfeil.slashblade.entity.EntityWitherSword;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.specialattack.SpecialAttackBase;
-import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Enchantments;
 import net.minecraft.init.SoundEvents;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.Vec3d;
@@ -64,7 +58,7 @@ public class Iai extends SpecialAttackBase {
         if(!world.isRemote){
             int level = EnchantmentHelper.getEnchantmentLevel(Enchantments.POWER, stack);
             float magicDamage = 2f+ItemSlashBlade.AttackAmplifier.get(tag) * (level / 2.0f);
-            ItemSlashBlade blade = (ItemSlashBlade)stack.getItem();
+
         	   ItemSlashBlade.setComboSequence(tag, ItemSlashBlade.ComboSequence.Iai);
             	for(int i = 0; i < 4;i++){
                     EntityDrive entityDrive = new EntityDrive(world, player, magicDamage,false,0);

@@ -1,29 +1,15 @@
 package net.langball.lastsmith.compat.blades;
 
-import mods.flammpfeil.slashblade.RecipeAwakeBlade;
-import mods.flammpfeil.slashblade.SlashBlade;
-import mods.flammpfeil.slashblade.SlashBladeTab;
 import mods.flammpfeil.slashblade.event.DropEventHandler;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
-import mods.flammpfeil.slashblade.named.NamedBladeManager;
-import mods.flammpfeil.slashblade.named.Yamato;
 import mods.flammpfeil.slashblade.named.event.LoadEvent.InitEvent;
-import net.langball.lastsmith.CommonProxy;
 import net.langball.lastsmith.Last_worker;
 import net.langball.lastsmith.blade.BladeLoader;
 import net.langball.lastsmith.blade.ItemSlashBladeNamedSS;
-import net.langball.lastsmith.items.ItemLoader;
-import net.langball.lastsmith.sa.SlashDimension_old;
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Enchantments;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemSlashblade_Scorn_2 {
 	   @SubscribeEvent

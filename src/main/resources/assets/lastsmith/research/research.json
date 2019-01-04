@@ -179,10 +179,7 @@
             "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/agito\",TextureName: \"named/orotiagito\"}",
             "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/agito\",TextureName: \"named/a_tukumo\"}",
             "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/yamato\",TextureName: \"named/yamato\"}",
-            "flammpfeil.slashblade:slashbladenamed;1;0;{TextureName: \"named/tagayasan\"}",
-            "flammpfeil.slashblade:slashbladenamed;1;0;{TextureName: \"BambooKatana\"}",
-            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/sange/sange\",TextureName: \"named/sange/black\"}",
-            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/sange/sange\",TextureName: \"named/sange/white\"}"
+            "flammpfeil.slashblade:slashbladenamed;1;0;{TextureName: \"named/tagayasan\"}"
          ],
          "category" : "KATANA",
          "meta" : [ "SPIKY" ],
@@ -207,11 +204,7 @@
                   "flammpfeil.slashblade:muramasa_fake",
                   "flammpfeil.slashblade:recipex_fake",
                   "flammpfeil.slashblade:recipexx_fake",
-                  "flammpfeil.slashblade:doutanuki_fake",
-                  "flammpfeil.slashblade:wrap.BambooMod.katana_fake",
-                  "flammpfeil.slashblade:wrap.BambooMod.katana_tls",
-                  "flammpfeil.slashblade:flammpfeil.slashblade.named.fox.black",
-                  "flammpfeil.slashblade:flammpfeil.slashblade.named.fox.white"
+                  "flammpfeil.slashblade:doutanuki_fake"
                ]
             }
          ]
@@ -310,9 +303,7 @@
          "name" : "research.OLDBLADES.title",
          "icons" : [
             "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/sweapon/model\",TextureName: \"named/sweapon/texture\"}",
-            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/slashblade/1\",TextureName: \"named/slashblade/1\"}",
-            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/muramasa/muramasa\",TextureName: \"named/famous/5\"}",
-            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/muramasa/muramasa\",TextureName: \"named/famous/6\"}"
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/slashblade/1\",TextureName: \"named/slashblade/1\"}"
          ],
          "category" : "KATANA",
          "meta" : [ "SPIKY" ],
@@ -328,11 +319,7 @@
                "text" : "research.OLDBLADES.text.stage.2",
                "recipes" : [
                   "flammpfeil.slashblade:flammpfeil.slashblade.named.slashblade_old",
-                  "flammpfeil.slashblade:flammpfeil.slashblade.named.sweapon",
-                  "flammpfeil.slashblade:flammpfeil.slashblade.named.template_re_fake",
-                  "flammpfeil.slashblade:flammpfeil.slashblade.named.template_re",
-                  "flammpfeil.slashblade:flammpfeil.slashblade.named.template_re2_fake",
-                  "flammpfeil.slashblade:flammpfeil.slashblade.named.template_re2"
+                  "flammpfeil.slashblade:flammpfeil.slashblade.named.sweapon"
                ]
             }
          ]
@@ -387,7 +374,7 @@
             },
             {
                "text" : "research.ROUKANSENPUUZIN.text.stage.2",
-               "recipes" : [ "flammpfeil.slashblade:flammpfeil.slashblade.named.roukan_xf_fake" ]
+               "recipes" : [ "lastsmith:flammpfeil.slashblade.named.roukan_xf" ]
             }
          ]
       },
@@ -409,7 +396,7 @@
             },
             {
                "text" : "research.HAKUROUSENPUUZIN.text.stage.2",
-               "recipes" : [ "flammpfeil.slashblade:flammpfeil.slashblade.named.bailou_xf_fake" ]
+               "recipes" : [ "lastsmith:flammpfeil.slashblade.named.bailou_xf" ]
             }
          ]
       },
@@ -440,10 +427,38 @@
             {
                "text" : "research.THAUMBLADE.text.stage.2",
                "recipes" : [
-                  "flammpfeil.slashblade:flammpfeil.slashblade.named.fortress.thaumium",
-                  "flammpfeil.slashblade:flammpfeil.slashblade.named.fortress.void",
-                  "flammpfeil.slashblade:flammpfeil.slashblade.named.fortress.elemental",
-                  "flammpfeil.slashblade:flammpfeil.slashblade.named.fortress.crimson"
+                  "lastsmith:flammpfeil.slashblade.named.fortress.thaumium",
+                  "lastsmith:flammpfeil.slashblade.named.fortress.void",
+                  "lastsmith:flammpfeil.slashblade.named.fortress.elemental",
+                  "lastsmith:flammpfeil.slashblade.named.fortress.crimson"
+               ]
+            }
+         ]
+      },
+      {
+         "key" : "BLADEUPDATE",
+         "name" : "research.BLADEUPDATE.title",
+         "icons" : [
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/smith/model\",TextureName: \"named/thaum/ModelKatanaThaumiumUpdate\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/smith/model\",TextureName: \"named/thaum/ModelKatanaVoidmetalUpdate\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/smith/model\",TextureName: \"named/thaum/ModelKatanaElementalUpdate\"}",
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/smith/model\",TextureName: \"named/thaum/ModelKatanaCrimsonUpdate\"}"
+         ],
+         "category" : "KATANA",
+         "location" : [ 5, 2 ],
+         "parents" : [ "THAUMBLADE" ],
+         "stages" : [
+            {
+               "text" : "research.BLADEUPDATE.text.stage.1",
+               "required_knowledge" : [ "THEORY;KATANA;2", "THEORY;INFUSION;4" ]
+            },
+            {
+               "text" : "research.BLADEUPDATE.text.stage.2",
+               "recipes" : [
+                  "lastsmith:flammpfeil.slashblade.named.fortress.thaumium",
+                  "lastsmith:flammpfeil.slashblade.named.fortress.void",
+                  "lastsmith:flammpfeil.slashblade.named.fortress.elemental",
+                  "lastsmith:flammpfeil.slashblade.named.fortress.crimson"
                ]
             }
          ]

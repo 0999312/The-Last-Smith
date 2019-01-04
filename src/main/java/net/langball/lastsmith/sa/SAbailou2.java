@@ -1,15 +1,7 @@
 package net.langball.lastsmith.sa;
 
-import mods.flammpfeil.slashblade.ability.StylishRankManager;
-import mods.flammpfeil.slashblade.entity.EntitySakuraEndManager;
-import mods.flammpfeil.slashblade.entity.EntityWitherSword;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.specialattack.SpecialAttackBase;
-import mods.flammpfeil.slashblade.util.SlashBladeEvent.BladeStandAttack;
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -36,8 +28,7 @@ public class SAbailou2 extends SpecialAttackBase {
             if(!ItemSlashBlade.ProudSoul.tryAdd(tag,cost,false)){
                 ItemSlashBlade.damageItem(stack, 20, player);
             }
-        	 ItemSlashBlade blade = (ItemSlashBlade)stack.getItem();
-        	player.addPotionEffect((new PotionEffect(Potion.getPotionById(1),1200,2)));
+        	 player.addPotionEffect((new PotionEffect(Potion.getPotionById(1),1200,2)));
         	player.addPotionEffect((new PotionEffect(Potion.getPotionById(15),100,3)));
         	player.addPotionEffect((new PotionEffect(Potion.getPotionById(5),1200,1)));
             }

@@ -1,24 +1,17 @@
 package net.langball.lastsmith.sa;
 
 import java.util.List;
-import java.util.Random;
-
 import mods.flammpfeil.slashblade.entity.EntityBlisteringSwords;
 import mods.flammpfeil.slashblade.entity.EntityDrive;
-import mods.flammpfeil.slashblade.entity.EntityWitherSword;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.specialattack.SpecialAttackBase;
-import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Enchantments;
 import net.minecraft.init.SoundEvents;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.Vec3d;
@@ -66,8 +59,7 @@ public class Sakuya2 extends SpecialAttackBase {
         	
             int level = EnchantmentHelper.getEnchantmentLevel(Enchantments.POWER, stack);
             float magicDamage = 5f + ItemSlashBlade.AttackAmplifier.get(tag) * (level / 3.0f);
-            ItemSlashBlade blade = (ItemSlashBlade)stack.getItem();
-           if(player.onGround){
+            if(player.onGround){
             for(int i = 0; i < 8;i++){
              EntityBlisteringSwords entityDrive = new EntityBlisteringSwords(world, player, magicDamage,90.0f, i);
             if (entityDrive != null) {

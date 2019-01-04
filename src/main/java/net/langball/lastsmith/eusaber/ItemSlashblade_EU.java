@@ -2,18 +2,14 @@ package net.langball.lastsmith.eusaber;
 
 import ic2.api.item.ElectricItem;
 import ic2.api.item.IElectricItem;
-import ic2.api.item.IElectricItemManager;
 import ic2.api.item.IItemHudInfo;
 import java.util.LinkedList;
 import java.util.List;
-import mods.flammpfeil.slashblade.TagPropertyAccessor.TagPropertyBoolean;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import net.langball.lastsmith.blade.ItemSlashBladeNamedSS;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
-import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
@@ -68,7 +64,8 @@ public Item getChargedItem(ItemStack itemStack)
   
 
   
-  @Override
+  @SuppressWarnings({ "unchecked", "rawtypes" })
+@Override
 public void addInformation(ItemStack arg0, World arg1, List arg2, ITooltipFlag arg3) {
 	super.addInformation(arg0, arg1, arg2, arg3);
 	arg2.add("Stored EU" + (int)ElectricItem.manager.getCharge(arg0) + "/" + maxEnergy);
@@ -89,9 +86,10 @@ public void onUpdate(ItemStack sitem, World par2World, Entity par3Entity, int in
     }
   }
   
-  public List<String> getHudInfo(ItemStack stack, boolean advanced)
+  @SuppressWarnings({ "unchecked", "rawtypes" })
+public List<String> getHudInfo(ItemStack stack, boolean advanced)
   {
-    LinkedList info = new LinkedList();
+	LinkedList info = new LinkedList();
     info.add(ElectricItem.manager.getToolTip(stack));
     return info;
   }

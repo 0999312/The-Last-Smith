@@ -2,19 +2,12 @@ package net.langball.lastsmith.blade.others;
 
 import mods.flammpfeil.slashblade.RecipeAwakeBlade;
 import mods.flammpfeil.slashblade.SlashBlade;
-import mods.flammpfeil.slashblade.SlashBladeTab;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
-import mods.flammpfeil.slashblade.named.NamedBladeManager;
-import mods.flammpfeil.slashblade.named.Yamato;
 import mods.flammpfeil.slashblade.named.event.LoadEvent.InitEvent;
-import net.langball.lastsmith.CommonProxy;
 import net.langball.lastsmith.Last_worker;
 import net.langball.lastsmith.blade.BladeLoader;
 import net.langball.lastsmith.blade.ItemSlashBladeNamedSS;
 import net.langball.lastsmith.items.ItemLoader;
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.nbt.NBTTagCompound;
@@ -41,8 +34,7 @@ public class ItemSlashblade_BambooLight_nice {
 	      ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(50));
 	      ItemSlashBlade.ProudSoul.set(reqTag, Integer.valueOf(150));
 	      ItemStack louguan = BladeLoader.findItemStack(Last_worker.MODID, name, 1);
-	      ItemStack itemSphereBladeSoul = SlashBlade.findItemStack("flammpfeil.slashblade", "sphere_bladesoul", 1);
-	      ItemStack ingot = SlashBlade.findItemStack("flammpfeil.slashblade", "ingot_bladesoul", 1);
+
 	      SlashBlade.addRecipe(name, new RecipeAwakeBlade((new ResourceLocation(SlashBlade.modid,name)),louguan, custombladeReqired, new Object[]{"DCD", "CBC", "DAD", Character.valueOf('A'),"ingotSteel", Character.valueOf('B'), custombladeReqired, Character.valueOf('C'),new ItemStack(ItemLoader.material,1,7), Character.valueOf('D'), "logWood"}));
 	 
 	   }

@@ -4,23 +4,16 @@ import java.util.List;
 
 import mods.flammpfeil.slashblade.entity.EntityBlisteringSwords;
 import mods.flammpfeil.slashblade.entity.EntityDrive;
-import mods.flammpfeil.slashblade.entity.EntityWitherSword;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.specialattack.SpecialAttackBase;
-import net.minecraft.block.SoundType;
-import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Enchantments;
 import net.minecraft.init.SoundEvents;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.SoundCategory;
-import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
@@ -74,7 +67,8 @@ public class Sakuya extends SpecialAttackBase {
             if (entityDrive != null) {
                 entityDrive.setInterval(9+i*2);
                 entityDrive.setLifeTime(30);
-                int color = blade.SummonedSwordColor.get(tag);
+                @SuppressWarnings("static-access")
+				int color = blade.SummonedSwordColor.get(tag);
                 entityDrive.setColor(color);
                 entityDrive.setTargetEntityId(target.getEntityId());
                 world.spawnEntity(entityDrive);

@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 import mezz.jei.api.ingredients.IIngredients;
+import mezz.jei.api.ingredients.VanillaTypes;
 import mezz.jei.api.recipe.IRecipeWrapper;
 import net.langball.lastsmith.blocks.BlastRecipes;
 import net.minecraft.client.Minecraft;
@@ -25,8 +26,8 @@ public class BlastRecipe  implements IRecipeWrapper
 	  
 	  public void getIngredients(IIngredients ingredients)
 	  {
-	    ingredients.setInputLists(ItemStack.class, this.inputs);
-	    ingredients.setOutput(ItemStack.class, this.output);
+	    ingredients.setInputLists(VanillaTypes.ITEM, this.inputs);
+	    ingredients.setOutput(VanillaTypes.ITEM, this.output);
 	  }
 	  
 	  public void drawInfo(Minecraft minecraft, int recipeWidth, int recipeHeight, int mouseX, int mouseY)

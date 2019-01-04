@@ -24,8 +24,7 @@ public class ConfigLoader
     public static void load()
     {
         logger.info("Started loading config. ");
-        String comment,comment1,comment2,comment3,comment4,comment5,comment7,comment8,comment9;
-
+        String comment;
         comment = "Set not to load TLS's Steel ingot recipes";
        steel = config.get(Configuration.CATEGORY_GENERAL, "steel_ingot_recipes", false, comment).getBoolean();
 

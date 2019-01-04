@@ -14,15 +14,12 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.FMLCommonHandler;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 import thaumcraft.api.items.IWarpingGear;
 
 public class ItemSlashBladeVoid extends ItemSlashBladeNamedSS implements IWarpingGear{
 
 	public ItemSlashBladeVoid(ToolMaterial par2EnumToolMaterial, float baseAttackModifiers) {
 		super(par2EnumToolMaterial, baseAttackModifiers);
-		// TODO Auto-generated constructor stub
 	}
 	 public void onUpdate(ItemStack stack, World world, Entity entity, int p_77663_4_, boolean p_77663_5_)
 	  {
@@ -49,6 +46,7 @@ public class ItemSlashBladeVoid extends ItemSlashBladeNamedSS implements IWarpin
 	  {
 	    return 1;
 	  }
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Override
 	public void addInformation(ItemStack arg0, World arg1, List arg2, ITooltipFlag arg3) {
 		arg2.add(TextFormatting.GOLD + I18n.format("enchantment.special.sapless"));

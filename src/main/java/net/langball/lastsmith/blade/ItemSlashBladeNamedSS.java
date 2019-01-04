@@ -9,9 +9,7 @@ import com.google.common.collect.Lists;
 import mods.flammpfeil.slashblade.TagPropertyAccessor;
 import mods.flammpfeil.slashblade.TagPropertyAccessor.TagPropertyBoolean;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
-import mods.flammpfeil.slashblade.item.ItemSlashBlade.SwordType;
 import mods.flammpfeil.slashblade.util.ResourceLocationRaw;
-import net.langball.lastsmith.CommonProxy;
 import net.langball.lastsmith.items.ItemLoader;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
@@ -20,7 +18,6 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
-import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.NonNullList;
@@ -45,6 +42,7 @@ public class ItemSlashBladeNamedSS extends ItemSlashBlade{
 			return texture;
 		}
 
+		@SuppressWarnings({ "rawtypes", "unchecked" })
 		@Override
 		public void addInformation(ItemStack arg0, World arg1, List arg2, ITooltipFlag arg3) {
 			NBTTagCompound tag = getItemTagCompound(arg0);
@@ -57,6 +55,7 @@ public class ItemSlashBladeNamedSS extends ItemSlashBlade{
 				arg2.add(TextFormatting.GOLD + I18n.format("blades.crafter")+":"+TextFormatting.GRAY+getname(nbt));	
 				}
 		}
+		@SuppressWarnings("rawtypes")
 		@Override
 	    public void addInformationSwordClass(ItemStack par1ItemStack,
 				EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
@@ -94,9 +93,9 @@ public class ItemSlashBladeNamedSS extends ItemSlashBlade{
 	        return result;
 	    }
 
-	    @Override
+		@Override
 	    public int getMaxDamage(ItemStack stack) {
-	        NBTTagCompound tag = this.getItemTagCompound(stack);
+	        NBTTagCompound tag = getItemTagCompound(stack);
 	        return CustomMaxDamage.get(tag,super.getMaxDamage(stack));
 	    }
 
@@ -151,11 +150,7 @@ public class ItemSlashBladeNamedSS extends ItemSlashBlade{
 		    NBTTagCompound nbt = getOrCreateNbtData(stack);
 		    return isActive(nbt);
 		  }
-		private static String getname(ItemStack stack)
-		  {
-			NBTTagCompound nbt = getOrCreateNbtData(stack);
-		    return getname(nbt);
-		  }
+
 		  private static String getname(NBTTagCompound nbt)
 		  {
 		    return nbt.getString("craftername");

@@ -8,11 +8,11 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid=Last_worker.MODID, name=Last_worker.NAME, version=Last_worker.VERSION, dependencies="required-after:flammpfeil.slashblade@[mc1.12-r15,);after:patchouli;")
+@Mod(modid=Last_worker.MODID, name=Last_worker.NAME, version=Last_worker.VERSION, dependencies="required-after:forge@[14.23.4.2768,);required-after:flammpfeil.slashblade@[mc1.12-r15,);after:patchouli;after:jei@[4.12.0,)")
 public class Last_worker {
 	public static final String MODID = "lastsmith";
     public static final String NAME = "The Last Smith";
-    public static final String VERSION = "1.1.4";
+    public static final String VERSION = "@version@";
     
 	@Instance(Last_worker.MODID)
 	    public static Last_worker instance;

@@ -12,7 +12,8 @@ public class TileEntityLoader
         registerTileEntity(TileEntityBlast.class, "BlasrFurnace");
     }
 
-    public void registerTileEntity(Class<? extends TileEntity> tileEntityClass, String id)
+    @SuppressWarnings("deprecation")
+	public void registerTileEntity(Class<? extends TileEntity> tileEntityClass, String id)
     {
         GameRegistry.registerTileEntity(tileEntityClass, Last_worker.MODID + ":" + id);
     }

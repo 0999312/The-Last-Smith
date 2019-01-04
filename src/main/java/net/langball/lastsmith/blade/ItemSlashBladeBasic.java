@@ -1,25 +1,16 @@
 package net.langball.lastsmith.blade;
 
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
-import java.util.Random;
-
 import mods.flammpfeil.slashblade.ItemSlashBladeDetune;
 import mods.flammpfeil.slashblade.SlashBlade;
-import mods.flammpfeil.slashblade.TagPropertyAccessor;
 import mods.flammpfeil.slashblade.util.ResourceLocationRaw;
-import net.langball.lastsmith.items.ItemLoader;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
@@ -38,23 +29,8 @@ public class ItemSlashBladeBasic extends ItemSlashBladeDetune{
 			EntityLivingBase par3EntityLivingBase) {
 		return super.hitEntity(par1ItemStack, par2EntityLivingBase, par3EntityLivingBase);
 	}
-	
-    private static void dropItem(ItemStack itemStack, World world, EntityLivingBase entity)
-	  {
-	    if ((world.restoringBlockSnapshots) || (world.isRemote)) {
-	      return;
-	    }
-	    float f = 0.5F;
-	    double d0 = world.rand.nextFloat() * f + 0.25D;
-	    double d1 = world.rand.nextFloat() * f + 0.25D;
-	    double d2 = world.rand.nextFloat() * f + 0.25D;
-	    
-
-	    EntityItem entityItem = new EntityItem(world, entity.posX + d0, entity.posY + d1, entity.posZ + d2, itemStack);
-	    entityItem.setDefaultPickupDelay();
-	    world.spawnEntity(entityItem);
-	  }
     
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Override
 	public void addInformation(ItemStack arg0, World arg1, List arg2, ITooltipFlag arg3) {
 		super.addInformation(arg0, arg1, arg2, arg3);
@@ -76,11 +52,7 @@ public class ItemSlashBladeBasic extends ItemSlashBladeDetune{
 	    NBTTagCompound nbt = getOrCreateNbtData(stack);
 	    return isActive(nbt);
 	  }
-	private static String getname(ItemStack stack)
-	  {
-		NBTTagCompound nbt = getOrCreateNbtData(stack);
-	    return getname(nbt);
-	  }
+
 	  private static String getname(NBTTagCompound nbt)
 	  {
 	    return nbt.getString("craftername");

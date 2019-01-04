@@ -51,7 +51,8 @@ public class ItemSlashBladeCrimson extends ItemSlashBladeNamedSS implements IWar
 	    return 2;
 	  }
 	  
-	  @SideOnly(Side.CLIENT)
+	  @SuppressWarnings({ "unchecked", "rawtypes" })
+	@SideOnly(Side.CLIENT)
 	  public void addInformation(ItemStack stack, World worldIn, List tooltip, ITooltipFlag flagIn)
 	  {
 	    tooltip.add(TextFormatting.GOLD +  I18n.format("enchantment.special.sapgreat"));

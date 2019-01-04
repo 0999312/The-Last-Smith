@@ -71,7 +71,7 @@ public class ItemLoader {
 	}
 	@SideOnly(Side.CLIENT)
 	public static void registerRender() {
-		registerRender(hammer);
+		registerRender(hammer,"test");
 		registerRender(material);
 		registerRender(blade);
 		registerRender(blade_heatted);

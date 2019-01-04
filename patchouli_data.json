@@ -22,12 +22,14 @@
         "lastsmith:origin/origin_eight",
         "lastsmith:origin/origin_ten",
         "lastsmith:origin/origin_nine",
-        "lastsmith:origin/origin_seven"
+        "lastsmith:origin/origin_seven",
+        "lastsmith:roukan/roukan_two"
       ],
       "bookmarks": [],
       "history": [
-        "lastsmith:origin/origin_seven",
         "lastsmith:origin/origin_nine",
+        "lastsmith:roukan/roukan_two",
+        "lastsmith:origin/origin_seven",
         "lastsmith:origin/origin_ten",
         "lastsmith:origin/origin_eight",
         "lastsmith:origin/origin_six",
@@ -37,8 +39,7 @@
         "lastsmith:origin/origin_one",
         "lastsmith:origin/origin_three",
         "lastsmith:origin/origin_two",
-        "lastsmith:basic_blade/basic_blade_three",
-        "lastsmith:basic_blade/basic_blade_one"
+        "lastsmith:basic_blade/basic_blade_three"
       ]
     },
     "patchouli:smith_guide": {

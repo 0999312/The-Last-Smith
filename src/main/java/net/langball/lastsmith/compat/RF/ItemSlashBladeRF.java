@@ -2,12 +2,9 @@ package net.langball.lastsmith.compat.RF;
 
 import java.util.List;
 
-import javax.annotation.Nullable;
-
 import cofh.api.item.IMultiModeItem;
 import cofh.core.init.CoreEnchantments;
 import cofh.core.init.CoreProps;
-import cofh.core.item.IEnchantableItem;
 import cofh.core.key.KeyBindingItemMultiMode;
 import cofh.core.util.helpers.DamageHelper;
 import cofh.core.util.helpers.EnergyHelper;
@@ -23,20 +20,16 @@ import net.langball.lastsmith.blade.ItemSlashBladeNamedSS;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Enchantments;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumParticleTypes;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundCategory;
-import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
 
@@ -50,9 +43,9 @@ public class ItemSlashBladeRF extends ItemSlashBladeNamedSS implements IEnergyCo
 	public ItemSlashBladeRF(ToolMaterial par2EnumToolMaterial, float baseAttackModifiers) {
 		super(par2EnumToolMaterial, baseAttackModifiers);
 	}
-	public ItemSlashBladeRF setEnergyParams(int maxEnergy, int maxTransfer, int energyPerUse, int energyPerUseCharged) {
-		this.maxEnergy = maxEnergy;
-		this.maxTransfer = maxTransfer;
+	public ItemSlashBladeRF setEnergyParams(int maxenergy, int maxTrans, int energyPerUse, int energyPerUseCharged) {
+		maxEnergy = maxenergy;
+		maxTransfer = maxTrans;
 		this.energyPerUse = energyPerUse;
 		this.energyPerUseCharged = energyPerUseCharged;
 
@@ -165,7 +158,6 @@ public class ItemSlashBladeRF extends ItemSlashBladeNamedSS implements IEnergyCo
 		      int rankPoint = StylishRankManager.getTotalRankPoint(par3Entity);
 			    int aRankPoint = (int)(StylishRankManager.RankRange * 7D);
 			    int rankAmount = aRankPoint - rankPoint;
-			    int rank = StylishRankManager.getStylishRank(par3Entity);
 			    if (0 < rankAmount)
 			    {
 			      StylishRankManager.addRankPoint(par3Entity, rankAmount);
@@ -201,7 +193,6 @@ public class ItemSlashBladeRF extends ItemSlashBladeNamedSS implements IEnergyCo
 	    int energy = getEnergyStored(stack);
 	    rankAmount = Math.min(energy, rankAmount);
 	    
-	    NBTTagCompound tag = getItemTagCompound(stack);
 	    int startupCost = 1000;
 	    
 	    World world = player.world;
@@ -239,6 +230,7 @@ public class ItemSlashBladeRF extends ItemSlashBladeNamedSS implements IEnergyCo
 		public ICapabilityProvider initCapabilities(ItemStack stack, NBTTagCompound nbt) {
 			return new EnergyContainerItemWrapper(stack, this);
 		}
+		@SuppressWarnings({ "rawtypes", "unchecked" })
 		@Override
 		public void addInformation(ItemStack stack, World arg1, List tooltip, ITooltipFlag arg3) {
 	        EntityPlayer par2EntityPlayer = Minecraft.getMinecraft().player;

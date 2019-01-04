@@ -1,24 +1,13 @@
 package net.langball.lastsmith.blade.smith;
 
-import mods.flammpfeil.slashblade.RecipeAwakeBlade;
 import mods.flammpfeil.slashblade.SlashBlade;
-import mods.flammpfeil.slashblade.SlashBladeTab;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
-import mods.flammpfeil.slashblade.named.NamedBladeManager;
-import mods.flammpfeil.slashblade.named.Yamato;
 import mods.flammpfeil.slashblade.named.event.LoadEvent.InitEvent;
-import net.langball.lastsmith.CommonProxy;
 import net.langball.lastsmith.blade.BladeLoader;
 import net.langball.lastsmith.blade.ItemSlashBladeNamedSS;
 import net.langball.lastsmith.recipe.RecipeBx;
-import net.langball.lastsmith.sa.Sakuya2;
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.init.Blocks;
 import net.minecraft.init.Enchantments;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.IRecipe;
-import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -29,7 +18,7 @@ public class ItemSlashblade_Smith4 {
 
 		    String name = "flammpfeil.slashblade.named.smith_last";
 	      String name2 = "flammpfeil.slashblade.named.smith_3";
-	      ItemStack customblade = new ItemStack(BladeLoader.blade_tls, 1, 0);
+	      ItemStack customblade = new ItemStack(BladeLoader.blade, 1, 0);
 	      NBTTagCompound tag = new NBTTagCompound();
 	      customblade.setTagCompound(tag);
 	      ItemSlashBladeNamedSS.CurrentItemName.set(tag, name);
@@ -55,15 +44,17 @@ public class ItemSlashblade_Smith4 {
 	      ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(5000));
 	      ItemSlashBlade.ProudSoul.set(reqTag, Integer.valueOf(50000));
 	      ItemSlashBlade.RepairCount.set(reqTag, Integer.valueOf(10));
-	      NBTTagCompound tag1 = ItemSlashBlade.getItemTagCompound(reqiredMain);
-	      if (tag1.hasKey("ench")) {
-	        tag1.removeTag("ench");
-	      }
-	      tag1 = ItemSlashBlade.getItemTagCompound(reqiredSub);
-	      if (tag1.hasKey("ench")) {
-	        tag1.removeTag("ench");
-	      }
-	      IRecipe recipe = new RecipeBx(new ResourceLocation(SlashBlade.modid,name),customblade, reqiredMain, reqiredSub, new Object[] { "DDD", "ACB", "DDD", Character.valueOf('A'), reqiredMain, Character.valueOf('B'), reqiredSub, Character.valueOf('C'), sb, Character.valueOf('D'), new ItemStack(Blocks.DIAMOND_BLOCK) });	      
-	      SlashBlade.addRecipe(name, recipe);
+	      SlashBlade.addRecipe(name, new RecipeBx(new ResourceLocation(name),
+	    		  BladeLoader.getCustomBlade(name),
+	    		  sb, 1, 1,
+	    		  reqiredMain, 0, 1, false,
+	    		  reqiredSub, 2, 1, false, new Object[]{
+	    		    "III", "ABC", "III",
+	    			'I',"blockDiamond",
+	    			'A',reqiredMain,
+	    			'B',sb,
+	    			'C',reqiredSub
+	    		  }
+	      ));
 	   }
 }
