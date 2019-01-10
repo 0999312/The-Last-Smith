@@ -17,7 +17,7 @@ public class Last_worker {
 	@Instance(Last_worker.MODID)
 	    public static Last_worker instance;
 	    
-	@SidedProxy(clientSide = "net.langball.lastsmith.ClientProxy",serverSide = "net.langball.lastsmith.CommonProxy")
+	@SidedProxy(clientSide = "net.langball.lastsmith.client.ClientProxy",serverSide = "net.langball.lastsmith.CommonProxy")
  public static CommonProxy proxy; 
 	 
 	   

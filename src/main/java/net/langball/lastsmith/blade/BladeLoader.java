@@ -215,6 +215,7 @@ public BladeLoader(FMLPreInitializationEvent event){
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_yile());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_nethop());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_irsoft());	
+		 SlashBlade.InitEventBus.register(new ItemSlashblade_xiaomo());	
 		 
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_kogawa());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_kogawa2());

@@ -18,7 +18,7 @@ public class ItemSlashblade_Smith4 {
 
 		    String name = "flammpfeil.slashblade.named.smith_last";
 	      String name2 = "flammpfeil.slashblade.named.smith_3";
-	      ItemStack customblade = new ItemStack(BladeLoader.blade, 1, 0);
+	      ItemStack customblade = new ItemStack(BladeLoader.bladeNamed, 1, 0);
 	      NBTTagCompound tag = new NBTTagCompound();
 	      customblade.setTagCompound(tag);
 	      ItemSlashBladeNamedSS.CurrentItemName.set(tag, name);

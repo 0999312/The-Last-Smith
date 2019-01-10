@@ -147,27 +147,22 @@ public class BlockBlast extends BlockContainer {
 	     */
 	    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
 	    {
-	        if (worldIn.isRemote)
-	        {
-	            return true;
-	        }
-	        else
-	        {
-	        	if(worldIn.getBlockState(new BlockPos(pos.getX(), pos.getY()+1, pos.getZ())).getBlock() == BlockLoader.Blast_top){
+	    	
+	        if(worldIn.getBlockState(new BlockPos(pos.getX(), pos.getY()+1, pos.getZ())).getBlock() == BlockLoader.Blast_top){
 	            TileEntity tileentity = worldIn.getTileEntity(pos);
 
-	            if (tileentity instanceof TileEntityBlast)
+	            if (tileentity instanceof TileEntityBlast && !worldIn.isRemote)
 	            {
 	                playerIn.openGui(Last_worker.instance, 1, worldIn, pos.getX(),pos.getY(),pos.getZ());
+	                return true;
 	            }
-
-	            return true;
-	            }else{
+	            }else {
+	            	if(worldIn.isRemote)
 	            	playerIn.sendMessage(new TextComponentString(TextFormatting.UNDERLINE + I18n.format("lastsmith.tip.blast_top")));
 	            	return true;
 	            }
-	        	
-	        }
+	        return true;
+        	
 	    }
 
 	    public static void setState(boolean active, World worldIn, BlockPos pos)

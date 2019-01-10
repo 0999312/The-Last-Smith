@@ -1,8 +1,5 @@
 {
     "variants": {
-        "facing=north": { "model": "lastsmith:blast_top" },
-        "facing=south": { "model": "lastsmith:blast_top", "y": 180 },
-        "facing=west":  { "model": "lastsmith:blast_top", "y": 270 },
-        "facing=east":  { "model": "lastsmith:blast_top", "y": 90 }
+        "normal": { "model": "lastsmith:blast_top" }
     }
 }

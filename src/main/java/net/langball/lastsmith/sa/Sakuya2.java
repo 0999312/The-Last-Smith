@@ -76,7 +76,8 @@ public class Sakuya2 extends SpecialAttackBase {
                 if (entityDrive != null) {
                     world.spawnEntity(entityDrive);
                 } 
-           }}
+           }
+            }
            else{
             	for(int i = 0; i < 4;i++){
                     EntityDrive entityDrive = new EntityDrive(world, player, magicDamage,false,0);

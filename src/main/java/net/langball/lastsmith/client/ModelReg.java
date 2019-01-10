@@ -1,4 +1,4 @@
-package net.langball.lastsmith;
+package net.langball.lastsmith.client;
 
 import cofh.CoFHCore;
 import ic2.core.IC2;

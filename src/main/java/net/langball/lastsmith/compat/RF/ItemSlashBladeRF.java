@@ -32,6 +32,8 @@ import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.world.World;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemSlashBladeRF extends ItemSlashBladeNamedSS implements IEnergyContainerItem, IMultiModeItem {
 	  public static final TagPropertyAccessor.TagPropertyString Username = new TagPropertyAccessor.TagPropertyString("Username");
@@ -230,8 +232,10 @@ public class ItemSlashBladeRF extends ItemSlashBladeNamedSS implements IEnergyCo
 		public ICapabilityProvider initCapabilities(ItemStack stack, NBTTagCompound nbt) {
 			return new EnergyContainerItemWrapper(stack, this);
 		}
+		
 		@SuppressWarnings({ "rawtypes", "unchecked" })
 		@Override
+		@SideOnly(Side.CLIENT)
 		public void addInformation(ItemStack stack, World arg1, List tooltip, ITooltipFlag arg3) {
 	        EntityPlayer par2EntityPlayer = Minecraft.getMinecraft().player;
 	        boolean par4 = arg3.isAdvanced();

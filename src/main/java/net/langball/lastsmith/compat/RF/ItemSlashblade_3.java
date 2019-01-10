@@ -42,7 +42,13 @@ public class ItemSlashblade_3 {
 	      ItemStack louguan =  BladeLoader.findItemStack(Last_worker.MODID, name, 1);
 	      ItemStack itemSphereBladeSoul = SlashBlade.findItemStack("flammpfeil.slashblade", "sphere_bladesoul", 1);
 
-	      SlashBlade.addRecipe(name, new RecipeAwakeBlade(new ResourceLocation(name), louguan, custombladeReqired, new Object[]{"DAD", "CBC", "ECE", Character.valueOf('A'), "ingotSakura", Character.valueOf('B'), custombladeReqired, Character.valueOf('C'), itemSphereBladeSoul, Character.valueOf('D'),"blockIron", Character.valueOf('E'),"blockRedStone"}));
+	      SlashBlade.addRecipe(name, new RecipeAwakeBlade(new ResourceLocation(name), louguan, custombladeReqired, new Object[]{
+	    		  "DAD", "CBC", "ECE",
+	    		  Character.valueOf('A'), "ingotSakura",
+	    		  Character.valueOf('B'), custombladeReqired,
+	    		  Character.valueOf('C'), itemSphereBladeSoul,
+	    		  Character.valueOf('D'),"blockIron",
+	    		  Character.valueOf('E'),"blockRedstone"}));
 
 	   }
 	   
