@@ -1,7 +1,7 @@
 ﻿///////////
 
-item.flammpfeil.slashblade.named.sweapon.name=Sheathed Chokuto
-item.flammpfeil.slashblade.named.slashblade_old.name=Tachi
+item.flammpfeil.slashblade.named.sweapon.name=SWeapon
+item.flammpfeil.slashblade.named.slashblade_old.name=SlashBlade-Tachi-
 item.flammpfeil.slashblade.named.louguan_old.name=Kanrouken
 
 item.flammpfeil.slashblade.named.eievui.name=Blade of Eievui
@@ -11,8 +11,8 @@ item.flammpfeil.slashblade.named.bailou_fake.name=Fake-Hakurouken-
 item.flammpfeil.slashblade.named.roukan.name=Roukanken
 item.flammpfeil.slashblade.named.louguan_tx.name=Hell Blade-Roukanken-
 item.flammpfeil.slashblade.named.bailou_tx.name=Hell Blade-Hakurouken-
-item.flammpfeil.slashblade.named.roukan_xf.name=Whirlwind-Roukanken-
-item.flammpfeil.slashblade.named.bailou_xf.name=Whirlwind-Hakurouken-
+item.flammpfeil.slashblade.named.roukan_xf.name=-Roukansenpuuzin-
+item.flammpfeil.slashblade.named.bailou_xf.name=-Hakurousenpuuzin-
 item.flammpfeil.slashblade.named.sakuyablade.name=Sakura Blade
 item.flammpfeil.slashblade.unnamedBlade.name=Noted-Origin-
 
@@ -29,8 +29,8 @@ item.flammpfeil.slashblade.named.yingjian.name=Sakura Cutter
 item.flammpfeil.slashblade.named.wenshi.name=Wen Shi
 item.flammpfeil.slashblade.named.snowblade.name=Snow Blade
 item.flammpfeil.slashblade.named.doubleblade.name=Kataware
-item.flammpfeil.slashblade.named.shurablade.name=Asura
-item.flammpfeil.slashblade.named.sagequoia.name=Named-Commander Wood-
+item.flammpfeil.slashblade.named.shurablade.name=Shura
+item.flammpfeil.slashblade.named.sagequoia.name=Named-Sagequoia-
 item.flammpfeil.slashblade.named.murakumo.name=Murakumo
 item.flammpfeil.slashblade.named.Ikaruga.name=Ikaruga
 
@@ -69,17 +69,12 @@ item.flammpfeil.slashblade.named.silverbamboolight_gold.name=Heirloom -Golden Ba
 item.flammpfeil.slashblade.named.silverbamboolight_blood.name=Demonic-Bloody Bamboo-
 
 slashblade.seffect.name.ManaRepair=Mana Repair
-
-flammpfeil.slashblade.specialattack.xianshizhan=Human Sign "Slash of Present"
 flammpfeil.slashblade.specialattack.relife=Resurrection
-flammpfeil.slashblade.specialattack.sanhua1=Sakura Sword "Disappearing Elegance"
 flammpfeil.slashblade.specialattack.miwang=Cleaver of Confusion
 flammpfeil.slashblade.specialattack.miwang2=Delusion of Enlightenment
-flammpfeil.slashblade.specialattack.spear2=Heart Carver
 flammpfeil.slashblade.specialattack.sakuyaSA=Sword Skill
 flammpfeil.slashblade.specialattack.IaiSA=Iai
 flammpfeil.slashblade.specialattack.SsakuyaSA=Refined Sword Skill
-flammpfeil.slashblade.specialattack.flyintosky=Tonbokiri
 
 item.lastsmith.blade.name=Poor Blade
 item.lastsmith.blade_2.name=Steel Blade
@@ -162,8 +157,8 @@ research.ROUKAN.title=Roukanken
 research.HAKUROU.title=Hakurouken
 research.OLDBLADES.title=Old Blades
 research.OTHERSBLADE.title=Other Blades
-research.ROUKANSENPUUZIN.title=Whirlwind Roukanken
-research.HAKUROUSENPUUZIN.title=Whirlwind Hakurouken
+research.ROUKANSENPUUZIN.title=Roukansenpuuzin
+research.HAKUROUSENPUUZIN.title=Hakurousenpuuzin
 research.THAUMBLADE.title=Fortress Katana
 
 research.THAUMBLADE.text.stage.1=I got an inspiration from Fortress Armor, and now I think I need relevant knowledge.
