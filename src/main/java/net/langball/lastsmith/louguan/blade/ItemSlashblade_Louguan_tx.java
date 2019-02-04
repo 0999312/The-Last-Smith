@@ -1,12 +1,12 @@
 package net.langball.lastsmith.louguan.blade;
 
-import mods.flammpfeil.slashblade.RecipeAwakeBlade;
 import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.named.event.LoadEvent.InitEvent;
 import net.langball.lastsmith.Last_worker;
 import net.langball.lastsmith.blade.BladeLoader;
 import net.langball.lastsmith.blade.ItemSlashBladeNamedSS;
+import net.langball.lastsmith.recipe.RecipeAwakeBladeTLS;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Enchantments;
 import net.minecraft.item.ItemStack;
@@ -44,7 +44,7 @@ public class ItemSlashblade_Louguan_tx {
 	      ItemStack louguan = BladeLoader.findItemStack(Last_worker.MODID, nametx, 1);
 	      ItemStack itemSphereBladeSoul = SlashBlade.findItemStack("flammpfeil.slashblade", "sphere_bladesoul", 1);
 
-	      SlashBlade.addRecipe(nametx, new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid,nametx),louguan, custombladeReqired, new Object[]{"DAD", "CBC", "DCD", Character.valueOf('A'),"ingotSakura",Character.valueOf('B'), custombladeReqired, Character.valueOf('C'), itemSphereBladeSoul, Character.valueOf('D'), new ItemStack(Blocks.DIAMOND_BLOCK)}));
+	      SlashBlade.addRecipe(nametx, new RecipeAwakeBladeTLS(new ResourceLocation(SlashBlade.modid,nametx),louguan, custombladeReqired, new Object[]{"DAD", "CBC", "DCD", Character.valueOf('A'),"sphereSakura",Character.valueOf('B'), custombladeReqired, Character.valueOf('C'), itemSphereBladeSoul, Character.valueOf('D'), new ItemStack(Blocks.DIAMOND_BLOCK)}));
 	   }
 
 }

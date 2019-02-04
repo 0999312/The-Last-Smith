@@ -1,6 +1,1 @@
-{
-   "parent" : "item/generated",
-   "textures" : {
-      "layer0" : "lastsmith:items/sakura_full"
-   }
-}
+{"parent":"item/generated","textures":{"layer0":"lastsmith:items/sakura_full"}}

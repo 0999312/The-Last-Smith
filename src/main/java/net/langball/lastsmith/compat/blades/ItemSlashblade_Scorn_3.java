@@ -1,6 +1,5 @@
 package net.langball.lastsmith.compat.blades;
 
-import mods.flammpfeil.slashblade.RecipeAwakeBlade;
 import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.named.event.LoadEvent.InitEvent;
@@ -8,6 +7,7 @@ import net.langball.lastsmith.Last_worker;
 import net.langball.lastsmith.blade.BladeLoader;
 import net.langball.lastsmith.blade.ItemSlashBladeNamedSS;
 import net.langball.lastsmith.items.ItemLoader;
+import net.langball.lastsmith.recipe.RecipeAwakeBladeTLS;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ResourceLocation;
@@ -38,7 +38,7 @@ public class ItemSlashblade_Scorn_3 {
 	      ItemStack louguan = BladeLoader.findItemStack(Last_worker.MODID, name, 1);
 
 	      ItemStack proudSoul = SlashBlade.findItemStack("flammpfeil.slashblade",SlashBlade.ProudSoulStr, 1);
-	      SlashBlade.addRecipe(name, new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid,name),
+	      SlashBlade.addRecipe(name, new RecipeAwakeBladeTLS(new ResourceLocation(SlashBlade.modid,name),
 	    		  louguan, custombladeReqired, new Object[]{
 	    				  "ADA", "CBC", "ADA", 
 	    				  Character.valueOf('A'), proudSoul

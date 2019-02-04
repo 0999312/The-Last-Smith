@@ -11,7 +11,6 @@ import mods.flammpfeil.slashblade.util.ResourceLocationRaw;
 import net.langball.lastsmith.CommonProxy;
 import net.langball.lastsmith.Last_worker;
 import net.langball.lastsmith.blade.arthurs.*;
-import net.langball.lastsmith.blade.famous.*;
 import net.langball.lastsmith.blade.others.ItemSlashblade_BambooLight_nice;
 import net.langball.lastsmith.blade.others.ItemSlashblade_BambooLight_yin;
 import net.langball.lastsmith.blade.others.ItemSlashblade_Eievui;
@@ -31,6 +30,20 @@ import net.langball.lastsmith.blade.others.ItemSlashblade_sakuya3;
 import net.langball.lastsmith.blade.others.ItemSlashblade_sakuya4;
 import net.langball.lastsmith.blade.others.ItemSlashblade_sakuya5;
 import net.langball.lastsmith.blade.smith.*;
+import net.langball.lastsmith.blade.yamazakura.ItemSlashblade_Yamazakura_Aoi;
+import net.langball.lastsmith.blade.yamazakura.ItemSlashblade_Yamazakura_Fumizuki;
+import net.langball.lastsmith.blade.yamazakura.ItemSlashblade_Yamazakura_Hazuki;
+import net.langball.lastsmith.blade.yamazakura.ItemSlashblade_Yamazakura_Kadomatsu;
+import net.langball.lastsmith.blade.yamazakura.ItemSlashblade_Yamazakura_Katura;
+import net.langball.lastsmith.blade.yamazakura.ItemSlashblade_Yamazakura_Kiku;
+import net.langball.lastsmith.blade.yamazakura.ItemSlashblade_Yamazakura_Minazuki;
+import net.langball.lastsmith.blade.yamazakura.ItemSlashblade_Yamazakura_Sakura;
+import net.langball.lastsmith.blade.yamazakura.ItemSlashblade_Yamazakura_Satsuki;
+import net.langball.lastsmith.blade.yamazakura.ItemSlashblade_Yamazakura_Shimotsuki;
+import net.langball.lastsmith.blade.yamazakura.ItemSlashblade_Yamazakura_Shiwasu;
+import net.langball.lastsmith.blade.yamazakura.ItemSlashblade_Yamazakura_Tuki;
+import net.langball.lastsmith.blade.yamazakura.ItemSlashblade_Yamazakura_Ume;
+import net.langball.lastsmith.blade.yamazakura.ItemSlashblade_Yamazakura_Uzuki;
 import net.langball.lastsmith.compat.*;
 import net.langball.lastsmith.compat.RF.ItemSlashBladeRF;
 import net.langball.lastsmith.compat.RF.ItemSlashblade_3;
@@ -145,6 +158,7 @@ public BladeLoader(FMLPreInitializationEvent event){
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_sakuya3());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_sakuya4());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_sakuya5());
+		 
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_Louguan_fake());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_Louguan_old());
 
@@ -180,8 +194,9 @@ public BladeLoader(FMLPreInitializationEvent event){
 			}
     
     if(Loader.isModLoaded(IC2.MODID)){
-    	 euBlade = (new ItemSlashblade_EU(ToolMaterial.IRON, 4.0F)).setRegistryName("EUBlade");
+    	 euBlade = (new ItemSlashBlade_EU(ToolMaterial.IRON, 4.0F)).setRegistryName("EUBlade");
     	 ForgeRegistries.ITEMS.register(euBlade);
+		 SlashBlade.InitEventBus.register(new ItemSlashblade_shouren());
     	 SlashBlade.InitEventBus.register(new ItemSlashblade_1());
     	 SlashBlade.InitEventBus.register(new ItemSlashblade_2());
 
@@ -201,9 +216,6 @@ public BladeLoader(FMLPreInitializationEvent event){
     	 SlashBlade.InitEventBus.register(new ItemSlashblade_lkaruga());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_Sweapon());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_Slashblade_old());
-
-		 
-		 SlashBlade.InitEventBus.register(new ItemSlashblade_Blade_basic());
 		 
 	     SlashBlade.InitEventBus.register(new ItemSlashblade_zheng());
 	 	 SlashBlade.InitEventBus.register(new ItemSlashblade_pear());
@@ -221,6 +233,25 @@ public BladeLoader(FMLPreInitializationEvent event){
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_kogawa2());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_kogawa3());
 		 
+		 SlashBlade.InitEventBus.register(new ItemSlashblade_Yamazakura_Ume());
+		 SlashBlade.InitEventBus.register(new ItemSlashblade_Yamazakura_Uzuki());
+		 SlashBlade.InitEventBus.register(new ItemSlashblade_Yamazakura_Kadomatsu());
+    	 SlashBlade.InitEventBus.register(new ItemSlashblade_Yamazakura_Sakura());
+		 SlashBlade.InitEventBus.register(new ItemSlashblade_Yamazakura_Hazuki());
+    	 SlashBlade.InitEventBus.register(new ItemSlashblade_Yamazakura_Kiku());
+		 SlashBlade.InitEventBus.register(new ItemSlashblade_Yamazakura_Satsuki());
+		 SlashBlade.InitEventBus.register(new ItemSlashblade_Yamazakura_Shiwasu());
+		 
+		 SlashBlade.InitEventBus.register(new ItemSlashblade_Yamazakura_Aoi());
+    	 SlashBlade.InitEventBus.register(new ItemSlashblade_Yamazakura_Minazuki());
+		 SlashBlade.InitEventBus.register(new ItemSlashblade_Yamazakura_Fumizuki());
+		 SlashBlade.InitEventBus.register(new ItemSlashblade_Yamazakura_Katura());
+		 SlashBlade.InitEventBus.register(new ItemSlashblade_Yamazakura_Shimotsuki());
+		 
+		 SlashBlade.InitEventBus.register(new ItemSlashblade_Yamazakura_Tuki());
+
+
+		 
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_Scorn_2());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_Scorn_3());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_Scorn_4());
@@ -230,5 +261,7 @@ public BladeLoader(FMLPreInitializationEvent event){
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_Smith2());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_Smith3());
 		 SlashBlade.InitEventBus.register(new ItemSlashblade_Smith4());
+		 
+		 
 	}
 }

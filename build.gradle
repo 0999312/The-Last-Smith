@@ -11,7 +11,7 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 
-version = "1.2.0"
+version = "1.2.4"
 group = "net.langball"
 archivesBaseName = "lastsmith"
 

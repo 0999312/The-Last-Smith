@@ -1,6 +1,5 @@
 package net.langball.lastsmith.blade.others;
 
-import mods.flammpfeil.slashblade.RecipeAwakeBlade;
 import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.named.event.LoadEvent.InitEvent;
@@ -8,6 +7,7 @@ import net.langball.lastsmith.Last_worker;
 import net.langball.lastsmith.blade.BladeLoader;
 import net.langball.lastsmith.blade.ItemSlashBladeNamedSS;
 import net.langball.lastsmith.items.ItemLoader;
+import net.langball.lastsmith.recipe.RecipeAwakeBladeTLS;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item.ToolMaterial;
@@ -33,7 +33,7 @@ public class ItemSlashblade_SilverBambooLight_nice {
 	      ItemStack custombladeReqired = new ItemStack(SlashBlade.bladeSilverBambooLight);
 	      ItemStack louguan = BladeLoader.findItemStack(Last_worker.MODID, name, 1);
 
-	      SlashBlade.addRecipe(name, new RecipeAwakeBlade((new ResourceLocation(SlashBlade.modid,name)),louguan, custombladeReqired, new Object[]{"CDC", "CDC", "CBC", Character.valueOf('B'), custombladeReqired, Character.valueOf('C'), new ItemStack(ItemLoader.material,1,7), Character.valueOf('D'), new ItemStack(Blocks.STONE)}));
+	      SlashBlade.addRecipe(name, new RecipeAwakeBladeTLS(new ResourceLocation(SlashBlade.modid,name),louguan, custombladeReqired, new Object[]{"CDC", "CDC", "CBC", Character.valueOf('B'), custombladeReqired, Character.valueOf('C'), new ItemStack(ItemLoader.material,1,7), Character.valueOf('D'), new ItemStack(Blocks.STONE)}));
 	   
 	   }
 

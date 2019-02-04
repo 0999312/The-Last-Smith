@@ -84,9 +84,7 @@ public class ItemSlashBladeWind extends ItemSlashBladeNamedSS {
 	    {
 	      player.playSound(SoundsTC.wind, 0.5F, 0.9F + player.world.rand.nextFloat() * 0.2F);
 	    }
-	    if (ticks % 20 == 0) {
-	      stack.damageItem(1, player);
-	    }
+
 	  }
 	 public boolean getIsRepairable(ItemStack stack1, ItemStack stack2)
 	  {

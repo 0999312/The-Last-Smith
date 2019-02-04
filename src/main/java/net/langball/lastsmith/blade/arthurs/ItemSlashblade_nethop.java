@@ -1,6 +1,5 @@
 package net.langball.lastsmith.blade.arthurs;
 
-import mods.flammpfeil.slashblade.RecipeAwakeBlade;
 import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.named.event.LoadEvent.InitEvent;
@@ -8,6 +7,7 @@ import net.langball.lastsmith.Last_worker;
 import net.langball.lastsmith.blade.BladeLoader;
 import net.langball.lastsmith.blade.ItemSlashBladeNamedSS;
 import net.langball.lastsmith.items.ItemLoader;
+import net.langball.lastsmith.recipe.RecipeAwakeBladeTLS;
 import net.minecraft.init.Enchantments;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -40,7 +40,7 @@ public class ItemSlashblade_nethop {
 	      ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(1000));
 	      ItemStack louguan = BladeLoader.findItemStack(Last_worker.MODID, name, 1);
 	      ItemStack itemSphereBladeSoul = SlashBlade.findItemStack("flammpfeil.slashblade", "sphere_bladesoul", 1);
-	      SlashBlade.addRecipe(name, new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid,name),louguan, custombladeReqired, new Object[]{"ADA", "CBF", "ADA", Character.valueOf('A'), itemSphereBladeSoul, Character.valueOf('B'), custombladeReqired, Character.valueOf('C'), Items.CLOCK,Character.valueOf('F'), Items.FLINT_AND_STEEL, Character.valueOf('D'), new ItemStack(ItemLoader.material,1,11)}));
+	      SlashBlade.addRecipe(name, new RecipeAwakeBladeTLS(new ResourceLocation(SlashBlade.modid,name),louguan, custombladeReqired, new Object[]{"ADA", "CBF", "ADA", Character.valueOf('A'), itemSphereBladeSoul, Character.valueOf('B'), custombladeReqired, Character.valueOf('C'), Items.CLOCK,Character.valueOf('F'), Items.FLINT_AND_STEEL, Character.valueOf('D'), new ItemStack(ItemLoader.material,1,11)}));
 	
 	   }
 

@@ -1,6 +1,5 @@
 package net.langball.lastsmith.blade.others;
 
-import mods.flammpfeil.slashblade.RecipeAwakeBlade;
 import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.named.NamedBladeManager;
@@ -8,6 +7,7 @@ import mods.flammpfeil.slashblade.named.event.LoadEvent.InitEvent;
 import mods.flammpfeil.slashblade.named.event.LoadEvent.PostInitEvent;
 import net.langball.lastsmith.blade.BladeLoader;
 import net.langball.lastsmith.blade.ItemSlashBladeNamedSS;
+import net.langball.lastsmith.recipe.RecipeAwakeBladeTLS;
 import net.minecraft.init.Enchantments;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -46,7 +46,7 @@ public class ItemSlashblade_lkaruga {
 		    ItemStack blade_req = SlashBlade.getCustomBlade("flammpfeil.slashblade.named.darkraven");
 		      NBTTagCompound reqTag = ItemSlashBlade.getItemTagCompound(blade_req);
 	          ItemSlashBlade.KillCount.set(reqTag,1000);
-		    SlashBlade.addRecipe(name, new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid,name),blade, blade_req, new Object[]{"SFS", "EBE", "SFS",Character.valueOf('S'),soul, Character.valueOf('F'),"feather", Character.valueOf('B'), blade_req, Character.valueOf('E'), new ItemStack(Items.ENDER_EYE)}));
+	          SlashBlade.addRecipe(name, new RecipeAwakeBladeTLS(new ResourceLocation(SlashBlade.modid,name),blade, blade_req, new Object[]{"SFS", "EBE", "SFS",Character.valueOf('S'),soul, Character.valueOf('F'),"feather", Character.valueOf('B'), blade_req, Character.valueOf('E'), new ItemStack(Items.ENDER_EYE)}));
 
 	   }
 }

@@ -30,6 +30,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.SoundCategory;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.fml.relauncher.Side;
@@ -37,6 +38,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemSlashBladeRF extends ItemSlashBladeNamedSS implements IEnergyContainerItem, IMultiModeItem {
 	  public static final TagPropertyAccessor.TagPropertyString Username = new TagPropertyAccessor.TagPropertyString("Username");
+	  
+	  
+	  
 	  public static int maxEnergy = 2000000;
 	  public static int maxTransfer = 20000;
 	  public int energyPerUse = 100;
@@ -151,7 +155,7 @@ public class ItemSlashBladeRF extends ItemSlashBladeNamedSS implements IEnergyCo
 	  {
 	    NBTTagCompound tag = getItemTagCompound(sitem);
 	    if ((isEmpowered(sitem)) && (par3Entity != null) && (par2World.getTotalWorldTime() % 10L == 0L) && ((!isCurrent) || 
-	      (OnClick.get(tag).booleanValue()) || (((par3Entity instanceof EntityPlayer)) && (!((EntityPlayer)par3Entity).isSwingInProgress) )))
+	      (OnClick.get(tag).booleanValue()) || (((par3Entity instanceof EntityPlayer)) )))
 	    {
 	      if (!par2World.isRemote)
 	      {
@@ -256,7 +260,9 @@ public class ItemSlashBladeRF extends ItemSlashBladeNamedSS implements IEnergyCo
 	            float az = tag.getFloat(adjustZStr);
 	            tooltip.add(String.format("adjust x:%.1f y:%.1f z:%.1f", ax,ay,az));
 	        }
-
+			if(isActive(stack)){
+				tooltip.add(TextFormatting.GOLD + I18n.format("blades.crafter")+":"+TextFormatting.GRAY+getname(tag));	
+			}
 			if (StringHelper.displayShiftForDetail && !StringHelper.isShiftKeyDown()) {
 				tooltip.add(I18n.format("info.cofh.holdShiftForDetails"));
 			}

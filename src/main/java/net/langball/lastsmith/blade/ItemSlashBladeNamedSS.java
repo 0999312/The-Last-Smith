@@ -2,7 +2,6 @@ package net.langball.lastsmith.blade;
 
 import java.util.EnumSet;
 import java.util.List;
-import java.util.Random;
 
 import com.google.common.collect.Lists;
 
@@ -10,12 +9,9 @@ import mods.flammpfeil.slashblade.TagPropertyAccessor;
 import mods.flammpfeil.slashblade.TagPropertyAccessor.TagPropertyBoolean;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.util.ResourceLocationRaw;
-import net.langball.lastsmith.items.ItemLoader;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -45,22 +41,19 @@ public class ItemSlashBladeNamedSS extends ItemSlashBlade{
 		@SuppressWarnings({ "rawtypes", "unchecked" })
 		@Override
 		public void addInformation(ItemStack arg0, World arg1, List arg2, ITooltipFlag arg3) {
-			NBTTagCompound tag = getItemTagCompound(arg0);
-			if(IsFakeBlade.get(tag)){
-				arg2.add(I18n.format("flammpfeil.swaepon.info.fake"));
-			}
-			NBTTagCompound nbt = getOrCreateNbtData(arg0);
+			NBTTagCompound nbt = getItemTagCompound(arg0);
 			super.addInformation(arg0, arg1, arg2, arg3);
 			if(isActive(arg0)){
 				arg2.add(TextFormatting.GOLD + I18n.format("blades.crafter")+":"+TextFormatting.GRAY+getname(nbt));	
 				}
 		}
-		@SuppressWarnings("rawtypes")
+		@SuppressWarnings({ "rawtypes", "unchecked" })
 		@Override
 	    public void addInformationSwordClass(ItemStack par1ItemStack,
 				EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
 			NBTTagCompound tag = getItemTagCompound(par1ItemStack);
 			if(IsFakeBlade.get(tag)){
+				par3List.add(I18n.format("flammpfeil.swaepon.info.fake"));
 			}else
 			super.addInformationSwordClass(par1ItemStack, par2EntityPlayer, par3List, par4);
 		}
@@ -112,31 +105,6 @@ public class ItemSlashBladeNamedSS extends ItemSlashBlade{
 	            if(!blade.isEmpty()) subItems.add(blade);
 	        }
 	    }
-	    @Override
-		public boolean hitEntity(ItemStack par1ItemStack, EntityLivingBase par2EntityLivingBase,
-				EntityLivingBase par3EntityLivingBase) {
-	    	 if(!par2EntityLivingBase.isEntityAlive() && par2EntityLivingBase.deathTime == 0){
-	         	Random random = new Random();
-	         	int i=random.nextInt(40);
-	         	if(i<2) dropItem(new ItemStack(ItemLoader.material,1,7), par2EntityLivingBase.world, par2EntityLivingBase);
-	         }
-			return super.hitEntity(par1ItemStack, par2EntityLivingBase, par3EntityLivingBase);
-		}
-	    private static void dropItem(ItemStack itemStack, World world, EntityLivingBase entity)
-		  {
-		    if ((world.restoringBlockSnapshots) || (world.isRemote)) {
-		      return;
-		    }
-		    float f = 0.5F;
-		    double d0 = world.rand.nextFloat() * f + 0.25D;
-		    double d1 = world.rand.nextFloat() * f + 0.25D;
-		    double d2 = world.rand.nextFloat() * f + 0.25D;
-		    
-
-		    EntityItem entityItem = new EntityItem(world, entity.posX + d0, entity.posY + d1, entity.posZ + d2, itemStack);
-		    entityItem.setDefaultPickupDelay();
-		    world.spawnEntity(entityItem);
-		  }
 
 		@Override
 		public void onCreated(ItemStack stack, World worldIn, EntityPlayer playerIn) {
@@ -151,19 +119,19 @@ public class ItemSlashBladeNamedSS extends ItemSlashBlade{
 		    return isActive(nbt);
 		  }
 
-		  private static String getname(NBTTagCompound nbt)
+		  public static String getname(NBTTagCompound nbt)
 		  {
 		    return nbt.getString("craftername");
 		  }
-		  private static void setActive(NBTTagCompound nbt, boolean active)
+		  public static void setActive(NBTTagCompound nbt, boolean active)
 		  {
 		    nbt.setBoolean("active", active);
 		  }
-		  private static void setPlayer(NBTTagCompound nbt, EntityPlayer playerIn)
+		  public static void setPlayer(NBTTagCompound nbt, EntityPlayer playerIn)
 		  {
 			  nbt.setString("craftername", playerIn.getName().toString());
 		  }
-		  private static boolean isActive(NBTTagCompound nbt)
+		  public static boolean isActive(NBTTagCompound nbt)
 		  {
 		    return nbt.getBoolean("active");
 		  }

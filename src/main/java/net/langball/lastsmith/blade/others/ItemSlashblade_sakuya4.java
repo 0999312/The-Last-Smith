@@ -1,6 +1,5 @@
 package net.langball.lastsmith.blade.others;
 
-import mods.flammpfeil.slashblade.RecipeAwakeBlade;
 import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.named.event.LoadEvent.InitEvent;
@@ -8,6 +7,7 @@ import net.langball.lastsmith.Last_worker;
 import net.langball.lastsmith.blade.BladeLoader;
 import net.langball.lastsmith.blade.ItemSlashBladeNamedSS;
 import net.langball.lastsmith.items.ItemLoader;
+import net.langball.lastsmith.recipe.RecipeAwakeBladeTLS;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ResourceLocation;
@@ -24,7 +24,7 @@ public class ItemSlashblade_sakuya4 {
 	      ItemSlashBladeNamedSS.CustomMaxDamage.set(tag, Integer.valueOf(113));
 	      ItemSlashBlade.AttackAmplifier.set(tag, 2F);
 	      ItemSlashBladeNamedSS.IsDefaultBewitched.set(tag, true);
-	      ItemSlashBlade.setBaseAttackModifier(tag, 10.0F);
+	      ItemSlashBlade.setBaseAttackModifier(tag, 8.0F);
 	      ItemSlashBlade.TextureName.set(tag, "named/sakura/texture_double");
 	      ItemSlashBlade.ModelName.set(tag, "named/sakura/work");
 	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(266));
@@ -39,7 +39,7 @@ public class ItemSlashblade_sakuya4 {
 	      ItemStack louguan = BladeLoader.findItemStack(Last_worker.MODID, name, 1);
 	      ItemStack itemSphereBladeSoul = SlashBlade.findItemStack("flammpfeil.slashblade", "sphere_bladesoul", 1);
 
-	      SlashBlade.addRecipe(name, new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid,name),louguan, custombladeReqired, new Object[]{"DAD", "FBF", "DAD", Character.valueOf('A'), itemSphereBladeSoul, Character.valueOf('B'), custombladeReqired, Character.valueOf('D'),new ItemStack(ItemLoader.material,1,8),'F',"blockRedstone"}));
+	      SlashBlade.addRecipe(name, new RecipeAwakeBladeTLS(new ResourceLocation(SlashBlade.modid,name),louguan, custombladeReqired, new Object[]{"DAD", "FBF", "DAD", Character.valueOf('A'), itemSphereBladeSoul, Character.valueOf('B'), custombladeReqired, Character.valueOf('D'),new ItemStack(ItemLoader.material,1,8),'F',"blockRedstone"}));
 	   }
 
 }

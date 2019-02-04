@@ -7,7 +7,6 @@ import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.util.ResourceLocationRaw;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -22,12 +21,6 @@ public class ItemSlashBladeBasic extends ItemSlashBladeDetune{
 	@Override
 	public ResourceLocationRaw getModel() {
 		return new ResourceLocationRaw(SlashBlade.modid, "model/named/yasha/yasha.obj");
-	}
-	
-    @Override
-	public boolean hitEntity(ItemStack par1ItemStack, EntityLivingBase par2EntityLivingBase,
-			EntityLivingBase par3EntityLivingBase) {
-		return super.hitEntity(par1ItemStack, par2EntityLivingBase, par3EntityLivingBase);
 	}
     
 	@SuppressWarnings({ "rawtypes", "unchecked" })

@@ -11,7 +11,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
-import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
@@ -28,10 +27,10 @@ public class ItemHeattedBlade extends ItemBase {
 			EnumFacing facing, float hitX, float hitY, float hitZ) {
 		if(worldIn.getBlockState(pos).getBlock() == BlockLoader.Casket){
 			if(!worldIn.isRemote){
-				ItemStack item = cold[getDamage(player.getHeldItem(hand))];
+				ItemStack item = cold[getDamage(player.getHeldItem(hand))].copy();
 				player.setHeldItem(hand, item);
 			}
-			worldIn.playSound(player,player.posX,player.posY,player.posZ,SoundEvents.BLOCK_FIRE_AMBIENT,SoundCategory.PLAYERS, 1.0F, 1.0F);
+			player.playSound(SoundEvents.BLOCK_FIRE_EXTINGUISH, 1F, 1F);
 		}
 		return super.onItemUse(player, worldIn, pos, hand, facing, hitX, hitY, hitZ);
 	}

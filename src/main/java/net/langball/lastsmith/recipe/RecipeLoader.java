@@ -40,7 +40,7 @@ public class RecipeLoader {
 				"BBB","BFB","BIB",'I',"blockIron",'B',Blocks.BRICK_BLOCK,'F',Blocks.FURNACE
 		}));
 		RecipesUtil.addRecipe("blast_top", new ShapedOreRecipe(new ResourceLocation(""), BlockLoader.BlastTopItem, new Object[]{
-				"BIB","BIB","BIB",'I',"blockIron",'B',Blocks.BRICK_BLOCK
+				"BIB","BIB","BIB",'I',"ingotIron",'B',Blocks.BRICK_BLOCK
 		}));
 		
 		RecipesUtil.addRecipe("casket", new ShapedOreRecipe(new ResourceLocation(""), BlockLoader.CasketItem, new Object[]{
@@ -52,6 +52,14 @@ public class RecipeLoader {
 		RecipesUtil.addRecipe("paper_arthurs", new ShapedOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.material,1,11), new Object[]{
 				"BBB","BIB","BBB",'B',new ItemStack(ItemLoader.material,1,8),'I',"paper"
 		}));
+		
+		RecipesUtil.addRecipe("sakura_steel_block", new ShapedOreRecipe(new ResourceLocation(""), new ItemStack(BlockLoader.Sakura_Steel_BlockItem), new Object[]{
+				"BBB","BBB","BBB",'B',"ingotSakura"
+		}));
+		
+		RecipesUtil.addRecipe("sakura_steel_ingot", new ShapelessOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.material,9,10), new Object[]{new ItemStack(BlockLoader.Sakura_Steel_BlockItem)}));
+		BlastRecipes.instance().addSmeltingRecipe(new ItemStack(BlockLoader.Sakura_Steel_BlockItem), new ItemStack(ItemLoader.material,1,12), 0F);
+		
 		RecipesUtil.addRecipe("sakura_ingot_unfinished", new ShapedOreRecipe(new ResourceLocation(""), new ItemStack(ItemLoader.material,1,9), new Object[]{
 				"BFB","FIF","BFB",'B',new ItemStack(ItemLoader.material,1,8),'I',SlashBlade.findItemStack("flammpfeil.slashblade",SlashBlade.IngotBladeSoulStr, 1),'F',SlashBlade.findItemStack("flammpfeil.slashblade",SlashBlade.ProudSoulStr, 1)
 		}));

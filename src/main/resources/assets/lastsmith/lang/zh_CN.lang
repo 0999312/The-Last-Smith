@@ -27,6 +27,7 @@ item.flammpfeil.slashblade.named.smith_last.name=自命「无念」
 item.flammpfeil.slashblade.named.ginkgoblade.name=杏之刃
 item.flammpfeil.slashblade.named.nanosaber.name=纳米太刀
 item.flammpfeil.slashblade.named.quantumsaber.name=量子太刀
+item.flammpfeil.slashblade.named.shouren.name=青莲
 item.flammpfeil.slashblade.named.yingjian.name=「樱剪」
 item.flammpfeil.slashblade.named.wenshi.name=「文始」
 item.flammpfeil.slashblade.named.snowblade.name=雪之刃
@@ -125,8 +126,31 @@ item.lastsmith.sakura_full.name=樱
 item.lastsmith.sakura_ingot_unfinished.name=未精炼樱色钢锭
 item.lastsmith.sakura_ingot.name=樱色钢锭
 
+item.lastsmith.sakura_sphere.name=樱之宝珠
+tile.sakura_steel_block.name=樱色钢块
+
 item.lastsmith.yakibatsuchi.name=烧刃土
 item.lastsmith.coal_dust.name=煤粉
+
+
+item.flammpfeil.slashblade.named.yamazakura.kadomatsu.name=山樱睦月「松」
+item.flammpfeil.slashblade.named.yamazakura.ume.name=山樱如月「梅」
+item.flammpfeil.slashblade.named.yamazakura.sakura.name=山樱弥生「樱」
+item.flammpfeil.slashblade.named.yamazakura.uzuki.name=山樱卯月
+item.flammpfeil.slashblade.named.yamazakura.satsuki.name=山樱皋月
+item.flammpfeil.slashblade.named.yamazakura.minazuki.name=山樱「水无月」
+item.flammpfeil.slashblade.named.yamazakura.fumizuki.name=山樱文月
+item.flammpfeil.slashblade.named.yamazakura.hazuki.name=山樱叶月
+item.flammpfeil.slashblade.named.yamazakura.kiku.name=山樱长月「菊」
+item.flammpfeil.slashblade.named.yamazakura.katura.name=山樱神无月「枫」
+item.flammpfeil.slashblade.named.yamazakura.shimotsuki.name=山樱霜月
+item.flammpfeil.slashblade.named.yamazakura.shiwasu.name=山樱「师走」
+item.flammpfeil.slashblade.named.yamazakura.aoi.name=山樱「葵」
+item.flammpfeil.slashblade.named.yamazakura.aoi_fake.name=伪物「葵」
+item.flammpfeil.slashblade.named.yamazakura.tuki.name=山樱「神月」
+
+
+
 
 item.flammpfeil.slashblade.wooden_saya.name=实木鞘
 item.flammpfeil.slashblade.bamboo_saya.name=竹鞘
@@ -142,6 +166,8 @@ info.flammpfeil.slashblade.tool.energyPerUse=RF/次使用
 info.flammpfeil.slashblade.tool.user=所有者
 
 itemGroup.lastsmith=最后的太刀匠人
+key.categories.lastsmith=最后的太刀匠人
+key.lastsmith.mode_change=模式切换
 
 item.flammpfeil.slashblade.named.fortress.thaumium.name=神秘要塞日本刀
 item.flammpfeil.slashblade.named.fortress.void.name=虚空要塞日本刀

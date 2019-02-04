@@ -2,6 +2,7 @@ package net.langball.lastsmith.items;
 
 import net.langball.lastsmith.CommonProxy;
 import net.langball.lastsmith.Last_worker;
+import net.langball.lastsmith.blocks.BlockLoader;
 import net.langball.lastsmith.util.JSON_Creator;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.Items;
@@ -29,7 +30,8 @@ public class ItemLoader {
 			Last_worker.MODID+'.'+"sakura_full",//8
 			Last_worker.MODID+'.'+"sakura_ingot_unfinished",//9
 			Last_worker.MODID+'.'+"sakura_ingot",//10
-			Last_worker.MODID+'.'+"paper_arthurs"//11
+			Last_worker.MODID+'.'+"paper_arthurs",//11
+			Last_worker.MODID+'.'+"sakura_sphere"//12
 			);
 	public static ItemBase blade = new ItemBase("itemBlade",1,
 			Last_worker.MODID+'.'+"blade",
@@ -68,43 +70,40 @@ public class ItemLoader {
 		OreDictionary.registerOre("gemCoal", new ItemStack(Items.COAL,1,0));
 		OreDictionary.registerOre("gemCoal", new ItemStack(Items.COAL,1,1));
 		OreDictionary.registerOre("ingotSakura",  new ItemStack(material,1,10));
+		OreDictionary.registerOre("blockSakura",  new ItemStack(BlockLoader.Sakura_Steel_BlockItem));
+		OreDictionary.registerOre("sphereSakura",  new ItemStack(material,1,12));
 	}
 	@SideOnly(Side.CLIENT)
 	public static void registerRender() {
-		registerRender(hammer,"test");
+		registerRender(hammer);
 		registerRender(material);
 		registerRender(blade);
 		registerRender(blade_heatted);
 	
 	}
+    @SideOnly(Side.CLIENT)
+    private static void registerRender(ItemBase item)
+    {
+    	registerRender(item, false);
+    }
+
+    @SideOnly(Side.CLIENT)
+    private static void registerRender(ItemBase item,boolean json_create)
+    {
+    	for(int i = 0;i<item.getSubNames().length;i++){
+    		String name = item.getSubNames()[i].substring(Last_worker.MODID.length()+1);
+    		if(json_create)JSON_Creator.genItem(name, name, "json_create");
+            ModelResourceLocation model = new ModelResourceLocation(new ResourceLocation(Last_worker.MODID,name), "inventory");
+            ModelLoader.setCustomModelResourceLocation(item, i, model);
+    	}
+    }
+    
 	private static void register(Item item)
     {
 		item.setCreativeTab(CommonProxy.tab);
         ForgeRegistries.ITEMS.register(item.setRegistryName(item.getUnlocalizedName().substring(5+Last_worker.MODID.length()+1)));
     }
-    @SideOnly(Side.CLIENT)
-    private static void registerRender(ItemBase item)
-    {
-    	for(int i = 0;i<item.getSubNames().length;i++){
-    		String name = item.getSubNames()[i].substring(10);
-            ModelResourceLocation model = new ModelResourceLocation(new ResourceLocation(Last_worker.MODID,name), "inventory");
-            ModelLoader.setCustomModelResourceLocation(item, i, model);
-    	}
 
-    }
-    @SideOnly(Side.CLIENT)
-    private static void registerRender(Item item, int meta, String name)
-    {
-        ModelResourceLocation model = new ModelResourceLocation(name, "inventory");
-        ModelLoader.setCustomModelResourceLocation(item, meta, model);
-    }
-    @SideOnly(Side.CLIENT)
-    private static void registerRender(Item item, int meta, String name,String textureName)
-    {
-    	JSON_Creator.genItem(name, textureName, "json_create");
-        ModelResourceLocation model = new ModelResourceLocation(name, "inventory");
-        ModelLoader.setCustomModelResourceLocation(item, meta, model);
-    }
 	@SideOnly(Side.CLIENT)
     private static void registerRender(Item item,String textureName)
     {

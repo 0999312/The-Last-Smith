@@ -1,1 +1,6 @@
-{"parent":"item/generated","textures":{"layer0":"lastsmith:items/crushed_iron"}}
+{
+   "parent" : "item/generated",
+   "textures" : {
+      "layer0" : "lastsmith:items/crushed_iron"
+   }
+}

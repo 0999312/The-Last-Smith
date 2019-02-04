@@ -15,8 +15,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public class ItemSlashblade_Smith4 {
 		@SubscribeEvent
 	   public void init(InitEvent event) {
-
-		    String name = "flammpfeil.slashblade.named.smith_last";
+		  String name = "flammpfeil.slashblade.named.smith_last";
 	      String name2 = "flammpfeil.slashblade.named.smith_3";
 	      ItemStack customblade = new ItemStack(BladeLoader.bladeNamed, 1, 0);
 	      NBTTagCompound tag = new NBTTagCompound();
@@ -24,7 +23,7 @@ public class ItemSlashblade_Smith4 {
 	      ItemSlashBladeNamedSS.CurrentItemName.set(tag, name);
 	      ItemSlashBladeNamedSS.CustomMaxDamage.set(tag, Integer.valueOf(50));
 	      ItemSlashBlade.AttackAmplifier.set(tag, 2F);
-	      ItemSlashBlade.setBaseAttackModifier(tag,18.0F);
+	      ItemSlashBlade.setBaseAttackModifier(tag,20.0F);
 	      ItemSlashBladeNamedSS.IsDefaultBewitched.set(tag, Boolean.valueOf(true));
 	      ItemSlashBlade.TextureName.set(tag, "named/smith/smith_3");
 	      ItemSlashBlade.ModelName.set(tag, "named/smith/model");
@@ -32,11 +31,12 @@ public class ItemSlashblade_Smith4 {
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);
 	      customblade.addEnchantment(Enchantments.POWER, 8);
-	      customblade.addEnchantment(Enchantments.UNBREAKING, 5);
+	      customblade.addEnchantment(Enchantments.UNBREAKING, 6);
 	      customblade.addEnchantment(Enchantments.SHARPNESS,15);
 	      customblade.addEnchantment(Enchantments.FIRE_ASPECT, 2);
 	      customblade.addEnchantment(Enchantments.SMITE, 6);
 	      customblade.addEnchantment(Enchantments.THORNS, 2);
+	      customblade.addEnchantment(Enchantments.KNOCKBACK, 4);
 	      ItemStack reqiredMain = BladeLoader.getCustomBlade("flammpfeil.slashblade.named.louguan_tx");
 	      ItemStack reqiredSub = BladeLoader.getCustomBlade("flammpfeil.slashblade.named.silverbamboolight_blood");
 	      ItemStack sb = BladeLoader.getCustomBlade(name2);
@@ -50,7 +50,7 @@ public class ItemSlashblade_Smith4 {
 	    		  reqiredMain, 0, 1, false,
 	    		  reqiredSub, 2, 1, false, new Object[]{
 	    		    "III", "ABC", "III",
-	    			'I',"blockDiamond",
+	    			'I', "sphereSakura",
 	    			'A',reqiredMain,
 	    			'B',sb,
 	    			'C',reqiredSub

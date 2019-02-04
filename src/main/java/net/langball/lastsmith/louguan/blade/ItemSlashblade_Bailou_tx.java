@@ -1,12 +1,12 @@
 package net.langball.lastsmith.louguan.blade;
 
-import mods.flammpfeil.slashblade.RecipeAwakeBlade;
 import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.named.event.LoadEvent.InitEvent;
 import net.langball.lastsmith.Last_worker;
 import net.langball.lastsmith.blade.BladeLoader;
 import net.langball.lastsmith.blade.ItemSlashBladeNamedSS;
+import net.langball.lastsmith.recipe.RecipeAwakeBladeTLS;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Enchantments;
 import net.minecraft.item.ItemStack;
@@ -46,7 +46,7 @@ public class ItemSlashblade_Bailou_tx {
 	      ItemSlashBlade.RepairCount.set(reqTag, Integer.valueOf(5));
 	      ItemStack louguan = BladeLoader.findItemStack(Last_worker.MODID, nameTx1, 1);
 
-	      SlashBlade.addRecipe(nameTx1, new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid,nameTx1),louguan, custombladeReqired, new Object[]{"DED", "EBE", "DED", Character.valueOf('B'), custombladeReqired, Character.valueOf('D'), new ItemStack(Blocks.DIAMOND_BLOCK), Character.valueOf('E'), new ItemStack(Blocks.OBSIDIAN)}));
+	      SlashBlade.addRecipe(nameTx1, new RecipeAwakeBladeTLS(new ResourceLocation(SlashBlade.modid,nameTx1),louguan, custombladeReqired, new Object[]{"DED", "EBE", "DED", Character.valueOf('B'), custombladeReqired, Character.valueOf('D'),  "blockSakura", Character.valueOf('E'), new ItemStack(Blocks.OBSIDIAN)}));
 	   }
 
 }

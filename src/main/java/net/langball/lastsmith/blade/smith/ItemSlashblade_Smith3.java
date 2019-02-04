@@ -47,7 +47,7 @@ public class ItemSlashblade_Smith3 {
 	    		  reqiredSub, 2, 1, false, new Object[]{
 	    		    "IGI", "ABC", "IGI",
 	    			'I',"blockIron",
-	    			'G',"blockGold",
+	    			'G',"blockSakura",
 	    			'A',reqiredMain,
 	    			'B',sb,
 	    			'C',reqiredSub

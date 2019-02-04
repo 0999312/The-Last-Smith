@@ -1,11 +1,11 @@
 package net.langball.lastsmith.blade.others;
 
-import mods.flammpfeil.slashblade.RecipeAwakeBlade;
 import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.named.event.LoadEvent.InitEvent;
 import net.langball.lastsmith.blade.BladeLoader;
 import net.langball.lastsmith.blade.ItemSlashBladeNamedSS;
+import net.langball.lastsmith.recipe.RecipeAwakeBladeTLS;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -32,7 +32,7 @@ public class ItemSlashblade_Sweapon {
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);
 	      ItemStack custombladeReqired = new ItemStack(SlashBlade.weapon);
 
-	      SlashBlade.addRecipe(name, new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid,name),customblade, custombladeReqired, new Object[]{" AD", " AD", " B ", Character.valueOf('A'), Items.IRON_INGOT, Character.valueOf('B'), custombladeReqired, Character.valueOf('D'), new ItemStack(Blocks.LAPIS_BLOCK)}));
+	      SlashBlade.addRecipe(name, new RecipeAwakeBladeTLS(new ResourceLocation(SlashBlade.modid,name),customblade, custombladeReqired, new Object[]{" AD", " AD", " B ", Character.valueOf('A'), Items.IRON_INGOT, Character.valueOf('B'), custombladeReqired, Character.valueOf('D'), new ItemStack(Blocks.LAPIS_BLOCK)}));
 	   }
 
 }
