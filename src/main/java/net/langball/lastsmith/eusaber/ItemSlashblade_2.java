@@ -26,6 +26,7 @@ public class ItemSlashblade_2 {
 	      ItemSlashBlade.setBaseAttackModifier(tag, 21.0f);
 	      ItemSlashBladeNamedSS.IsDefaultBewitched.set(tag, Boolean.valueOf(false));
 	      ItemSlashBlade.TextureName.set(tag, "named/nanosaber/texture_1");
+	      ItemSlashBlade_EU.TextureOnName.set(tag, "named/nanosaber/texture_1_on");
 	      ItemSlashBlade.ModelName.set(tag, "named/nanosaber/model");
 	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(1));
 	      ItemSlashBlade.StandbyRenderType.set(tag, Integer.valueOf(2));

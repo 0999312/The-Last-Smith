@@ -16,6 +16,7 @@ import mods.flammpfeil.slashblade.TagPropertyAccessor;
 import mods.flammpfeil.slashblade.ability.StylishRankManager;
 import mods.flammpfeil.slashblade.entity.EntityDrive;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
+import mods.flammpfeil.slashblade.util.ResourceLocationRaw;
 import net.langball.lastsmith.blade.ItemSlashBladeNamedSS;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.I18n;
@@ -39,7 +40,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class ItemSlashBladeRF extends ItemSlashBladeNamedSS implements IEnergyContainerItem, IMultiModeItem {
 	  public static final TagPropertyAccessor.TagPropertyString Username = new TagPropertyAccessor.TagPropertyString("Username");
 	  
-	  
+	  public static final TagPropertyAccessor.TagPropertyString TextureOnName = new TagPropertyAccessor.TagPropertyString("TextureOnName");
 	  
 	  public static int maxEnergy = 2000000;
 	  public static int maxTransfer = 20000;
@@ -136,9 +137,41 @@ public class ItemSlashBladeRF extends ItemSlashBladeNamedSS implements IEnergyCo
 		return getMode(stack) == 1 && getEnergyStored(stack) >= energyPerUseCharged;
 	}
 
+  	@Override
+	public ResourceLocationRaw getModelTexture(ItemStack par1ItemStack) {
+  		NBTTagCompound tag = getItemTagCompound(par1ItemStack);
+  		ResourceLocationRaw result = ((ItemSlashBladeNamedSS)par1ItemStack.getItem()).getModelTexture();
+  		if(isEmpowered(par1ItemStack)){
+  	  		if(TextureOnName.exists(tag)){
+  	            String textureName = TextureOnName.get(tag);
+  	            ResourceLocationRaw loc;
+  	            if(!textureMap.containsKey(textureName))
+  	            {
+  	                loc = new ResourceLocationRaw("flammpfeil.slashblade","model/" + textureName + ".png");
+  	                textureMap.put(textureName,loc);
+  	            }else{
+  	                loc = textureMap.get(textureName);
+  	            }
+  	            result = loc;
+  	        }
+  		}
+  		else
+  		if(TextureName.exists(tag)){
+            String textureName = TextureName.get(tag);
+            ResourceLocationRaw loc;
+            if(!textureMap.containsKey(textureName))
+            {
+                loc = new ResourceLocationRaw("flammpfeil.slashblade","model/" + textureName + ".png");
+                textureMap.put(textureName,loc);
+            }else{
+                loc = textureMap.get(textureName);
+            }
+            result = loc;
+        }
+        return result;
+	}
 
 	@Override
-
 	public boolean hitEntity(ItemStack stack, EntityLivingBase entity, EntityLivingBase player) {
 		int rank = StylishRankManager.getStylishRank(player);
 	    int usage = (int)(this.energyPerUse * Math.pow(2.0D, rank));

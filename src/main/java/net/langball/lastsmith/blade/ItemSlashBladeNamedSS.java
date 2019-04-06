@@ -57,7 +57,7 @@ public class ItemSlashBladeNamedSS extends ItemSlashBlade{
 			}else
 			super.addInformationSwordClass(par1ItemStack, par2EntityPlayer, par3List, par4);
 		}
-	    static public ResourceLocationRaw getModelTexture(ItemStack par1ItemStack){
+	    public ResourceLocationRaw getModelTexture(ItemStack par1ItemStack){
 	        NBTTagCompound tag = getItemTagCompound(par1ItemStack);
 	        if(TextureName.exists(tag)){
 	            String textureName = TextureName.get(tag);

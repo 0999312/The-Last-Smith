@@ -23,8 +23,8 @@ public class ItemSlashblade_Yamazakura_Katura {
 	      ItemSlashBladeNamedSS.CustomMaxDamage.set(tag, Integer.valueOf(31));
 	      ItemSlashBlade.setBaseAttackModifier(tag, 7.0F);
 	      ItemSlashBladeNamedSS.IsDefaultBewitched.set(tag, Boolean.valueOf(true));
-	      ItemSlashBlade.TextureName.set(tag, "named/yamazakura/yamazakura_minazuki");
-	      ItemSlashBlade.ModelName.set(tag, "named/yamazakura/minazuki");
+	      ItemSlashBlade.TextureName.set(tag, "named/yamazakura/yamazakura_kannazuki_katura");
+	      ItemSlashBlade.ModelName.set(tag, "named/yamazakura/kannazuki");
 	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(3));
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);

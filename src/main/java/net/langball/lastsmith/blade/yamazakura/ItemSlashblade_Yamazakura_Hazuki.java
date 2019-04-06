@@ -27,7 +27,7 @@ public class ItemSlashblade_Yamazakura_Hazuki {
 	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(0));
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);
-	      DropEventHandler.registerEntityDrop(new ResourceLocation("minecraft","evocation_illager"), 0.01f, BladeLoader.findItemStack(Last_worker.MODID, name, 1));
+	      DropEventHandler.registerEntityDrop(new ResourceLocation("minecraft","evocation_illager"), -0.5F, BladeLoader.findItemStack(Last_worker.MODID, name, 1));
 	      
 	   }
 

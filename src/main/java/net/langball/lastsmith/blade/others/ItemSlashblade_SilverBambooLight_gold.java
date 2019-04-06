@@ -32,8 +32,8 @@ public class ItemSlashblade_SilverBambooLight_gold {
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);
 	      ItemStack custombladeReqired =BladeLoader.findItemStack(Last_worker.MODID, name1, 1);
 	      NBTTagCompound reqTag = ItemSlashBlade.getItemTagCompound(custombladeReqired);
-	      ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(200));
-	      ItemSlashBlade.ProudSoul.set(reqTag, Integer.valueOf(100));
+	      ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(500));
+	      ItemSlashBlade.ProudSoul.set(reqTag, Integer.valueOf(1000));
 	      ItemStack louguan = BladeLoader.findItemStack(Last_worker.MODID, name, 1);
 	      ItemStack ingot = SlashBlade.findItemStack("flammpfeil.slashblade", "ingot_bladesoul", 1);
 	      

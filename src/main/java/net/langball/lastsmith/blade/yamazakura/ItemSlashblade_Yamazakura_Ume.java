@@ -27,7 +27,7 @@ public class ItemSlashblade_Yamazakura_Ume {
 	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(0));
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);
-	      DropEventHandler.registerEntityDrop(new ResourceLocation("minecraft","stray"), 0.01f, BladeLoader.findItemStack(Last_worker.MODID, name, 1));
+	      DropEventHandler.registerEntityDrop(new ResourceLocation("minecraft","stray"),-0.06f, BladeLoader.findItemStack(Last_worker.MODID, name, 1));
 	      
 	   }
 

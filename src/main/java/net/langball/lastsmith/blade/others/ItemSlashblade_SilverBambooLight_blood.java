@@ -38,8 +38,8 @@ public class ItemSlashblade_SilverBambooLight_blood {
 	      customblade.addEnchantment(Enchantments.SHARPNESS, 3);
 	      ItemStack custombladeReqired = BladeLoader.findItemStack(Last_worker.MODID, name1, 1);
 	      NBTTagCompound reqTag = ItemSlashBlade.getItemTagCompound(custombladeReqired);
-	      ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(500));
-	      ItemSlashBlade.ProudSoul.set(reqTag, Integer.valueOf(200));
+	      ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(5000));
+	      ItemSlashBlade.ProudSoul.set(reqTag, Integer.valueOf(20000));
 	      ItemStack louguan = BladeLoader.findItemStack(Last_worker.MODID, name, 1);
 
 	      SlashBlade.addRecipe(name, new RecipeAwakeBladeTLS(new ResourceLocation(SlashBlade.modid,name),louguan, custombladeReqired, new Object[]{"DAD", "ABA", "DAD", Character.valueOf('A'),  "sphereSakura", Character.valueOf('B'), custombladeReqired, Character.valueOf('D'), new ItemStack(Blocks.NETHER_BRICK)}));

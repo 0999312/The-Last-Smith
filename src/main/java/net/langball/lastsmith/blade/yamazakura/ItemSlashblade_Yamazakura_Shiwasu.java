@@ -22,12 +22,12 @@ public class ItemSlashblade_Yamazakura_Shiwasu {
 	      ItemSlashBladeNamedSS.CustomMaxDamage.set(tag, Integer.valueOf(31));
 	      ItemSlashBladeNamedSS.IsFakeBlade.set(tag, true);
 	      ItemSlashBlade.setBaseAttackModifier(tag, 7.0F);
-	      ItemSlashBlade.TextureName.set(tag, "named/yamazakura/yamazakura_yayoi_sakura");
-	      ItemSlashBlade.ModelName.set(tag, "named/yamazakura/sakura_fake");
+	      ItemSlashBlade.TextureName.set(tag, "named/yamazakura/yamazakura_shiwasu");
+	      ItemSlashBlade.ModelName.set(tag, "named/yamazakura/shimotsuki");
 	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(0));
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);
-	      DropEventHandler.registerEntityDrop(new ResourceLocation("minecraft","ghast"), 0.01f, BladeLoader.findItemStack(Last_worker.MODID, name, 1));
+	      DropEventHandler.registerEntityDrop(new ResourceLocation("minecraft","ghast"), -0.95f, BladeLoader.findItemStack(Last_worker.MODID, name, 1));
 	      
 	   }
 

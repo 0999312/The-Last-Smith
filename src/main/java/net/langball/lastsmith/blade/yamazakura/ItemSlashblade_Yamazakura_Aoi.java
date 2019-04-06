@@ -29,7 +29,7 @@ public class ItemSlashblade_Yamazakura_Aoi {
 	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(0));
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);
-	      DropEventHandler.registerEntityDrop(new ResourceLocation("minecraft","vindication_illager"), 0.01f, BladeLoader.findItemStack(Last_worker.MODID, name, 1));
+	      DropEventHandler.registerEntityDrop(new ResourceLocation("minecraft","vindication_illager"), -0.1f, BladeLoader.findItemStack(Last_worker.MODID, name, 1));
 	      
 	   }
 

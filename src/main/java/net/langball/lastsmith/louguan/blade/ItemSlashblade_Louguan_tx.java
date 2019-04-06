@@ -36,9 +36,10 @@ public class ItemSlashblade_Louguan_tx {
 	      customblade.addEnchantment(Enchantments.POWER, 6);
 	      customblade.addEnchantment(Enchantments.SHARPNESS, 10);
 	      customblade.addEnchantment(Enchantments.FIRE_ASPECT, 4);
+	      
 	      ItemStack custombladeReqired = BladeLoader.findItemStack(Last_worker.MODID,name,1);
 	      NBTTagCompound reqTag = ItemSlashBlade.getItemTagCompound(custombladeReqired);
-	      ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(4000));
+	      ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(2000));
 	      ItemSlashBlade.ProudSoul.set(reqTag, Integer.valueOf(50000));
 	      ItemSlashBlade.RepairCount.set(reqTag, Integer.valueOf(20));
 	      ItemStack louguan = BladeLoader.findItemStack(Last_worker.MODID, nametx, 1);

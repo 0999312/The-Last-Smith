@@ -26,6 +26,7 @@ public class ItemSlashblade_3 {
 	      ItemSlashBlade.setBaseAttackModifier(tag, 12.0f);
 	      ItemSlashBladeNamedSS.IsDefaultBewitched.set(tag, Boolean.valueOf(true));
 	      ItemSlashBlade.TextureName.set(tag, "named/RFlouguan/texture");
+	      ItemSlashBladeRF.TextureOnName.set(tag, "named/RFlouguan/texture_on");
 	      ItemSlashBlade.ModelName.set(tag, "named/RFlouguan/model");
 	      ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(9));
 	      ItemSlashBlade.StandbyRenderType.set(tag, Integer.valueOf(2));

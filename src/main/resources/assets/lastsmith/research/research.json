@@ -10,7 +10,7 @@
          "stages" : [
             {
                "text" : "research.FIRSTBLADE.text.stage.1",
-               "required_craft" : [ "lastsmith:wooden_blade" ]
+               "required_craft" : [ "lastsmith:itemMaterials;1;3" ]
             },
             {
                "text" : "research.FIRSTBLADE.text.stage.2",
@@ -32,7 +32,7 @@
          "stages" : [
             {
                "text" : "research.WOODENBLADE.text.stage.1",
-               "required_craft" : [ "lastsmith:wooden_blade", "lastsmith:wooden_saya" ]
+               "required_craft" : [ "lastsmith:itemMaterials;1;3", "lastsmith:slashbladeSaya" ]
             },
             {
                "text" : "research.WOODENBLADE.text.stage.2",
@@ -58,12 +58,12 @@
          "stages" : [
             {
                "text" : "research.BLADES.text.stage.1",
-               "required_craft" : [ "lastsmith:smith_hammer", "lastsmith:blast" ]
+               "required_craft" : [ "lastsmith:smith_hammer", "lastsmith:blast", "lastsmith:blast_top"]
             },
             {
                "text" : "research.BLADES.text.stage.2",
-               "recipes" : [ "lastsmith:blast", "lastsmith:hammer" ],
-               "required_craft" : [ "lastsmith:blade", "lastsmith:blade_2", "lastsmith:blade_3" ]
+               "recipes" : [ "lastsmith:blast", "lastsmith:blast_top", "lastsmith:hammer" ],
+               "required_craft" : [ "lastsmith:itemBlade;1;0", "lastsmith:itemBlade;1;1", "lastsmith:itemBlade;1;2" ]
             },
             {
                "text" : "research.BLADES.text.stage.3",
@@ -73,6 +73,12 @@
                   "lastsmith:blade_unfinished",
                   "lastsmith:blade_2_unfinished",
                   "lastsmith:blade_3_unfinished",
+                  "lastsmith:blade_unfinished_2",
+                  "lastsmith:blade_2_unfinished_2",
+                  "lastsmith:blade_3_unfinished_2",
+                  "lastsmith:blade_unfinished_3",
+                  "lastsmith:blade_2_unfinished_3",
+                  "lastsmith:blade_3_unfinished_3",
                   "lastsmith:blade",
                   "lastsmith:blade_2",
                   "lastsmith:blade_3"
@@ -104,6 +110,12 @@
                   "lastsmith:blade_unfinished",
                   "lastsmith:blade_2_unfinished",
                   "lastsmith:blade_3_unfinished",
+                  "lastsmith:blade_unfinished_2",
+                  "lastsmith:blade_2_unfinished_2",
+                  "lastsmith:blade_3_unfinished_2",
+                  "lastsmith:blade_unfinished_3",
+                  "lastsmith:blade_2_unfinished_3",
+                  "lastsmith:blade_3_unfinished_3",
                   "lastsmith:blade",
                   "lastsmith:blade_2",
                   "lastsmith:blade_3",

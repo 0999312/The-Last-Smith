@@ -11,6 +11,7 @@ import mods.flammpfeil.slashblade.TagPropertyAccessor;
 import mods.flammpfeil.slashblade.ability.StylishRankManager;
 import mods.flammpfeil.slashblade.entity.EntityDrive;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
+import mods.flammpfeil.slashblade.util.ResourceLocationRaw;
 import net.langball.lastsmith.blade.ItemSlashBladeNamedSS;
 import net.langball.lastsmith.util.IMultiModeBlade;
 import net.minecraft.client.resources.I18n;
@@ -32,7 +33,7 @@ public class ItemSlashBlade_EU
   extends ItemSlashBladeNamedSS
   implements IElectricItem, IItemHudInfo, IMultiModeBlade{
 	 public static final TagPropertyAccessor.TagPropertyString Username = new TagPropertyAccessor.TagPropertyString("Username");
-
+	 public static final TagPropertyAccessor.TagPropertyString TextureOnName = new TagPropertyAccessor.TagPropertyString("TextureOnName");
 	 public static int maxEnergy = 200000;
 	 public static int maxTransfer = 4096;
 	 public int energyPerUse = 500;
@@ -77,7 +78,45 @@ public Item getChargedItem(ItemStack itemStack)
     return maxTransfer;
   }
   
+  	@Override
+	public ResourceLocationRaw getModelTexture(ItemStack par1ItemStack) {
+  		NBTTagCompound tag = getItemTagCompound(par1ItemStack);
+  		ResourceLocationRaw result = ((ItemSlashBladeNamedSS)par1ItemStack.getItem()).getModelTexture();
+  		if(isEmpowered(par1ItemStack)){
+  	  		if(TextureOnName.exists(tag)){
+  	            String textureName = TextureOnName.get(tag);
+  	            ResourceLocationRaw loc;
+  	            if(!textureMap.containsKey(textureName))
+  	            {
+  	                loc = new ResourceLocationRaw("flammpfeil.slashblade","model/" + textureName + ".png");
+  	                textureMap.put(textureName,loc);
+  	            }else{
+  	                loc = textureMap.get(textureName);
+  	            }
+  	            result = loc;
+  	        }
+  		}
+  		else
+  		if(TextureName.exists(tag)){
+            String textureName = TextureName.get(tag);
+            ResourceLocationRaw loc;
+            if(!textureMap.containsKey(textureName))
+            {
+                loc = new ResourceLocationRaw("flammpfeil.slashblade","model/" + textureName + ".png");
+                textureMap.put(textureName,loc);
+            }else{
+                loc = textureMap.get(textureName);
+            }
+            result = loc;
+        }
+        return result;
+	}
   
+  	@Override
+	public ResourceLocationRaw getModelLocation(ItemStack arg0) {
+		
+		return super.getModelLocation(arg0);
+	}
   
     @SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
@@ -178,8 +217,7 @@ public Item getChargedItem(ItemStack itemStack)
 	    	EntityPlayer player = (EntityPlayer)par3Entity;
 	    	if (!par2World.isRemote){
 	    		ItemStack sitem1 = player.getHeldItemMainhand();
-	    		 if (((sitem1.getItem() instanceof IElectricItem)&&(sitem1.getItem() instanceof IMultiModeBlade))&&!(isEmpowered(sitem)) && (par3Entity != null) && (par2World.getTotalWorldTime() % 10L == 0L) && ((!isCurrent) || 
-	    			      (OnClick.get(tag).booleanValue()) || (((par3Entity instanceof EntityPlayer)) )))
+	    		 if (((sitem1.getItem() instanceof IElectricItem)&&(sitem1.getItem() instanceof IMultiModeBlade))&&!(isEmpowered(sitem)))
 	    		StylishRankManager.setRankPoint(player, 0);
 	    		}
 	      }

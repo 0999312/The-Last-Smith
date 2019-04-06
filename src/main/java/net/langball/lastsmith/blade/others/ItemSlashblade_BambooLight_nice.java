@@ -30,9 +30,6 @@ public class ItemSlashblade_BambooLight_nice {
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);
 	      ItemStack custombladeReqired = new ItemStack(SlashBlade.bladeBambooLight);
-	      NBTTagCompound reqTag = ItemSlashBlade.getItemTagCompound(custombladeReqired);
-	      ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(50));
-	      ItemSlashBlade.ProudSoul.set(reqTag, Integer.valueOf(150));
 	      ItemStack louguan = BladeLoader.findItemStack(Last_worker.MODID, name, 1);
 
 	      SlashBlade.addRecipe(name, new RecipeAwakeBladeTLS(new ResourceLocation(SlashBlade.modid,name),louguan, custombladeReqired, new Object[]{"DCD", "CBC", "DAD", Character.valueOf('A'),"ingotSteel", Character.valueOf('B'), custombladeReqired, Character.valueOf('C'),new ItemStack(ItemLoader.material,1,7), Character.valueOf('D'), "logWood"}));

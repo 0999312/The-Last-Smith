@@ -39,8 +39,8 @@ public class ItemSlashblade_BambooLight_yin {
 	      customblade.addEnchantment(Enchantments.KNOCKBACK, 3);
 	      ItemStack custombladeReqired = BladeLoader.findItemStack(Last_worker.MODID, name1, 1);
 	      NBTTagCompound reqTag = ItemSlashBlade.getItemTagCompound(custombladeReqired);
-	      ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(1000));
-	      ItemSlashBlade.ProudSoul.set(reqTag, Integer.valueOf(5000));
+	      ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(2000));
+	      ItemSlashBlade.ProudSoul.set(reqTag, Integer.valueOf(10000));
 	      ItemStack louguan = BladeLoader.findItemStack(Last_worker.MODID, name, 1);
 	      ItemStack ingot = SlashBlade.findItemStack("flammpfeil.slashblade", "ingot_bladesoul", 1);
 	      SlashBlade.addRecipe(name, new RecipeAwakeBladeTLS(new ResourceLocation(SlashBlade.modid,name),louguan, custombladeReqired, new Object[]{"DFD", "FBF", "AFA", Character.valueOf('A'), ingot, Character.valueOf('B'), custombladeReqired, Character.valueOf('D'), new ItemStack(Items.ENDER_PEARL), Character.valueOf('F'), "sphereSakura"}));

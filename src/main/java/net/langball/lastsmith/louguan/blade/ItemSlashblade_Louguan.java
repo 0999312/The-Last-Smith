@@ -35,7 +35,7 @@ public class ItemSlashblade_Louguan {
 	      BladeLoader.registerCustomItemStack(name, customblade);
 	      ItemSlashBladeNamedSS.NamedBlades.add(name);
 	      customblade.addEnchantment(Enchantments.POWER, 4);
-	      customblade.addEnchantment(Enchantments.SHARPNESS, 5);
+	      customblade.addEnchantment(Enchantments.SHARPNESS, 6);
 	      ItemStack custombladeReqired = BladeLoader.findItemStack(Last_worker.MODID,namefake,1);
 	      NBTTagCompound reqTag = ItemSlashBlade.getItemTagCompound(custombladeReqired);
 	      ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(1000));
