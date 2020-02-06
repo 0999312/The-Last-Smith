@@ -1,0 +1,39 @@
+package cn.mmf.lastsmith.item;
+
+import net.minecraft.block.BlockCauldron;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.SoundEvents;
+import net.minecraft.item.ItemStack;
+import net.minecraft.stats.StatList;
+import net.minecraft.util.EnumActionResult;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+
+public class ItemHeattedBlade extends ItemBase {
+
+	private ItemStack[] cold;
+	public ItemHeattedBlade(String[] subNames,ItemStack... colded) {
+		super("heatted_blade", 1, subNames);
+		cold = colded;
+	}
+	@Override
+	public EnumActionResult onItemUse(EntityPlayer player, World worldIn, BlockPos pos, EnumHand hand,
+			EnumFacing facing, float hitX, float hitY, float hitZ) {
+		if(worldIn.getBlockState(pos).getBlock() instanceof BlockCauldron){
+		player.playSound(SoundEvents.ENTITY_GENERIC_EXTINGUISH_FIRE, 1.2F, 1.2F);
+		if(!worldIn.isRemote){
+				BlockCauldron cauldron = (BlockCauldron) worldIn.getBlockState(pos).getBlock();
+				int i = worldIn.getBlockState(pos).getValue(BlockCauldron.LEVEL).intValue();
+				if(i>0){
+					player.addStat(StatList.CAULDRON_USED);
+					cauldron.setWaterLevel(worldIn, pos, worldIn.getBlockState(pos), i-1);
+					ItemStack item = cold[getDamage(player.getHeldItem(hand))].copy();
+					player.setHeldItem(hand, item);
+				}
+			}
+		}
+		return super.onItemUse(player, worldIn, pos, hand, facing, hitX, hitY, hitZ);
+	}
+}

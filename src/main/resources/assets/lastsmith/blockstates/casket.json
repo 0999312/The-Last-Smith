@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "facing=north": { "model": "lastsmith:casket" },
-        "facing=south": { "model": "lastsmith:casket", "y": 180 },
-        "facing=west":  { "model": "lastsmith:casket", "y": 270 },
-        "facing=east":  { "model": "lastsmith:casket", "y": 90 }
-    }
-}
