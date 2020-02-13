@@ -36,7 +36,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 
 public class BladeLoader {
-	public static Item blade=new ItemSlashBladeDetuneTLS(ToolMaterial.IRON,6).setDestructable(false).setModelTexture(new ResourceLocationRaw("flammpfeil.slashblade","model/unnamed/texture.png")).setRepairMaterialOreDic("ingotSteel","nuggetSteel").setMaxDamage(71).setUnlocalizedName("flammpfeil.slashblade.unnamedBlade");
+	public static Item blade=new ItemSlashBladeDetuneTLS(ToolMaterial.IRON,6).setDestructable(false).setModelTexture(new ResourceLocationRaw("flammpfeil.slashblade","model/unnamed/texture.png")).setRepairMaterialOreDic("ingotSteel","nuggetSteel").setMaxDamage(71).setUnlocalizedName(TLSMain.MODID+"."+"white_top");
 	public static Item bladeNamed= new ItemSlashBladeNamedTLS(ToolMaterial.IRON, 4.0f).setMaxDamage(40).setUnlocalizedName("flammpfeil.slashblade.named");
 	public static Item euBlade,windBlade,voidBlade,rfblade,crimsonBlade;
 	public static Item wrapper = new ItemSlashBladeSaya(ToolMaterial.WOOD).setUnlocalizedName(TLSMain.MODID+"."+"wooden_saya");

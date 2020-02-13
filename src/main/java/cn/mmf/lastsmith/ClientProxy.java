@@ -50,7 +50,6 @@ public class ClientProxy extends CommonProxy {
 	@Override
 	public boolean doesPlayerHaveAdvancement(EntityPlayer player, ResourceLocation advId) {
 		if (player instanceof EntityPlayerSP) {
-			TLSMain.logger.info("APAPAPAPAPA");
 			ClientAdvancementManager manager = ((EntityPlayerSP) player).connection.getAdvancementManager();
 			Advancement adv = manager.getAdvancementList().getAdvancement(advId);
 			if (adv == null) return false;

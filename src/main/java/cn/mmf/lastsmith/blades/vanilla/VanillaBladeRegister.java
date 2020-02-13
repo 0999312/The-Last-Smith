@@ -163,15 +163,19 @@ public class VanillaBladeRegister {
                 " X ",
                 'X',SlashBlade.getCustomBlade(SlashBlade.ProudSoulStr),
                 'B',SlashBlade.getCustomBlade("flammpfeil.slashblade.named.orotiagito.seald.reqired")));
+        ItemStack tagayasanreqiredBlade = new ItemStack(SlashBlade.bladeWood);
+        NBTTagCompound reqTag = ItemSlashBlade.getItemTagCompound(tagayasanreqiredBlade);
+        ItemSlashBlade.KillCount.set(reqTag,1000);
+
         SlashBlade.addRecipe("flammpfeil.slashblade.named.tagayasan",
                 new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid,"tagayasan"),
                 SlashBlade.getCustomBlade("flammpfeil.slashblade.named.tagayasan"),
-                SlashBlade.getCustomBlade("flammpfeil.slashblade.named.tagayasan.reqired"),
+                tagayasanreqiredBlade,
                 "XEX",
                 "PBP",
                 "XEX",
                 'X', SlashBlade.getCustomBlade(SlashBlade.SphereBladeSoulStr),
-                'B', SlashBlade.getCustomBlade("flammpfeil.slashblade.named.tagayasan.reqired"),
+                'B', tagayasanreqiredBlade,
                 'P', new ItemStack(Items.ENDER_PEARL),
                 'E', new ItemStack(Items.ENDER_EYE)));
         SlashBlade.addRecipe("flammpfeil.slashblade.named.yuzukitukumo",

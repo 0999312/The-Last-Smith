@@ -4,6 +4,7 @@ import java.util.List;
 
 import cn.mmf.lastsmith.CommonProxy;
 import cn.mmf.lastsmith.TLSMain;
+import cn.mmf.lastsmith.block.BlockLoader;
 import cn.mmf.lastsmith.util.JSON_Creator;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.util.ITooltipFlag;
@@ -30,25 +31,25 @@ public class ItemLoader {
 		}
 	);
 	public static ItemBase SCROLL = new ItemBase("scroll", 1, new String[]{
-			TLSMain.MODID+"."+"scroll_namedblade_1",
-			TLSMain.MODID+"."+"scroll_namedblade_2",
-			TLSMain.MODID+"."+"scroll_namedblade_3",
-			TLSMain.MODID+"."+"scroll_bamboo_1",
-			TLSMain.MODID+"."+"scroll_bamboo_2",
-			TLSMain.MODID+"."+"scroll_sakura",
-			TLSMain.MODID+"."+"scroll_bewitched",
-			TLSMain.MODID+"."+"scroll_requiem",
-			TLSMain.MODID+"."+"scroll_aoi",
-			TLSMain.MODID+"."+"scroll_tuki",
-			TLSMain.MODID+"."+"scroll_ghost",
-			TLSMain.MODID+"."+"scroll_blood",
-			TLSMain.MODID+"."+"scroll_shapeness",
-			TLSMain.MODID+"."+"scroll_nether",
-			TLSMain.MODID+"."+"scroll_thaumium",
-			TLSMain.MODID+"."+"scroll_crimson",
-			TLSMain.MODID+"."+"scroll_creait",
-			TLSMain.MODID+"."+"scroll_tech",
-			TLSMain.MODID+"."+"scroll_highpowered"
+		TLSMain.MODID+"."+"scroll_namedblade_1",
+		TLSMain.MODID+"."+"scroll_namedblade_2",
+		TLSMain.MODID+"."+"scroll_namedblade_3",
+		TLSMain.MODID+"."+"scroll_bamboo_1",
+		TLSMain.MODID+"."+"scroll_bamboo_2",
+		TLSMain.MODID+"."+"scroll_sakura",
+		TLSMain.MODID+"."+"scroll_bewitched",
+		TLSMain.MODID+"."+"scroll_requiem",
+		TLSMain.MODID+"."+"scroll_aoi",
+		TLSMain.MODID+"."+"scroll_tuki",
+		TLSMain.MODID+"."+"scroll_ghost",
+		TLSMain.MODID+"."+"scroll_blood",
+		TLSMain.MODID+"."+"scroll_shapeness",
+		TLSMain.MODID+"."+"scroll_nether",
+		TLSMain.MODID+"."+"scroll_thaumium",
+		TLSMain.MODID+"."+"scroll_crimson",
+		TLSMain.MODID+"."+"scroll_creait",
+		TLSMain.MODID+"."+"scroll_tech",
+		TLSMain.MODID+"."+"scroll_highpowered"
 		}
 	){
 		@Override
@@ -97,6 +98,11 @@ public class ItemLoader {
 			register(hammer);
 			OreDictionary.registerOre("toolForginghammer", new ItemStack(hammer,1,32767));
 		}
+		OreDictionary.registerOre("sphereSakura",  new ItemStack(MATERIALS,1,6));
+		OreDictionary.registerOre("ingotSakura",  new ItemStack(MATERIALS,1,5));
+		OreDictionary.registerOre("fullSakura",  new ItemStack(MATERIALS,1,4));
+		OreDictionary.registerOre("leafSakura",  new ItemStack(MATERIALS,1,3));
+		OreDictionary.registerOre("blockSakura",  new ItemStack(BlockLoader.Sakura_Steel_Block));
 	}
 	public static void renderItem() {
 		if(!Loader.isModLoaded("sakura")){
