@@ -1,11 +1,11 @@
 package cn.mmf.lastsmith.blades;
 
+import cn.mcmod_mmf.mmlib.util.RecipesUtil;
 import cn.mmf.lastsmith.TLSMain;
 import cn.mmf.lastsmith.event.RegisterSlashBladeEvent;
 import cn.mmf.lastsmith.event.RegisterSlashBladeRecipeEvent;
 import cn.mmf.lastsmith.item.ItemSlashBladeNamedTLS;
 import cn.mmf.lastsmith.recipe.RecipeAwakeBladeTLS;
-import cn.mmf.lastsmith.util.RecipesUtil;
 import mods.flammpfeil.slashblade.ItemSlashBladeNamed;
 import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
@@ -25,8 +25,8 @@ public class BladeKusabimaru {
 		ItemSlashBladeNamed.CurrentItemName.set(tag1, "flammpfeil.slashblade.named.kusabimaru");
 		ItemSlashBladeNamed.CustomMaxDamage.set(tag1, 70);
 		ItemSlashBlade.setBaseAttackModifier(tag1, 5.0F);
-		ItemSlashBlade.TextureName.set(tag1, "named/smith/texture_final");
-		ItemSlashBlade.ModelName.set(tag1, "named/smith/model");
+		ItemSlashBlade.TextureName.set(tag1, "named/sekiro/kusabimaru");
+		ItemSlashBlade.ModelName.set(tag1, "named/sekiro/kusabimaru");
 
 		BladeLoader.registerCustomItemStack("flammpfeil.slashblade.named.kusabimaru", customblade);
 		ItemSlashBladeNamedTLS.NamedBlades.add("flammpfeil.slashblade.named.kusabimaru");
@@ -35,10 +35,7 @@ public class BladeKusabimaru {
 	@SubscribeEvent
 	public static void onRecipeRegister(RegisterSlashBladeRecipeEvent event) {
 		ItemStack request = new ItemStack(BladeLoader.blade);
-		NBTTagCompound tag = new NBTTagCompound();
-		ItemSlashBlade.KillCount.set(tag, 100);
-		request.setTagCompound(tag);
-		RecipesUtil.addRecipe("flammpfeil.slashblade.named.kusabimaru", new RecipeAwakeBladeTLS(
+		RecipesUtil.addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.kusabimaru", new RecipeAwakeBladeTLS(
 			new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.kusabimaru"),
 			"slashblade_white", BladeLoader.getCustomBlade("flammpfeil.slashblade.named.kusabimaru"), request, 
 			new Object[] {

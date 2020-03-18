@@ -11,7 +11,7 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 
-version = "V1.2.6.5-MC1.12.2"
+version = "V2.0.0-MC1.12.2"
 group = "net.langball"
 archivesBaseName = "TLS"
 
@@ -88,20 +88,11 @@ repositories {
 }
 
 dependencies {
-	configurations.all {
-		resolutionStrategy {
-			force 'mezz.jei:jei_1.12.2:4.14.3.242'
-		}
-	}
 	// compile against the JEI API but do not include it at runtime
-    deobfProvided ("mezz.jei:jei_1.12.2:4.14.3.242:api"){
-	force = true
-	}
+    deobfProvided "mezz.jei:jei_1.12.2:4.14.3.238:api"
     // at runtime, use the full JEI jar
-    runtime ("mezz.jei:jei_1.12.2:4.14.3.242"){
-	force = true
-	}
-	deobfCompile "slashblade:SlashBlade:mc1.12:r17"
+    runtime "mezz.jei:jei_1.12.2:4.14.3.238"
+	
     compile "vazkii.patchouli:Patchouli:1.0-16.84"
 	deobfCompile "baubles:Baubles:1.12:1.5.2"
 	deobfCompile "vazkii.botania:Botania:r1.10-357.7"

@@ -17,13 +17,12 @@ import cofh.CoFHCore;
 import ic2.core.IC2;
 import cn.mmf.lastsmith.item.ItemSlashBladeNamedTLS;
 import mods.flammpfeil.slashblade.SlashBlade;
-import mods.flammpfeil.slashblade.tileentity.DummyTileEntity;
+import mods.flammpfeil.slashblade.client.model.BladeSpecialRender;
 import mods.flammpfeil.slashblade.util.ResourceLocationRaw;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
-import net.minecraftforge.client.ForgeHooksClient;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
@@ -93,11 +92,10 @@ public class BladeLoader {
         }
 	}
 
-    @SuppressWarnings("deprecation")
 	@SideOnly(Side.CLIENT)
     private static void setSlashBladeRender(Item blade) {
     	ModelLoader.setCustomModelResourceLocation(blade, 0, new ModelResourceLocation("flammpfeil.slashblade:model/named/blade.obj"));
-    	ForgeHooksClient.registerTESRItemStack(blade, 0, DummyTileEntity.class);
+    	blade.setTileEntityItemStackRenderer(new BladeSpecialRender());
 	}
     public static void registerCustomItemStack(String name, ItemStack stack){
         BladeRegistry.put(new ResourceLocationRaw(TLSMain.MODID, name),stack);

@@ -18,7 +18,6 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
 import java.util.Iterator;
 import java.util.Map;
 
-import cn.mmf.lastsmith.TLSMain;
 import cn.mmf.lastsmith.advancement.AdvancementHelper;
 import cn.mmf.lastsmith.util.BladeUtil;
 
@@ -140,7 +139,6 @@ public class RecipeAwakeBladeTLS extends ShapedOreRecipe {
     public boolean isGoodForCrafting(InventoryCrafting inv,World world,String name) {
         Container container = inv.eventHandler;
         if(container == null) {
-        	TLSMain.logger.info("Container Not Found");
             return false;
         }
         EntityPlayer foundPlayer = null;
@@ -152,11 +150,8 @@ public class RecipeAwakeBladeTLS extends ShapedOreRecipe {
             }
         }
         if(foundPlayer != null) {
-        	TLSMain.logger.info("PLPLPLPLPLPL");
-        	TLSMain.logger.info(AdvancementHelper.checkAdvancement(foundPlayer, name));
             return AdvancementHelper.checkAdvancement(foundPlayer, name);
         }
-    	TLSMain.logger.info("Player Not Found");
 		return false;
     }
 

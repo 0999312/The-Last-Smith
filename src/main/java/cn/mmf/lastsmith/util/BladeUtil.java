@@ -15,6 +15,7 @@ public class BladeUtil {
 	
 	public static final TagPropertyAccessor.TagPropertyBoolean IsFakeBlade = new TagPropertyBoolean("IsFakeBlade");
 	public static final TagPropertyAccessor.TagPropertyBoolean IsBewitchedActived = new TagPropertyBoolean("IsBewitchedActived");
+	
 	public static String getname(NBTTagCompound nbt) {
 		if(nbt.hasKey("craftername"))
 			return nbt.getString("craftername");

@@ -8,9 +8,8 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 
-
 @Mod(modid = TLSMain.MODID, name = TLSMain.NAME, version = TLSMain.VERSION,
-dependencies="required-after:flammpfeil.slashblade@[mc1.12-r17,);after:sakura@[V0.0.9-MC1.12.2,);")
+dependencies="required-after:flammpfeil.slashblade@[mc1.12-r32,);required-after:mm_lib;after:sakura@[V0.0.9-MC1.12.2,);")
 public class TLSMain{
     public static final String MODID = "lastsmith";
     public static final String NAME = "The Last Smith";

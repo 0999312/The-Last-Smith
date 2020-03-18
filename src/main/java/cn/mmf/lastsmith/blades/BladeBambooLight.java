@@ -1,12 +1,12 @@
 package cn.mmf.lastsmith.blades;
 
+import cn.mcmod_mmf.mmlib.util.RecipesUtil;
 import cn.mmf.lastsmith.TLSMain;
 import cn.mmf.lastsmith.event.RegisterSlashBladeEvent;
 import cn.mmf.lastsmith.event.RegisterSlashBladeRecipeEvent;
 import cn.mmf.lastsmith.item.ItemSlashBladeNamedTLS;
 import cn.mmf.lastsmith.recipe.RecipeAwakeBladeTLS;
 import cn.mmf.lastsmith.util.BladeUtil;
-import cn.mmf.lastsmith.util.RecipesUtil;
 import mods.flammpfeil.slashblade.ItemSlashBladeNamed;
 import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
@@ -44,7 +44,8 @@ public class BladeBambooLight {
 		ItemSlashBladeNamed.CustomMaxDamage.set(tag, 70);
 		ItemSlashBladeNamed.IsDefaultBewitched.set(tag, true);
 		BladeUtil.IsBewitchedActived.set(tag, true);
-		ItemSlashBlade.setBaseAttackModifier(tag, 8.0F);
+		ItemSlashBlade.SpecialAttackType.set(tag, 7);
+		ItemSlashBlade.setBaseAttackModifier(tag, 10.0F);
 		ItemSlashBlade.TextureName.set(tag, "named/bamboolight/bamboo_top");
 		ItemSlashBlade.ModelName.set(tag, "named/yamato");
 
@@ -70,14 +71,14 @@ public class BladeBambooLight {
 		NBTTagCompound tag = new NBTTagCompound();
 		customblade_recluse.setTagCompound(tag);
 		customblade_recluse.addEnchantment(Enchantments.KNOCKBACK, 2);
-		customblade_recluse.addEnchantment(Enchantments.THORNS, 1);
 		customblade_recluse.addEnchantment(Enchantments.SHARPNESS, 3);
-		customblade_recluse.addEnchantment(Enchantments.POWER, 1);
+		customblade_recluse.addEnchantment(Enchantments.POWER, 2);
+		ItemSlashBlade.SpecialAttackType.set(tag, 9);
 		ItemSlashBladeNamed.CurrentItemName.set(tag, "flammpfeil.slashblade.named.silverbamboolight_blood");
 		ItemSlashBladeNamed.CustomMaxDamage.set(tag, 70);
 		ItemSlashBladeNamed.IsDefaultBewitched.set(tag, true);
 		BladeUtil.IsBewitchedActived.set(tag, true);
-		ItemSlashBlade.setBaseAttackModifier(tag, 8.0F);
+		ItemSlashBlade.setBaseAttackModifier(tag, 10.0F);
 		ItemSlashBlade.TextureName.set(tag, "named/bamboolight/silverbamboo_blood");
 		ItemSlashBlade.ModelName.set(tag, "named/yamato");
 
@@ -93,7 +94,7 @@ public class BladeBambooLight {
 		bamboolight.setTagCompound(tag_bamboo);
 		ItemStack sliverbamboolight = new ItemStack(SlashBlade.bladeSilverBambooLight);
 		bamboolight.setTagCompound(tag_bamboo);
-		RecipesUtil.addRecipe("flammpfeil.slashblade.named.bamboolight_top", new RecipeAwakeBladeTLS(
+		RecipesUtil.addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.bamboolight_top", new RecipeAwakeBladeTLS(
 			new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.bamboolight_top"),
 			"slashblade_bamboolight", BladeLoader.getCustomBlade("flammpfeil.slashblade.named.bamboolight_top"), bamboolight, 
 			new Object[] {
@@ -103,8 +104,8 @@ public class BladeBambooLight {
 				'P', "leafSakura",
 				'S', "stone",
 				'B', bamboolight
-			}));
-		RecipesUtil.addRecipe("flammpfeil.slashblade.named.silverbamboolight_top", new RecipeAwakeBladeTLS(
+		}));
+		RecipesUtil.addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.silverbamboolight_top", new RecipeAwakeBladeTLS(
 			new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.silverbamboolight_top"),
 			"slashblade_sliverbamboolight", BladeLoader.getCustomBlade("flammpfeil.slashblade.named.silverbamboolight_top"), sliverbamboolight, 
 			new Object[] {
@@ -114,6 +115,36 @@ public class BladeBambooLight {
 				'P', "leafSakura",
 				'S', "stone",
 				'B', sliverbamboolight
+		}));
+		ItemStack bamboolight_top = BladeLoader.getCustomBlade("flammpfeil.slashblade.named.bamboolight_top");
+		ItemStack silverbamboolight_top = BladeLoader.getCustomBlade("flammpfeil.slashblade.named.silverbamboolight_top");
+		NBTTagCompound tag_upgrade = new NBTTagCompound();
+		ItemSlashBlade.KillCount.set(tag_upgrade, 500);
+		ItemSlashBlade.ProudSoul.set(tag_upgrade, 20000);
+		ItemSlashBlade.RepairCount.set(tag_upgrade, 5);
+		bamboolight_top.setTagCompound(tag_upgrade);
+		silverbamboolight_top.setTagCompound(tag_upgrade);
+		RecipesUtil.addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.bamboolight_recluse", new RecipeAwakeBladeTLS(
+				new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.bamboolight_recluse"),
+				"bewitched_blade", BladeLoader.getCustomBlade("flammpfeil.slashblade.named.bamboolight_recluse"), bamboolight_top, 
+				new Object[] {
+					"PSP",
+					"SBS",
+					"PSP",
+					'P', "sphereSakura",
+					'S', "fullSakura",
+					'B', bamboolight_top
+		}));
+		RecipesUtil.addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.silverbamboolight_blood", new RecipeAwakeBladeTLS(
+				new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.silverbamboolight_blood"),
+				"bewitched_blade", BladeLoader.getCustomBlade("flammpfeil.slashblade.named.silverbamboolight_blood"), silverbamboolight_top, 
+				new Object[] {
+					"PSP",
+					"SBS",
+					"PSP",
+					'P', "sphereSakura",
+					'S', "fullSakura",
+					'B', silverbamboolight_top
 		}));
 	}
 }

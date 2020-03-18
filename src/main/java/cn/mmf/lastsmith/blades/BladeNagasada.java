@@ -1,12 +1,12 @@
 package cn.mmf.lastsmith.blades;
 
+import cn.mcmod_mmf.mmlib.util.RecipesUtil;
 import cn.mmf.lastsmith.TLSMain;
 import cn.mmf.lastsmith.event.RegisterSlashBladeEvent;
 import cn.mmf.lastsmith.event.RegisterSlashBladeRecipeEvent;
 import cn.mmf.lastsmith.item.ItemSlashBladeNamedTLS;
 import cn.mmf.lastsmith.recipe.RecipeAwakeBladeTLS;
 import cn.mmf.lastsmith.util.BladeUtil;
-import cn.mmf.lastsmith.util.RecipesUtil;
 import mods.flammpfeil.slashblade.ItemSlashBladeNamed;
 import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
@@ -27,19 +27,18 @@ public class BladeNagasada {
 		ItemSlashBladeNamed.CurrentItemName.set(tag1, "flammpfeil.slashblade.named.nagasada");
 		ItemSlashBladeNamed.CustomMaxDamage.set(tag1, 40);
 		ItemSlashBlade.setBaseAttackModifier(tag1, 6.0F);
+
 		ItemSlashBlade.TextureName.set(tag1, "named/namedblade/texture_nagasada");
 		ItemSlashBlade.ModelName.set(tag1, "named/namedblade/model_stright");
 
 		BladeLoader.registerCustomItemStack("flammpfeil.slashblade.named.nagasada", customblade);
 		ItemSlashBladeNamedTLS.NamedBlades.add("flammpfeil.slashblade.named.nagasada");
-
-	
 	}
 
 	@SubscribeEvent
 	public static void onRecipeRegister(RegisterSlashBladeRecipeEvent event) {
 		ItemStack request = new ItemStack(BladeLoader.blade);
-		RecipesUtil.addRecipe("flammpfeil.slashblade.named.nagasada", new RecipeAwakeBladeTLS(
+		RecipesUtil.addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.nagasada", new RecipeAwakeBladeTLS(
 			new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.nagasada"),
 			"slashblade_white", BladeLoader.getCustomBlade("flammpfeil.slashblade.named.nagasada"), request, 
 			new Object[] {
@@ -51,6 +50,5 @@ public class BladeNagasada {
 				'S', SlashBlade.getCustomBlade(SlashBlade.ProudSoulStr),
 				'B', request
 		}));
-
 	}
 }

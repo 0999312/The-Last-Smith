@@ -1,5 +1,7 @@
 package cn.mmf.lastsmith.item;
 
+import cn.mcmod_mmf.mmlib.item.ItemBase;
+import cn.mmf.lastsmith.TLSMain;
 import net.minecraft.block.BlockCauldron;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
@@ -15,7 +17,7 @@ public class ItemHeattedBlade extends ItemBase {
 
 	private ItemStack[] cold;
 	public ItemHeattedBlade(String[] subNames,ItemStack... colded) {
-		super("heatted_blade", 1, subNames);
+		super(TLSMain.MODID,"heatted_blade", 1, subNames);
 		cold = colded;
 	}
 	@Override

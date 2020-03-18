@@ -1,12 +1,12 @@
 package cn.mmf.lastsmith.blades;
 
+import cn.mcmod_mmf.mmlib.util.RecipesUtil;
 import cn.mmf.lastsmith.TLSMain;
 import cn.mmf.lastsmith.event.RegisterSlashBladeEvent;
 import cn.mmf.lastsmith.event.RegisterSlashBladeRecipeEvent;
 import cn.mmf.lastsmith.item.ItemSlashBladeNamedTLS;
 import cn.mmf.lastsmith.recipe.RecipeAwakeBladeTLS;
 import cn.mmf.lastsmith.util.BladeUtil;
-import cn.mmf.lastsmith.util.RecipesUtil;
 import mods.flammpfeil.slashblade.ItemSlashBladeNamed;
 import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
@@ -28,8 +28,8 @@ public class BladeKogawa {
 		ItemSlashBladeNamed.CurrentItemName.set(tag1, "flammpfeil.slashblade.named.kogawa_normal");
 		ItemSlashBladeNamed.CustomMaxDamage.set(tag1, 40);
 		ItemSlashBlade.setBaseAttackModifier(tag1, 6.0F);
-		ItemSlashBlade.TextureName.set(tag1, "named/kogawa/texture_normal");
-		ItemSlashBlade.ModelName.set(tag1, "named/kogawa/model");
+		ItemSlashBlade.TextureName.set(tag1, "named/namedblade/texture_normal");
+		ItemSlashBlade.ModelName.set(tag1, "named/namedblade/model");
 
 		BladeLoader.registerCustomItemStack("flammpfeil.slashblade.named.kogawa_normal", customblade);
 		ItemSlashBladeNamedTLS.NamedBlades.add("flammpfeil.slashblade.named.kogawa_normal");
@@ -40,8 +40,8 @@ public class BladeKogawa {
 		ItemSlashBladeNamed.CurrentItemName.set(tag2, "flammpfeil.slashblade.named.kogawa_rare");
 		ItemSlashBladeNamed.CustomMaxDamage.set(tag2, 50);
 		ItemSlashBlade.setBaseAttackModifier(tag2, 7.0F);
-		ItemSlashBlade.TextureName.set(tag2, "named/kogawa/texture_rare");
-		ItemSlashBlade.ModelName.set(tag2, "named/kogawa/model");
+		ItemSlashBlade.TextureName.set(tag2, "named/namedblade/texture_rare");
+		ItemSlashBlade.ModelName.set(tag2, "named/namedblade/model");
 
 		BladeLoader.registerCustomItemStack("flammpfeil.slashblade.named.kogawa_rare", customblade2);
 		ItemSlashBladeNamedTLS.NamedBlades.add("flammpfeil.slashblade.named.kogawa_rare");
@@ -54,8 +54,8 @@ public class BladeKogawa {
 		ItemSlashBladeNamed.CurrentItemName.set(tag3, "flammpfeil.slashblade.named.kogawa_super");
 		ItemSlashBladeNamed.CustomMaxDamage.set(tag3, 50);
 		ItemSlashBlade.setBaseAttackModifier(tag3, 7.0F);
-		ItemSlashBlade.TextureName.set(tag3, "named/kogawa/texture_super");
-		ItemSlashBlade.ModelName.set(tag3, "named/kogawa/model");
+		ItemSlashBlade.TextureName.set(tag3, "named/namedblade/texture_super");
+		ItemSlashBlade.ModelName.set(tag3, "named/namedblade/model");
 		BladeLoader.registerCustomItemStack("flammpfeil.slashblade.named.kogawa_super", customblade3);
 		ItemSlashBladeNamedTLS.NamedBlades.add("flammpfeil.slashblade.named.kogawa_super");
 	}
@@ -63,10 +63,9 @@ public class BladeKogawa {
 	@SubscribeEvent
 	public static void onRecipeRegister(RegisterSlashBladeRecipeEvent event) {
 		ItemStack request = new ItemStack(BladeLoader.blade);
-		NBTTagCompound tag = new NBTTagCompound();
-		ItemSlashBlade.KillCount.set(tag, 100);
+		NBTTagCompound tag = ItemSlashBlade.getItemTagCompound(request);
 		request.setTagCompound(tag);
-		RecipesUtil.addRecipe("flammpfeil.slashblade.named.kogawa_normal", new RecipeAwakeBladeTLS(
+		RecipesUtil.addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.kogawa_normal", new RecipeAwakeBladeTLS(
 			new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.kogawa_normal"),
 			"slashblade_white", BladeLoader.getCustomBlade("flammpfeil.slashblade.named.kogawa_normal"), request, 
 			new Object[] {
@@ -78,11 +77,11 @@ public class BladeKogawa {
 				'B', request
 		}));
 		ItemStack request_rare = BladeLoader.getCustomBlade("flammpfeil.slashblade.named.kogawa_normal");
-		NBTTagCompound tag1 = new NBTTagCompound();
+		NBTTagCompound tag1 = ItemSlashBlade.getItemTagCompound(request_rare);
 		ItemSlashBlade.KillCount.set(tag1, 50);
 		ItemSlashBlade.ProudSoul.set(tag1, 1000);
 		request_rare.setTagCompound(tag1);
-		RecipesUtil.addRecipe("flammpfeil.slashblade.named.kogawa_rare", new RecipeAwakeBladeTLS(
+		RecipesUtil.addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.kogawa_rare", new RecipeAwakeBladeTLS(
 			new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.kogawa_rare"),
 			"slashblade_white", BladeLoader.getCustomBlade("flammpfeil.slashblade.named.kogawa_rare"), request_rare, 
 			new Object[] {
@@ -94,11 +93,11 @@ public class BladeKogawa {
 				'B', request_rare
 		}));
 		ItemStack request_super = BladeLoader.getCustomBlade("flammpfeil.slashblade.named.kogawa_rare");
-		NBTTagCompound tag2 = new NBTTagCompound();
+		NBTTagCompound tag2 = ItemSlashBlade.getItemTagCompound(request_super);
 		ItemSlashBlade.KillCount.set(tag2, 250);
 		ItemSlashBlade.ProudSoul.set(tag2, 5000);
 		request_super.setTagCompound(tag2);
-		RecipesUtil.addRecipe("flammpfeil.slashblade.named.kogawa_super", new RecipeAwakeBladeTLS(
+		RecipesUtil.addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.kogawa_super", new RecipeAwakeBladeTLS(
 			new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.kogawa_super"),
 			"slashblade_white", BladeLoader.getCustomBlade("flammpfeil.slashblade.named.kogawa_super"), request_super, 
 			new Object[] {
