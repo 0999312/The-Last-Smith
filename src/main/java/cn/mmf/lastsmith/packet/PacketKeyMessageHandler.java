@@ -4,6 +4,7 @@ import cn.mmf.lastsmith.util.IMultiModeBlade;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
@@ -12,11 +13,13 @@ public class PacketKeyMessageHandler implements IMessageHandler<PacketKeyMessage
 
 	@Override
 	public IMessage onMessage(PacketKeyMessage message, MessageContext ctx) {
-		EntityPlayer player = ctx.getServerHandler().player;
-		if (isPlayerHoldingMultiModeItem(player) && incrHeldMultiModeItemState(player)) {
-			ItemStack heldItem = getHeldMultiModeStack(player);
-			((IMultiModeBlade) heldItem.getItem()).onModeChange(player, heldItem);
-		}
+		FMLCommonHandler.instance().getMinecraftServerInstance().addScheduledTask(() -> {
+			EntityPlayer player = ctx.getServerHandler().player;
+			if (isPlayerHoldingMultiModeItem(player) && incrHeldMultiModeItemState(player)) {
+				ItemStack heldItem = getHeldMultiModeStack(player);
+				((IMultiModeBlade) heldItem.getItem()).onModeChange(player, heldItem);
+			}
+		});
 		return null;
 	}
 	public static boolean incrHeldMultiModeItemState(EntityPlayer player) {
