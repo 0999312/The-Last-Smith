@@ -1,8 +1,12 @@
 package cn.mmf.lastsmith.item;
 
+import java.util.List;
+
 import cn.mcmod_mmf.mmlib.item.ItemBase;
 import cn.mmf.lastsmith.TLSMain;
 import net.minecraft.block.BlockCauldron;
+import net.minecraft.client.resources.I18n;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
@@ -19,6 +23,11 @@ public class ItemHeattedBlade extends ItemBase {
 	public ItemHeattedBlade(String[] subNames,ItemStack... colded) {
 		super(TLSMain.MODID,"heatted_blade", 1, subNames);
 		cold = colded;
+	}
+	@Override
+	public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
+		super.addInformation(stack, worldIn, tooltip, flagIn);
+		tooltip.add(I18n.format("lastsmith.use_it_on_cauldron.text"));
 	}
 	@Override
 	public EnumActionResult onItemUse(EntityPlayer player, World worldIn, BlockPos pos, EnumHand hand,

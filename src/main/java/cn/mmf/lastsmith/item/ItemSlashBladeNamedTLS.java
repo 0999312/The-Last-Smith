@@ -19,6 +19,8 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.oredict.OreDictionary;
 
 public class ItemSlashBladeNamedTLS extends ItemSlashBladeTLS{
@@ -38,6 +40,7 @@ public class ItemSlashBladeNamedTLS extends ItemSlashBladeTLS{
 	}
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Override
+    @SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack arg0, World arg1, List arg2, ITooltipFlag arg3) {
 		NBTTagCompound nbt = getItemTagCompound(arg0);
 		super.addInformation(arg0, arg1, arg2, arg3);
@@ -47,6 +50,7 @@ public class ItemSlashBladeNamedTLS extends ItemSlashBladeTLS{
 	}
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Override
+    @SideOnly(Side.CLIENT)
     public void addInformationSwordClass(ItemStack par1ItemStack,
 			EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
 		NBTTagCompound tag = getItemTagCompound(par1ItemStack);
@@ -98,14 +102,19 @@ public class ItemSlashBladeNamedTLS extends ItemSlashBladeTLS{
         for(String bladename : NamedBlades){
             ItemStack blade = BladeLoader.getCustomBlade(bladename);
             if(!blade.isEmpty()) {
-                BladeUtil.setName(getItemTagCompound(blade), I18n.format("lastsmith.name.unnamed_smith"));
+            	setCreativeCrafterName(blade);
                 if(blade.getItemDamage() == OreDictionary.WILDCARD_VALUE)
                     blade.setItemDamage(-1);
             	subItems.add(blade);
             }
         }
     }
-
+    
+    @SideOnly(Side.CLIENT)
+    protected void setCreativeCrafterName(ItemStack blade){
+    	BladeUtil.setName(getItemTagCompound(blade), I18n.format("lastsmith.name.unnamed_smith"));
+    }
+    
 	@Override
     public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack)  {
         Boolean result = super.getIsRepairable(par1ItemStack,par2ItemStack);

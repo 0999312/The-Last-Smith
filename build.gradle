@@ -11,7 +11,7 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 
-version = "V2.0.0-MC1.12.2"
+version = "2.0.2-1.12.2"
 group = "net.langball"
 archivesBaseName = "TLS"
 

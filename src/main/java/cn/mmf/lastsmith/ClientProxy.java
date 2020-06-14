@@ -23,7 +23,7 @@ import net.minecraftforge.fml.common.gameevent.InputEvent;
 
 @EventBusSubscriber
 public class ClientProxy extends CommonProxy {
-	public static final KeyBinding ChangeMode = new KeyBinding("key.lastsmith.mode_change", Keyboard.KEY_V, "key.categories.lastsmith");
+	public static final KeyBinding ChangeMode = new KeyBinding("key.flammpfeil.slashblade.mode_change", Keyboard.KEY_V, "key.categories.lastsmith");
 	@Override
 	public void preInit(FMLPreInitializationEvent event) {
 		super.preInit(event);

@@ -2,18 +2,13 @@ package cn.mmf.lastsmith.blades.compat;
 
 import java.util.List;
 
+import cn.mcmod_mmf.mmlib.item.EnergyContainerItemWrapper;
+import cn.mcmod_mmf.mmlib.item.IEnergyContainerItem;
+import cn.mcmod_mmf.mmlib.util.StringUtil;
+import cn.mmf.lastsmith.ClientProxy;
 import cn.mmf.lastsmith.item.ItemSlashBladeNamedTLS;
 import cn.mmf.lastsmith.util.BladeUtil;
-import cofh.api.item.IMultiModeItem;
-import cofh.core.init.CoreEnchantments;
-import cofh.core.init.CoreProps;
-import cofh.core.key.KeyBindingItemMultiMode;
-import cofh.core.util.helpers.DamageHelper;
-import cofh.core.util.helpers.EnergyHelper;
-import cofh.core.util.helpers.MathHelper;
-import cofh.core.util.helpers.StringHelper;
-import cofh.redstoneflux.api.IEnergyContainerItem;
-import cofh.redstoneflux.util.EnergyContainerItemWrapper;
+import cn.mmf.lastsmith.util.IMultiModeBlade;
 import mods.flammpfeil.slashblade.TagPropertyAccessor;
 import mods.flammpfeil.slashblade.ability.StylishRankManager;
 import mods.flammpfeil.slashblade.entity.EntityDrive;
@@ -22,14 +17,13 @@ import mods.flammpfeil.slashblade.util.ResourceLocationRaw;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Enchantments;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.EntityDamageSource;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.text.TextFormatting;
@@ -38,11 +32,7 @@ import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ItemSlashBladeRF extends ItemSlashBladeNamedTLS implements IEnergyContainerItem, IMultiModeItem {
-	// public static int maxEnergy = 2000000;
-	// public static int maxTransfer = 20000;
-	// public int energyPerUse = 100;
-	// public int energyPerUseCharged = 800;
+public class ItemSlashBladeRF extends ItemSlashBladeNamedTLS implements IEnergyContainerItem, IMultiModeBlade {
 	public static final TagPropertyAccessor.TagPropertyInteger MAXENERGY = new TagPropertyAccessor.TagPropertyInteger(
 			"maxEnergy");
 	public static final TagPropertyAccessor.TagPropertyInteger MAXTRANSFER = new TagPropertyAccessor.TagPropertyInteger(
@@ -60,13 +50,13 @@ public class ItemSlashBladeRF extends ItemSlashBladeNamedTLS implements IEnergyC
 	public int receiveEnergy(ItemStack container, int maxReceive, boolean simulate) {
 		NBTTagCompound tag = getItemTagCompound(container);
 		if (container.getTagCompound() == null)
-			EnergyHelper.setDefaultEnergyTag(container, 0);
-		int stored = Math.min(container.getTagCompound().getInteger(CoreProps.ENERGY), getMaxEnergyStored(container));
+			getItemTagCompound(container).setInteger("Energy", 0);
+		int stored = Math.min(container.getTagCompound().getInteger("Energy"), getMaxEnergyStored(container));
 		int receive = Math.min(maxReceive,
 				Math.min(getMaxEnergyStored(container) - stored, MAXTRANSFER.get(tag, 20000)));
 		if (!simulate) {
 			stored += receive;
-			container.getTagCompound().setInteger(CoreProps.ENERGY, stored);
+			container.getTagCompound().setInteger("Energy", stored);
 		}
 		return receive;
 	}
@@ -74,41 +64,29 @@ public class ItemSlashBladeRF extends ItemSlashBladeNamedTLS implements IEnergyC
 	@Override
 	public int extractEnergy(ItemStack container, int maxExtract, boolean simulate) {
 		if (container.getTagCompound() == null)
-			EnergyHelper.setDefaultEnergyTag(container, 0);
-		int stored = Math.min(container.getTagCompound().getInteger(CoreProps.ENERGY), getMaxEnergyStored(container));
+			getItemTagCompound(container).setInteger("Energy", 0);
+		int stored = Math.min(container.getTagCompound().getInteger("Energy"), getMaxEnergyStored(container));
 		int extract = Math.min(maxExtract, stored);
 		if (!simulate) {
 			stored -= extract;
-			container.getTagCompound().setInteger(CoreProps.ENERGY, stored);
+			container.getTagCompound().setInteger("Energy", stored);
 			if (stored == 0)
 				setMode(container, 0);
 		}
 		return extract;
 	}
 
-	protected int useEnergy(ItemStack stack, boolean simulate) {
-		NBTTagCompound tag = getItemTagCompound(stack);
-		int unbreakingLevel = MathHelper.clamp(EnchantmentHelper.getEnchantmentLevel(Enchantments.UNBREAKING, stack), 0,
-				10);
-		if (MathHelper.RANDOM.nextInt(2 + unbreakingLevel) >= 2)
-			return 0;
-
-		return extractEnergy(stack, isEmpowered(stack) ? ENERGYPERUSECHARGED.get(tag, 800) : ENERGYPERUSE.get(tag, 100),
-				simulate);
-	}
-
 	@Override
 	public int getEnergyStored(ItemStack container) {
 		if (container.getTagCompound() == null)
-			EnergyHelper.setDefaultEnergyTag(container, 0);
-		return Math.min(container.getTagCompound().getInteger(CoreProps.ENERGY), getMaxEnergyStored(container));
+			getItemTagCompound(container).setInteger("Energy", 0);
+		return Math.min(container.getTagCompound().getInteger("Energy"), getMaxEnergyStored(container));
 	}
 
 	@Override
 	public int getMaxEnergyStored(ItemStack container) {
 		NBTTagCompound tag = getItemTagCompound(container);
-		int enchant = EnchantmentHelper.getEnchantmentLevel(CoreEnchantments.holding, container);
-		return MAXENERGY.get(tag, 2000000) + MAXENERGY.get(tag, 2000000) * enchant / 2;
+		return MAXENERGY.get(tag, 2000000);
 	}
 
 	@Override
@@ -211,14 +189,14 @@ public class ItemSlashBladeRF extends ItemSlashBladeNamedTLS implements IEnergyC
 		NBTTagCompound tag = getItemTagCompound(stack);
 		int rank = StylishRankManager.getStylishRank(player);
 		int usage = (int) (ENERGYPERUSE.get(tag, 100) * Math.pow(2.0D, rank));
-		if ((isEmpowered(stack)) && (extractEnergy(stack, usage, false) == usage)
-				&& ((player instanceof EntityPlayer))) {
+		if ((isEmpowered(stack)) && (extractEnergy(stack, usage, false) == usage)) {
 			entity.hurtResistantTime = 0;
-			entity.attackEntityFrom(DamageHelper.causePlayerFluxDamage((EntityPlayer) player), rank);
+			entity.attackEntityFrom(new EntityDamageSource("forge_flux", player).setDamageBypassesArmor().setFireDamage(), rank);
 		}
 		return super.hitEntity(stack, entity, player);
 	}
-
+	
+	@Override
 	public void onUpdate(ItemStack sitem, World par2World, Entity par3Entity, int indexOfMainSlot, boolean isCurrent) {
 		NBTTagCompound tag = getItemTagCompound(sitem);
 		if ((isEmpowered(sitem)) && (par3Entity != null) && (par2World.getTotalWorldTime() % 10L == 0L)
@@ -326,32 +304,31 @@ public class ItemSlashBladeRF extends ItemSlashBladeNamedTLS implements IEnergyC
 			tooltip.add(TextFormatting.GOLD + I18n.format("blades.crafter") + ":" + TextFormatting.GRAY
 					+ BladeUtil.getname(tag));
 		}
-		if (StringHelper.displayShiftForDetail && !StringHelper.isShiftKeyDown()) {
+		if (StringUtil.displayShiftForDetail && !StringUtil.isShiftKeyDown()) {
 			tooltip.add(I18n.format("info.cofh.holdShiftForDetails"));
 		}
-		if (!StringHelper.isShiftKeyDown()) {
+		if (!StringUtil.isShiftKeyDown()) {
 			return;
 		}
 		if (stack.getTagCompound() == null) {
-			EnergyHelper.setDefaultEnergyTag(stack, 0);
+			getItemTagCompound(stack).setInteger("Energy", 0);
 		}
-		tooltip.add(
-				StringHelper.localize("info.cofh.charge") + ": " + StringHelper.getScaledNumber(getEnergyStored(stack))
-						+ " / " + StringHelper.getScaledNumber(getMaxEnergyStored(stack)) + " RF");
-		tooltip.add(StringHelper.ORANGE + getEnergyPerUse(stack) + " "
-				+ StringHelper.localize("info.flammpfeil.slashblade.tool.energyPerUse") + StringHelper.END);
-		tooltip.add(StringHelper.RED + StringHelper.localize("info.flammpfeil.slashblade.tool.user") + ": "
+		tooltip.add(StringUtil.localize("info.cofh.charge") + ": " + StringUtil.getScaledNumber(getEnergyStored(stack))
+				+ " / " + StringUtil.getScaledNumber(getMaxEnergyStored(stack)) + " RF");
+		tooltip.add(StringUtil.ORANGE + getEnergyPerUse(stack) + " "
+				+ StringUtil.localize("info.flammpfeil.slashblade.tool.energyPerUse") + StringUtil.END);
+		tooltip.add(StringUtil.RED + StringUtil.localize("info.flammpfeil.slashblade.tool.user") + ": "
 				+ BladeUtil.Username.get(ItemSlashBlade.getItemTagCompound(stack)));
 		addEmpoweredTip(this, stack, tooltip);
 	}
 
-	public void addEmpoweredTip(IMultiModeItem item, ItemStack stack, List<String> tooltip) {
+	public void addEmpoweredTip(IMultiModeBlade item, ItemStack stack, List<String> tooltip) {
 		if (!isEmpowered(stack)) {
-			tooltip.add(StringHelper.localizeFormat("info.flammpfeil.slashblade.tool.chargeOn",
-					StringHelper.getKeyName(KeyBindingItemMultiMode.INSTANCE.getKey())));
+			tooltip.add(StringUtil.localizeFormat("info.flammpfeil.slashblade.tool.chargeOn",
+					StringUtil.getKeyName(ClientProxy.ChangeMode.getKeyCode())));
 		} else {
-			tooltip.add(StringHelper.localizeFormat("info.flammpfeil.slashblade.tool.chargeOff",
-					StringHelper.getKeyName(KeyBindingItemMultiMode.INSTANCE.getKey())));
+			tooltip.add(StringUtil.localizeFormat("info.flammpfeil.slashblade.tool.chargeOff",
+					StringUtil.getKeyName(ClientProxy.ChangeMode.getKeyCode())));
 		}
 	}
 }
