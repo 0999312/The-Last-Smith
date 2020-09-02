@@ -8,7 +8,13 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.util.ResourceLocation;
 
 public class AdvancementHelper {
-	public static void grantAdvancement(EntityPlayer player, String advancementName) {
+	private static final AdvancementHelper instance = new AdvancementHelper();
+	private AdvancementHelper() {
+	}
+	public static AdvancementHelper getInstance() {
+		return instance;
+	}
+	public void grantAdvancement(EntityPlayer player, String advancementName) {
 		if (!(player instanceof EntityPlayerMP))
 			return;
 
@@ -20,13 +26,14 @@ public class AdvancementHelper {
 		((EntityPlayerMP) player).getAdvancements().grantCriterion(advancement, "done");
 	}
 
-	public static boolean checkAdvancement(EntityPlayer player, String advancementName) {
+	public boolean checkAdvancement(EntityPlayer player, String advancementName) {
 		return checkAdvancement(player, new ResourceLocation(TLSMain.MODID, advancementName));
 	}
-	public static boolean checkAdvancement(EntityPlayer player, ResourceLocation advancement) {
+	public boolean checkAdvancement(EntityPlayer player, ResourceLocation advancement) {
 		if (!TLSMain.proxy.doesPlayerHaveAdvancement(player, advancement)) {
 			return false;
 		}
 		return true;
 	}
+
 }

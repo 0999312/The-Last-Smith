@@ -41,20 +41,20 @@ public class BladeFushikiri {
 		ItemSlashBlade.TextureName.set(tag1, "named/sekiro/fushigiri");
 		ItemSlashBlade.ModelName.set(tag1, "named/sekiro/fushigiri");
 
-		BladeLoader.registerCustomItemStack("flammpfeil.slashblade.named.fushikiri", customblade);
+		BladeLoader.getInstance().registerCustomItemStack("flammpfeil.slashblade.named.fushikiri", customblade);
 		ItemSlashBladeNamedTLS.NamedBlades.add("flammpfeil.slashblade.named.fushikiri");
 	}
 
 	@SubscribeEvent
 	public static void onRecipeRegister(RegisterSlashBladeRecipeEvent event) {
-		ItemStack request = BladeLoader.getCustomBlade("flammpfeil.slashblade.named.kusabimaru");
+		ItemStack request = BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.kusabimaru");
 		NBTTagCompound tag4 = ItemSlashBlade.getItemTagCompound(request);
 		ItemSlashBlade.KillCount.set(tag4, 1000);
 		ItemSlashBlade.ProudSoul.set(tag4, 25000);
 		ItemSlashBlade.RepairCount.set(tag4, 5);
-		RecipesUtil.addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.fushikiri", new RecipeAwakeBladeTLS(
+		RecipesUtil.getInstance().addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.fushikiri", new RecipeAwakeBladeTLS(
 			new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.fushikiri"),
-			"sharpness", BladeLoader.getCustomBlade("flammpfeil.slashblade.named.fushikiri"), request, 
+			"silverbamboolight_blood", BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.fushikiri"), request, 
 			new Object[] {
 				"DPS",
 				"PSP",

@@ -49,7 +49,7 @@ public class BladeRoukanTC {
 		ItemSlashBlade.ModelName.set(tag1, "named/roukan/model");
 		ItemSlashBlade.SpecialAttackType.set(tag1, 1);
 		ItemSlashBlade.StandbyRenderType.set(tag1, 2);
-		BladeLoader.registerCustomItemStack("flammpfeil.slashblade.named.roukan_xf", customblade);
+		BladeLoader.getInstance().registerCustomItemStack("flammpfeil.slashblade.named.roukan_xf", customblade);
 		ItemSlashBladeNamedTLS.NamedBlades.add("flammpfeil.slashblade.named.roukan_xf");
 	}
 
@@ -62,12 +62,12 @@ public class BladeRoukanTC {
 	@Method(modid = "thaumcraft")
 	private static void recipe() {
 		ItemStack sphere = SlashBlade.findItemStack("flammpfeil.slashblade", SlashBlade.SphereBladeSoulStr, 1);
-		ItemStack request = BladeLoader.getCustomBlade("flammpfeil.slashblade.named.roukan");
+		ItemStack request = BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.roukan");
 		NBTTagCompound tag = ItemSlashBlade.getItemTagCompound(request);
 		ItemSlashBlade.RepairCount.set(tag, 10);
 		request.setTagCompound(tag);
 		ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(TLSMain.MODID,"flammpfeil.slashblade.named.roukan_xf"), 
-			new InfusionRecipeAwakeBlade("roukan_xf", BladeLoader.getCustomBlade("flammpfeil.slashblade.named.roukan_xf"), 1,
+			new InfusionRecipeAwakeBlade("roukan_xf", BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.roukan_xf"), 1,
 				new AspectList().add(Aspect.AIR, 8).add(Aspect.AVERSION, 8).add(Aspect.ENERGY, 8),request,new Object[]{
 				ConfigItems.AIR_CRYSTAL, "fullSakura","blockDiamond", "fullSakura", sphere, "fullSakura","feather", "fullSakura" 
 		}));

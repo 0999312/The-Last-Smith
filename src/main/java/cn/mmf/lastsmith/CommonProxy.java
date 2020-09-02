@@ -35,23 +35,23 @@ import thaumcraft.api.ThaumcraftApi;
 
 @EventBusSubscriber
 public class CommonProxy {
-	public static CreativeTabs tab = new CreativeTabsTLS();
+	public static final CreativeTabs tab = new CreativeTabsTLS();
 	public static final HasAdvancementTrigger ADVANCEMENT_UNLOCKED = CriteriaTriggers.register(new HasAdvancementTrigger());
     private static final SimpleNetworkWrapper network = NetworkRegistry.INSTANCE.newSimpleChannel(TLSMain.MODID);
     public static SimpleNetworkWrapper getNetwork() {
         return network;
     }
 	public void preInit(FMLPreInitializationEvent event) {
-		new BlockLoader();
-		new ItemLoader();
-		new BladeLoader();
+		BlockLoader.getInstance().register();
+		ItemLoader.getInstance().register();
+		BladeLoader.getInstance().register();
 	}
 	
     public void init(FMLInitializationEvent event) { 
     	GameRegistry.addSmelting(new ItemStack(ItemLoader.BLADE,1,9), new ItemStack(ItemLoader.BLADE_HEATTED,1,0), 1F);
     	GameRegistry.addSmelting(new ItemStack(ItemLoader.BLADE,1,10), new ItemStack(ItemLoader.BLADE_HEATTED,1,1), 1F);
     	GameRegistry.addSmelting(new ItemStack(ItemLoader.BLADE,1,11), new ItemStack(ItemLoader.BLADE_HEATTED,1,2), 1F);
-    	RecipesUtil.addOreDictionarySmelting("blockSakura", new ItemStack(ItemLoader.MATERIALS,1,6));
+    	RecipesUtil.getInstance().addOreDictionarySmelting("blockSakura", new ItemStack(ItemLoader.MATERIALS,1,6));
     	ItemPredicates.register(new ResourceLocation(TLSMain.MODID, "slashblade"), SlashBladeItemPredicate::new);
     	MinecraftForge.EVENT_BUS.post(new RegisterSlashBladeEvent(event));
     	network.registerMessage(new PacketKeyMessageHandler(),PacketKeyMessage.class,0,Side.SERVER);

@@ -23,14 +23,16 @@ import cn.mmf.lastsmith.util.BladeUtil;
 
 public class RecipeAwakeBladeTLS extends ShapedOreRecipe {
 
-    private ItemStack requiredStateBlade;
-    private String name;
+    private final ItemStack requiredStateBlade;
+    private final String name;
     public RecipeAwakeBladeTLS(ResourceLocation loc,String advancement,ItemStack result, ItemStack requiredStateBlade, Object... recipe) {
         super(loc, result, recipe);
         this.requiredStateBlade = requiredStateBlade;
         this.name = advancement;
     }
-
+	public String getAdvancementName() {
+		return name;
+	}
     @Override
     public boolean matches(InventoryCrafting inv, World world) {
         boolean result = super.matches(inv, world) && isGoodForCrafting(inv, world, name);
@@ -150,7 +152,7 @@ public class RecipeAwakeBladeTLS extends ShapedOreRecipe {
             }
         }
         if(foundPlayer != null) {
-            return AdvancementHelper.checkAdvancement(foundPlayer, name);
+            return AdvancementHelper.getInstance().checkAdvancement(foundPlayer, name);
         }
 		return false;
     }

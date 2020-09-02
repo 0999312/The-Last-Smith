@@ -12,5 +12,6 @@ public class SALoader {
 		ItemSlashBlade.specialAttacks.put(263, new SASpaceDim());
 		ItemSlashBlade.specialAttacks.put(264, new SlashDimension_old());
 		ItemSlashBlade.specialAttacks.put(265, new SASakuraSkill());
+		ItemSlashBlade.specialAttacks.put(266, new SAFallenSakura());
 	}
 }

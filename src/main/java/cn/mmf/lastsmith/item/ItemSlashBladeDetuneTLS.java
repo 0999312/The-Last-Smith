@@ -1,45 +1,84 @@
 package cn.mmf.lastsmith.item;
 
 
+import java.util.EnumSet;
 import java.util.List;
 
-import cn.mmf.lastsmith.util.BladeUtil;
-import mods.flammpfeil.slashblade.ItemSlashBladeDetune;
+import cn.mmf.lastsmith.blades.BladeLoader;
 import mods.flammpfeil.slashblade.SlashBlade;
+import mods.flammpfeil.slashblade.util.ReflectionAccessHelper;
 import mods.flammpfeil.slashblade.util.ResourceLocationRaw;
-import net.minecraft.client.resources.I18n;
-import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
-public class ItemSlashBladeDetuneTLS extends ItemSlashBladeDetune{
+public class ItemSlashBladeDetuneTLS extends ItemSlashBladeTLS{
 
 	public ItemSlashBladeDetuneTLS(ToolMaterial par2EnumToolMaterial, float baseAttackModifiers) {
 		super(par2EnumToolMaterial, baseAttackModifiers);
 	}
+//	
+	public ResourceLocationRaw model = new ResourceLocationRaw(SlashBlade.modid, "model/blade.obj");
+	
 	@Override
 	public ResourceLocationRaw getModel() {
-		return new ResourceLocationRaw(SlashBlade.modid, "model/named/yasha/yasha.obj");
+		return model;
 	}
-    
-	@SuppressWarnings({ "rawtypes", "unchecked" })
+	public ItemSlashBladeDetuneTLS setModel(ResourceLocationRaw loc){
+		this.model = loc;
+		return this;
+	}
+	
+	public ResourceLocationRaw texture;
 	@Override
-	public void addInformation(ItemStack arg0, World arg1, List arg2, ITooltipFlag arg3) {
-		super.addInformation(arg0, arg1, arg2, arg3);
-		NBTTagCompound nbt = getItemTagCompound(arg0);
-		if(BladeUtil.getname(nbt) != null){
-			arg2.add(TextFormatting.GOLD + I18n.format("blades.crafter")+":"+TextFormatting.GRAY+BladeUtil.getname(nbt));	
-		}
+	public ResourceLocationRaw getModelTexture(){
+		return texture;
+	}
+	public ItemSlashBladeDetuneTLS setModelTexture(ResourceLocationRaw loc){
+		this.texture = loc;
+		return this;
+	}
+	
+	private boolean isDestructable = true;
+	public ItemSlashBladeDetuneTLS setDestructable(boolean enabled){
+		this.isDestructable = enabled;
+		return this;
+	}
+	@Override
+	public void onUpdate(ItemStack arg0, World arg1, Entity arg2, int arg3, boolean arg4) {
+        if (this == BladeLoader.bladeSilverBambooLight) {
+        	NBTTagCompound tag = getItemTagCompound(arg0);
+            int killCount = KillCount.get(tag);
+        	if(IsBroken.get(tag)&&killCount>=100) {
+        		ReflectionAccessHelper.setItem(arg0, SlashBlade.wrapBlade);
+        		arg0.setItemDamage(0);
+            }
+        }
+		super.onUpdate(arg0, arg1, arg2, arg3, arg4);
+	}
+    @Override
+    public boolean isDestructable(ItemStack stack) {
+        return super.isDestructable(stack) || isDestructable;
+    }
+    
+    
+    
+	@Override
+	public EnumSet<SwordType> getSwordType(ItemStack itemStack) {
+		EnumSet<SwordType> set = super.getSwordType(itemStack);
+		set.remove(SwordType.Enchanted);
+		set.remove(SwordType.Bewitched);
+		set.remove(SwordType.SoulEeater);
+		return set;
 	}
 
+	@SuppressWarnings("rawtypes")
 	@Override
-	public void onCreated(ItemStack stack, World worldIn, EntityPlayer playerIn) {
-		super.onCreated(stack, worldIn, playerIn);
-		NBTTagCompound nbt = stack.getTagCompound();
-		BladeUtil.setPlayer(nbt,playerIn);
+    public void addInformationSwordClass(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
+		
 	}
+
 
 }

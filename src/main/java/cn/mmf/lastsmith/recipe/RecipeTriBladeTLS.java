@@ -33,18 +33,18 @@ import net.minecraft.util.ResourceLocation;
 
 public class RecipeTriBladeTLS extends ShapedOreRecipe {
 
-	protected final String name;
-	final protected ItemStack requiredBladeMain;
-	final protected ItemStack requiredBladeSub;
-	final protected boolean remainedBladeSub;
-	final protected ItemStack requiredBladeTri;
-	final protected boolean remainedBladeTri;
-	final protected int posXMain;
-	final protected int posYMain;
-	final protected int posXSub;
-	final protected int posYSub;
-	final protected int posXTri;
-	final protected int posYTri;
+	private final String name;
+	private final ItemStack requiredBladeMain;
+	private final ItemStack requiredBladeSub;
+	private final boolean remainedBladeSub;
+	private final ItemStack requiredBladeTri;
+	private final boolean remainedBladeTri;
+	private final int posXMain;
+	private final int posYMain;
+	private final int posXSub;
+	private final int posYSub;
+	private final int posXTri;
+	private final int posYTri;
 
 	public RecipeTriBladeTLS(ResourceLocation group, String name, ItemStack result, ItemStack requiredBladeMain, int posXMain,
 			int posYMain, ItemStack requiredBladeSub, int posXSub, int posYSub, boolean remainedBladeSub,
@@ -72,7 +72,11 @@ public class RecipeTriBladeTLS extends ShapedOreRecipe {
 	protected static boolean isValidBlade(ItemStack item) {
 		return !item.isEmpty() && item.getItem() instanceof ItemSlashBlade && item.hasTagCompound();
 	}
-
+	
+	public String getAdvancementName() {
+		return name;
+	}
+	
 	@Override
 	public boolean matches(InventoryCrafting inv, World world) {
 		boolean result = super.matches(inv, world) && isGoodForCrafting(inv, world, name);
@@ -224,7 +228,7 @@ public class RecipeTriBladeTLS extends ShapedOreRecipe {
 			}
 		}
 		if (foundPlayer != null) {
-			return AdvancementHelper.checkAdvancement(foundPlayer, name);
+			return AdvancementHelper.getInstance().checkAdvancement(foundPlayer, name);
 		}
 		return false;
 	}

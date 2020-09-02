@@ -13,7 +13,6 @@ import cn.mmf.lastsmith.item.ItemLoader;
 import cn.mmf.lastsmith.item.ItemSlashBladeDetuneTLS;
 import cn.mmf.lastsmith.item.ItemSlashBladeSaya;
 import cn.mmf.lastsmith.item.ItemSlashBladeTLS;
-import cofh.CoFHCore;
 import ic2.core.IC2;
 import cn.mmf.lastsmith.item.ItemSlashBladeNamedTLS;
 import mods.flammpfeil.slashblade.SlashBlade;
@@ -35,19 +34,27 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 
 public class BladeLoader {
-	public static Item blade=new ItemSlashBladeDetuneTLS(ToolMaterial.IRON,6).setDestructable(false).setModelTexture(new ResourceLocationRaw("flammpfeil.slashblade","model/unnamed/texture.png")).setRepairMaterialOreDic("ingotSteel","nuggetSteel").setMaxDamage(71).setUnlocalizedName(TLSMain.MODID+"."+"white_top");
+	public static Item blade=new ItemSlashBladeDetuneTLS(ToolMaterial.IRON,6).setDestructable(false).setModel(new ResourceLocationRaw(SlashBlade.modid, "model/named/yasha/yasha.obj")).setModelTexture(new ResourceLocationRaw("flammpfeil.slashblade","model/unnamed/texture.png")).setRepairMaterialOreDic("ingotSteel","nuggetSteel").setMaxDamage(71).setUnlocalizedName(TLSMain.MODID+".white_top");
 	public static Item bladeNamed= new ItemSlashBladeNamedTLS(ToolMaterial.IRON, 4.0f).setMaxDamage(40).setUnlocalizedName("flammpfeil.slashblade.named");
 	public static Item euBlade,windBlade,voidBlade,rfblade,crimsonBlade;
 	public static Item wrapper = new ItemSlashBladeSaya(ToolMaterial.WOOD).setUnlocalizedName(TLSMain.MODID+"."+"wooden_saya");
 	public static Item wrapper_bamboo = new ItemSlashBladeSaya(ToolMaterial.WOOD).setModelTexture(new ResourceLocationRaw("flammpfeil.slashblade","model/bamboo_saya.png")).setUnlocalizedName(TLSMain.MODID+"."+"bamboo_saya");
-	public static Item weapon;
-	public static Map<ResourceLocationRaw, ItemStack> BladeRegistry = Maps.newHashMap();
-
-    public BladeLoader() {
-    	ItemLoader.register(wrapper);
-    	ItemLoader.register(wrapper_bamboo);
-    	ItemLoader.register(blade);
-    	ItemLoader.register(bladeNamed);
+	public static Item weapon,bladeWood,bladeBambooLight,bladeSilverBambooLight,bladeWhiteSheath;
+	private Map<ResourceLocationRaw, ItemStack> BladeRegistry = Maps.newHashMap();
+	private static final BladeLoader instance = new BladeLoader();
+    private BladeLoader() {
+    }
+	public static BladeLoader getInstance() {
+		return instance;
+	}
+	public Map<ResourceLocationRaw, ItemStack> getBladeRegistry() {
+		return BladeRegistry;
+	}
+    public void register() {
+    	ItemLoader.getInstance().registerItem(wrapper);
+    	ItemLoader.getInstance().registerItem(wrapper_bamboo);
+    	ItemLoader.getInstance().registerItem(blade);
+    	ItemLoader.getInstance().registerItem(bladeNamed);
 		weapon = new ItemSlashBladeTLS(ToolMaterial.IRON, 4 + ToolMaterial.DIAMOND.getAttackDamage())
 				.setRepairMaterial(new ItemStack(Items.IRON_INGOT))
 				.setRepairMaterialOreDic("ingotSteel", "nuggetSteel")
@@ -56,7 +63,49 @@ public class BladeLoader {
                 .setRegistryName(new ResourceLocation(SlashBlade.modid, "slashblade"));
 		
         ForgeRegistries.ITEMS.register(weapon);
-    	if(Loader.isModLoaded(Thaumcraft.MODID)){
+    	
+        bladeWood = new ItemSlashBladeDetuneTLS(ToolMaterial.WOOD, 4 + ToolMaterial.WOOD.getAttackDamage())
+                .setDestructable(true)
+                .setModelTexture(new ResourceLocationRaw("flammpfeil.slashblade", "model/wood.png"))
+                .setRepairMaterialOreDic("logWood")
+                .setMaxDamage(60)
+                .setUnlocalizedName("flammpfeil.slashblade.wood")
+                .setCreativeTab(SlashBlade.tab)
+                .setRegistryName(SlashBlade.modid,"slashbladeWood");
+        ForgeRegistries.ITEMS.register(bladeWood);
+
+        bladeBambooLight = new ItemSlashBladeDetuneTLS(ToolMaterial.WOOD, 4 + ToolMaterial.STONE.getAttackDamage())
+                .setDestructable(true)
+                .setModelTexture(new ResourceLocationRaw("flammpfeil.slashblade", "model/banboo.png"))
+                .setRepairMaterialOreDic("bamboo")
+                .setMaxDamage(50)
+                .setUnlocalizedName("flammpfeil.slashblade.bamboo")
+                .setCreativeTab(SlashBlade.tab)
+                .setRegistryName(SlashBlade.modid,"slashbladeBambooLight");
+        ForgeRegistries.ITEMS.register(bladeBambooLight);
+
+        bladeSilverBambooLight = new ItemSlashBladeDetuneTLS(ToolMaterial.WOOD, 4 + ToolMaterial.IRON.getAttackDamage())
+                .setDestructable(true)
+                .setModelTexture(new ResourceLocationRaw("flammpfeil.slashblade", "model/silverbanboo.png"))
+                .setRepairMaterialOreDic("bamboo")
+                .setMaxDamage(40)
+                .setUnlocalizedName("flammpfeil.slashblade.silverbamboo")
+                .setCreativeTab(SlashBlade.tab)
+                .setRegistryName(SlashBlade.modid,"slashbladeSilverBambooLight");
+        ForgeRegistries.ITEMS.register(bladeSilverBambooLight);
+
+        bladeWhiteSheath = new ItemSlashBladeDetuneTLS(ToolMaterial.IRON, 4 + ToolMaterial.IRON.getAttackDamage())
+                .setDestructable(false)
+                .setModelTexture(new ResourceLocationRaw("flammpfeil.slashblade", "model/white.png"))
+                .setRepairMaterial(new ItemStack(Items.IRON_INGOT))
+                .setRepairMaterialOreDic("ingotSteel", "nuggetSteel")
+                .setMaxDamage(70)
+                .setUnlocalizedName("flammpfeil.slashblade.white")
+                .setCreativeTab(SlashBlade.tab)
+                .setRegistryName(SlashBlade.modid,"slashbladeWhite");
+        ForgeRegistries.ITEMS.register(bladeWhiteSheath);
+        
+        if(Loader.isModLoaded(Thaumcraft.MODID)){
     		windBlade = (new ItemSlashBladeWind(ThaumcraftMaterials.TOOLMAT_ELEMENTAL, 4.0F)).setRegistryName("slashblade_wind");
     		ForgeRegistries.ITEMS.register(windBlade);
     		voidBlade = (new ItemSlashBladeVoid(ThaumcraftMaterials.TOOLMAT_VOID, 4.0F)).setRegistryName("slashblade_void");
@@ -68,22 +117,25 @@ public class BladeLoader {
        	 euBlade = (new ItemSlashBladeEU(ToolMaterial.IRON, 4.0F)).setRegistryName("slashblade_eu");
        	 ForgeRegistries.ITEMS.register(euBlade);
        }
-    	if(Loader.isModLoaded(CoFHCore.MOD_ID)){
-    		rfblade = new ItemSlashBladeRF(ToolMaterial.IRON, 4.0F).setRegistryName("slashBlade_rf");
-    		ForgeRegistries.ITEMS.register(rfblade);
-		}
-    }
+		rfblade = new ItemSlashBladeRF(ToolMaterial.IRON, 4.0F).setRegistryName("slashBlade_rf");
+		ForgeRegistries.ITEMS.register(rfblade);
+	}
     
     @SideOnly(Side.CLIENT)
-    public static void renderSlashBlade() {
+    public void renderSlashBlade() {
     	setSlashBladeRender(blade);
     	setSlashBladeRender(bladeNamed);
     	setSlashBladeRender(wrapper);
     	setSlashBladeRender(wrapper_bamboo);
     	setSlashBladeRender(weapon);
+    	
+    	setSlashBladeRender(bladeBambooLight);
+    	setSlashBladeRender(bladeWhiteSheath);
+    	setSlashBladeRender(bladeWood);
+    	setSlashBladeRender(bladeSilverBambooLight);
+    	
         if(Loader.isModLoaded(IC2.MODID)) 
         	setSlashBladeRender(euBlade);
-        if(Loader.isModLoaded(CoFHCore.MOD_ID)) 
         	setSlashBladeRender(rfblade);
         if(Loader.isModLoaded(Thaumcraft.MODID)){
         	setSlashBladeRender(windBlade);
@@ -93,17 +145,18 @@ public class BladeLoader {
 	}
 
 	@SideOnly(Side.CLIENT)
-    private static void setSlashBladeRender(Item blade) {
+    private void setSlashBladeRender(Item blade) {
     	ModelLoader.setCustomModelResourceLocation(blade, 0, new ModelResourceLocation("flammpfeil.slashblade:model/named/blade.obj"));
     	blade.setTileEntityItemStackRenderer(new BladeSpecialRender());
 	}
-    public static void registerCustomItemStack(String name, ItemStack stack){
+    public void registerCustomItemStack(String name, ItemStack stack){
         BladeRegistry.put(new ResourceLocationRaw(TLSMain.MODID, name),stack);
     }
-	public static ItemStack getCustomBlade(String bladename) {
+	public ItemStack getCustomBlade(String bladename) {
 		if(BladeRegistry.containsKey(new ResourceLocationRaw(TLSMain.MODID,bladename))) {
 			return BladeRegistry.get(new ResourceLocationRaw(TLSMain.MODID, bladename)).copy();
         }
 		return ItemStack.EMPTY;
 	}
+
 }

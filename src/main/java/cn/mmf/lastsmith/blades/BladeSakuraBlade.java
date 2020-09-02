@@ -10,6 +10,7 @@ import cn.mmf.lastsmith.util.BladeUtil;
 import mods.flammpfeil.slashblade.ItemSlashBladeNamed;
 import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Enchantments;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -36,7 +37,7 @@ public class BladeSakuraBlade {
 		ItemSlashBlade.SpecialAttackType.set(tag1, 265);
 		ItemSlashBladeNamed.IsDefaultBewitched.set(tag1, true);
 		BladeUtil.IsBewitchedActived.set(tag1, true);
-		BladeLoader.registerCustomItemStack("flammpfeil.slashblade.named.sakura", customblade);
+		BladeLoader.getInstance().registerCustomItemStack("flammpfeil.slashblade.named.sakura", customblade);
 		ItemSlashBladeNamedTLS.NamedBlades.add("flammpfeil.slashblade.named.sakura");
 		
 		ItemStack customblade2 = new ItemStack(BladeLoader.bladeNamed, 1, 0);
@@ -54,7 +55,7 @@ public class BladeSakuraBlade {
 		ItemSlashBlade.SpecialAttackType.set(tag2, 265);
 		ItemSlashBladeNamed.IsDefaultBewitched.set(tag2, true);
 		BladeUtil.IsBewitchedActived.set(tag2, true);
-		BladeLoader.registerCustomItemStack("flammpfeil.slashblade.named.ginkgo", customblade2);
+		BladeLoader.getInstance().registerCustomItemStack("flammpfeil.slashblade.named.ginkgo", customblade2);
 		ItemSlashBladeNamedTLS.NamedBlades.add("flammpfeil.slashblade.named.ginkgo");
 		
 		ItemStack customblade3 = new ItemStack(BladeLoader.bladeNamed, 1, 0);
@@ -72,7 +73,7 @@ public class BladeSakuraBlade {
 		ItemSlashBlade.SpecialAttackType.set(tag3, 265);
 		ItemSlashBladeNamed.IsDefaultBewitched.set(tag3, true);
 		BladeUtil.IsBewitchedActived.set(tag3, true);
-		BladeLoader.registerCustomItemStack("flammpfeil.slashblade.named.yukikage", customblade3);
+		BladeLoader.getInstance().registerCustomItemStack("flammpfeil.slashblade.named.yukikage", customblade3);
 		ItemSlashBladeNamedTLS.NamedBlades.add("flammpfeil.slashblade.named.yukikage");
 		
 		ItemStack customblade4 = new ItemStack(BladeLoader.bladeNamed, 1, 0);
@@ -90,7 +91,7 @@ public class BladeSakuraBlade {
 		ItemSlashBlade.SpecialAttackType.set(tag4, 265);
 		ItemSlashBladeNamed.IsDefaultBewitched.set(tag4, true);
 		BladeUtil.IsBewitchedActived.set(tag4, true);
-		BladeLoader.registerCustomItemStack("flammpfeil.slashblade.named.kataware", customblade4);
+		BladeLoader.getInstance().registerCustomItemStack("flammpfeil.slashblade.named.kataware", customblade4);
 		ItemSlashBladeNamedTLS.NamedBlades.add("flammpfeil.slashblade.named.kataware");
 		
 		ItemStack customblade5 = new ItemStack(BladeLoader.bladeNamed, 1, 0);
@@ -102,13 +103,13 @@ public class BladeSakuraBlade {
 		customblade5.addEnchantment(Enchantments.UNBREAKING, 2);
 		customblade5.addEnchantment(Enchantments.FIRE_ASPECT, 1);
 		customblade5.addEnchantment(Enchantments.SHARPNESS, 2);
-		ItemSlashBlade.TextureName.set(tag5, "named/sakura/texture_3");
+		ItemSlashBlade.TextureName.set(tag5, "named/sakura/texture_4");
 		ItemSlashBlade.ModelName.set(tag5, "named/sakura/model");
 		ItemSlashBlade.SummonedSwordColor.set(tag5, 0xDD0033);
 		ItemSlashBlade.SpecialAttackType.set(tag5, 265);
 		ItemSlashBladeNamed.IsDefaultBewitched.set(tag5, true);
 		BladeUtil.IsBewitchedActived.set(tag5, true);
-		BladeLoader.registerCustomItemStack("flammpfeil.slashblade.named.shura", customblade5);
+		BladeLoader.getInstance().registerCustomItemStack("flammpfeil.slashblade.named.shura", customblade5);
 		ItemSlashBladeNamedTLS.NamedBlades.add("flammpfeil.slashblade.named.shura");
 	}
 
@@ -120,9 +121,9 @@ public class BladeSakuraBlade {
 		ItemSlashBlade.ProudSoul.set(tag, 5000);
 		ItemSlashBlade.RepairCount.set(tag, 1);
 		request.setTagCompound(tag);
-		RecipesUtil.addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.sakura", new RecipeAwakeBladeTLS(
+		RecipesUtil.getInstance().addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.sakura", new RecipeAwakeBladeTLS(
 			new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.sakura"),
-			"bewitched_blade", BladeLoader.getCustomBlade("flammpfeil.slashblade.named.sakura"), request, 
+			"bewitched_blade", BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.sakura"), request, 
 			new Object[] {
 				"SDS",
 				"PBP",
@@ -132,9 +133,9 @@ public class BladeSakuraBlade {
 				'S', SlashBlade.getCustomBlade(SlashBlade.SphereBladeSoulStr),
 				'B', request
 		}));
-		RecipesUtil.addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.yukikage", new RecipeAwakeBladeTLS(
-				new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.yukikage"),
-				"bewitched_blade", BladeLoader.getCustomBlade("flammpfeil.slashblade.named.yukikage"), request, 
+		RecipesUtil.getInstance().addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.ginkgo", new RecipeAwakeBladeTLS(
+				new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.ginkgo"),
+				"bewitched_blade", BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.ginkgo"), request, 
 				new Object[] {
 					"SDS",
 					"PBP",
@@ -144,9 +145,21 @@ public class BladeSakuraBlade {
 					'S', SlashBlade.getCustomBlade(SlashBlade.SphereBladeSoulStr),
 					'B', request
 		}));
-		RecipesUtil.addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.kataware", new RecipeAwakeBladeTLS(
+		RecipesUtil.getInstance().addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.yukikage", new RecipeAwakeBladeTLS(
+				new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.yukikage"),
+				"bewitched_blade", BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.yukikage"), request, 
+				new Object[] {
+					"SDS",
+					"PBP",
+					"SDS",
+					'P', "fullSakura",
+					'D', Blocks.SNOW,
+					'S', SlashBlade.getCustomBlade(SlashBlade.SphereBladeSoulStr),
+					'B', request
+		}));
+		RecipesUtil.getInstance().addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.kataware", new RecipeAwakeBladeTLS(
 				new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.kataware"),
-				"bewitched_blade", BladeLoader.getCustomBlade("flammpfeil.slashblade.named.kataware"), request, 
+				"bewitched_blade", BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.kataware"), request, 
 				new Object[] {
 					"SDS",
 					"PBP",
@@ -156,15 +169,15 @@ public class BladeSakuraBlade {
 					'S', SlashBlade.getCustomBlade(SlashBlade.SphereBladeSoulStr),
 					'B', request
 		}));
-		ItemStack requestShura = BladeLoader.getCustomBlade("flammpfeil.slashblade.named.kataware");
+		ItemStack requestShura = BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.kataware");
 		NBTTagCompound tagShura = ItemSlashBlade.getItemTagCompound(requestShura);
 		ItemSlashBlade.KillCount.set(tagShura, 750);
 		ItemSlashBlade.ProudSoul.set(tagShura, 20000);
 		ItemSlashBlade.RepairCount.set(tagShura, 10);
 		requestShura.setTagCompound(tagShura);
-		RecipesUtil.addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.shura", new RecipeAwakeBladeTLS(
+		RecipesUtil.getInstance().addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.shura", new RecipeAwakeBladeTLS(
 				new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.shura"),
-				"fushikiri", BladeLoader.getCustomBlade("flammpfeil.slashblade.named.shura"), requestShura, 
+				"sharpness", BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.shura"), requestShura, 
 				new Object[] {
 					"SDS",
 					"PBP",

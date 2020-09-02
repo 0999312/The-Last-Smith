@@ -37,7 +37,7 @@ public class BladeAmagumo {
 		ItemSlashBlade.TextureName.set(tag1, "named/smith/texture_wind");
 		ItemSlashBlade.ModelName.set(tag1, "named/smith/model");
 
-		BladeLoader.registerCustomItemStack("flammpfeil.slashblade.named.amagumo.wind", customblade);
+		BladeLoader.getInstance().registerCustomItemStack("flammpfeil.slashblade.named.amagumo.wind", customblade);
 		ItemSlashBladeNamedTLS.NamedBlades.add("flammpfeil.slashblade.named.amagumo.wind");
 		
 		ItemStack customblade1 = new ItemStack(BladeLoader.bladeNamed, 1, 0);
@@ -57,7 +57,7 @@ public class BladeAmagumo {
 		ItemSlashBlade.TextureName.set(tag11, "named/smith/texture_cloud");
 		ItemSlashBlade.ModelName.set(tag11, "named/agito");
 
-		BladeLoader.registerCustomItemStack("flammpfeil.slashblade.named.amagumo.cloud", customblade1);
+		BladeLoader.getInstance().registerCustomItemStack("flammpfeil.slashblade.named.amagumo.cloud", customblade1);
 		ItemSlashBladeNamedTLS.NamedBlades.add("flammpfeil.slashblade.named.amagumo.cloud");
 	}
 
@@ -68,9 +68,9 @@ public class BladeAmagumo {
 		ItemSlashBlade.KillCount.set(tag4, 750);
 		ItemSlashBlade.ProudSoul.set(tag4, 25000);
 		ItemSlashBlade.RepairCount.set(tag4, 5);
-		RecipesUtil.addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.amagumo.wind", new RecipeAwakeBladeTLS(
+		RecipesUtil.getInstance().addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.amagumo.wind", new RecipeAwakeBladeTLS(
 			new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.amagumo.wind"),
-			"sharpness", BladeLoader.getCustomBlade("flammpfeil.slashblade.named.amagumo.wind"), request, 
+			"sharpness", BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.amagumo.wind"), request, 
 			new Object[] {
 				"DPS",
 				"PSP",
@@ -80,9 +80,9 @@ public class BladeAmagumo {
 				'D', "enderpearl",
 				'B', request
 		}));
-		RecipesUtil.addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.amagumo.cloud", new RecipeAwakeBladeTLS(
+		RecipesUtil.getInstance().addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.amagumo.cloud", new RecipeAwakeBladeTLS(
 			new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.amagumo.cloud"),
-			"sharpness", BladeLoader.getCustomBlade("flammpfeil.slashblade.named.amagumo.cloud"), request, 
+			"sharpness", BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.amagumo.cloud"), request, 
 			new Object[] {
 				"SPD",
 				"PSP",

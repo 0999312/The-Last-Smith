@@ -28,16 +28,16 @@ public class BladeKusabimaru {
 		ItemSlashBlade.TextureName.set(tag1, "named/sekiro/kusabimaru");
 		ItemSlashBlade.ModelName.set(tag1, "named/sekiro/kusabimaru");
 
-		BladeLoader.registerCustomItemStack("flammpfeil.slashblade.named.kusabimaru", customblade);
+		BladeLoader.getInstance().registerCustomItemStack("flammpfeil.slashblade.named.kusabimaru", customblade);
 		ItemSlashBladeNamedTLS.NamedBlades.add("flammpfeil.slashblade.named.kusabimaru");
 	}
 
 	@SubscribeEvent
 	public static void onRecipeRegister(RegisterSlashBladeRecipeEvent event) {
 		ItemStack request = new ItemStack(BladeLoader.blade);
-		RecipesUtil.addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.kusabimaru", new RecipeAwakeBladeTLS(
+		RecipesUtil.getInstance().addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.kusabimaru", new RecipeAwakeBladeTLS(
 			new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.kusabimaru"),
-			"slashblade_white", BladeLoader.getCustomBlade("flammpfeil.slashblade.named.kusabimaru"), request, 
+			"slashblade_white", BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.kusabimaru"), request, 
 			new Object[] {
 				"DPS",
 				"PSP",

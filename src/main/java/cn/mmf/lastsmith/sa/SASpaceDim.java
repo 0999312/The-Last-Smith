@@ -32,7 +32,7 @@ public class SASpaceDim extends SpecialAttackBase implements IJustSpecialAttack,
 	}
 
 	private static final int COST = 40;
-	private static final int NO_COST_DAMAGE = 10;
+	private static final int NO_COST_DAMAGE = 20;
 
 	@Override
 	public void doSpacialAttack(ItemStack stack, EntityPlayer player) {

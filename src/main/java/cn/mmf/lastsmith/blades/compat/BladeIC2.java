@@ -37,7 +37,7 @@ public class BladeIC2 {
 		BladeUtil.ModelOnName.set(tag1, "named/nanosaber/model");
 		ItemSlashBlade.SpecialAttackType.set(tag1, 1);
 		ItemSlashBlade.StandbyRenderType.set(tag1, 2);
-		BladeLoader.registerCustomItemStack("flammpfeil.slashblade.named.nanosaber", customblade);
+		BladeLoader.getInstance().registerCustomItemStack("flammpfeil.slashblade.named.nanosaber", customblade);
 		ItemSlashBladeNamedTLS.NamedBlades.add("flammpfeil.slashblade.named.nanosaber");
 
 		ItemStack customblade1 = new ItemStack(BladeLoader.euBlade, 1, 0);
@@ -52,7 +52,7 @@ public class BladeIC2 {
 		BladeUtil.ModelOnName.set(tag11, "named/nanosaber/model");
 		ItemSlashBlade.SpecialAttackType.set(tag11, 1);
 		ItemSlashBlade.StandbyRenderType.set(tag11, 2);
-		BladeLoader.registerCustomItemStack("flammpfeil.slashblade.named.quantumsaber", customblade1);
+		BladeLoader.getInstance().registerCustomItemStack("flammpfeil.slashblade.named.quantumsaber", customblade1);
 		ItemSlashBladeNamedTLS.NamedBlades.add("flammpfeil.slashblade.named.quantumsaber");
 	}
 
@@ -63,8 +63,8 @@ public class BladeIC2 {
 		ItemStack custombladeReqired = new ItemStack(BladeLoader.blade);
 		NBTTagCompound reqTag = ItemSlashBlade.getItemTagCompound(custombladeReqired);
 		ItemSlashBlade.RepairCount.set(reqTag, Integer.valueOf(5));
-		ItemStack blade = BladeLoader.getCustomBlade("flammpfeil.slashblade.named.nanosaber");
-		RecipesUtil.addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.nanosaber",
+		ItemStack blade = BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.nanosaber");
+		RecipesUtil.getInstance().addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.nanosaber",
 			new RecipeAwakeBladeTLS(new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.nanosaber"),
 				"bewitched_blade", blade, custombladeReqired,
 				new Object[] {
@@ -79,9 +79,9 @@ public class BladeIC2 {
 		}));
 		NBTTagCompound reqTag2 = ItemSlashBlade.getItemTagCompound(blade);
 		ItemSlashBlade.RepairCount.set(reqTag2, Integer.valueOf(10));
-		RecipesUtil.addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.quantumsaber",
+		RecipesUtil.getInstance().addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.quantumsaber",
 			new RecipeAwakeBladeTLS(new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.quantumsaber"),
-				"bewitched_blade", BladeLoader.getCustomBlade("flammpfeil.slashblade.named.quantumsaber"), blade,
+				"bewitched_blade", BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.quantumsaber"), blade,
 				new Object[] {
 						"IAI",
 						"CBC",

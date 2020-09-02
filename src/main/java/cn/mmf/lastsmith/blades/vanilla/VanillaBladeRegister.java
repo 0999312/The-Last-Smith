@@ -6,19 +6,21 @@ import cn.mmf.lastsmith.event.RegisterSlashBladeEvent;
 import cn.mmf.lastsmith.event.RegisterSlashBladeRecipeEvent;
 import cn.mmf.lastsmith.item.ItemLoader;
 import cn.mmf.lastsmith.recipe.RecipeAwakeBladeTLS;
+import cn.mmf.lastsmith.recipe.RecipeKiriSayaTLS;
 import cn.mmf.lastsmith.util.BladeUtil;
 import cn.mmf.slashblade_addon.ConfigLoader;
 import cn.mmf.slashblade_addon.SJAP;
 import cn.mmf.slashblade_addon.item.ItemSlashBladeRF;
 import cn.mmf.slashblade_addon.item.ItemSlashBladeWind;
 import cn.mmf.slashblade_addon.recipes.RecipeNihil;
-import cofh.CoFHCore;
 import mods.flammpfeil.slashblade.ItemSlashBladeNamed;
 import mods.flammpfeil.slashblade.RecipeAwakeBlade;
 import mods.flammpfeil.slashblade.RecipeUpgradeBlade;
 import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.item.crafting.BladeIngredient;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Enchantments;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -32,6 +34,22 @@ import thaumcraft.Thaumcraft;
 
 @EventBusSubscriber
 public class VanillaBladeRegister {
+	private static String[] defaultBewitched = new String[]{
+			"flammpfeil.slashblade.named.tagayasan",
+			"flammpfeil.slashblade.named.crimsoncherry",
+			"flammpfeil.slashblade.named.nihilex",
+			"flammpfeil.slashblade.named.nihilul",
+			"flammpfeil.slashblade.named.nihilbx",
+			"flammpfeil.slashblade.named.yamato",
+			
+			"flammpfeil.slashblade.named.sange",
+			"flammpfeil.slashblade.named.orotiagito",
+			"flammpfeil.slashblade.named.kirisaya",
+			
+			"flammpfeil.slashblade.named.kamuy.water",
+			"flammpfeil.slashblade.named.kamuy.fire",
+			"flammpfeil.slashblade.named.kamuy.lightning",
+	};
 	@SubscribeEvent
 	public static void onSlashBladeRegister(RegisterSlashBladeEvent event) {
 
@@ -42,7 +60,7 @@ public class VanillaBladeRegister {
 			ItemStack newBlade = new ItemStack(BladeLoader.bladeNamed);
 
 			if (Loader.isModLoaded(SJAP.MODID)) {
-				if (Loader.isModLoaded(CoFHCore.MOD_ID) && blade.getItem() instanceof ItemSlashBladeRF) {
+				if (blade.getItem() instanceof ItemSlashBladeRF) {
 					newBlade = new ItemStack(BladeLoader.rfblade);
 					BladeUtil.ModelOnName.set(oldNBT, ItemSlashBladeNamed.ModelName.get(oldNBT));
 					BladeUtil.TextureOnName.set(oldNBT, ItemSlashBladeNamed.TextureName.get(oldNBT));
@@ -53,18 +71,10 @@ public class VanillaBladeRegister {
 				if (Loader.isModLoaded(Thaumcraft.MODID) && blade.getItem() instanceof ItemSlashBladeWind)
 					newBlade = new ItemStack(BladeLoader.windBlade);
 			}
-			if (ItemSlashBladeNamed.CurrentItemName.get(oldNBT)
-					.equalsIgnoreCase("flammpfeil.slashblade.named.tagayasan")
-					|| ItemSlashBladeNamed.CurrentItemName.get(oldNBT)
-							.equalsIgnoreCase("flammpfeil.slashblade.named.crimsoncherry")
-					|| ItemSlashBladeNamed.CurrentItemName.get(oldNBT)
-							.equalsIgnoreCase("flammpfeil.slashblade.named.nihilex")
-					|| ItemSlashBladeNamed.CurrentItemName.get(oldNBT)
-							.equalsIgnoreCase("flammpfeil.slashblade.named.nihilul")
-					|| ItemSlashBladeNamed.CurrentItemName.get(oldNBT)
-							.equalsIgnoreCase("flammpfeil.slashblade.named.nihilbx")) {
-				ItemSlashBladeNamed.IsDefaultBewitched.set(oldNBT, true);
-				BladeUtil.IsBewitchedActived.set(oldNBT, true);
+			for(String bewitched : defaultBewitched) {
+				if (ItemSlashBladeNamed.CurrentItemName.get(oldNBT)
+						.equalsIgnoreCase(bewitched))
+					BladeUtil.IsBewitchedActived.set(oldNBT, true);
 			}
 			newBlade.setTagCompound(oldNBT);
 			SlashBlade.BladeRegistry.put(name, newBlade);
@@ -110,26 +120,26 @@ public class VanillaBladeRegister {
 				SlashBlade.wrapBlade, '#', new BladeIngredient(brokenBladeWhite))
 						.setRegistryName(new ResourceLocation(SlashBlade.modid, "slashblade")));
 		SlashBlade.addRecipe("flammpfeil.slashblade.named.yamato",
-				new RecipeAwakeBladeTLS(new ResourceLocation(SlashBlade.modid, "yamato"), "root",
+				new RecipeAwakeBladeTLS(new ResourceLocation(SlashBlade.modid, "yamato"), "bewitched_blade",
 						SlashBlade.getCustomBlade("flammpfeil.slashblade.named.yamato"),
 						SlashBlade.getCustomBlade("flammpfeil.slashblade.named.yamato.reqired"), "XXX", "XBX", "XXX",
 						'X', SlashBlade.getCustomBlade(SlashBlade.SphereBladeSoulStr), 'B',
 						SlashBlade.getCustomBlade("flammpfeil.slashblade.named.yamato.reqired")));
 		SlashBlade.addRecipe("flammpfeil.slashblade.named.agito",
-				new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid, "agito"),
+				new RecipeAwakeBladeTLS(new ResourceLocation(SlashBlade.modid, "agito"),"bewitched_blade",
 						SlashBlade.getCustomBlade("flammpfeil.slashblade.named.agito"),
 						SlashBlade.getCustomBlade("flammpfeil.slashblade.named.agito.reqired"), " X ", "XBX", " X ",
 						'X', SlashBlade.getCustomBlade(SlashBlade.ProudSoulStr), 'B',
 						SlashBlade.getCustomBlade("flammpfeil.slashblade.named.agito.reqired")));
 		SlashBlade.addRecipe("flammpfeil.slashblade.named.orotiagito",
-				new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid, "agito_ex"),
+				new RecipeAwakeBladeTLS(new ResourceLocation(SlashBlade.modid, "agito_ex"),"bewitched_blade",
 						SlashBlade.getCustomBlade("flammpfeil.slashblade.named.orotiagito"),
 						SlashBlade.getCustomBlade("flammpfeil.slashblade.named.orotiagito.reqired"), "PXP", "XBX",
 						"PXP", 'X', SlashBlade.getCustomBlade(SlashBlade.SphereBladeSoulStr), 'P',
 						SlashBlade.getCustomBlade(SlashBlade.ProudSoulStr), 'B',
 						SlashBlade.getCustomBlade("flammpfeil.slashblade.named.orotiagito.reqired")));
 		SlashBlade.addRecipe("flammpfeil.slashblade.named.orotiagito.seald",
-				new RecipeAwakeBlade(new ResourceLocation(SlashBlade.modid, "agito2"),
+				new RecipeAwakeBladeTLS(new ResourceLocation(SlashBlade.modid, "agito2"),"bewitched_blade",
 						SlashBlade.getCustomBlade("flammpfeil.slashblade.named.orotiagito.seald"),
 						SlashBlade.getCustomBlade("flammpfeil.slashblade.named.orotiagito.seald.reqired"), " X ", "XBX",
 						" X ", 'X', SlashBlade.getCustomBlade(SlashBlade.ProudSoulStr), 'B',
@@ -153,7 +163,59 @@ public class VanillaBladeRegister {
 						SlashBlade.findItemStack(SlashBlade.modid, SlashBlade.SphereBladeSoulStr, 1), 'B',
 						SlashBlade.getCustomBlade("flammpfeil.slashblade.thousandkill")));
 	}
-
+	@SubscribeEvent
+	public static void initSJAPBlades(RegisterSlashBladeRecipeEvent event) {
+		if (!Loader.isModLoaded(SJAP.MODID))
+			return;
+	       ItemStack sphere = SlashBlade.findItemStack(SlashBlade.modid, SlashBlade.SphereBladeSoulStr, 1);
+	        ItemStack blade_base = SlashBlade.getCustomBlade("flammpfeil.slashblade.named.kamuy.base");
+	        ItemStack blade_water = SlashBlade.getCustomBlade("flammpfeil.slashblade.named.kamuy.water");
+	        ItemStack blade_fire = SlashBlade.getCustomBlade("flammpfeil.slashblade.named.kamuy.fire");
+	        ItemStack blade_lightning = SlashBlade.getCustomBlade("flammpfeil.slashblade.named.kamuy.lightning");
+	        
+			ItemStack reqblade_base = new ItemStack(SlashBlade.weapon);
+			NBTTagCompound reqtag_base = ItemSlashBlade.getItemTagCompound(reqblade_base);
+			ItemSlashBlade.RepairCount.set(reqtag_base, 5);
+			ItemSlashBlade.KillCount.set(reqtag_base, 1000);
+			ItemSlashBlade.ProudSoul.set(reqtag_base, 1000);
+			reqblade_base.addEnchantment(Enchantments.LOOTING, 1);
+			SlashBlade.addRecipe("flammpfeil.slashblade.named.kamuy.base", new RecipeAwakeBladeTLS(new ResourceLocation("flammpfeil.slashblade","flammpfeil.slashblade.named.kamuy.base"),"bewitched_blade", blade_base, reqblade_base, new Object[]{
+					"SQS","IKI","SBS",'S', sphere,'K', reqblade_base,'Q', "gemQuartz",'I', "blockIron",'B', Items.BOOK
+			}));
+			ItemStack reqblade = SlashBlade.getCustomBlade("flammpfeil.slashblade.named.kamuy.water");
+			NBTTagCompound reqtag = ItemSlashBlade.getItemTagCompound(reqblade);
+			ItemSlashBlade.RepairCount.set(reqtag, 20);
+			ItemSlashBlade.KillCount.set(reqtag, 2000);
+			ItemSlashBlade.ProudSoul.set(reqtag, 5000);
+			SlashBlade.addRecipe("flammpfeil.slashblade.named.kamuy.water", new RecipeAwakeBladeTLS(new ResourceLocation("flammpfeil.slashblade","flammpfeil.slashblade.named.kamuy.water"),"bewitched_blade", blade_water, reqblade, new Object[]{
+					"S8S","4K6","S2S",
+					'S', sphere,'K', reqblade,'8',"blockLapis",'4', Blocks.ICE,'6', Blocks.SNOW,'2', Items.WATER_BUCKET
+			}));
+			SlashBlade.addRecipe("flammpfeil.slashblade.named.kamuy.fire", new RecipeAwakeBladeTLS(new ResourceLocation("flammpfeil.slashblade","flammpfeil.slashblade.named.kamuy.fire"),"bewitched_blade", blade_fire, reqblade, new Object[]{
+					"S8S","4K6","S2S",
+					'S', sphere,'K', reqblade,'8',"blockRedstone",'4',Items.FIRE_CHARGE,'6', Items.BLAZE_ROD,'2', Items.LAVA_BUCKET
+			}));
+			SlashBlade.addRecipe("flammpfeil.slashblade.named.kamuy.lightning", new RecipeAwakeBladeTLS(new ResourceLocation("flammpfeil.slashblade","flammpfeil.slashblade.named.kamuy.lightning"),"bewitched_blade", blade_lightning, reqblade, new Object[]{
+					"S8S","4K6","S2S",
+					'S', sphere,'K', reqblade,'8',"blockIron",'4', "blockGold",'6', "blockDiamond",'2', "blockEmerald"
+			}));
+			
+		    ItemStack sphere1 = SlashBlade.findItemStack("flammpfeil.slashblade", "sphere_bladesoul", 1);
+		    ItemSlashBlade.SpecialAttackType.set(sphere1.getTagCompound(), Integer.valueOf(0));
+		    ItemStack blade = SlashBlade.getCustomBlade("flammpfeil.slashblade.named.kirisaya");
+		    ItemStack reqiredBlade = new ItemStack(SlashBlade.wrapBlade);
+		    NBTTagCompound tag = ItemSlashBlade.getItemTagCompound(reqiredBlade);
+		    ItemSlashBlade.RepairCount.set(tag, Integer.valueOf(1));
+		    ItemSlashBlade.KillCount.set(tag, Integer.valueOf(1000));
+		    ItemSlashBlade.ProudSoul.set(tag, Integer.valueOf(20000));
+		    reqiredBlade.addEnchantment(Enchantments.SHARPNESS, 3);
+		    reqiredBlade.addEnchantment(Enchantments.POWER, 3);
+		    
+		    SlashBlade.addRecipe("flammpfeil.slashblade.named.kirisaya", new RecipeKiriSayaTLS(new ResourceLocation("flammpfeil.slashblade","flammpfeil.slashblade.named.kirisaya"),"sharpness", blade, reqiredBlade, sphere1, new Object[]{
+		    		"DGD", "ZBZ", "GDG", Character.valueOf('G'), new ItemStack(Items.GOLDEN_APPLE, 1, 1), Character.valueOf('D'), new ItemStack(Items.RECORD_11), Character.valueOf('B'), reqiredBlade, Character.valueOf('Z'), sphere1 
+		    }));
+		    
+	}
 	@SubscribeEvent
 	public static void initNihilRecipes(RegisterSlashBladeRecipeEvent event) {
 		if (!Loader.isModLoaded(SJAP.MODID))

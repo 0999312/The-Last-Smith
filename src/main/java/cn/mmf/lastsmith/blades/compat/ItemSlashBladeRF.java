@@ -284,16 +284,20 @@ public class ItemSlashBladeRF extends ItemSlashBladeNamedTLS implements IEnergyC
 		boolean par4 = arg3.isAdvanced();
 		if (par2EntityPlayer == null)
 			return;
-		addInformationOwner(stack, par2EntityPlayer, tooltip, par4);
-		addInformationSwordClass(stack, par2EntityPlayer, tooltip, par4);
-		addInformationKillCount(stack, par2EntityPlayer, tooltip, par4);
-		addInformationProudSoul(stack, par2EntityPlayer, tooltip, par4);
-		addInformationSpecialAttack(stack, par2EntityPlayer, tooltip, par4);
-		addInformationRepairCount(stack, par2EntityPlayer, tooltip, par4);
-		addInformationRangeAttack(stack, par2EntityPlayer, tooltip, par4);
-		addInformationSpecialEffec(stack, par2EntityPlayer, tooltip, par4);
-		addInformationMaxAttack(stack, par2EntityPlayer, tooltip, par4);
 		NBTTagCompound tag = getItemTagCompound(stack);
+		if (StringUtil.getInstance().isAltKeyDown()) {
+			addInformationOwner(stack, par2EntityPlayer, tooltip, par4);
+			addInformationSwordClass(stack, par2EntityPlayer, tooltip, par4);
+			addInformationKillCount(stack, par2EntityPlayer, tooltip, par4);
+			addInformationProudSoul(stack, par2EntityPlayer, tooltip, par4);
+			addInformationSpecialAttack(stack, par2EntityPlayer, tooltip, par4);
+			addInformationRepairCount(stack, par2EntityPlayer, tooltip, par4);
+			addInformationRangeAttack(stack, par2EntityPlayer, tooltip, par4);
+			addInformationSpecialEffec(stack, par2EntityPlayer, tooltip, par4);
+			addInformationMaxAttack(stack, par2EntityPlayer, tooltip, par4);
+		}else{
+			tooltip.add(I18n.format("lastsmith.info.hold_alt_for_details"));
+		}
 		if (tag.hasKey(adjustXStr)) {
 			float ax = tag.getFloat(adjustXStr);
 			float ay = tag.getFloat(adjustYStr);
@@ -304,31 +308,31 @@ public class ItemSlashBladeRF extends ItemSlashBladeNamedTLS implements IEnergyC
 			tooltip.add(TextFormatting.GOLD + I18n.format("blades.crafter") + ":" + TextFormatting.GRAY
 					+ BladeUtil.getname(tag));
 		}
-		if (StringUtil.displayShiftForDetail && !StringUtil.isShiftKeyDown()) {
+		if (StringUtil.displayShiftForDetail && !StringUtil.getInstance().isShiftKeyDown()) {
 			tooltip.add(I18n.format("info.cofh.holdShiftForDetails"));
 		}
-		if (!StringUtil.isShiftKeyDown()) {
+		if (!StringUtil.getInstance().isShiftKeyDown()) {
 			return;
 		}
 		if (stack.getTagCompound() == null) {
 			getItemTagCompound(stack).setInteger("Energy", 0);
 		}
-		tooltip.add(StringUtil.localize("info.cofh.charge") + ": " + StringUtil.getScaledNumber(getEnergyStored(stack))
-				+ " / " + StringUtil.getScaledNumber(getMaxEnergyStored(stack)) + " RF");
+		tooltip.add(StringUtil.getInstance().localize("info.cofh.charge") + ": " + StringUtil.getInstance().getScaledNumber(getEnergyStored(stack))
+				+ " / " + StringUtil.getInstance().getScaledNumber(getMaxEnergyStored(stack)) + " RF");
 		tooltip.add(StringUtil.ORANGE + getEnergyPerUse(stack) + " "
-				+ StringUtil.localize("info.flammpfeil.slashblade.tool.energyPerUse") + StringUtil.END);
-		tooltip.add(StringUtil.RED + StringUtil.localize("info.flammpfeil.slashblade.tool.user") + ": "
+				+ StringUtil.getInstance().localize("info.flammpfeil.slashblade.tool.energyPerUse") + StringUtil.END);
+		tooltip.add(StringUtil.RED + StringUtil.getInstance().localize("info.flammpfeil.slashblade.tool.user") + ": "
 				+ BladeUtil.Username.get(ItemSlashBlade.getItemTagCompound(stack)));
 		addEmpoweredTip(this, stack, tooltip);
 	}
 
 	public void addEmpoweredTip(IMultiModeBlade item, ItemStack stack, List<String> tooltip) {
 		if (!isEmpowered(stack)) {
-			tooltip.add(StringUtil.localizeFormat("info.flammpfeil.slashblade.tool.chargeOn",
-					StringUtil.getKeyName(ClientProxy.ChangeMode.getKeyCode())));
+			tooltip.add(StringUtil.getInstance().localizeFormat("info.flammpfeil.slashblade.tool.chargeOn",
+					StringUtil.getInstance().getKeyName(ClientProxy.ChangeMode.getKeyCode())));
 		} else {
-			tooltip.add(StringUtil.localizeFormat("info.flammpfeil.slashblade.tool.chargeOff",
-					StringUtil.getKeyName(ClientProxy.ChangeMode.getKeyCode())));
+			tooltip.add(StringUtil.getInstance().localizeFormat("info.flammpfeil.slashblade.tool.chargeOff",
+					StringUtil.getInstance().getKeyName(ClientProxy.ChangeMode.getKeyCode())));
 		}
 	}
 }

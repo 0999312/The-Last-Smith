@@ -48,7 +48,7 @@ public class SESharpness implements ISpecialEffect {
 			return;
 		}
 		NBTTagCompound tag = ItemSlashBlade.getItemTagCompound(event.blade);
-		float damage = ItemSlashBlade.BaseAttackModifier.get(tag, 10F)+ItemSlashBlade.RepairCount.get(tag, 0)
+		float damage = ItemSlashBlade.BaseAttackModifier.get(tag, 10F) + ItemSlashBlade.RepairCount.get(tag, 0)
 				+ (2.5F * EnchantmentHelper.getEnchantmentLevel(Enchantments.SHARPNESS, event.blade));
 		DamageSource ds = new EntityDamageSource("sharpness_blade", player);
 		event.target.attackEntityFrom(ds, damage);
@@ -99,7 +99,7 @@ public class SESharpness implements ISpecialEffect {
 
 	@Override
 	public String getEffectKey() {
-		return "extremeSharpness";
+		return "extreme_sharpness";
 	}
 
 }

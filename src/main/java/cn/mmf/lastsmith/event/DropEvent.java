@@ -138,7 +138,7 @@ public class DropEvent {
 				return;
 			if (!(attackItem.getItem() instanceof ItemSlashBlade))
 				return;
-			if (!AdvancementHelper.checkAdvancement((EntityPlayer) target, info.getAdvancement()))
+			if (!AdvancementHelper.getInstance().checkAdvancement((EntityPlayer) target, info.getAdvancement()))
 				return;
 
 			if ((event.isRecentlyHit() || forceDrop) && isDrop && info.getItemStack() != null

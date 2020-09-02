@@ -10,23 +10,21 @@ import cn.mmf.lastsmith.util.BladeUtil;
 import mods.flammpfeil.slashblade.ItemSlashBladeNamed;
 import mods.flammpfeil.slashblade.util.ResourceLocationRaw;
 import net.minecraft.client.resources.I18n;
-import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.NonNullList;
-import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.oredict.OreDictionary;
 
 public class ItemSlashBladeNamedTLS extends ItemSlashBladeTLS{
-	 public ItemSlashBladeNamedTLS(ToolMaterial par2EnumToolMaterial, float baseAttackModifiers) {
+	public ItemSlashBladeNamedTLS(ToolMaterial par2EnumToolMaterial, float baseAttackModifiers) {
 	        super(par2EnumToolMaterial, baseAttackModifiers);
-	    }
+	}
    
     private static ResourceLocationRaw texture = new ResourceLocationRaw("flammpfeil.slashblade","model/white.png");
 	public ResourceLocationRaw getModelTexture() {
@@ -38,16 +36,7 @@ public class ItemSlashBladeNamedTLS extends ItemSlashBladeTLS{
 		NBTTagCompound nbt = stack.getTagCompound();
 		BladeUtil.setPlayer(nbt,playerIn);
 	}
-	@SuppressWarnings({ "rawtypes", "unchecked" })
-	@Override
-    @SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack arg0, World arg1, List arg2, ITooltipFlag arg3) {
-		NBTTagCompound nbt = getItemTagCompound(arg0);
-		super.addInformation(arg0, arg1, arg2, arg3);
-		if(BladeUtil.getname(nbt) != null){
-			arg2.add(TextFormatting.GOLD + I18n.format("blades.crafter")+":"+TextFormatting.GRAY+BladeUtil.getname(nbt));	
-		}
-	}
+
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Override
     @SideOnly(Side.CLIENT)
@@ -100,19 +89,13 @@ public class ItemSlashBladeNamedTLS extends ItemSlashBladeTLS{
         if (!this.isInCreativeTab(tab)) return;
         if (this.isInCreativeTab(CreativeTabs.COMBAT)) return;
         for(String bladename : NamedBlades){
-            ItemStack blade = BladeLoader.getCustomBlade(bladename);
+            ItemStack blade = BladeLoader.getInstance().getCustomBlade(bladename);
             if(!blade.isEmpty()) {
-            	setCreativeCrafterName(blade);
                 if(blade.getItemDamage() == OreDictionary.WILDCARD_VALUE)
                     blade.setItemDamage(-1);
             	subItems.add(blade);
             }
         }
-    }
-    
-    @SideOnly(Side.CLIENT)
-    protected void setCreativeCrafterName(ItemStack blade){
-    	BladeUtil.setName(getItemTagCompound(blade), I18n.format("lastsmith.name.unnamed_smith"));
     }
     
 	@Override

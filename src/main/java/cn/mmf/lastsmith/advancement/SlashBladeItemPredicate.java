@@ -24,14 +24,7 @@ public class SlashBladeItemPredicate extends ItemPredicate {
         return !stack.isEmpty() && 
         		(BladeUtil.isMatchedBlade(stack, SlashBlade.getCustomBlade(blade_name))||
         		BladeUtil.isMatchedBlade(stack, SlashBlade.getCustomBlade(blade_name+".sample"))||
-        		BladeUtil.isMatchedBlade(stack, BladeLoader.getCustomBlade(blade_name)));
+        		BladeUtil.isMatchedBlade(stack, BladeLoader.getInstance().getCustomBlade(blade_name)));
     }
-//    public static void init() {
-//        ItemPredicates.register(new ResourceLocation(TLSMain.MODID, "slashblade"), SlashBladeItemPredicate::fromJson);
-//    }
-//
-//    public static ItemPredicate fromJson(JsonObject json) {
-//        return null;
-//    }
 	
 }

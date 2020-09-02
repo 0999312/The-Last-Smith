@@ -31,7 +31,7 @@ public class BladeRequirm {
 		ItemSlashBlade.setBaseAttackModifier(tag, 4.0F);
 		ItemSlashBlade.TextureName.set(tag, "named/scorn/texture_1");
 		ItemSlashBlade.ModelName.set(tag, "named/scorn/model");
-		BladeLoader.registerCustomItemStack("flammpfeil.slashblade.named.scorn_rust", customblade);
+		BladeLoader.getInstance().registerCustomItemStack("flammpfeil.slashblade.named.scorn_rust", customblade);
 		ItemSlashBladeNamedTLS.NamedBlades.add("flammpfeil.slashblade.named.scorn_rust");
 
 		ItemStack customblade1 = new ItemStack(BladeLoader.bladeNamed, 1, 0);
@@ -42,7 +42,7 @@ public class BladeRequirm {
 		ItemSlashBlade.setBaseAttackModifier(tag1, 6.0F);
 		ItemSlashBlade.TextureName.set(tag1, "named/scorn/texture_0");
 		ItemSlashBlade.ModelName.set(tag1, "named/scorn/model");
-		BladeLoader.registerCustomItemStack("flammpfeil.slashblade.named.scorn_sealed", customblade1);
+		BladeLoader.getInstance().registerCustomItemStack("flammpfeil.slashblade.named.scorn_sealed", customblade1);
 		ItemSlashBladeNamedTLS.NamedBlades.add("flammpfeil.slashblade.named.scorn_sealed");
 
 		ItemStack customblade2 = new ItemStack(BladeLoader.bladeNamed, 1, 0);
@@ -61,7 +61,7 @@ public class BladeRequirm {
 	    customblade2.addEnchantment(Enchantments.POWER,1);
 		ItemSlashBlade.TextureName.set(tag2, "named/scorn/texture");
 		ItemSlashBlade.ModelName.set(tag2, "named/scorn/model");
-		BladeLoader.registerCustomItemStack("flammpfeil.slashblade.named.scorn", customblade2);
+		BladeLoader.getInstance().registerCustomItemStack("flammpfeil.slashblade.named.scorn", customblade2);
 		ItemSlashBladeNamedTLS.NamedBlades.add("flammpfeil.slashblade.named.scorn");
 	}
 
@@ -70,16 +70,16 @@ public class BladeRequirm {
 		
 		DropEvent.registerEntityDrop(new ResourceLocation("twilightforest", "lich"),
 				new ResourceLocation(TLSMain.MODID, "bewitched_blade"), 1F,
-				BladeLoader.getCustomBlade("flammpfeil.slashblade.named.scorn_rust"), true);
-		ItemStack custombladeReqired = BladeLoader.getCustomBlade("flammpfeil.slashblade.named.scorn_rust");
+				BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.scorn_rust"), true);
+		ItemStack custombladeReqired = BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.scorn_rust");
 		NBTTagCompound reqTag = ItemSlashBlade.getItemTagCompound(custombladeReqired);
 		ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(500));
 		ItemSlashBlade.ProudSoul.set(reqTag, Integer.valueOf(10000));
 		ItemSlashBlade.RepairCount.set(reqTag, Integer.valueOf(5));
 		ItemStack itemSphereBladeSoul = SlashBlade.findItemStack("flammpfeil.slashblade", "sphere_bladesoul", 1);
 
-		RecipesUtil.addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.scorn_sealed",new RecipeAwakeBladeTLS(new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.scorn_sealed"),
-			"bewitched_blade", BladeLoader.getCustomBlade("flammpfeil.slashblade.named.scorn_sealed"), custombladeReqired,
+		RecipesUtil.getInstance().addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.scorn_sealed",new RecipeAwakeBladeTLS(new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.scorn_sealed"),
+			"bewitched_blade", BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.scorn_sealed"), custombladeReqired,
 			new Object[] {
 				"ADA",
 				"DBD",
@@ -88,13 +88,13 @@ public class BladeRequirm {
 				'B', custombladeReqired,
 				'D', "fullSakura"
 		}));
-		ItemStack custombladeReqired1 = BladeLoader.getCustomBlade("flammpfeil.slashblade.named.scorn_sealed");
+		ItemStack custombladeReqired1 = BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.scorn_sealed");
 		NBTTagCompound reqTag1 = ItemSlashBlade.getItemTagCompound(custombladeReqired1);
 		ItemSlashBlade.KillCount.set(reqTag1, Integer.valueOf(1000));
 		ItemSlashBlade.ProudSoul.set(reqTag1, Integer.valueOf(50000));
 		ItemSlashBlade.RepairCount.set(reqTag1, Integer.valueOf(10));
-		RecipesUtil.addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.scorn",new RecipeAwakeBladeTLS(new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.scorn"),
-			"bewitched_blade", BladeLoader.getCustomBlade("flammpfeil.slashblade.named.scorn"), custombladeReqired1,
+		RecipesUtil.getInstance().addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.scorn",new RecipeAwakeBladeTLS(new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.scorn"),
+			"bewitched_blade", BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.scorn"), custombladeReqired1,
 			new Object[] {
 				"DAD",
 				"ABA",

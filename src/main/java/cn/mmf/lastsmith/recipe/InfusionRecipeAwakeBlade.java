@@ -63,7 +63,7 @@ public class InfusionRecipeAwakeBlade extends InfusionRecipe {
 				if (ItemSlashBladeNamed.CurrentItemName.exists(newTag)) {
 					ItemStack tmp;
 					String key = ItemSlashBladeNamed.CurrentItemName.get(newTag);
-					tmp = BladeLoader.getCustomBlade(key);
+					tmp = BladeLoader.getInstance().getCustomBlade(key);
 
 					if (!tmp.isEmpty())
 						result = tmp;

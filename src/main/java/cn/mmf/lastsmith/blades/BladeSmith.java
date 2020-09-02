@@ -41,23 +41,22 @@ public class BladeSmith {
 		SpecialEffects.addEffect(customblade, SELoader.EXTREME_SHARPNESS);
 		ItemSlashBlade.TextureName.set(tag1, "named/smith/texture_final");
 		ItemSlashBlade.ModelName.set(tag1, "named/smith/model");
-//		ItemSlashBlade.SpecialAttackType.set(tag1, 263);
-		BladeLoader.registerCustomItemStack("flammpfeil.slashblade.named.smith.final", customblade);
+		BladeLoader.getInstance().registerCustomItemStack("flammpfeil.slashblade.named.smith.final", customblade);
 		ItemSlashBladeNamedTLS.NamedBlades.add("flammpfeil.slashblade.named.smith.final");
 	}
 
 	@SubscribeEvent
 	public static void onRecipeRegister(RegisterSlashBladeRecipeEvent event) {
-		ItemStack sb = BladeLoader.getCustomBlade("flammpfeil.slashblade.named.nagasada");
-		ItemStack reqiredMain = BladeLoader.getCustomBlade("flammpfeil.slashblade.named.amagumo.wind");
-		ItemStack reqiredSub = BladeLoader.getCustomBlade("flammpfeil.slashblade.named.amagumo.cloud");
+		ItemStack sb = BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.nagasada");
+		ItemStack reqiredMain = BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.amagumo.wind");
+		ItemStack reqiredSub = BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.amagumo.cloud");
 		NBTTagCompound reqTag = ItemSlashBlade.getItemTagCompound(sb);
 		ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(5000));
 		ItemSlashBlade.ProudSoul.set(reqTag, Integer.valueOf(10000));
 		ItemSlashBlade.RepairCount.set(reqTag, Integer.valueOf(10));
-		RecipesUtil.addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.smith.final", new RecipeTriBladeTLS(
+		RecipesUtil.getInstance().addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.smith.final", new RecipeTriBladeTLS(
 			new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.smith.final"),
-			"amagumo", BladeLoader.getCustomBlade("flammpfeil.slashblade.named.smith.final"), sb,
+			"amagumo", BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.smith.final"), sb,
 			1, 1, reqiredMain, 1, 0, false, reqiredSub, 1, 2, false,
 			new Object[] { 
 				"GAG",

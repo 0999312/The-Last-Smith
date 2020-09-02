@@ -31,16 +31,16 @@ public class BladeNagasada {
 		ItemSlashBlade.TextureName.set(tag1, "named/namedblade/texture_nagasada");
 		ItemSlashBlade.ModelName.set(tag1, "named/namedblade/model_stright");
 
-		BladeLoader.registerCustomItemStack("flammpfeil.slashblade.named.nagasada", customblade);
+		BladeLoader.getInstance().registerCustomItemStack("flammpfeil.slashblade.named.nagasada", customblade);
 		ItemSlashBladeNamedTLS.NamedBlades.add("flammpfeil.slashblade.named.nagasada");
 	}
 
 	@SubscribeEvent
 	public static void onRecipeRegister(RegisterSlashBladeRecipeEvent event) {
 		ItemStack request = new ItemStack(BladeLoader.blade);
-		RecipesUtil.addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.nagasada", new RecipeAwakeBladeTLS(
+		RecipesUtil.getInstance().addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.nagasada", new RecipeAwakeBladeTLS(
 			new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.nagasada"),
-			"slashblade_white", BladeLoader.getCustomBlade("flammpfeil.slashblade.named.nagasada"), request, 
+			"slashblade_white", BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.nagasada"), request, 
 			new Object[] {
 				"SDS",
 				"PBP",

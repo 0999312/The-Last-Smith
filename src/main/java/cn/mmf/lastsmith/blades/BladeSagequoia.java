@@ -39,7 +39,7 @@ public class BladeSagequoia {
 		ItemSlashBlade.ModelName.set(tag, "named/sagequoia/model");
 		ItemSlashBlade.SpecialAttackType.set(tag, Integer.valueOf(5));
 		ItemSlashBlade.StandbyRenderType.set(tag, Integer.valueOf(3));
-		BladeLoader.registerCustomItemStack(name, customblade);
+		BladeLoader.getInstance().registerCustomItemStack(name, customblade);
 		ItemSlashBladeNamedTLS.NamedBlades.add(name);
 		customblade.addEnchantment(Enchantments.UNBREAKING, 10);
 		customblade.addEnchantment(Enchantments.SHARPNESS, 7);
@@ -53,8 +53,8 @@ public class BladeSagequoia {
 		ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(2300));
 		ItemStack itemSphereBladeSoul = SlashBlade.findItemStack("flammpfeil.slashblade", "sphere_bladesoul", 1);
 
-		RecipesUtil.addRecipe(TLSMain.MODID,name, new RecipeAwakeBladeTLS(new ResourceLocation(TLSMain.MODID, name), 
-			"bewitched_blade", BladeLoader.getCustomBlade(name),custombladeReqired,new Object[] {
+		RecipesUtil.getInstance().addRecipe(TLSMain.MODID,name, new RecipeAwakeBladeTLS(new ResourceLocation(TLSMain.MODID, name), 
+			"bewitched_blade", BladeLoader.getInstance().getCustomBlade(name),custombladeReqired,new Object[] {
 				"ADA",
 				"CBC",
 				"ADA",
