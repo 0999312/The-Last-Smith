@@ -19,6 +19,10 @@ public class PlayerEventRegister {
 			}
 		}
 		if (TLSConfig.slashblade_action_cooldown_enable && TLSConfig.slashblade_action_cooldown > 0) {
+			if(event.getPlayer().getCooldownTracker().hasCooldown(event.getBlade().getItem())) {
+				event.setCanceled(true);
+				return ;
+			}
 			event.getPlayer().getCooldownTracker().setCooldown(blade.getItem(), 
 					(int)(event.getComboSeq().comboResetTicks * TLSConfig.slashblade_action_cooldown));
 		}

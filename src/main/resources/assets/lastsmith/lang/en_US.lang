@@ -1,39 +1,39 @@
 ﻿///////////
 
-item.lastsmith.white_top.name=Top-白鞘-
+item.lastsmith.white_top.name=Top-White-
 item.flammpfeil.slashblade.named.sweapon.name=Sweapon
 item.flammpfeil.slashblade.named.slashblade_old.name=SlashBlade-Sweapon-
 
-item.flammpfeil.slashblade.named.kanrou_fake.name=Faked-观楼剑-
-item.flammpfeil.slashblade.named.kanrou.name=Named-观楼剑-
-item.flammpfeil.slashblade.named.hakurou_fake.name=Faked-白楼剑-
-item.flammpfeil.slashblade.named.hakurou.name=-白楼剑-
-item.flammpfeil.slashblade.named.roukan.name=-楼观剑-
-item.flammpfeil.slashblade.named.roukan_nether.name=Gokukaiken-楼观剑-
-item.flammpfeil.slashblade.named.hakurou_nether.name=Gokukaiken-白楼剑-
+item.flammpfeil.slashblade.named.kanrou_fake.name=Faked-Kanrouken-
+item.flammpfeil.slashblade.named.kanrou.name=Named-Kanrouken-
+item.flammpfeil.slashblade.named.hakurou_fake.name=Faked-Hakurouken-
+item.flammpfeil.slashblade.named.hakurou.name=-Hakurouken-
+item.flammpfeil.slashblade.named.roukan.name=-Roukanken-
+item.flammpfeil.slashblade.named.roukan_nether.name=Gokukaiken-Roukanken-
+item.flammpfeil.slashblade.named.hakurou_nether.name=Gokukaiken-Hakurouken-
 item.flammpfeil.slashblade.named.roukan_xf.name=楼观旋风刃
 item.flammpfeil.slashblade.named.bailou_xf.name=白楼旋风刃
 
-item.flammpfeil.slashblade.named.eievui.name=伊布之刃
+item.flammpfeil.slashblade.named.eievui.name=-Eievui-
 
-item.flammpfeil.slashblade.named.kusabimaru.name=Named-楔丸-
-item.flammpfeil.slashblade.named.fushikiri.name=Fushigiri-拜泪-
+item.flammpfeil.slashblade.named.kusabimaru.name=Named-Kusabimaru-
+item.flammpfeil.slashblade.named.fushikiri.name=Fushigiri-Hairui-
 
-item.flammpfeil.slashblade.named.nagasada.name=自锻刀-永贞-
+item.flammpfeil.slashblade.named.nagasada.name=Selforged-Nagasada-
 item.flammpfeil.slashblade.named.amagumo.wind.name=Amagumo-Wind-
 item.flammpfeil.slashblade.named.amagumo.cloud.name=Amagumo-Cloud-
-item.flammpfeil.slashblade.named.smith.final.name=Amagumo-Munen-
+item.flammpfeil.slashblade.named.smith.final.name=Amagumo-Munin-
 
-item.flammpfeil.slashblade.named.sakura.name=驱魔刃-樱-
-item.flammpfeil.slashblade.named.ginkgo.name=驱魔刃-杏-
-item.flammpfeil.slashblade.named.yukikage.name=驱魔刃-雪影-
-item.flammpfeil.slashblade.named.kataware.name=邪魔刃-双-
-item.flammpfeil.slashblade.named.shura.name=邪魔刃-修罗-
+item.flammpfeil.slashblade.named.sakura.name=Exorcism-Sakura-
+item.flammpfeil.slashblade.named.ginkgo.name=Exorcism-Ginkgo-
+item.flammpfeil.slashblade.named.yukikage.name=Exorcism-Yukikage-
+item.flammpfeil.slashblade.named.kataware.name=Evil-Kataware-
+item.flammpfeil.slashblade.named.shura.name=Evil-Shura-
 
-item.flammpfeil.slashblade.named.nanosaber.name=纳米太刀
-item.flammpfeil.slashblade.named.quantumsaber.name=量子太刀
-item.flammpfeil.slashblade.named.yingjian.name=-樱剪-
-item.flammpfeil.slashblade.named.wenshi.name=-文始-
+item.flammpfeil.slashblade.named.nanosaber.name=Nano Blade
+item.flammpfeil.slashblade.named.quantumsaber.name=Quantum Blade
+item.flammpfeil.slashblade.named.yingjian.name=-Sakura-giri-
+item.flammpfeil.slashblade.named.wenshi.name=-Bunshi-
 
 item.flammpfeil.slashblade.named.sagequoia.name=Named-Sagequoia-
 item.flammpfeil.slashblade.named.murakumo.name=天丛云
@@ -45,7 +45,7 @@ item.flammpfeil.slashblade.named.mmf.r_liu.name=渝州-长清-
 item.flammpfeil.slashblade.named.mmf.fox.name=无铭-影狐-
 item.flammpfeil.slashblade.named.mmf.nethop.name=-V.V.V.V.V.-
 item.flammpfeil.slashblade.named.mmf.lrsoft.name=-祭钢刃-
-item.flammpfeil.slashblade.named.mmf.tartaric_acid.name=日耀剑-光日-
+item.flammpfeil.slashblade.named.mmf.tartaric_acid.name=Nichiyo-Koni-
 
 item.flammpfeil.slashblade.named.kogawa_normal.name=Common-SlashEdge-
 item.flammpfeil.slashblade.named.kogawa_rare.name=Named-SlashEdge-
