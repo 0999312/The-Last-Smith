@@ -3,6 +3,7 @@ package cn.mmf.lastsmith.recipe;
 import java.util.Iterator;
 import java.util.Map;
 
+import cn.mmf.lastsmith.TLSConfig;
 import cn.mmf.lastsmith.advancement.AdvancementHelper;
 import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.ItemSlashBladeNamed;
@@ -122,8 +123,14 @@ public class RecipeTriBladeTLS extends ShapedOreRecipe {
 	private static boolean matchesCount(ItemStack slot, ItemStack required) {
 		NBTTagCompound tagSlot = ItemSlashBlade.getItemTagCompound(slot);
 		NBTTagCompound tagReq = ItemSlashBlade.getItemTagCompound(required);
+		
+        int require_kill_count = ItemSlashBlade.KillCount.get(tagReq);
+        if(TLSConfig.advanced_mode) {
+        	require_kill_count = (int) (require_kill_count * (TLSConfig.kill_count_multiplier / 100F));
+        }
+		
 		return tagValueCompare(ItemSlashBlade.ProudSoul, tagSlot, tagReq) >= 0
-				&& tagValueCompare(ItemSlashBlade.KillCount, tagSlot, tagReq) >= 0
+				&& (ItemSlashBlade.KillCount.get(tagSlot) >= require_kill_count)
 				&& tagValueCompare(ItemSlashBlade.RepairCount, tagSlot, tagReq) >= 0;
 	}
 
@@ -214,6 +221,10 @@ public class RecipeTriBladeTLS extends ShapedOreRecipe {
 	}
 
 	public boolean isGoodForCrafting(InventoryCrafting inv, World world, String name) {
+		if (!TLSConfig.advanced_mode)
+			return true;
+		if (!TLSConfig.recipe_lock_enable)
+			return true;
 		Container container = inv.eventHandler;
 		if (container == null) {
 			return false;

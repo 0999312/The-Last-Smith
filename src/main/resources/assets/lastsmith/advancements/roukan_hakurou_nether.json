@@ -1,0 +1,44 @@
+{
+   "display" : {
+      "title" : {
+         "translate" : "achievement.lastsmith.roukan_hakurou_nether.title"
+      },
+      "description" : {
+         "translate" : "achievement.lastsmith.roukan_hakurou_nether.desc",
+         "with" : [ "\n" ]
+      },
+      "icon" : {
+         "item" : "flammpfeil.slashblade:slashbladenamed",
+         "data" : 0,
+         "nbt" : "{ench: [{lvl:1,id:35}], ModelName: \"named/roukan/model\", TextureName: \"named/roukan/texture_tx\"}"
+      },
+      "frame" : "goal"
+   },
+   "parent" : "lastsmith:roukan_hakurou",
+   "criteria" : {
+      "crafting" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.roukan_nether"
+               },
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.hakurou_nether"
+               }
+            ]
+         }
+      },
+      "blade" : {
+         "trigger" : "lastsmith:has_advancement",
+         "conditions" : {
+            "advancement" : "lastsmith:fushikiri"
+         }
+      }
+   },
+   "rewards" : {
+      "loot" : [ "lastsmith:advancements/roukan_hakurou_nether" ]
+   }
+}

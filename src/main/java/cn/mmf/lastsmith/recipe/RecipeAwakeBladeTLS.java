@@ -18,6 +18,7 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
 import java.util.Iterator;
 import java.util.Map;
 
+import cn.mmf.lastsmith.TLSConfig;
 import cn.mmf.lastsmith.advancement.AdvancementHelper;
 import cn.mmf.lastsmith.util.BladeUtil;
 
@@ -54,10 +55,14 @@ public class RecipeAwakeBladeTLS extends ShapedOreRecipe {
 
                     if(!curIs.getUnlocalizedName().equals(requiredStateBlade.getUnlocalizedName()))
                         return false;
-
+                    int require_kill_count = ItemSlashBlade.KillCount.get(reqTag);
+                    if(TLSConfig.advanced_mode) {
+                    	require_kill_count *= (TLSConfig.kill_count_multiplier/100);
+                    }
+                    
                     if(ItemSlashBlade.ProudSoul.get(reqTag) > ItemSlashBlade.ProudSoul.get(srcTag))
                         return false;
-                    if(ItemSlashBlade.KillCount.get(reqTag) > ItemSlashBlade.KillCount.get(srcTag))
+                    if(require_kill_count > ItemSlashBlade.KillCount.get(srcTag))
                         return false;
                     if(ItemSlashBlade.RepairCount.get(reqTag) > ItemSlashBlade.RepairCount.get(srcTag))
                         return false;
@@ -100,8 +105,8 @@ public class RecipeAwakeBladeTLS extends ShapedOreRecipe {
 
                 if(oldTag.hasUniqueId("Owner"))
                     newTag.setUniqueId("Owner",oldTag.getUniqueId("Owner"));
-                if(BladeUtil.IsBewitchedActived.exists(oldTag))
-                    BladeUtil.IsBewitchedActived.set(newTag, BladeUtil.IsBewitchedActived.get(oldTag));
+                if(BladeUtil.getInstance().IsBewitchedActived.exists(oldTag))
+                	BladeUtil.getInstance().IsBewitchedActived.set(newTag, BladeUtil.getInstance().IsBewitchedActived.get(oldTag));
                 if(oldTag.hasKey(ItemSlashBlade.adjustXStr))
                     newTag.setFloat(ItemSlashBlade.adjustXStr,oldTag.getFloat(ItemSlashBlade.adjustXStr));
                 if(oldTag.hasKey(ItemSlashBlade.adjustYStr))
@@ -139,6 +144,10 @@ public class RecipeAwakeBladeTLS extends ShapedOreRecipe {
 		return result;
 	}
     public boolean isGoodForCrafting(InventoryCrafting inv,World world,String name) {
+		if (!TLSConfig.advanced_mode)
+			return true;
+		if (!TLSConfig.recipe_lock_enable)
+			return true;
         Container container = inv.eventHandler;
         if(container == null) {
             return false;

@@ -1,0 +1,95 @@
+{
+   "display" : {
+      "title" : {
+         "translate" : "achievement.lastsmith.namedblade_2.title"
+      },
+      "description" : {
+         "translate" : "achievement.lastsmith.namedblade_2.desc",
+         "with" : [ "\n" ]
+      },
+      "icon" : {
+         "item" : "flammpfeil.slashblade:slashbladenamed",
+         "data" : 0,
+         "nbt" : "{ModelName: \"named/namedblade/model_stright\", TextureName: \"named/namedblade/texture_nagasada\"}"
+      },
+      "frame" : "goal"
+   },
+   "parent" : "lastsmith:slashblade_white",
+   "criteria" : {
+      "blade" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.kogawa_super"
+               }
+            ]
+         }
+      },
+      "blade1" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.kusabimaru"
+               }
+            ]
+         }
+      },
+      "blade2" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.nagasada"
+               }
+            ]
+         }
+      },
+      "blade3" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.yamazakura.kadomatsu"
+               }
+            ]
+         }
+      },
+      "blade4" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.yamazakura.ume"
+               }
+            ]
+         }
+      },
+      "blade5" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.yamazakura.sakura"
+               }
+            ]
+         }
+      },
+      "white" : {
+         "trigger" : "lastsmith:has_advancement",
+         "conditions" : {
+            "advancement" : "lastsmith:slashblade_white"
+         }
+      }
+   },
+   "rewards" : {
+      "loot" : [ "lastsmith:advancements/named_2" ]
+   }
+}

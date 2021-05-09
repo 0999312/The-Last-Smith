@@ -11,7 +11,7 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 
-version = "2.0.5-1.12.2"
+version = "2.1.6-1.12.2"
 group = "net.langball"
 archivesBaseName = "TLS"
 
@@ -93,9 +93,9 @@ dependencies {
     runtime "mezz.jei:jei_1.12.2:4.14.3.238"
 	
     compile "vazkii.patchouli:Patchouli:1.0-16.84"
-	deobfCompile "curse.maven:baubles:2518667"
+	deobfCompile "curse.maven:baubles-227083:2518667"
 	deobfCompile "vazkii.botania:Botania:r1.10-357.7"
-	deobfCompile "curse.maven:thaumcraft:2629023"
-	deobfCompile "curse.maven:industrial-craft:2980904"
-	deobfCompile "curse.maven:the-twilight-forest:2818055"
+	deobfCompile "curse.maven:thaumcraft-223628:2629023"
+	deobfCompile "curse.maven:industrial-craft-242638:2980904"
+	deobfCompile "curse.maven:the-twilight-forest-227639:2818055"
 }

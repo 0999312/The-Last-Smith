@@ -10,7 +10,6 @@ import java.util.List;
 import cn.mmf.lastsmith.item.ItemSlashBladeNamedTLS;
 import cn.mmf.lastsmith.util.BladeUtil;
 import cn.mmf.lastsmith.util.IMultiModeBlade;
-import mods.flammpfeil.slashblade.TagPropertyAccessor;
 import mods.flammpfeil.slashblade.ability.StylishRankManager;
 import mods.flammpfeil.slashblade.entity.EntityDrive;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
@@ -31,18 +30,6 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemSlashBladeEU extends ItemSlashBladeNamedTLS implements IElectricItem, IItemHudInfo, IMultiModeBlade {
-//	public static int maxEnergy = 200000;
-//	public static int maxTransfer = 4096;
-//	public int energyPerUse = 500;
-//	public int energyPerUseCharged = 800;
-	public static final TagPropertyAccessor.TagPropertyInteger MAXENERGY = new TagPropertyAccessor.TagPropertyInteger(
-			"maxEnergy");
-	public static final TagPropertyAccessor.TagPropertyInteger MAXTRANSFER = new TagPropertyAccessor.TagPropertyInteger(
-			"maxTransfer");
-	public static final TagPropertyAccessor.TagPropertyInteger ENERGYPERUSE = new TagPropertyAccessor.TagPropertyInteger(
-			"energyPerUse");
-	public static final TagPropertyAccessor.TagPropertyInteger ENERGYPERUSECHARGED = new TagPropertyAccessor.TagPropertyInteger(
-			"energyPerUseCharged");
 
 	public ItemSlashBladeEU(Item.ToolMaterial par2EnumToolMaterial, float baseAttackModifiers) {
 		super(par2EnumToolMaterial, baseAttackModifiers);
@@ -67,7 +54,7 @@ public class ItemSlashBladeEU extends ItemSlashBladeNamedTLS implements IElectri
 
 	public double getMaxCharge(ItemStack itemStack) {
 		NBTTagCompound tag = getItemTagCompound(itemStack);
-		return MAXENERGY.get(tag, 200000);
+		return BladeUtil.getInstance().MAXENERGY.get(tag, 200000);
 	}
 
 	public int getTier(ItemStack itemStack) {
@@ -76,7 +63,7 @@ public class ItemSlashBladeEU extends ItemSlashBladeNamedTLS implements IElectri
 
 	public double getTransferLimit(ItemStack itemStack) {
 		NBTTagCompound tag = getItemTagCompound(itemStack);
-		return MAXTRANSFER.get(tag, 4096);
+		return BladeUtil.getInstance().MAXTRANSFER.get(tag, 4096);
 	}
 
 	@Override
@@ -84,8 +71,8 @@ public class ItemSlashBladeEU extends ItemSlashBladeNamedTLS implements IElectri
 		NBTTagCompound tag = getItemTagCompound(par1ItemStack);
 		ResourceLocationRaw result = ((ItemSlashBladeNamedTLS) par1ItemStack.getItem()).getModelTexture();
 		if (isEmpowered(par1ItemStack)) {
-			if (BladeUtil.TextureOnName.exists(tag)) {
-				String textureName = BladeUtil.TextureOnName.get(tag);
+			if (BladeUtil.getInstance().TextureOnName.exists(tag)) {
+				String textureName = BladeUtil.getInstance().TextureOnName.get(tag);
 				ResourceLocationRaw loc;
 				if (!textureMap.containsKey(textureName)) {
 					loc = new ResourceLocationRaw("flammpfeil.slashblade", "model/" + textureName + ".png");
@@ -114,8 +101,8 @@ public class ItemSlashBladeEU extends ItemSlashBladeNamedTLS implements IElectri
 		NBTTagCompound tag = getItemTagCompound(par1ItemStack);
 		ResourceLocationRaw result = ((ItemSlashBladeNamedTLS) par1ItemStack.getItem()).getModel();
 		if (isEmpowered(par1ItemStack)) {
-			if (BladeUtil.ModelOnName.exists(tag)) {
-				String textureName = BladeUtil.ModelOnName.get(tag);
+			if (BladeUtil.getInstance().ModelOnName.exists(tag)) {
+				String textureName = BladeUtil.getInstance().ModelOnName.get(tag);
 				ResourceLocationRaw loc;
 				if (!modelMap.containsKey(textureName)) {
 					loc = new ResourceLocationRaw("flammpfeil.slashblade", "model/" + textureName + ".obj");
@@ -145,8 +132,8 @@ public class ItemSlashBladeEU extends ItemSlashBladeNamedTLS implements IElectri
 	public void addInformation(ItemStack arg0, World arg1, List arg2, ITooltipFlag arg3) {
 		super.addInformation(arg0, arg1, arg2, arg3);
 		arg2.add(I18n.format("info.flammpfeil.slashblade.tool.user") + ": "
-				+ BladeUtil.Username.get(ItemSlashBlade.getItemTagCompound(arg0)));
-		arg2.add("Stored EU : " + (int) ElectricItem.manager.getCharge(arg0) + "/" + MAXENERGY.get(ItemSlashBlade.getItemTagCompound(arg0), 200000) + " EU");
+				+ BladeUtil.getInstance().Username.get(ItemSlashBlade.getItemTagCompound(arg0)));
+		arg2.add("Stored EU : " + (int) ElectricItem.manager.getCharge(arg0) + "/" + BladeUtil.getInstance().MAXENERGY.get(ItemSlashBlade.getItemTagCompound(arg0), 200000) + " EU");
 		arg2.add("PowerTier 2");
 	}
 
@@ -158,12 +145,12 @@ public class ItemSlashBladeEU extends ItemSlashBladeNamedTLS implements IElectri
 			if (IsBroken.get(tag).booleanValue()) {
 				cancel = true;
 			}
-			if (BladeUtil.Username.exists(tag)) {
-				if (!player.getName().toString().trim().equals(BladeUtil.Username.get(tag).trim())) {
+			if (BladeUtil.getInstance().Username.exists(tag)) {
+				if (!player.getName().toString().trim().equals(BladeUtil.getInstance().Username.get(tag).trim())) {
 					cancel = true;
 				}
 			} else {
-				BladeUtil.Username.set(tag, player.getName().toString());
+				BladeUtil.getInstance().Username.set(tag, player.getName().toString());
 			}
 			if (cancel) {
 				player.world.playSound(null, player.getPosition(), SoundEvents.BLOCK_NOTE_BASS, SoundCategory.PLAYERS,
@@ -182,7 +169,7 @@ public class ItemSlashBladeEU extends ItemSlashBladeNamedTLS implements IElectri
 
 	public boolean isEmpowered(ItemStack stack) {
 		NBTTagCompound tag = getItemTagCompound(stack);
-		return getMode(stack) == 1 && ElectricItem.manager.getCharge(stack) >= ENERGYPERUSECHARGED.get(tag, 800);
+		return getMode(stack) == 1 && ElectricItem.manager.getCharge(stack) >= BladeUtil.getInstance().ENERGYPERUSECHARGED.get(tag, 800);
 	}
 
 	@Override
@@ -190,7 +177,7 @@ public class ItemSlashBladeEU extends ItemSlashBladeNamedTLS implements IElectri
 	public boolean hitEntity(ItemStack stack, EntityLivingBase entity, EntityLivingBase player) {
 		NBTTagCompound tag = getItemTagCompound(stack);
 		int rank = StylishRankManager.getStylishRank(player);
-		int usage = (int) (ENERGYPERUSE.get(tag, 500) * Math.pow(2.0D, rank));
+		int usage = (int) (BladeUtil.getInstance().ENERGYPERUSE.get(tag, 500) * Math.pow(2.0D, rank));
 		if ((isEmpowered(stack)) && (ElectricItem.manager.use(stack, usage, player))
 				&& ((player instanceof EntityPlayer))) {
 			entity.hurtResistantTime = 0;
@@ -204,7 +191,7 @@ public class ItemSlashBladeEU extends ItemSlashBladeNamedTLS implements IElectri
 				&& ((!isCurrent) || (OnClick.get(tag).booleanValue()) || (((par3Entity instanceof EntityPlayer))))) {
 			if (!par2World.isRemote) {
 				EntityPlayer player = (EntityPlayer) par3Entity;
-				int runingCost = ENERGYPERUSE.get(tag, 500);
+				int runingCost = BladeUtil.getInstance().ENERGYPERUSE.get(tag, 1000);
 				ElectricItem.manager.use(sitem, runingCost, player);
 				int rankPoint = StylishRankManager.getTotalRankPoint(par3Entity);
 				int aRankPoint = (int) (StylishRankManager.RankRange * 7D);
@@ -214,7 +201,7 @@ public class ItemSlashBladeEU extends ItemSlashBladeNamedTLS implements IElectri
 				}
 			}
 
-			if ((BladeUtil.Username.exists(tag)) && (!par3Entity.getName().toString().trim().equals(BladeUtil.Username.get(tag).trim()))) {
+			if ((BladeUtil.getInstance().Username.exists(tag)) && (!par3Entity.getName().toString().trim().equals(BladeUtil.getInstance().Username.get(tag).trim()))) {
 				setMode(sitem, 0);
 			}
 			double d0 = itemRand.nextGaussian() * 0.02D;
@@ -242,7 +229,7 @@ public class ItemSlashBladeEU extends ItemSlashBladeNamedTLS implements IElectri
 
 	protected int getEnergyPerUse(ItemStack stack) {
 		NBTTagCompound tag = getItemTagCompound(stack);
-		return isEmpowered(stack) ? ENERGYPERUSECHARGED.get(tag, 800) : ENERGYPERUSE.get(tag, 500);
+		return isEmpowered(stack) ? BladeUtil.getInstance().ENERGYPERUSECHARGED.get(tag, 800) : BladeUtil.getInstance().ENERGYPERUSE.get(tag, 500);
 	}
 
 	public void onStartupEmpowered(EntityPlayer player, ItemStack stack) {
@@ -279,7 +266,7 @@ public class ItemSlashBladeEU extends ItemSlashBladeNamedTLS implements IElectri
 			energyUsage += rankAmount * 2;
 			StylishRankManager.addRankPoint(player, rankAmount);
 		}
-		ElectricItem.manager.use(stack, ENERGYPERUSE.get(tag, 500), player);
+		ElectricItem.manager.use(stack, BladeUtil.getInstance().ENERGYPERUSE.get(tag, 500), player);
 	}
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })

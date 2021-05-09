@@ -9,6 +9,13 @@
       },
       {
          "type" : "crafting",
+         "flag":"mod:tfc",
+         "recipe" : "lastsmith:blade_wood_tfc",
+         "recipe2" : "lastsmith:wooden_saya_tfc"
+      },
+      {
+         "type" : "crafting",
+       "flag":"!mod:tfc",
          "recipe" : "lastsmith:blade_wood",
          "recipe2" : "lastsmith:wooden_saya"
       },

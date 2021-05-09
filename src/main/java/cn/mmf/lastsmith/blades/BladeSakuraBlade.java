@@ -36,7 +36,7 @@ public class BladeSakuraBlade {
 		ItemSlashBlade.ModelName.set(tag1, "named/sakura/model");
 		ItemSlashBlade.SpecialAttackType.set(tag1, 265);
 		ItemSlashBladeNamed.IsDefaultBewitched.set(tag1, true);
-		BladeUtil.IsBewitchedActived.set(tag1, true);
+		BladeUtil.getInstance().IsBewitchedActived.set(tag1, true);
 		BladeLoader.getInstance().registerCustomItemStack("flammpfeil.slashblade.named.sakura", customblade);
 		ItemSlashBladeNamedTLS.NamedBlades.add("flammpfeil.slashblade.named.sakura");
 		
@@ -54,7 +54,7 @@ public class BladeSakuraBlade {
 		ItemSlashBlade.SummonedSwordColor.set(tag2, 0xf8bb28);
 		ItemSlashBlade.SpecialAttackType.set(tag2, 265);
 		ItemSlashBladeNamed.IsDefaultBewitched.set(tag2, true);
-		BladeUtil.IsBewitchedActived.set(tag2, true);
+		BladeUtil.getInstance().IsBewitchedActived.set(tag2, true);
 		BladeLoader.getInstance().registerCustomItemStack("flammpfeil.slashblade.named.ginkgo", customblade2);
 		ItemSlashBladeNamedTLS.NamedBlades.add("flammpfeil.slashblade.named.ginkgo");
 		
@@ -72,7 +72,7 @@ public class BladeSakuraBlade {
 		ItemSlashBlade.SummonedSwordColor.set(tag3, 0xF0F8FF);
 		ItemSlashBlade.SpecialAttackType.set(tag3, 265);
 		ItemSlashBladeNamed.IsDefaultBewitched.set(tag3, true);
-		BladeUtil.IsBewitchedActived.set(tag3, true);
+		BladeUtil.getInstance().IsBewitchedActived.set(tag3, true);
 		BladeLoader.getInstance().registerCustomItemStack("flammpfeil.slashblade.named.yukikage", customblade3);
 		ItemSlashBladeNamedTLS.NamedBlades.add("flammpfeil.slashblade.named.yukikage");
 		
@@ -90,7 +90,7 @@ public class BladeSakuraBlade {
 		ItemSlashBlade.SummonedSwordColor.set(tag4, 0xDD0033);
 		ItemSlashBlade.SpecialAttackType.set(tag4, 265);
 		ItemSlashBladeNamed.IsDefaultBewitched.set(tag4, true);
-		BladeUtil.IsBewitchedActived.set(tag4, true);
+		BladeUtil.getInstance().IsBewitchedActived.set(tag4, true);
 		BladeLoader.getInstance().registerCustomItemStack("flammpfeil.slashblade.named.kataware", customblade4);
 		ItemSlashBladeNamedTLS.NamedBlades.add("flammpfeil.slashblade.named.kataware");
 		
@@ -108,7 +108,7 @@ public class BladeSakuraBlade {
 		ItemSlashBlade.SummonedSwordColor.set(tag5, 0xDD0033);
 		ItemSlashBlade.SpecialAttackType.set(tag5, 265);
 		ItemSlashBladeNamed.IsDefaultBewitched.set(tag5, true);
-		BladeUtil.IsBewitchedActived.set(tag5, true);
+		BladeUtil.getInstance().IsBewitchedActived.set(tag5, true);
 		BladeLoader.getInstance().registerCustomItemStack("flammpfeil.slashblade.named.shura", customblade5);
 		ItemSlashBladeNamedTLS.NamedBlades.add("flammpfeil.slashblade.named.shura");
 	}

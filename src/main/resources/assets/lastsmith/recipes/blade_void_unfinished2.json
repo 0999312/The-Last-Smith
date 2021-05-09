@@ -1,0 +1,31 @@
+{
+   "conditions" : [
+         {
+            "type" : "forge:mod_loaded",
+            "modid" : "thaumcraft"
+         }
+   ],
+   "type" : "minecraft:crafting_shaped",
+   "pattern" : [
+	"  S",
+	" S ",
+	"# D"
+	],
+   "key" : {
+      "#" : {
+      "item" : "lastsmith:blade",
+	  "data" : 26
+      },
+      "S" : {
+         "type" : "forge:ore_dict",
+         "ore" : "ingotVoid"
+      },
+      "D" : {
+         "item" : "#TOOLFORGINGHAMMER"
+      }
+   },
+   "result" : {
+      "item" : "lastsmith:blade",
+	  "data" : 28
+   }
+}

@@ -1,0 +1,24 @@
+{
+   "display" : {
+      "title" : {
+         "translate" : "achievement.lastsmith.first.title"
+      },
+      "description" : {
+         "translate" : "achievement.lastsmith.first.desc",
+         "with" : [ "\n" ]
+      },
+      "icon" : {
+         "item" : "lastsmith:white_top"
+      },
+      "background" : "minecraft:textures/blocks/brick.png",
+      "frame" : "task"
+   },
+   "criteria" : {
+      "blade" : {
+         "trigger" : "lastsmith:has_advancement",
+         "conditions" : {
+            "advancement": "flammpfeil.slashblade:wood"
+         }
+      }
+   }
+}

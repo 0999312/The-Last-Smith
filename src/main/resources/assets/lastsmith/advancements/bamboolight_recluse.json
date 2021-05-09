@@ -1,0 +1,46 @@
+{
+   "display" : {
+      "title" : {
+         "translate" : "achievement.lastsmith.bamboolight.title"
+      },
+      "description" : {
+         "translate" : "achievement.lastsmith.bamboolight.desc",
+         "with" : [ "\n" ]
+      },
+      "icon" : {
+         "item" : "flammpfeil.slashblade:slashbladenamed",
+         "data" : 0,
+         "nbt" : "{ench: [{lvl:1,id:35}], ModelName: \"named/yamato\", TextureName: \"named/bamboolight/bamboo_top\"}"
+      },
+      "frame" : "goal"
+   },
+   "parent" : "lastsmith:slashblade_bamboolight",
+   "criteria" : {
+      "crafting" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.bamboolight_recluse"
+               }
+            ]
+         }
+      },
+      "blade" : {
+         "trigger" : "lastsmith:has_advancement",
+         "conditions" : {
+            "advancement" : "lastsmith:slashblade_bamboolight"
+         }
+      },
+      "blade2" : {
+         "trigger" : "lastsmith:has_advancement",
+         "conditions" : {
+            "advancement" : "lastsmith:bewitched_blade"
+         }
+      }
+   },
+   "rewards" : {
+      "loot" : [ "lastsmith:advancements/bamboo_1" ]
+   }
+}

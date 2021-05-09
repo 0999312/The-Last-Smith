@@ -1,0 +1,33 @@
+{
+       "conditions" : [
+          {
+             "type" : "forge:not",
+             "value" : {
+                "type" : "forge:mod_loaded",
+                "modid" : "tfc"
+             }
+          }
+       ],
+   "type" : "minecraft:crafting_shaped",
+   "pattern" : [
+	"  S",
+	" S ",
+	"# D"
+	],
+   "key" : {
+      "#" : {
+      "item" : "lastsmith:blade",
+	  "data" : 3
+      },
+      "S" : {
+         "item" : "#INGOTIRON"
+      },
+      "D" : {
+         "item" : "#TOOLFORGINGHAMMER"
+      }
+   },
+   "result" : {
+      "item" : "lastsmith:blade",
+	  "data" : 6
+   }
+}

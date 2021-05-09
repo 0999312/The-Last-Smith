@@ -1,0 +1,29 @@
+{
+   "conditions" : [
+      {
+         "type" : "forge:mod_loaded",
+         "modid" : "tfc"
+      }
+   ],
+   "result" : {
+      "item" : "lastsmith:materials",
+      "data" : 2,
+      "count" : 1
+   },
+   "ingredients" : [
+      {
+         "item" : "tfc:powder/flux"
+      },
+      {
+         "type" : "forge:ore_dict",
+         "ore" : "dustCharcoal"
+      },
+      {
+         "item" : "tfc:ceramics/fire_clay"
+      },
+      {
+         "item" : "#TOOLFORGINGHAMMER"
+      }
+   ],
+   "type" : "forge:ore_shapeless"
+}

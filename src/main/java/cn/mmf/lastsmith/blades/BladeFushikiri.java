@@ -27,7 +27,7 @@ public class BladeFushikiri {
 		NBTTagCompound tag1 = new NBTTagCompound();
 		customblade.setTagCompound(tag1);
 		ItemSlashBladeNamed.IsDefaultBewitched.set(tag1, true);
-		BladeUtil.IsBewitchedActived.set(tag1, true);
+		BladeUtil.getInstance().IsBewitchedActived.set(tag1, true);
 		ItemSlashBladeNamed.CurrentItemName.set(tag1, "flammpfeil.slashblade.named.fushikiri");
 		ItemSlashBladeNamed.CustomMaxDamage.set(tag1, 40);
 		ItemSlashBlade.AttackAmplifier.set(tag1, 3F);
@@ -54,7 +54,7 @@ public class BladeFushikiri {
 		ItemSlashBlade.RepairCount.set(tag4, 5);
 		RecipesUtil.getInstance().addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.fushikiri", new RecipeAwakeBladeTLS(
 			new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.fushikiri"),
-			"silverbamboolight_blood", BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.fushikiri"), request, 
+			"silverbamboo_blood", BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.fushikiri"), request, 
 			new Object[] {
 				"DPS",
 				"PSP",

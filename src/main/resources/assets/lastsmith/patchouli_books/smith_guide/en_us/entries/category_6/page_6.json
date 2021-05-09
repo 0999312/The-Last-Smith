@@ -1,11 +1,11 @@
 {
-   "name" : "Nethop的「V.V.V.V.V.」",
+   "name" : "Nethop's V.V.V.V.V.",
    "icon" : "flammpfeil.slashblade:slashbladenamed{ModelName: \"named/arthurs/model_grand\", TextureName: \"named/arthurs/texture_grand\"}",
    "category" : "category_6",
    "pages" : [
       {
          "type" : "text",
-         "text" : "Nethop，通常我们叫他典仪长（或者直接电椅），妖怪之山锻刀铺元老成员。$(br2)梨木桑的好友之一，MCBBS拔刀剑附属索引贴的楼主，MC百科元老编辑员之一。$(br2)最近他从虚无之中回来了，令人感动。"
+         "text" : "Nethop, one of initial members of Mountain Forging-Shop.$(br2)A friend of Limu-san. He is the poster of the index post of SlashBlade Mod's addons on MCBBS, a Chinese Minecraft community forum. He is also one of the initial editor of MCMOD Encyclopedia.$(br2)Recently he came back from offline status. It's so moving."
       },
       {
          "type" : "crafting",

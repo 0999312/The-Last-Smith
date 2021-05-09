@@ -1,11 +1,11 @@
 {
-   "name" : "型月刀「空の境界」",
+   "name" : "Knife Of BE",
    "icon" : "flammpfeil.slashblade:slashbladenamed{ModelName: \"named/tboen/model\",TextureName: \"named/tboen/texture\"}",
    "category" : "category_3",
    "pages" : [
       {
          "type" : "text",
-         "text" : "仿两仪式用过的短刃而作。$(br2)并非看穿死线之物。"
+         "text" : "Replica of Ryougi Shiki's short blade.$(br2)It cannot cut through the death line."
       },
       {
          "type" : "crafting",

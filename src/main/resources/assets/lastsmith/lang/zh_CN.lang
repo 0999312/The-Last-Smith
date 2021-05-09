@@ -11,10 +11,10 @@ item.flammpfeil.slashblade.named.hakurou.name=「白楼剑」
 item.flammpfeil.slashblade.named.roukan.name=「楼观剑」
 item.flammpfeil.slashblade.named.roukan_nether.name=狱界剑「楼观剑」
 item.flammpfeil.slashblade.named.hakurou_nether.name=狱界剑「白楼剑」
-item.flammpfeil.slashblade.named.roukan_xf.name=楼观旋风刃
-item.flammpfeil.slashblade.named.bailou_xf.name=白楼旋风刃
+item.flammpfeil.slashblade.named.roukan_xf.name=「楼观旋风刃」
+item.flammpfeil.slashblade.named.hakurou_xf.name=「白楼旋风刃」
 
-item.flammpfeil.slashblade.named.eievui.name=伊布之刃
+item.flammpfeil.slashblade.named.eievui.name=「伊布之刃」
 
 item.flammpfeil.slashblade.named.kusabimaru.name=名刀「楔丸」
 item.flammpfeil.slashblade.named.fushikiri.name=不死斩「拜泪」
@@ -32,8 +32,8 @@ item.flammpfeil.slashblade.named.shura.name=邪魔刃「修罗」
 
 item.flammpfeil.slashblade.named.nanosaber.name=纳米太刀
 item.flammpfeil.slashblade.named.quantumsaber.name=量子太刀
-item.flammpfeil.slashblade.named.yingjian.name=「樱剪」
-item.flammpfeil.slashblade.named.wenshi.name=「文始」
+item.flammpfeil.slashblade.named.roukan_bot.name=「樱剪」
+item.flammpfeil.slashblade.named.roukan_tech.name=「文始」
 
 item.flammpfeil.slashblade.named.sagequoia.name=名刀「将军木」
 item.flammpfeil.slashblade.named.murakumo.name=天丛云
@@ -56,6 +56,17 @@ item.flammpfeil.slashblade.named.scorn_fake.name=伪物「亡者」
 item.flammpfeil.slashblade.named.scorn_rust.name=伪物「亡者」
 item.flammpfeil.slashblade.named.scorn.name=「镇魂曲」
 
+item.flammpfeil.slashblade.named.thousand.name=「千兆」
+
+item.lastsmith.handmade_white.name=自锻刀「钢」
+item.flammpfeil.slashblade.handmade.red_steel.name=自锻刀「红钢」
+item.flammpfeil.slashblade.handmade.blue_steel.name=自锻刀「蓝钢」
+item.lastsmith.handmade_thaum.name=自锻刀「神秘」
+item.lastsmith.handmade_void.name=自锻刀「虚空」
+item.lastsmith.handmade_saya_0.name=朴素拵
+item.lastsmith.handmade_saya_1.name=落英拵
+item.lastsmith.handmade_saya_2.name=三雷拵
+
 flammpfeil.swaepon.info.fake=伪
 
 flammpfeil.slashblade.specialattack.sxsa_1=樱之流「空间震」
@@ -63,6 +74,8 @@ flammpfeil.slashblade.specialattack.sakura_skill=樱之流「初传」
 flammpfeil.slashblade.specialattack.fallen_sakura=樱之流「落樱」
 
 slashblade.seffect.name.extreme_sharpness=极致锋利
+slashblade.seffect.name.sap_slash=极致削弱
+slashblade.seffect.name.technical_experimental_laser_system=「TLS」系统
 
 blades.crafter=刀匠
 lastsmith.name.unnamed_smith=无名刀匠
@@ -74,6 +87,8 @@ item.flammpfeil.slashblade.named.silverbamboolight_top.name=上品「银纸竹�
 item.flammpfeil.slashblade.named.silverbamboolight_blood.name=「血纸竹光」
 
 slashblade.seffect.name.ManaRepair=魔力修复
+
+slashblade.seffect.name.bewitched_sharpness=「极致妖力」
 
 item.lastsmith.blade.name=劣质刀条
 item.lastsmith.blade_2.name=钢刀条
@@ -95,6 +110,30 @@ item.lastsmith.blade_unfinished_5.name=未完成刀条（5/5）
 item.lastsmith.blade_2_unfinished_5.name=未完成刀条（5/5）
 item.lastsmith.blade_3_unfinished_5.name=未完成刀条（5/5）
 
+item.lastsmith.blade_blue_steel_unfinished.name=未完成蓝钢刀条（1/5）
+item.lastsmith.blade_blue_steel_unfinished_2.name=未完成蓝钢刀条（2/5）
+item.lastsmith.blade_blue_steel_unfinished_3.name=未完成蓝钢刀条（3/5）
+item.lastsmith.blade_blue_steel_unfinished_4.name=未完成蓝钢刀条（4/5）
+item.lastsmith.blade_blue_steel_unfinished_5.name=未完成蓝钢刀条（5/5）
+
+item.lastsmith.blade_red_steel_unfinished.name=未完成红钢刀条（1/5）
+item.lastsmith.blade_red_steel_unfinished_2.name=未完成红钢刀条（2/5）
+item.lastsmith.blade_red_steel_unfinished_3.name=未完成红钢刀条（3/5）
+item.lastsmith.blade_red_steel_unfinished_4.name=未完成红钢刀条（4/5）
+item.lastsmith.blade_red_steel_unfinished_5.name=未完成红钢刀条（5/5）
+
+item.lastsmith.blade_thaum_unfinished.name=未完成神秘刀条（1/5）
+item.lastsmith.blade_thaum_unfinished_2.name=未完成神秘刀条（2/5）
+item.lastsmith.blade_thaum_unfinished_3.name=未完成神秘刀条（3/5）
+item.lastsmith.blade_thaum_unfinished_4.name=未完成神秘刀条（4/5）
+item.lastsmith.blade_thaum_unfinished_5.name=未完成神秘刀条（5/5）
+
+item.lastsmith.blade_void_unfinished.name=未完成虚空刀条（1/5）
+item.lastsmith.blade_void_unfinished_2.name=未完成虚空刀条（2/5）
+item.lastsmith.blade_void_unfinished_3.name=未完成虚空刀条（3/5）
+item.lastsmith.blade_void_unfinished_4.name=未完成虚空刀条（4/5）
+item.lastsmith.blade_void_unfinished_5.name=未完成虚空刀条（5/5）
+
 item.lastsmith.blade_unfinished.name=未完成刀条
 item.lastsmith.blade_2_unfinished.name=未完成刀条
 item.lastsmith.blade_3_unfinished.name=未完成刀条
@@ -102,6 +141,10 @@ item.lastsmith.smith_hammer.name=工匠锤
 item.lastsmith.sakura.name=魂樱花瓣
 item.lastsmith.wooden_blade.name=实木刀条
 item.lastsmith.bamboo_blade.name=竹刀条
+item.lastsmith.blade_blue_steel.name=蓝钢刀条
+item.lastsmith.blade_red_steel.name=红钢刀条
+item.lastsmith.blade_thaum.name=神秘刀条
+item.lastsmith.blade_void.name=虚空金属刀条
 item.lastsmith.paper_arthurs.name=制作者名单
 item.lastsmith.sakura_full.name=魂樱
 item.lastsmith.sakura_ingot.name=魂樱钢锭
@@ -130,10 +173,13 @@ item.flammpfeil.slashblade.named.yamazakura.kamuy.name=山樱「神月」
 item.lastsmith.wooden_saya.name=实木鞘
 item.lastsmith.bamboo_saya.name=竹鞘
 
-info.flammpfeil.slashblade.tool.chargeOff=§e按下 (%s) to 休眠§r
-info.flammpfeil.slashblade.tool.chargeOn=§b按下 (%s) to 充能§r
-info.flammpfeil.slashblade.tool.energyPerUse=RF/次使用
+info.flammpfeil.slashblade.tool.charge=充能
+info.flammpfeil.slashblade.tool.charge_off=§e按下 （%s) to 休眠§r
+info.flammpfeil.slashblade.tool.charge_on=§b按下 （%s) to 充能§r
+info.flammpfeil.slashblade.tool.energy_per_use=RF/次使用
 info.flammpfeil.slashblade.tool.user=所有者
+
+info.flammpfeil.slashblade.hold_shift_for_details=按下Shift键查看更多信息。
 
 itemGroup.lastsmith=最后的太刀匠人
 key.categories.lastsmith=最后的太刀匠人
@@ -143,13 +189,13 @@ lastsmith.use_it_on_cauldron.text=右键炼药锅以冷却。
 
 item.flammpfeil.slashblade.named.fortress.thaumium.name=神秘要塞日本刀
 item.flammpfeil.slashblade.named.fortress.void.name=虚空要塞日本刀
-item.flammpfeil.slashblade.named.fortress.elemental.name=元素要塞日本刀
+item.flammpfeil.slashblade.named.fortress.elemental.name=风雷要塞日本刀
 item.flammpfeil.slashblade.named.fortress.crimson.name=血腥要塞日本刀
 
-item.flammpfeil.slashblade.named.fortress.thaumium.update.name=神秘要塞日本刀
-item.flammpfeil.slashblade.named.fortress.void.update.name=虚空要塞日本刀
-item.flammpfeil.slashblade.named.fortress.elemental.update.name=元素要塞日本刀
-item.flammpfeil.slashblade.named.fortress.crimson.update.name=血腥要塞日本刀
+item.flammpfeil.slashblade.named.fortress.thaumium.update.name=「要塞」神秘
+item.flammpfeil.slashblade.named.fortress.void.update.name=「要塞」虚无
+item.flammpfeil.slashblade.named.fortress.elemental.update.name=「要塞」风雷
+item.flammpfeil.slashblade.named.fortress.crimson.update.name=「要塞」血红
 
 item.lastsmith.scroll_namedblade_1.name=名刀之卷「上」
 item.lastsmith.scroll_namedblade_2.name=名刀之卷「下」
@@ -171,7 +217,7 @@ item.lastsmith.scroll_thaumium.name=神秘刀使的手稿
 item.lastsmith.scroll_crimson.name=邪血刀使的手稿
 item.lastsmith.scroll_creait.name=「妖怪之山锻刀铺」的名单
 item.lastsmith.scroll_tech.name=高科技利刃的蓝图
-item.lastsmith.scroll_highpowered.name=「高能爆发」模块蓝图
+item.lastsmith.scroll_highpowered.name=「TLS系统」模块蓝图
 
 tooltip.scroll_namedblade_1.name=记载着家喻户晓的名刀。
 tooltip.scroll_namedblade_2.name=记载着一些不为人所知的优质刀。
@@ -188,11 +234,11 @@ tooltip.scroll_blood.name=记载着斩断不死之刃的一卷。<BR>§8§l§o�
 tooltip.scroll_shapeness.name=记载着世间无上利刃的一卷。<BR>§8§l§o稀世名器，或被雪藏，或被遗弃。<BR>§8§l§o其被重拾再出鞘之日，血如江河。
 tooltip.scroll_nether.name=记载着狱界剑传说的一卷。<BR>§8§l§o黑衣的剑士，手持两振真红之刃。<BR>§8§l§o无人从其刃中幸存，只留得一丝锈迹。
 tooltip.scroll_nihil.name=记载着「似蛭」传说的一卷。<BR>§8§l§o渴望鲜血的死之欲望。<BR>§8§l§o谓之“炼狱刀「死念」”。
-tooltip.scroll_thaumium.name=神秘刀使的研究手稿。<BR>§8§l§o神秘学与日本刀的交汇之时，不毁之刀刃出炉之时……
+tooltip.scroll_thaumium.name=神秘刀使的研究手稿。<BR>§8§l§o神秘学与日本刀的交汇之时，灵之刀刃出炉之时……
 tooltip.scroll_crimson.name=邪血刀使的研究手稿。<BR>§8§l§o渴求着血腥的刀刃，有着玷污生灵的力量……
 tooltip.scroll_creait.name=「妖怪之山锻刀铺」的成员名单。<BR>§8§l§o组长：§6樱风华乐§r<BR>§8§l§o主要开发：§6射命丸政§r<BR>§8§l§o美工：§6樱风华乐§r，§6射命丸政§r，§6萧琥璃GF§r<BR>§8§l§o友情参与：§6酒石酸菌（第一版宣传片制作）§r，§6梨木利亚（早期成员）§r，§6Nethop（早期成员）§r，§6LT_lrsoft（早期成员）<BR>§e§l感谢您的游玩，主线剧情到此完结。
 tooltip.scroll_tech.name=新型高科技利刃的蓝图。<BR>§8§l§o结合了最新锐的纳米技术。<BR>§8§l§o在充能状态下保持最佳输出状态。
-tooltip.scroll_highpowered.name=「高能爆发」模块的设计蓝图。<BR>§8§l§o在一瞬间释放大量能量的爆发模块。<BR>§8§l§o需要时刻注意剩余电量。
+tooltip.scroll_highpowered.name=「TLS」模块的设计蓝图。<BR>§8§l§o代替了实体刀刃的激光技术。<BR>§8§l§o需要时刻注意剩余电量，非善于用刀者不可使用。
 
 achievement.lastsmith.first.title=「木偶」
 achievement.lastsmith.first.desc=亲手制作一振自己的带鞘木刀。§8§l§o学习日本刀构造，为锻造打下基础。
@@ -224,6 +270,21 @@ achievement.lastsmith.bamboolight_recluse.desc=得到隐居之人的竹刃§8§l
 achievement.lastsmith.silverbamboolight_blood.title=血染之竹刃
 achievement.lastsmith.silverbamboolight_blood.desc=得到血染之竹刃§8§l§o战死的武者，热血挥洒在竹刀之时……英魂斩断了敌寇的猖狂。
 
+achievement.lastsmith.bunshi.title=技术试验
+achievement.lastsmith.bunshi.desc=得到「文始」§8§l§o「文始」，文明时代的初始
+
+achievement.lastsmith.thousand.title=千兆毁灭
+achievement.lastsmith.thousand.desc=得到「千兆」§8§l§o完成的TLS系统，出力1000%
+
+achievement.lastsmith.thaumic_katana.title=神秘之日本刀
+achievement.lastsmith.thaumic_katana.desc=得到神秘使的日本刀§8§l§o神秘学与日本刀的交汇之时，灵之刀刃出炉之时……
+
+achievement.lastsmith.crimson_katana.title=血腥之日本刀
+achievement.lastsmith.crimson_katana.desc=得到邪术使的日本刀§8§l§o渴求着血腥的刀刃，有着玷污生灵的力量……
+
+achievement.lastsmith.silverbamboolight_blood.title=血染之竹刃
+achievement.lastsmith.silverbamboolight_blood.desc=得到血染之竹刃§8§l§o战死的武者，热血挥洒在竹刀之时……英魂斩断了敌寇的猖狂。
+
 achievement.lastsmith.sagequoia.title=「将军木」
 achievement.lastsmith.sagequoia.desc=收集到「将军木」§8§l§o极！大大大大大将军！
 achievement.lastsmith.amagumo.title=「天云」
@@ -245,6 +306,9 @@ achievement.lastsmith.yamazakura.aoi.desc=得到山樱「葵」§8§l§o另一�
 achievement.lastsmith.yamazakura.kamuy.title=「神月」之传说
 achievement.lastsmith.yamazakura.kamuy.desc=得到山樱「神月」§8§l§o真正的山樱……落下五月雨的一刻，空间被切裂开来……
 
+achievement.lastsmith.kirisaya.title=无神「无刃」之传说
+achievement.lastsmith.kirisaya.desc=得到无神「无刃」§8§l§o无形的刀刃……
+
 jei.tls.tip.stage.bewitched_blade=需要目睹妖刀的传说……
 jei.tls.tip.stage.sharpness=需要无上利刃的历史……
 jei.tls.tip.stage.sakura_blade=需要驱魔之刃的传说……
@@ -252,10 +316,20 @@ jei.tls.tip.stage.fushikiri=需要领悟斩断不死之力……
 jei.tls.tip.stage.slashblade_white=需要锻造的基本技艺……
 jei.tls.tip.stage.slashblade_bamboolight=需要竹刀的基本技艺……
 jei.tls.tip.stage.slashblade_sliverbamboolight=需要传统的竹光技艺……
-jei.tls.tip.stage.silverbamboolight_blood=需要血染竹刀的妖迹……
+jei.tls.tip.stage.silverbamboo_blood=需要血染竹刀的妖迹……
 jei.tls.tip.stage.amagumo=需要两振天狗之利刃……
 jei.tls.tip.stage.final_blade=需要完成主线的所有剧情。
+jei.tls.tip.stage.bunshi=需要TLS技术试验的资料
 
 guide.smith_guide.title=《妖刀的记录及锻造方法》
 guide.smith_guide.landing_text=一本破烂的由妖怪撰写的书籍。
 guide.smith_guide.subtitle=无法认清作者的名
+
+research.roukan_xf.title=魂樱与旋风之刃
+research.fortress_blade.title=神秘之日本刀
+
+research.roukan_xf.text.stage.1=研究元素工具的时候，你想到了一些奇怪的点子。<BR>如果一振日本刀被赐予了元素的力量，那又会是什么样的呢？
+research.roukan_xf.text.stage.2=这二振刀，是以白玉楼庭师的两振佩刀为基底的元素道具。<BR>很显然，这二振刀有着和风雷剑一样的能力，但是比风雷剑强大的多。<BR>很显然，原来刀的某些特性不见了……
+
+research.fortress_blade.text.stage.1=研究元素工具的时候，你想到了一些奇怪的点子。<BR>一位神秘使能否打造出自己的利刃？比起不顺手的长剑，或许日本刀会更合适一些……<BR>当然你很快就写下了基本的配方，更进一步的步骤是……
+research.fortress_blade.text.stage.2=用注魔以及魂樱的力量，强行注入灵力的做法似乎是可行的……<BR>神秘学与日本刀的交汇之时，灵之刀刃出炉之时……<BR>而渴求着血腥的刀刃，有着玷污生灵的力量……

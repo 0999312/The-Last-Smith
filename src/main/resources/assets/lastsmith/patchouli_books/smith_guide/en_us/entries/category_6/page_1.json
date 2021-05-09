@@ -1,11 +1,11 @@
 {
-   "name" : "樱风华乐的渝州「长清」",
+   "name" : "R_Liu's Cyanlacuight",
    "icon" : "flammpfeil.slashblade:slashbladenamed{ModelName: \"named/arthurs/model_0\", TextureName: \"named/arthurs/texture_0\"}",
    "category" : "category_6",
    "pages" : [
       {
          "type" : "text",
-         "text" : "妖怪之山锻刀铺的组长：樱风华乐。$(br2)组里的拔刀剑建模担当，推动国内自定义拔刀剑的关键人物之一。$(br2)最近开始学习拔刀剑附属的独立开发了，可喜可贺。"
+         "text" : "R_Liu, leader of Mysterious Mountain Forging-Shop.$(br2)Chief modeller of this team. Important person who leads the custom SlashBlade making in China Minecraft community.$(br2)Recently he began to learn to develop SlashBlade Mod's addon. Let's cheer fo him."
       },
       {
          "type" : "crafting",

@@ -1,0 +1,21 @@
+{
+   "type" : "minecraft:crafting_shaped",
+   "pattern" : [
+	" S",
+	"# "
+	],
+   "key" : {
+      "#" : {
+		"item" : "lastsmith:blade",
+		"data" : 7
+      },
+      "S" : {
+        "item": "lastsmith:materials",
+		"data": 2
+      }
+   },
+   "result" : {
+      "item" : "lastsmith:blade",
+	  "data" : 10
+   }
+}

@@ -1,0 +1,43 @@
+{
+   "conditions" : [
+      {
+         "type" : "forge:mod_loaded",
+         "modid" : "slashblade_addon"
+      }
+   ],
+   "display" : {
+      "title" : {
+         "translate" : "achievement.lastsmith.kirisaya.title"
+      },
+      "description" : {
+         "translate" : "achievement.lastsmith.kirisaya.desc",
+         "with" : [ "\n" ]
+      },
+      "icon" : {
+         "item" : "flammpfeil.slashblade:slashbladenamed",
+         "data" : 0,
+         "nbt" : "{ench: [{lvl:1,id:35}], ModelName: \"named/kirisaya/kirisaya\", TextureName: \"named/kirisaya/kirisaya\"}"
+      },
+      "frame" : "goal"
+   },
+   "parent" : "lastsmith:sharpness",
+   "criteria" : {
+      "crafting" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.kirisaya"
+               }
+            ]
+         }
+      },
+      "blade" : {
+         "trigger" : "lastsmith:has_advancement",
+         "conditions" : {
+            "advancement" : "lastsmith:sharpness"
+         }
+      }
+   }
+}

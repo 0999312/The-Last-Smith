@@ -1,0 +1,85 @@
+{
+   "display" : {
+      "title" : {
+         "translate" : "achievement.lastsmith.namedblade_1.title"
+      },
+      "description" : {
+         "translate" : "achievement.lastsmith.namedblade_1.desc",
+         "with" : [ "\n" ]
+      },
+      "icon" : {
+         "item" : "flammpfeil.slashblade:slashbladenamed",
+         "data" : 0,
+         "nbt" : "{ModelName: \"named/yamato\", TextureName: \"named/yamato\"}"
+      },
+      "frame" : "goal"
+   },
+   "parent" : "lastsmith:slashblade_white",
+   "criteria" : {
+      "blade2" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "wrap.BambooMod.katana"
+               }
+            ]
+         }
+      },
+      "blade3" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.doutanuki"
+               }
+            ]
+         }
+      },
+      "blade4" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.fox.white"
+               }
+            ]
+         }
+      },
+      "blade5" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.fox.black"
+               }
+            ]
+         }
+      },
+      "blade10" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.muramasa"
+               }
+            ]
+         }
+      },
+
+      "white" : {
+         "trigger" : "lastsmith:has_advancement",
+         "conditions" : {
+            "advancement" : "lastsmith:slashblade_white"
+         }
+      }
+   },
+   "rewards" : {
+      "loot" : [ "lastsmith:advancements/named_1" ]
+   }
+}

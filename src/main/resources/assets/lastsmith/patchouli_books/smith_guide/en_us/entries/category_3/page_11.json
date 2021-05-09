@@ -1,11 +1,11 @@
 {
-   "name" : "「梅」拵之双刃",
+   "name" : "Two Blades in Plum Set",
    "icon" : "flammpfeil.slashblade:slashbladenamed{ModelName: \"wa/model\",TextureName: \"wa/waA\"}",
    "category" : "category_3",
    "pages" : [
       {
          "type" : "text",
-         "text" : "在内府军的一些低级将士之中，经常有两个特别的刀拵的身影。$(br)因为刀鞘上的梅花特征，被称为「梅」。$(br2)实际上，非常的廉价。$(br)因为太过廉价所以并不是有地位之人看得上的东西。"
+         "text" : "Some junior officers in the Central Force own two special Blades.$(br)They are called Plum because of their Blade sets is decorated with plum blossom patterns. These Blades are too cheap to be regarded as valuable by senior generals."
       },
       {
          "type" : "crafting",

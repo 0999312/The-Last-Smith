@@ -1,0 +1,43 @@
+{
+   "display" : {
+      "title" : {
+         "translate" : "achievement.lastsmith.bewitched.title"
+      },
+      "description" : {
+         "translate" : "achievement.lastsmith.bewitched.desc",
+         "with" : [ "\n" ]
+      },
+      "icon" : {
+         "item" : "flammpfeil.slashblade:slashbladenamed",
+         "data" : 0,
+         "nbt" : "{ench: [{lvl:1,id:35}], ModelName: \"named/sekiro/kusabimaru\", TextureName: \"named/sekiro/kusabimaru\"}"
+      },
+      "frame" : "challenge"
+   },
+   "parent" : "lastsmith:namedblade_2",
+   "criteria" : {
+      "named_1" : {
+         "trigger" : "lastsmith:has_advancement",
+         "conditions" : {
+            "advancement" : "lastsmith:namedblade_1"
+         }
+      },
+      "named_2" : {
+         "trigger" : "lastsmith:has_advancement",
+         "conditions" : {
+            "advancement" : "lastsmith:namedblade_2"
+         }
+      },
+      "bewitched_scroll" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "item" : "lastsmith:scroll",
+                  "data" : 6
+               }
+            ]
+         }
+      }
+   }
+}

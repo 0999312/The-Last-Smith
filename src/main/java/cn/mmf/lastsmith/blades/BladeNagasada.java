@@ -23,7 +23,7 @@ public class BladeNagasada {
 		ItemStack customblade = new ItemStack(BladeLoader.bladeNamed, 1, 0);
 		NBTTagCompound tag1 = new NBTTagCompound();
 		customblade.setTagCompound(tag1);
-		BladeUtil.IsFakeBlade.set(tag1, true);
+		BladeUtil.getInstance().IsFakeBlade.set(tag1, true);
 		ItemSlashBladeNamed.CurrentItemName.set(tag1, "flammpfeil.slashblade.named.nagasada");
 		ItemSlashBladeNamed.CustomMaxDamage.set(tag1, 40);
 		ItemSlashBlade.setBaseAttackModifier(tag1, 6.0F);

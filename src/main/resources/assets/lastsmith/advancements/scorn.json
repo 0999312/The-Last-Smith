@@ -1,0 +1,40 @@
+{
+   "display" : {
+      "title" : {
+         "translate" : "achievement.lastsmith.scorn.title"
+      },
+      "description" : {
+         "translate" : "achievement.lastsmith.scorn.desc",
+         "with" : [ "\n" ]
+      },
+      "icon" : {
+         "item" : "flammpfeil.slashblade:slashbladenamed",
+         "data" : 0,
+         "nbt" : "{ench: [{lvl:1,id:35}], ModelName: \"named/scorn/model\", TextureName: \"named/scorn/texture\"}"
+      },
+      "frame" : "goal"
+   },
+   "parent" : "lastsmith:bewitched_blade",
+   "criteria" : {
+      "crafting" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.scorn"
+               }
+            ]
+         }
+      },
+      "blade" : {
+         "trigger" : "lastsmith:has_advancement",
+         "conditions" : {
+            "advancement" : "lastsmith:bewitched_blade"
+         }
+      }
+   },
+   "rewards" : {
+      "loot" : [ "lastsmith:advancements/scorn" ]
+   }
+}

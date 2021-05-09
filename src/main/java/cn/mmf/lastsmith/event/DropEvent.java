@@ -2,8 +2,6 @@ package cn.mmf.lastsmith.event;
 
 import java.util.Map;
 import java.util.Random;
-import java.util.UUID;
-
 import com.google.common.collect.Maps;
 
 import cn.mmf.lastsmith.TLSConfig;
@@ -61,13 +59,11 @@ public class DropEvent {
 	}
 
 	public static final Map<ResourceLocation, DropInfo> dropData = Maps.newHashMap();
-	public static final Map<UUID, Boolean> canDropMap = Maps.newHashMap();
 
 	/**
 	 *
 	 * @param entityKey
-	 * @param rate
-	 *            abs(rate) over 1 forcedrop
+	 * @param rate      abs(rate) over 1 forcedrop
 	 *
 	 * @param item
 	 */
@@ -77,29 +73,20 @@ public class DropEvent {
 		dropData.put(entityKey, info);
 	}
 
-	public static boolean isCanDrop(UUID id) {
-		return canDropMap.getOrDefault(id, true);
-	}
-
-	public static void setCanDrop(UUID id, boolean isCan) {
-		canDropMap.put(id, isCan);
-	}
-
 	@SubscribeEvent
 	public static void KillingMob(LivingExperienceDropEvent event) {
-		World world =event.getEntityLiving().world;
-		if (!world.isRemote&&event.getAttackingPlayer() != null) {
+		World world = event.getEntityLiving().world;
+		if (!world.isRemote && event.getAttackingPlayer() != null) {
 			if (event.getAttackingPlayer().getHeldItemMainhand().getItem() instanceof ItemSlashBlade) {
 				int level = EnchantmentHelper.getEnchantmentLevel(Enchantments.LOOTING,
 						event.getAttackingPlayer().getHeldItemMainhand());
-				if (world.rand.nextDouble()<=TLSConfig.sakura_drop_rate){
+				if (world.rand.nextDouble() <= TLSConfig.sakura_drop_rate) {
 					int amount = 0;
-		            for (int i = 0; i < 1 + level; ++i) {
-		                if (world.rand.nextInt(2 * Enchantments.LOOTING.getMaxLevel()) <= level)
-		                   amount++;
-		            }
-					dropItem(new ItemStack(ItemLoader.MATERIALS, amount, 3), world,
-							event.getEntityLiving());
+					for (int i = 0; i < 1 + level; ++i) {
+						if (world.rand.nextInt(2 * Enchantments.LOOTING.getMaxLevel()) <= level)
+							amount++;
+					}
+					dropItem(new ItemStack(ItemLoader.MATERIALS, amount, 3), world, event.getEntityLiving());
 				}
 			}
 		}
@@ -131,8 +118,6 @@ public class DropEvent {
 			EntityLivingBase target = event.getEntityLiving().getRevengeTarget();
 			if (!(target instanceof EntityPlayer))
 				return;
-			if (!isCanDrop(target.getUniqueID()))
-				return;
 			ItemStack attackItem = target.getHeldItem(EnumHand.MAIN_HAND);
 			if (attackItem.isEmpty())
 				return;
@@ -146,8 +131,13 @@ public class DropEvent {
 				ItemStack dropitem = info.getItemStack().copy();
 				dropitem.setCount(Math.max(dropitem.getMaxStackSize(),
 						Math.max(1, Math.round(dropitem.getCount() * rand.nextFloat()))));
+				NBTTagCompound playerData = target.getEntityData();
+				NBTTagCompound data = getTagSafe(playerData, EntityPlayer.PERSISTED_NBT_TAG);
+				StringBuilder builder = new StringBuilder(dropitem.getUnlocalizedName().substring(5)).append("_has");
 				if (info.isOnlyFirstTime()) {
-					setCanDrop(target.getUniqueID(), false);
+					if (data.getBoolean(builder.toString())) {
+						return ;
+					}
 				}
 				if (dropitem.getItem() instanceof ItemSlashBlade) {
 					NBTTagCompound tag = ItemSlashBlade.getItemTagCompound(dropitem);
@@ -157,14 +147,24 @@ public class DropEvent {
 								event.getEntityLiving().posZ, dropitem);
 						e.setGlowing(true);
 						event.getEntityLiving().world.spawnEntity(e);
+						data.setBoolean(builder.toString(), true);
+						playerData.setTag(EntityPlayer.PERSISTED_NBT_TAG, data);
 						return;
 					}
 				}
-
 				if (dropitem.getCount() != 0)
 					event.getEntityLiving().entityDropItem(dropitem, 1);
-
+				data.setBoolean(builder.toString(), true);
+				playerData.setTag(EntityPlayer.PERSISTED_NBT_TAG, data);
 			}
 		}
+	}
+
+	private static NBTTagCompound getTagSafe(NBTTagCompound tag, String key) {
+		if (tag == null) {
+			return new NBTTagCompound();
+		}
+
+		return tag.getCompoundTag(key);
 	}
 }

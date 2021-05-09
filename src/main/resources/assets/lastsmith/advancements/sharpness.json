@@ -1,0 +1,155 @@
+{
+   "display" : {
+      "title" : {
+         "translate" : "achievement.lastsmith.sharpness.title"
+      },
+      "description" : {
+         "translate" : "achievement.lastsmith.sharpness.desc",
+         "with" : [ "\n" ]
+      },
+      "icon" : {
+         "item" : "flammpfeil.slashblade:slashbladenamed",
+         "data" : 0,
+         "nbt" : "{ench: [{lvl:1,id:35}], ModelName: \"named/smith/model\", TextureName: \"named/smith/texture_wind\"}"
+      },
+      "frame" : "challenge"
+   },
+   "parent" : "lastsmith:roukan_hakurou",
+   "criteria" : {
+      "blade" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.agito"
+               }
+            ]
+         }
+      },
+      "blade1" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.orotiagito"
+               }
+            ]
+         }
+      },
+      "blade6" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.koseki"
+               }
+            ]
+         }
+      },
+      "blade7" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.sange"
+               }
+            ]
+         }
+      },
+      "blade8" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.yasha"
+               }
+            ]
+         }
+      },
+      "blade9" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.yashatrue"
+               }
+            ]
+         }
+      },
+      "blade11" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.yuzukitukumo"
+               }
+            ]
+         }
+      },
+      "blade12" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.yamato"
+               }
+            ]
+         }
+      },
+      "named_1" : {
+         "trigger" : "lastsmith:has_advancement",
+         "conditions" : {
+            "advancement" : "lastsmith:roukan_hakurou"
+         }
+      },
+      "named_2" : {
+         "trigger" : "lastsmith:has_advancement",
+         "conditions" : {
+            "advancement" : "lastsmith:yamazakura_aoi"
+         }
+      },
+      "named_3" : {
+         "trigger" : "lastsmith:has_advancement",
+         "conditions" : {
+            "advancement" : "lastsmith:yamazakura_kamuy"
+         }
+      },
+      "named_4" : {
+         "trigger" : "lastsmith:has_advancement",
+         "conditions" : {
+            "advancement" : "lastsmith:bamboolight_recluse"
+         }
+      },
+      "named_5" : {
+         "trigger" : "lastsmith:has_advancement",
+         "conditions" : {
+            "advancement" : "lastsmith:silverbamboo_blood"
+         }
+      },
+      "named_6" : {
+         "trigger" : "lastsmith:has_advancement",
+         "conditions" : {
+            "advancement" : "lastsmith:sagequoia"
+         }
+      },
+      "bewitched_scroll" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "item" : "lastsmith:scroll",
+                  "data" : 12
+               }
+            ]
+         }
+      }
+   }
+}

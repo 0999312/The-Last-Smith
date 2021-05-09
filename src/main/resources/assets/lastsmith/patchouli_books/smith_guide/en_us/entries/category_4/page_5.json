@@ -1,21 +1,22 @@
 {
-   "name" : "「大蛇鄂门」",
+   "name" : "Orotiagito",
    "icon" : "flammpfeil.slashblade:slashbladenamed{ModelName: \"named/agito\", TextureName: \"named/orotiagito\"}",
    "category" : "category_4",
    "pages" : [
       {
          "type" : "text",
-         "text" : "「大蛇鄂门」的真品$(br2)稀世名匠的传奇之作，自诞生之日便赢得好评$(br2)在九头大蛇的尾部寻求其身影……"
+         "text" : "The genuine Orotiagito.$(br2)Legendary Blade from an extraordinary smith, has gathering great fame among the swordsman.$(br2)Find it from the Hydra's tail."
       },
       {
+        "flag":"mod:twilightforest",
          "type" : "entity",
          "entity" : "twilightforest:hydra",
          "scale" : 1,
-         "text" : "在永恒的暮色之森中，杀死九头大蛇……"
+         "text" : "Find the Hydra in the Twilight Forest, then slay it."
       },
       {
          "type" : "text",
-         "text" : "「大蛇鄂门」的力量与「散华」一致，都是众星之力。$(br2)在为其除锈之前，无法认清其中的奥妙。"
+         "text" : "The Orotiagito has the so-called Power of the Stars, which is the same as the Sange.$(br2)Before its rust is finally removed, you can hardly reveal its mystery."
       },
       {
          "type" : "crafting",

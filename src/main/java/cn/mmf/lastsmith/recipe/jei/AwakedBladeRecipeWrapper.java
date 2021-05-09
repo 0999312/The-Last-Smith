@@ -12,6 +12,7 @@ public class AwakedBladeRecipeWrapper extends ShapedOreRecipeWrapper {
 		super(jeiHelpers, recipe);
 		this.recipe=recipe;
 	}
+	
     @Override
     public void drawInfo(Minecraft minecraft, int recipeWidth, int recipeHeight, int mouseX, int mouseY) {
         super.drawInfo(minecraft, recipeWidth, recipeHeight, mouseX, mouseY);
@@ -19,4 +20,5 @@ public class AwakedBladeRecipeWrapper extends ShapedOreRecipeWrapper {
         builder.append(recipe.getAdvancementName());
         minecraft.fontRenderer.drawString(I18n.format(builder.toString()), 0, -11, 0xBF0000);
     }
+    
 }

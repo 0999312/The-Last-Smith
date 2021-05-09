@@ -1,5 +1,6 @@
 package cn.mmf.lastsmith;
 
+import cn.mcmod_mmf.mmlib.compat.PatchouliCompat;
 import cn.mcmod_mmf.mmlib.util.RecipesUtil;
 import cn.mmf.lastsmith.advancement.HasAdvancementTrigger;
 import cn.mmf.lastsmith.advancement.SlashBladeItemPredicate;
@@ -51,6 +52,10 @@ public class CommonProxy {
     	GameRegistry.addSmelting(new ItemStack(ItemLoader.BLADE,1,9), new ItemStack(ItemLoader.BLADE_HEATTED,1,0), 1F);
     	GameRegistry.addSmelting(new ItemStack(ItemLoader.BLADE,1,10), new ItemStack(ItemLoader.BLADE_HEATTED,1,1), 1F);
     	GameRegistry.addSmelting(new ItemStack(ItemLoader.BLADE,1,11), new ItemStack(ItemLoader.BLADE_HEATTED,1,2), 1F);
+    	
+    	GameRegistry.addSmelting(new ItemStack(ItemLoader.BLADE,1,29), new ItemStack(ItemLoader.BLADE_HEATTED,1,5), 1F);
+    	GameRegistry.addSmelting(new ItemStack(ItemLoader.BLADE,1,30), new ItemStack(ItemLoader.BLADE_HEATTED,1,6), 1F);
+    	
     	RecipesUtil.getInstance().addOreDictionarySmelting("blockSakura", new ItemStack(ItemLoader.MATERIALS,1,6));
     	ItemPredicates.register(new ResourceLocation(TLSMain.MODID, "slashblade"), SlashBladeItemPredicate::new);
     	MinecraftForge.EVENT_BUS.post(new RegisterSlashBladeEvent(event));
@@ -62,6 +67,8 @@ public class CommonProxy {
 
     public void postInit(FMLPostInitializationEvent event) {
     	MinecraftForge.EVENT_BUS.post(new RegisterSlashBladeRecipeEvent(event));
+    	if(TLSConfig.spawn_first_with_book)
+    		PatchouliCompat.addBook("smith_guide",TLSMain.MODID);
     }
 	public boolean doesPlayerHaveAdvancement(EntityPlayer player, ResourceLocation advId) {
 		if (player instanceof EntityPlayerMP) {

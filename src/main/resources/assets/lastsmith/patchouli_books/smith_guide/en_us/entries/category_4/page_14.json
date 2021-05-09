@@ -1,31 +1,31 @@
 {
-   "name" : "「魂樱之长刀」",
+   "name" : "The Tachi of Spirit Sakura",
    "icon" : "flammpfeil.slashblade:slashbladenamed{ModelName: \"named/roukan/model\", TextureName: \"named/roukan/texture\"}",
    "category" : "category_4",
    "pages" : [
       {
          "type" : "text",
-         "text" : "太阴历，第三轮回，月与冬与水之年，我和一些共同学习锻造的同胞注意到魂樱的力量，并开始尝试利用魂樱之钢锻造刀刃。$(br2)结果是可喜的，魂樱蕴含的灵力之旺盛足以欢喜。$(br2)以魂樱锻造而成的胁差，具有着消灭幽灵的力量，将亡灵就地成佛……"
+         "text" : "The Third Cycle of Lunar Calendar, The year of Moon, Winter and Water. I and my peers learning smithing with me understood the power of Spirit Sakura, and tried to smith Blades with Spirit Sakura Steel.$(br2)Due to its great Spirit Power, we succeeded in smithing a powerful Blades with Spirit Sakura Steel."
       },
       {
          "type" : "text",
-         "text" : "此刀被交付给半灵族——魂魄家的家主，根据交付地点被命名为「白楼剑」$(br2)后来，魂魄家的传人接过此剑，又询问我等能否锻造一振长刀为其所用。$(br2)在魂魄家以及西行寺家的共同要求与大天狗的命令之下，召集了我等天狗刀匠与其他族群的刀匠，甚至还有人类，一同开始锻造「魂樱之长刀」"
+         "text" : "The wakizashi made of Spirit Sakura Steel was able to kill ghosts and purify them.$(br2)This Blade was given to the lord of Konpaku family, the Half-human Half-spirit clan. It was called Hakurouken, named after the place where the Blade was given.$(br2)The Blade was passed to the descendant of Konpaku family. She asked us if we could smith a tachi for her."
       },
       {
          "type" : "text",
-         "text" : "我不记得当时都有多少人与妖参与。事实上，人数太多……$(br2)更残酷的现实是，我们失败的次数不可计量……$(br2)而次品中也不缺乏优秀的作品，但无法被他们所赏识……$(br2)最终，以高浓度的魂樱之气凝结的魂樱之钢和各种灵力的附着，一振长刀在试斩时斩下了曾一度认为无法被斩断的物质……"
+         "text" : "With the joint requirement of the Konpaku family, the Saigyoji family and the Lord of Tengu, we Tengu smiths and smiths from other clan, even human smiths, began to smith the The Tachi of Spirit Sakura.$(br2)The number of smiths from Human clans and Youkai clans was too many to be count. What was worse, we failed too many times. Though there were some not-bad Blades among the defectives, but these Blades were not accepted by them."
       },
       {
          "type" : "text",
-         "text" : "「魂樱之长刀」被锻造出来，被命名为「楼观剑」。$(br2)它承载着太多的东西，甚至是人类和妖怪的性命……$(br2)换取来的是多少人世俗的赞赏？又是多少利欲熏心的刀匠的粗劣模仿？$(br2)出现了太多仿制品，甚至是次品的仿制品……$(br2)「观楼剑」……这是他们为这些伪物取的名字……"
+         "text" : "Finally there was a tachi, with its condensed Spirit Sakura power and other Spirit powers, cut through materials which used to be considered as not cuttable. The Tachi of Spirit Sakura was eventually smithed, and named Roukanken.$(br2)It meant so many things, even deaths of many Humans and Youkais.$(br2)But it only got vulgar comments and poor imitations by smiths who only considered benefits."
       },
       {
           "type" : "text",
-          "text" : "可曾记得魂樱的起源？$(br2)自从人类与邪魔的战争开始之后，落樱便代表着一方生命的终结……魂樱因此而生……$(br2)魂樱说到底，也就是那些死去的灵魂……$(br2)而无论是人类还是妖怪，都只是沉溺于互相厮杀之中……$(br2)我等刀匠不过是给予他们厮杀的力量，但这就是我们的正义……"
+          "text" : "So many replicas came into being, some were even bad. People named them Kanrouken.$(br2)Do you still remember the origin of Spirit Sakura?$(br2)Since the war between Humans and Devils broke out, the falling of Sakura means a warrior's death. This is the origin of Spirit Sakura. They are the spirit of the dead.$(br2)But However, not only Humans but also Youkais were obsessed in killing each other."
       },
       {
           "type" : "text",
-          "text" : "在「魂樱之长刀」完成之日，我定下决心，以魂樱的力量为我族增加实力……$(br2)我要超越这振「魂樱之长刀」……$(br2)独自……"
+          "text" : "We smiths can only give them the ability to kill, but this is the only thing we should do.$(br2)At the day the smithing  of The Tachi of Spirit Sakura finished, I decided to smith a new Blade to strengthen my clan.$(br2)I must smith a Blade better than The Tachi of Spirit Sakura.$(br2)On my own."
       },
       {
          "type" : "crafting",

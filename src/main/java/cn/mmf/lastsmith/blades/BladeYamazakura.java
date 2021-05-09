@@ -28,7 +28,7 @@ public class BladeYamazakura {
 		customblade.setTagCompound(tag);
 		ItemSlashBladeNamed.CurrentItemName.set(tag, "flammpfeil.slashblade.named.yamazakura.aoi_fake");
 		ItemSlashBladeNamed.CustomMaxDamage.set(tag, 31);
-		BladeUtil.IsFakeBlade.set(tag, true);
+		BladeUtil.getInstance().IsFakeBlade.set(tag, true);
 		ItemSlashBlade.setBaseAttackModifier(tag, 5.0F);
 		ItemSlashBlade.TextureName.set(tag, "named/yamazakura/yamazakura_aoi");
 		ItemSlashBlade.ModelName.set(tag, "named/yamazakura/model_fake");
@@ -41,7 +41,7 @@ public class BladeYamazakura {
 		customblade1.setTagCompound(tag1);
 		ItemSlashBladeNamed.CurrentItemName.set(tag1, "flammpfeil.slashblade.named.yamazakura.kadomatsu");
 		ItemSlashBladeNamed.CustomMaxDamage.set(tag1, 31);
-		BladeUtil.IsFakeBlade.set(tag1, true);
+		BladeUtil.getInstance().IsFakeBlade.set(tag1, true);
 		ItemSlashBlade.setBaseAttackModifier(tag1, 5.0F);
 		ItemSlashBlade.TextureName.set(tag1, "named/yamazakura/yamazakura_mutsuki_kadomatsu");
 		ItemSlashBlade.ModelName.set(tag1, "named/yamazakura/model_fake");
@@ -54,7 +54,7 @@ public class BladeYamazakura {
 		customblade11.setTagCompound(tag11);
 		ItemSlashBladeNamed.CurrentItemName.set(tag11, "flammpfeil.slashblade.named.yamazakura.ume");
 		ItemSlashBladeNamed.CustomMaxDamage.set(tag11, 31);
-		BladeUtil.IsFakeBlade.set(tag11, true);
+		BladeUtil.getInstance().IsFakeBlade.set(tag11, true);
 		ItemSlashBlade.setBaseAttackModifier(tag11, 5.0F);
 		ItemSlashBlade.TextureName.set(tag11, "named/yamazakura/yamazakura_kisaragi_ume");
 		ItemSlashBlade.ModelName.set(tag11, "named/yamazakura/model_fake");
@@ -67,7 +67,7 @@ public class BladeYamazakura {
 		customblade2.setTagCompound(tag2);
 		ItemSlashBladeNamed.CurrentItemName.set(tag2, "flammpfeil.slashblade.named.yamazakura.sakura");
 		ItemSlashBladeNamed.CustomMaxDamage.set(tag2, 31);
-		BladeUtil.IsFakeBlade.set(tag2, true);
+		BladeUtil.getInstance().IsFakeBlade.set(tag2, true);
 		ItemSlashBlade.setBaseAttackModifier(tag2, 5.0F);
 		ItemSlashBlade.TextureName.set(tag2, "named/yamazakura/yamazakura_yayoi_sakura");
 		ItemSlashBlade.ModelName.set(tag2, "named/yamazakura/model_fake");
@@ -80,7 +80,7 @@ public class BladeYamazakura {
 		customblade21.setTagCompound(tag21);
 		ItemSlashBladeNamed.CurrentItemName.set(tag21, "flammpfeil.slashblade.named.yamazakura.uzuki");
 		ItemSlashBladeNamed.CustomMaxDamage.set(tag21, 31);
-		BladeUtil.IsFakeBlade.set(tag21, true);
+		BladeUtil.getInstance().IsFakeBlade.set(tag21, true);
 		ItemSlashBlade.setBaseAttackModifier(tag21, 6.0F);
 		ItemSlashBlade.TextureName.set(tag21, "named/yamazakura/yamazakura_uzuki");
 		ItemSlashBlade.ModelName.set(tag21, "named/yamazakura/uzuki");
@@ -93,7 +93,7 @@ public class BladeYamazakura {
 		customblade22.setTagCompound(tag22);
 		ItemSlashBladeNamed.CurrentItemName.set(tag22, "flammpfeil.slashblade.named.yamazakura.satsuki");
 		ItemSlashBladeNamed.CustomMaxDamage.set(tag22, 31);
-		BladeUtil.IsFakeBlade.set(tag22, true);
+		BladeUtil.getInstance().IsFakeBlade.set(tag22, true);
 		ItemSlashBlade.setBaseAttackModifier(tag22, 6.0F);
 		ItemSlashBlade.TextureName.set(tag22, "named/yamazakura/yamazakura_satsuki");
 		ItemSlashBlade.ModelName.set(tag22, "named/yamazakura/satsuki");
@@ -106,7 +106,7 @@ public class BladeYamazakura {
 		customblade221.setTagCompound(tag221);
 		ItemSlashBladeNamed.CurrentItemName.set(tag221, "flammpfeil.slashblade.named.yamazakura.hazuki");
 		ItemSlashBladeNamed.CustomMaxDamage.set(tag221, 31);
-		BladeUtil.IsFakeBlade.set(tag221, true);
+		BladeUtil.getInstance().IsFakeBlade.set(tag221, true);
 		ItemSlashBlade.setBaseAttackModifier(tag221, 6.0F);
 		ItemSlashBlade.TextureName.set(tag221, "named/yamazakura/yamazakura_hazuki");
 		ItemSlashBlade.ModelName.set(tag221, "named/yamazakura/fumizuki_fake");
@@ -119,7 +119,7 @@ public class BladeYamazakura {
 		customblade222.setTagCompound(tag222);
 		ItemSlashBladeNamed.CurrentItemName.set(tag222, "flammpfeil.slashblade.named.yamazakura.kiku");
 		ItemSlashBladeNamed.CustomMaxDamage.set(tag222, 31);
-		BladeUtil.IsFakeBlade.set(tag222, true);
+		BladeUtil.getInstance().IsFakeBlade.set(tag222, true);
 		ItemSlashBlade.setBaseAttackModifier(tag222, 6.0F);
 		ItemSlashBlade.TextureName.set(tag222, "named/yamazakura/yamazakura_nagatsuki_kiku");
 		ItemSlashBlade.ModelName.set(tag222, "named/yamazakura/fumizuki");
@@ -132,7 +132,7 @@ public class BladeYamazakura {
 		customblade3.setTagCompound(tag3);
 		ItemSlashBladeNamed.CurrentItemName.set(tag3, "flammpfeil.slashblade.named.yamazakura.shiwasu");
 		ItemSlashBladeNamed.CustomMaxDamage.set(tag3, 31);
-		BladeUtil.IsFakeBlade.set(tag3, true);
+		BladeUtil.getInstance().IsFakeBlade.set(tag3, true);
 		ItemSlashBlade.setBaseAttackModifier(tag3, 7.0F);
 		ItemSlashBlade.TextureName.set(tag3, "named/yamazakura/yamazakura_shiwasu");
 		ItemSlashBlade.ModelName.set(tag3, "named/yamazakura/shimotsuki");
@@ -145,7 +145,7 @@ public class BladeYamazakura {
 		customblade31.setTagCompound(tag31);
 		ItemSlashBladeNamed.CurrentItemName.set(tag31, "flammpfeil.slashblade.named.yamazakura.shimotsuki");
 		ItemSlashBladeNamed.CustomMaxDamage.set(tag31, 31);
-		BladeUtil.IsFakeBlade.set(tag31, true);
+		BladeUtil.getInstance().IsFakeBlade.set(tag31, true);
 		ItemSlashBlade.setBaseAttackModifier(tag31, 7.0F);
 		ItemSlashBlade.TextureName.set(tag31, "named/yamazakura/yamazakura_shimotsuki");
 		ItemSlashBlade.ModelName.set(tag31, "named/yamazakura/shimotsuki");
@@ -159,7 +159,7 @@ public class BladeYamazakura {
 		customblade4.addEnchantment(Enchantments.UNBREAKING, 1);
 		ItemSlashBladeNamed.CurrentItemName.set(tag4, "flammpfeil.slashblade.named.yamazakura.minazuki");
 		ItemSlashBladeNamed.CustomMaxDamage.set(tag4, 41);
-		BladeUtil.IsFakeBlade.set(tag4, true);
+		BladeUtil.getInstance().IsFakeBlade.set(tag4, true);
 		ItemSlashBlade.setBaseAttackModifier(tag4, 6.0F);
 		ItemSlashBlade.TextureName.set(tag4, "named/yamazakura/yamazakura_minazuki");
 		ItemSlashBlade.ModelName.set(tag4, "named/yamazakura/model_fake");
@@ -205,7 +205,7 @@ public class BladeYamazakura {
 		ItemSlashBladeNamed.CustomMaxDamage.set(tag421, 41);
 		ItemSlashBlade.setBaseAttackModifier(tag421, 10.0F);
 		ItemSlashBladeNamed.IsDefaultBewitched.set(tag421, true);
-		BladeUtil.IsBewitchedActived.set(tag421, true);
+		BladeUtil.getInstance().IsBewitchedActived.set(tag421, true);
 		ItemSlashBlade.SpecialAttackType.set(tag421, 263);
 		ItemSlashBlade.TextureName.set(tag421, "named/yamazakura/yamazakura_kamuy_tuki");
 		ItemSlashBlade.ModelName.set(tag421, "named/yamazakura/model");
@@ -223,7 +223,7 @@ public class BladeYamazakura {
 		ItemSlashBladeNamed.CustomMaxDamage.set(tag5, 41);
 		ItemSlashBlade.setBaseAttackModifier(tag5, 9.0F);
 		ItemSlashBladeNamed.IsDefaultBewitched.set(tag5, true);
-		BladeUtil.IsBewitchedActived.set(tag5, true);
+		BladeUtil.getInstance().IsBewitchedActived.set(tag5, true);
 		ItemSlashBlade.SpecialAttackType.set(tag5, 263);
 		ItemSlashBlade.TextureName.set(tag5, "named/yamazakura/yamazakura_aoi");
 		ItemSlashBlade.ModelName.set(tag5, "named/yamazakura/model");
@@ -234,21 +234,21 @@ public class BladeYamazakura {
 	@SubscribeEvent
 	public static void onRecipeRegister(RegisterSlashBladeRecipeEvent event) {
 		DropEvent.registerEntityDrop(new ResourceLocation("minecraft", "evocation_illager"),
-				new ResourceLocation(TLSMain.MODID, "slashblade_white"), 0.25f,
+				new ResourceLocation(TLSMain.MODID, "slashblade_white"), 0.5f,
 				BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.yamazakura.aoi_fake"), true);
 		
 		DropEvent.registerEntityDrop(new ResourceLocation("minecraft", "spider"),
-				new ResourceLocation(TLSMain.MODID, "slashblade_white"), 0.5f,
+				new ResourceLocation(TLSMain.MODID, "slashblade_white"), 0.35f,
 				BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.yamazakura.kadomatsu"), true);
 		DropEvent.registerEntityDrop(new ResourceLocation("minecraft", "stray"),
-				new ResourceLocation(TLSMain.MODID, "slashblade_white"), 0.35f,
+				new ResourceLocation(TLSMain.MODID, "slashblade_white"), 0.45f,
 				BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.yamazakura.ume"), true);
 		DropEvent.registerEntityDrop(new ResourceLocation("minecraft", "creeper"),
-				new ResourceLocation(TLSMain.MODID, "slashblade_white"), 0.5f,
+				new ResourceLocation(TLSMain.MODID, "slashblade_white"), 0.35f,
 				BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.yamazakura.sakura"), true);
 
 		DropEvent.registerEntityDrop(new ResourceLocation("minecraft", "ghast"),
-				new ResourceLocation(TLSMain.MODID, "slashblade_white"), 0.35f,
+				new ResourceLocation(TLSMain.MODID, "slashblade_white"), 0.5f,
 				BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.yamazakura.uzuki"), true);
 		DropEvent.registerEntityDrop(new ResourceLocation("minecraft", "enderman"),
 				new ResourceLocation(TLSMain.MODID, "slashblade_white"), 0.35f,
@@ -261,7 +261,7 @@ public class BladeYamazakura {
 				new ResourceLocation(TLSMain.MODID, "slashblade_white"), 0.45f,
 				BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.yamazakura.kiku"), true);
 		DropEvent.registerEntityDrop(new ResourceLocation("minecraft", "vex"),
-				new ResourceLocation(TLSMain.MODID, "slashblade_white"), 0.35f,
+				new ResourceLocation(TLSMain.MODID, "slashblade_white"), 0.45f,
 				BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.yamazakura.shiwasu"), true);
 		DropEvent.registerEntityDrop(new ResourceLocation("minecraft", "magma_cube"),
 				new ResourceLocation(TLSMain.MODID, "slashblade_white"), 0.35f,
@@ -290,7 +290,6 @@ public class BladeYamazakura {
 		reqiredMain = BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.yamazakura.uzuki");
 		reqiredSub = BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.yamazakura.satsuki");
 		reqTag = ItemSlashBlade.getItemTagCompound(sb);
-		ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(100));
 
 		RecipesUtil.getInstance().addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.yamazakura.fumizuki", new RecipeTriBladeTLS(
 			new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.yamazakura.fumizuki"),
@@ -309,8 +308,7 @@ public class BladeYamazakura {
 		reqiredMain = BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.yamazakura.hazuki");
 		reqiredSub = BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.yamazakura.kiku");
 		reqTag = ItemSlashBlade.getItemTagCompound(sb);
-		ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(250));
-		ItemSlashBlade.RepairCount.set(reqTag, Integer.valueOf(1));
+		ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(100));
 		RecipesUtil.getInstance().addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.yamazakura.kannazuki", new RecipeTriBladeTLS(
 			new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.yamazakura.kannazuki"),
 			"bewitched_blade", BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.yamazakura.kannazuki"), sb,
@@ -328,9 +326,9 @@ public class BladeYamazakura {
 		reqiredMain = BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.yamazakura.shiwasu");
 		reqiredSub = BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.yamazakura.shimotsuki");
 		reqTag = ItemSlashBlade.getItemTagCompound(sb);
-		ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(1000));
-		ItemSlashBlade.ProudSoul.set(reqTag, Integer.valueOf(10000));
-		ItemSlashBlade.RepairCount.set(reqTag, Integer.valueOf(5));
+		ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(500));
+		ItemSlashBlade.ProudSoul.set(reqTag, Integer.valueOf(1000));
+		ItemSlashBlade.RepairCount.set(reqTag, Integer.valueOf(1));
 		RecipesUtil.getInstance().addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.yamazakura.kamuy", new RecipeTriBladeTLS(
 			new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.yamazakura.kamuy"),
 			"bewitched_blade", BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.yamazakura.kamuy"), sb,
@@ -346,9 +344,9 @@ public class BladeYamazakura {
 		}));
 		sb = BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.yamazakura.aoi_fake");
 		reqTag = ItemSlashBlade.getItemTagCompound(sb);
-		ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(1000));
-		ItemSlashBlade.ProudSoul.set(reqTag, Integer.valueOf(10000));
-		ItemSlashBlade.RepairCount.set(reqTag, Integer.valueOf(5));
+		ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(500));
+		ItemSlashBlade.ProudSoul.set(reqTag, Integer.valueOf(1000));
+		ItemSlashBlade.RepairCount.set(reqTag, Integer.valueOf(1));
 		RecipesUtil.getInstance().addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.yamazakura.aoi", new RecipeAwakeBladeTLS(
 			new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.yamazakura.aoi"),
 			"bewitched_blade", BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.yamazakura.aoi"), sb, 

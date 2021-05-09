@@ -1,0 +1,27 @@
+{
+   "conditions" : [
+      {
+         "type" : "forge:mod_loaded",
+         "modid" : "tfc"
+      }
+   ],
+   "type" : "tfc:damage_item_shaped",
+   "pattern" : [ "  S", " S ", "# W" ],
+   "key" : {
+      "S" : {
+         "item" : "#BAMBOO"
+      },
+      "#" : {
+         "item" : "lastsmith:materials",
+         "data" : 0
+      },
+      "W" : {
+         "type" : "forge:ore_dict",
+         "ore" : "saw"
+      }
+   },
+   "result" : {
+      "item" : "lastsmith:materials",
+      "data" : 1
+   }
+}

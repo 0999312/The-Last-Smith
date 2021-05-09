@@ -33,7 +33,7 @@ public class BladeSagequoia {
 		ItemSlashBladeNamed.CustomMaxDamage.set(tag, Integer.valueOf(113));
 		ItemSlashBlade.AttackAmplifier.set(tag, 2F);
 		ItemSlashBladeNamed.IsDefaultBewitched.set(tag, true);
-		BladeUtil.IsBewitchedActived.set(tag, true);
+		BladeUtil.getInstance().IsBewitchedActived.set(tag, true);
 		ItemSlashBlade.setBaseAttackModifier(tag, 15.0F);
 		ItemSlashBlade.TextureName.set(tag, "named/sagequoia/texture");
 		ItemSlashBlade.ModelName.set(tag, "named/sagequoia/model");

@@ -1,0 +1,31 @@
+{
+       "conditions" : [
+          {
+             "type" : "forge:not",
+             "value" : {
+                "type" : "forge:mod_loaded",
+                "modid" : "tfc"
+             }
+          }
+       ],
+   "type" : "minecraft:crafting_shaped",
+   "pattern" : [
+	" S#",
+	"SDS",
+	"#S "
+	],
+   "key" : {
+      "#" : {
+         "item" : "#BAMBOO"
+      },
+      "S" : {
+         "item" : "#PLANKWOOD"
+      },
+      "D" : {
+         "item" : "lastsmith:wooden_saya"
+      }
+   },
+   "result" : {
+      "item" : "lastsmith:bamboo_saya"
+   }
+}

@@ -1,0 +1,28 @@
+{
+   "conditions" : [
+      {
+         "type" : "forge:mod_loaded",
+         "modid" : "tfc"
+      }
+   ],
+   "type" : "tfc:damage_item_shaped",
+   "pattern" : [ " S#", "SDS", "#SW" ],
+   "key" : {
+      "#" : {
+         "item" : "#BAMBOO"
+      },
+      "S" : {
+         "item" : "#PLANKWOOD"
+      },
+      "D" : {
+         "item" : "lastsmith:wooden_saya"
+      },
+      "W" : {
+         "type" : "forge:ore_dict",
+         "ore" : "saw"
+      }
+   },
+   "result" : {
+      "item" : "lastsmith:bamboo_saya"
+   }
+}

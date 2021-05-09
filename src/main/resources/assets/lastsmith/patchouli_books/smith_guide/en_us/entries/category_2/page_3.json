@@ -9,8 +9,15 @@
       },
       {
          "type" : "crafting",
+       "flag":"!mod:tfc",
          "recipe" : "lastsmith:blade_bamboo",
          "recipe2" : "lastsmith:bamboo_saya"
+      },
+      {
+         "type" : "crafting",
+         "flag":"mod:tfc",
+         "recipe" : "lastsmith:blade_bamboo_tfc",
+         "recipe2" : "lastsmith:bamboo_saya_tfc"
       },
       {
          "type" : "crafting",

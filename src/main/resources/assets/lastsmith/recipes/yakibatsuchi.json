@@ -1,0 +1,31 @@
+{
+   "conditions" : [
+      {
+         "type" : "forge:not",
+         "value" : {
+            "type" : "forge:mod_loaded",
+            "modid" : "tfc"
+         }
+      }
+   ],
+   "result" : {
+      "item" : "lastsmith:materials",
+      "data" : 2,
+      "count" : 1
+   },
+   "ingredients" : [
+      {
+         "item" : "#OREIRON"
+      },
+      {
+         "item" : "#BLOCKCOAL"
+      },
+      {
+         "item" : "minecraft:clay"
+      },
+      {
+         "item" : "#TOOLFORGINGHAMMER"
+      }
+   ],
+   "type" : "forge:ore_shapeless"
+}

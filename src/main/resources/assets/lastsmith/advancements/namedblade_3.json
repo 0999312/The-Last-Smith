@@ -1,0 +1,167 @@
+{
+   "conditions" : [
+      {
+         "type" : "forge:mod_loaded",
+         "modid" : "slashblade_addon"
+      }
+   ],
+   "display" : {
+      "title" : {
+         "translate" : "achievement.lastsmith.namedblade_3.title"
+      },
+      "description" : {
+         "translate" : "achievement.lastsmith.namedblade_3.desc",
+         "with" : [ "\n" ]
+      },
+      "icon" : {
+         "item" : "flammpfeil.slashblade:slashbladenamed",
+         "data" : 0,
+         "nbt" : "{ModelName: \"wa/model\", TextureName: \"wa/template\"}"
+      },
+      "frame" : "goal"
+   },
+   "parent" : "lastsmith:slashblade_white",
+   "criteria" : {
+      "blade" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "SlashBladeTemplate.blue"
+               }
+            ]
+         }
+      },
+      "blade1" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.darkraven"
+               }
+            ]
+         }
+      },
+      "blade2" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.snowcrow"
+               }
+            ]
+         }
+      },
+      "blade3" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.wa.katana"
+               }
+            ]
+         }
+      },
+      "blade4" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.wa.tachi"
+               }
+            ]
+         }
+      },
+      "blade5" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.wanderer"
+               }
+            ]
+         }
+      },
+      "blade6" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.fluorescentbar"
+               }
+            ]
+         }
+      },
+      "blade7" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.frostwolfa"
+               }
+            ]
+         }
+      },
+      "blade8" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.frostwolfb"
+               }
+            ]
+         }
+      },
+      "blade9" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.toyako"
+               }
+            ]
+         }
+      },
+      "blade10" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.yukari"
+               }
+            ]
+         }
+      },
+      "blade11" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.tboen"
+               }
+            ]
+         }
+      },
+      "white" : {
+         "trigger" : "lastsmith:has_advancement",
+         "conditions" : {
+            "advancement" : "lastsmith:slashblade_white"
+         }
+      }
+   },
+   "rewards" : {
+      "loot" : [ "lastsmith:advancements/named_3" ]
+   }
+}

@@ -22,9 +22,9 @@ public class SlashBladeItemPredicate extends ItemPredicate {
     @Override
     public boolean test(ItemStack stack) {
         return !stack.isEmpty() && 
-        		(BladeUtil.isMatchedBlade(stack, SlashBlade.getCustomBlade(blade_name))||
-        		BladeUtil.isMatchedBlade(stack, SlashBlade.getCustomBlade(blade_name+".sample"))||
-        		BladeUtil.isMatchedBlade(stack, BladeLoader.getInstance().getCustomBlade(blade_name)));
+        		(BladeUtil.getInstance().isMatchedBlade(stack, SlashBlade.getCustomBlade(blade_name))||
+        		BladeUtil.getInstance().isMatchedBlade(stack, SlashBlade.getCustomBlade(blade_name+".sample"))||
+        		BladeUtil.getInstance().isMatchedBlade(stack, BladeLoader.getInstance().getCustomBlade(blade_name)));
     }
 	
 }

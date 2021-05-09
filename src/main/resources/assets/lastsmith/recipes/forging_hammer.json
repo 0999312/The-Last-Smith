@@ -1,0 +1,28 @@
+{
+   "conditions" : [
+      {
+         "type" : "forge:not",
+         "value" : {
+            "type" : "forge:mod_loaded",
+            "modid" : "sakura"
+         }
+      }
+   ],
+   "type" : "minecraft:crafting_shaped",
+   "pattern" : [ 
+	" II",
+	" SI",
+	"S  " 
+	],
+   "key" : {
+      "S" : {
+         "item" : "#LOGWOOD"
+      },
+      "I" : {
+         "item" : "#INGOTIRON"
+      }
+   },
+   "result" : {
+      "item" : "lastsmith:forging_hammer"
+   }
+}

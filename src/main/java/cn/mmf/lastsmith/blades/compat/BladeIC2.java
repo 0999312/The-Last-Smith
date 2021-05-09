@@ -32,9 +32,9 @@ public class BladeIC2 {
 		ItemSlashBladeNamed.CustomMaxDamage.set(tag1, -1);
 		ItemSlashBlade.setBaseAttackModifier(tag1, 11.0f);
 		ItemSlashBlade.TextureName.set(tag1, "named/nanosaber/texture");
-		BladeUtil.TextureOnName.set(tag1, "named/nanosaber/texture_on");
+		BladeUtil.getInstance().TextureOnName.set(tag1, "named/nanosaber/texture_on");
 		ItemSlashBlade.ModelName.set(tag1, "named/nanosaber/model");
-		BladeUtil.ModelOnName.set(tag1, "named/nanosaber/model");
+		BladeUtil.getInstance().ModelOnName.set(tag1, "named/nanosaber/model");
 		ItemSlashBlade.SpecialAttackType.set(tag1, 1);
 		ItemSlashBlade.StandbyRenderType.set(tag1, 2);
 		BladeLoader.getInstance().registerCustomItemStack("flammpfeil.slashblade.named.nanosaber", customblade);
@@ -47,9 +47,9 @@ public class BladeIC2 {
 		ItemSlashBladeNamed.CustomMaxDamage.set(tag11, -1);
 		ItemSlashBlade.setBaseAttackModifier(tag11, 21.0f);
 		ItemSlashBlade.TextureName.set(tag11, "named/nanosaber/texture_1");
-		BladeUtil.TextureOnName.set(tag11, "named/nanosaber/texture_1_on");
+		BladeUtil.getInstance().TextureOnName.set(tag11, "named/nanosaber/texture_1_on");
 		ItemSlashBlade.ModelName.set(tag11, "named/nanosaber/model");
-		BladeUtil.ModelOnName.set(tag11, "named/nanosaber/model");
+		BladeUtil.getInstance().ModelOnName.set(tag11, "named/nanosaber/model");
 		ItemSlashBlade.SpecialAttackType.set(tag11, 1);
 		ItemSlashBlade.StandbyRenderType.set(tag11, 2);
 		BladeLoader.getInstance().registerCustomItemStack("flammpfeil.slashblade.named.quantumsaber", customblade1);
@@ -71,9 +71,9 @@ public class BladeIC2 {
 						"IAI",
 						"CBC",
 						"IDI",
-						'A', IC2Items.getItem("crafting", "circuit"),
+						'A', "circuitBasic",
 						'B', custombladeReqired,
-						'C', IC2Items.getItem("plate", "dense_iron"),
+						'C', "plateDenseIron",
 						'D', IC2Items.getItem("energy_crystal"),
 						'I', IC2Items.getItem("crafting", "alloy")
 		}));
@@ -86,9 +86,9 @@ public class BladeIC2 {
 						"IAI",
 						"CBC",
 						"IDI",
-						'A', IC2Items.getItem("plate", "dense_steel"),
+						'A', "plateDenseSteel",
 						'B', blade,
-						'C', IC2Items.getItem("crafting", "advanced_circuit"),
+						'C', "circuitAdvanced",
 						'D', IC2Items.getItem("lapotron_crystal"),
 						'I', IC2Items.getItem("crafting", "iridium")
 		}));

@@ -9,9 +9,12 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @EventBusSubscriber
 public class SELoader {
-	public static ISpecialEffect EXTREME_SHARPNESS;
+	public static ISpecialEffect EXTREME_SHARPNESS,TLSystem,SAP,MUNIN_SHARPNESS;
 	@SubscribeEvent
 	public static void registerSE(RegistryEvent.Register<Item> event) {
-		EXTREME_SHARPNESS = SpecialEffects.register(new SESharpness());
+		EXTREME_SHARPNESS = SpecialEffects.register(new SESharpnessLower());
+		MUNIN_SHARPNESS = SpecialEffects.register(new SESharpness());
+		TLSystem = SpecialEffects.register(new SEtacticalLaserSystem());
+		SAP = SpecialEffects.register(new SESapping());
 	}
 }

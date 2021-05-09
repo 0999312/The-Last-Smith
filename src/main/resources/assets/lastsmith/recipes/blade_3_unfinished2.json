@@ -1,0 +1,34 @@
+{
+       "conditions" : [
+          {
+             "type" : "forge:not",
+             "value" : {
+                "type" : "forge:mod_loaded",
+                "modid" : "tfc"
+             }
+          }
+       ],
+   "type" : "minecraft:crafting_shaped",
+   "pattern" : [
+	"  S",
+	" S ",
+	"# D"
+	],
+   "key" : {
+      "#" : {
+      "item" : "lastsmith:blade",
+	  "data" : 5
+      },
+      "S" : {
+      "item" : "flammpfeil.slashblade:proudsoul",
+	  "data" : 1
+      },
+      "D" : {
+         "item" : "#TOOLFORGINGHAMMER"
+      }
+   },
+   "result" : {
+      "item" : "lastsmith:blade",
+	  "data" : 8
+   }
+}

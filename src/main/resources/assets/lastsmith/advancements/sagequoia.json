@@ -1,0 +1,37 @@
+{
+   "display" : {
+      "title" : {
+         "translate" : "achievement.lastsmith.sagequoia.title"
+      },
+      "description" : {
+         "translate" : "achievement.lastsmith.sagequoia.desc",
+         "with" : [ "\n" ]
+      },
+      "icon" : {
+         "item" : "flammpfeil.slashblade:slashbladenamed",
+         "data" : 0,
+         "nbt" : "{ench: [{lvl:1,id:35}], ModelName: \"named/sagequoia/model\", TextureName: \"named/sagequoia/texture\"}"
+      },
+      "frame" : "goal"
+   },
+   "parent" : "lastsmith:bewitched_blade",
+   "criteria" : {
+      "crafting" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.sagequoia"
+               }
+            ]
+         }
+      },
+      "blade" : {
+         "trigger" : "lastsmith:has_advancement",
+         "conditions" : {
+            "advancement" : "lastsmith:bewitched_blade"
+         }
+      }
+   }
+}

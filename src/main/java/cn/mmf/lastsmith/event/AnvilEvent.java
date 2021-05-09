@@ -15,6 +15,25 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 @EventBusSubscriber
 public class AnvilEvent {
 	@SubscribeEvent
+	public static void MuninOldRecipe(AnvilUpdateEvent event) {
+        if (!(event.getLeft().getItem() instanceof ItemSlashBlade))
+            return;
+        if (event.getRight() == null)
+            return;
+        if (!(event.getRight().getItem() == ItemLoader.SCROLL)||(event.getRight().getMetadata()!=17))
+            return;
+        event.setMaterialCost(1);
+        ItemStack out = event.getLeft().copy();
+        NBTTagCompound tag = ItemSlashBlade.getItemTagCompound(out);
+        if(!ItemSlashBladeNamed.CurrentItemName.get(tag).equalsIgnoreCase("flammpfeil.slashblade.named.smith.final"))
+        	return;
+		ItemSlashBlade.TextureName.set(tag, "named/smith/texture_final_old");
+		ItemSlashBlade.ModelName.set(tag, "named/smith/model");
+        out.setItemDamage(0);
+        event.setCost(1);
+        event.setOutput(out);
+	}
+	@SubscribeEvent
 	public static void bewitchedBladeRecipe(AnvilUpdateEvent event) {
         if (!(event.getLeft().getItem() instanceof ItemSlashBlade))
             return;
@@ -48,7 +67,7 @@ public class AnvilEvent {
             repairFactor = 1f;
             ItemSlashBlade.ProudSoul.add(tag, 10000);
     		ItemSlashBladeNamed.IsDefaultBewitched.set(tag, true);
-    		BladeUtil.IsBewitchedActived.set(tag, true);
+    		BladeUtil.getInstance().IsBewitchedActived.set(tag, true);
             break;
         default:
             return;  

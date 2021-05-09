@@ -1,0 +1,44 @@
+{
+   "display" : {
+      "title" : {
+         "translate" : "achievement.lastsmith.roukan_hakurou.title"
+      },
+      "description" : {
+         "translate" : "achievement.lastsmith.roukan_hakurou.desc",
+         "with" : [ "\n" ]
+      },
+      "icon" : {
+         "item" : "flammpfeil.slashblade:slashbladenamed",
+         "data" : 0,
+         "nbt" : "{ench: [{lvl:1,id:35}], ModelName: \"named/roukan/model\", TextureName: \"named/roukan/texture\"}"
+      },
+      "frame" : "goal"
+   },
+   "parent" : "lastsmith:sakura_blade",
+   "criteria" : {
+      "crafting" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.roukan"
+               },
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.hakurou"
+               }
+            ]
+         }
+      },
+      "blade" : {
+         "trigger" : "lastsmith:has_advancement",
+         "conditions" : {
+            "advancement" : "lastsmith:sakura_blade"
+         }
+      }
+   },
+   "rewards" : {
+      "loot" : [ "lastsmith:advancements/roukan_hakurou" ]
+   }
+}

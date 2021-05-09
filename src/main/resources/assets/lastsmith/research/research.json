@@ -17,7 +17,43 @@
             {
                "text" : "research.roukan_xf.text.stage.2",
                "recipes" : [
-                  "lastsmith:flammpfeil.slashblade.named.roukan_xf"
+                  "lastsmith:flammpfeil.slashblade.named.roukan_xf",
+                  "lastsmith:flammpfeil.slashblade.named.hakurou_xf"
+               ]
+            }
+         ]
+      },
+      {
+         "key" : "fortress_blade",
+         "name" : "research.fortress_blade.title",
+         "icons" : [
+            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"named/smith/model\",TextureName: \"named/thaum/texture_elemental_update\"}"
+         ],
+         "category" : "INFUSION",
+         "location" : [ -3, 6 ],
+         "parents" : [ "ELEMENTALTOOLS" ],
+         "stages" : [
+            {
+               "text" : "research.fortress_blade.text.stage.1",
+               "required_knowledge" : [ "THEORY;INFUSION;2", "THEORY;BASICS;2" ],
+               "recipes" : [
+                  "lastsmith:flammpfeil.slashblade.named.fortress.thaumium",
+                  "lastsmith:flammpfeil.slashblade.named.fortress.elemental",
+                  "lastsmith:flammpfeil.slashblade.named.fortress.void",
+                  "lastsmith:flammpfeil.slashblade.named.fortress.crimson"
+               ]
+            },
+            {
+               "text" : "research.fortress_blade.text.stage.2",
+               "recipes" : [
+                  "lastsmith:flammpfeil.slashblade.named.fortress.thaumium",
+                  "lastsmith:flammpfeil.slashblade.named.fortress.elemental",
+                  "lastsmith:flammpfeil.slashblade.named.fortress.void",
+                  "lastsmith:flammpfeil.slashblade.named.fortress.crimson",
+                  "lastsmith:flammpfeil.slashblade.named.fortress.thaumium.update",
+                  "lastsmith:flammpfeil.slashblade.named.fortress.element.update",
+                  "lastsmith:flammpfeil.slashblade.named.fortress.void.update",
+                  "lastsmith:flammpfeil.slashblade.named.fortress.crimson.update"
                ]
             }
          ]

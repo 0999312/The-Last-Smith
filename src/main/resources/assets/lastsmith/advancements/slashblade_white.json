@@ -1,0 +1,36 @@
+{
+   "display" : {
+      "title" : {
+         "translate" : "achievement.lastsmith.white.title"
+      },
+      "description" : {
+         "translate" : "achievement.lastsmith.white.desc",
+         "with" : [ "\n" ]
+      },
+      "icon" : {
+         "item" : "flammpfeil.slashblade:slashbladeWhite"
+      },
+      "frame" : "goal"
+   },
+   "parent" : "lastsmith:root",
+   "criteria" : {
+      "blade_1" : {
+         "trigger" : "lastsmith:has_advancement",
+         "conditions" : {
+            "advancement" : "flammpfeil.slashblade:white"
+         }
+      },
+      "blade_2" : {
+         "trigger" : "lastsmith:has_advancement",
+         "conditions" : {
+            "advancement" : "flammpfeil.slashblade:brokenwhite"
+         }
+      },
+      "blade" : {
+         "trigger" : "lastsmith:has_advancement",
+         "conditions" : {
+            "advancement" : "lastsmith:root"
+         }
+      }
+   }
+}

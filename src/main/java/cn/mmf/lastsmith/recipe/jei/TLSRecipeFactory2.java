@@ -9,4 +9,5 @@ public class TLSRecipeFactory2 implements IRecipeWrapperFactory<RecipeAwakeBlade
 	public IRecipeWrapper getRecipeWrapper(RecipeAwakeBladeTLS recipe) {
 		return new AwakedBladeRecipeWrapper(JEIPlugin.jeiHelpers, recipe);
 	}
+	
 }

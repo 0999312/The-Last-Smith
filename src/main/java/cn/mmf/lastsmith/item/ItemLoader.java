@@ -40,11 +40,11 @@ public class ItemLoader {
 		"scroll_aoi",//8
 		"scroll_tuki",//9
 		"scroll_ghost",//10
-		"scroll_blood",
-		"scroll_shapeness",
-		"scroll_nether",
-		"scroll_nihil",
-		"scroll_thaumium",
+		"scroll_blood",//11
+		"scroll_shapeness",//12
+		"scroll_nether",//13
+		"scroll_nihil",//14
+		"scroll_thaumium",//15
 		"scroll_crimson",
 		"scroll_creait",
 		"scroll_tech",
@@ -82,17 +82,46 @@ public class ItemLoader {
 		"blade_3_unfinished_3",//11
 		"blade_unfinished_5",
 		"blade_2_unfinished_5",
-		"blade_3_unfinished_5"//14
+		"blade_3_unfinished_5",//14
+		"blade_red_steel_unfinished",//15
+		"blade_blue_steel_unfinished",//16
+		"blade_red_steel_unfinished_2",
+		"blade_blue_steel_unfinished_2",
+		"blade_red_steel_unfinished_3",
+		"blade_blue_steel_unfinished_3",
+		"blade_red_steel_unfinished_5",//21
+		"blade_blue_steel_unfinished_5",//22
+		"blade_red_steel",
+		"blade_blue_steel",//24
+		
+		"blade_thaum_unfinished",//25
+		"blade_void_unfinished",//26
+		"blade_thaum_unfinished_2",//27
+		"blade_void_unfinished_2",//28
+		"blade_thaum_unfinished_3",//29
+		"blade_void_unfinished_3",
+		"blade_thaum_unfinished_5",//31
+		"blade_void_unfinished_5",//32
+		"blade_thaum",
+		"blade_void"
 	);
 	public static ItemBase BLADE_HEATTED = new ItemHeattedBlade(
 		new String[]{
-				"blade_unfinished_4",
+				"blade_unfinished_4",//0
 				"blade_2_unfinished_4",
-				"blade_3_unfinished_4"
+				"blade_3_unfinished_4",
+				"blade_red_steel_unfinished_4",
+				"blade_blue_steel_unfinished_4",
+				"blade_thaum_unfinished_4",
+				"blade_void_unfinished_4"
 		},
 		new ItemStack(BLADE,1,12),
 		new ItemStack(BLADE,1,13),
-		new ItemStack(BLADE,1,14)
+		new ItemStack(BLADE,1,14),
+		new ItemStack(BLADE,1,21),
+		new ItemStack(BLADE,1,22),
+		new ItemStack(BLADE,1,31),
+		new ItemStack(BLADE,1,22)
 	);
 	public static Item hammer = new ItemHammer().setUnlocalizedName(TLSMain.MODID+'.'+"forging_hammer");
 	private static final ItemLoader instance = new ItemLoader();

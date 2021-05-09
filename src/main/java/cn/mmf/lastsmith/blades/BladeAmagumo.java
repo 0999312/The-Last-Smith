@@ -24,7 +24,7 @@ public class BladeAmagumo {
 		NBTTagCompound tag1 = new NBTTagCompound();
 		customblade.setTagCompound(tag1);
 		ItemSlashBladeNamed.IsDefaultBewitched.set(tag1, true);
-		BladeUtil.IsBewitchedActived.set(tag1, true);
+		BladeUtil.getInstance().IsBewitchedActived.set(tag1, true);
 		ItemSlashBladeNamed.CurrentItemName.set(tag1, "flammpfeil.slashblade.named.amagumo.wind");
 		ItemSlashBladeNamed.CustomMaxDamage.set(tag1, 40);
 		ItemSlashBlade.AttackAmplifier.set(tag1, 3F);
@@ -44,7 +44,7 @@ public class BladeAmagumo {
 		NBTTagCompound tag11 = new NBTTagCompound();
 		customblade1.setTagCompound(tag11);
 		ItemSlashBladeNamed.IsDefaultBewitched.set(tag11, true);
-		BladeUtil.IsBewitchedActived.set(tag11, true);
+		BladeUtil.getInstance().IsBewitchedActived.set(tag11, true);
 		ItemSlashBladeNamed.CurrentItemName.set(tag11, "flammpfeil.slashblade.named.amagumo.cloud");
 		ItemSlashBladeNamed.CustomMaxDamage.set(tag11, 40);
 		ItemSlashBlade.AttackAmplifier.set(tag11, 3F);
@@ -73,10 +73,11 @@ public class BladeAmagumo {
 			"sharpness", BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.amagumo.wind"), request, 
 			new Object[] {
 				"DPS",
-				"PSP",
+				"PAP",
 				"BPD",
 				'P', "sphereSakura",
 				'S', "feather",
+				'A', "gemEmerald",
 				'D', "enderpearl",
 				'B', request
 		}));
@@ -85,11 +86,12 @@ public class BladeAmagumo {
 			"sharpness", BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.amagumo.cloud"), request, 
 			new Object[] {
 				"SPD",
-				"PSP",
+				"PAP",
 				"DPB",
 				'P', "sphereSakura",
 				'S', "feather",
 				'D', "enderpearl",
+				'A', "gemQuartz",
 				'B', request
 		}));
 	}

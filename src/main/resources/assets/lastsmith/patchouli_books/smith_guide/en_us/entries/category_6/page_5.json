@@ -1,11 +1,11 @@
 {
-   "name" : "lrsoft的「祭钢刃」",
+   "name" : "lrsoft's Orlibur",
    "icon" : "flammpfeil.slashblade:slashbladenamed{ModelName: \"named/arthurs/model_irsort\", TextureName: \"named/arthurs/texture_irsoft\"}",
    "category" : "category_6",
    "pages" : [
       {
          "type" : "text",
-         "text" : "lrsoft，技术革新的制作者，早期TLS纳米太刀联动代码技术帮助。$(br2)其实他只不过是把纳米太刀的技术先搬运到了高版本，而且现在TLS的纳米太刀和他也没有关系了。$(br2)现在摸鱼中……"
+         "text" : "lrsoft, developer of Technology Revolution, an addon of SlashBlade Mod. He provided help in programming TLS's Nanosaber code by porting its code to later versions of Minecraft. Now Nanosaber is rewritten.$(br2)He is afk now."
       },
       {
          "type" : "crafting",

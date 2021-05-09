@@ -1,0 +1,24 @@
+{
+   "conditions" : [
+      {
+         "type" : "forge:not",
+         "value" : {
+            "type" : "forge:mod_loaded",
+            "modid" : "tfc"
+         }
+      }
+   ],
+   "type" : "minecraft:crafting_shaped",
+   "pattern" : [ " S#", "S#S", "#S " ],
+   "key" : {
+      "#" : {
+         "item" : "#LOGWOOD"
+      },
+      "S" : {
+         "item" : "#PLANKWOOD"
+      }
+   },
+   "result" : {
+      "item" : "lastsmith:wooden_saya"
+   }
+}

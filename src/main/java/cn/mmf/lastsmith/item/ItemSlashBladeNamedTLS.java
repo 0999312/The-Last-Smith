@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.google.common.collect.Lists;
 
+import cn.mmf.lastsmith.TLSConfig;
 import cn.mmf.lastsmith.blades.BladeLoader;
 import cn.mmf.lastsmith.util.BladeUtil;
 import mods.flammpfeil.slashblade.ItemSlashBladeNamed;
@@ -16,7 +17,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.NonNullList;
-import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.oredict.OreDictionary;
@@ -30,12 +30,6 @@ public class ItemSlashBladeNamedTLS extends ItemSlashBladeTLS{
 	public ResourceLocationRaw getModelTexture() {
 		return texture;
 	}
-	@Override
-	public void onCreated(ItemStack stack, World worldIn, EntityPlayer playerIn) {
-		super.onCreated(stack, worldIn, playerIn);
-		NBTTagCompound nbt = stack.getTagCompound();
-		BladeUtil.setPlayer(nbt,playerIn);
-	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Override
@@ -43,7 +37,7 @@ public class ItemSlashBladeNamedTLS extends ItemSlashBladeTLS{
     public void addInformationSwordClass(ItemStack par1ItemStack,
 			EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
 		NBTTagCompound tag = getItemTagCompound(par1ItemStack);
-		if(BladeUtil.IsFakeBlade.get(tag)){
+		if(BladeUtil.getInstance().IsFakeBlade.get(tag)){
 			par3List.add(I18n.format("flammpfeil.swaepon.info.fake"));
 		}else
 		super.addInformationSwordClass(par1ItemStack, par2EntityPlayer, par3List, par4);
@@ -131,9 +125,9 @@ public class ItemSlashBladeNamedTLS extends ItemSlashBladeTLS{
 	public EnumSet<SwordType> getSwordType(ItemStack itemStack) {
 		EnumSet<SwordType> set = super.getSwordType(itemStack);
 		NBTTagCompound tag = getItemTagCompound(itemStack);
-		if(BladeUtil.IsFakeBlade.get(tag)){
+		if(BladeUtil.getInstance().IsFakeBlade.get(tag)){
 			set.remove(SwordType.Enchanted);
-			if(!BladeUtil.IsBewitchedActived.get(tag)){
+			if(TLSConfig.advanced_mode && !BladeUtil.getInstance().IsBewitchedActived.get(tag)){
 				set.remove(SwordType.Bewitched);
 				set.remove(SwordType.SoulEeater);
 			}

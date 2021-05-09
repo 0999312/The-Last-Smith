@@ -5,10 +5,13 @@ import java.util.Map;
 import com.google.common.collect.Maps;
 
 import cn.mmf.lastsmith.TLSMain;
+import cn.mmf.lastsmith.blades.compat.ItemSlashBladeCrimson;
 import cn.mmf.lastsmith.blades.compat.ItemSlashBladeEU;
 import cn.mmf.lastsmith.blades.compat.ItemSlashBladeRF;
 import cn.mmf.lastsmith.blades.compat.ItemSlashBladeVoid;
 import cn.mmf.lastsmith.blades.compat.ItemSlashBladeWind;
+import cn.mmf.lastsmith.blades.handmade.ItemSlashBladeHandmade;
+import cn.mmf.lastsmith.blades.handmade.ItemSlashBladeSayaHandmade;
 import cn.mmf.lastsmith.item.ItemLoader;
 import cn.mmf.lastsmith.item.ItemSlashBladeDetuneTLS;
 import cn.mmf.lastsmith.item.ItemSlashBladeSaya;
@@ -39,7 +42,10 @@ public class BladeLoader {
 	public static Item euBlade,windBlade,voidBlade,rfblade,crimsonBlade;
 	public static Item wrapper = new ItemSlashBladeSaya(ToolMaterial.WOOD).setUnlocalizedName(TLSMain.MODID+"."+"wooden_saya");
 	public static Item wrapper_bamboo = new ItemSlashBladeSaya(ToolMaterial.WOOD).setModelTexture(new ResourceLocationRaw("flammpfeil.slashblade","model/bamboo_saya.png")).setUnlocalizedName(TLSMain.MODID+"."+"bamboo_saya");
-	public static Item weapon,bladeWood,bladeBambooLight,bladeSilverBambooLight,bladeWhiteSheath;
+	public static Item weapon,bladeWood,bladeBambooLight,bladeSilverBambooLight,
+	bladeWhiteSheath,
+	bladeHandmade = new ItemSlashBladeHandmade(ToolMaterial.IRON,6).setUnlocalizedName("lastsmith.handmade_white"),
+	bladeSayaHandmade = new ItemSlashBladeSayaHandmade(ToolMaterial.WOOD).setUnlocalizedName("lastsmith.handmade_saya_0");
 	private Map<ResourceLocationRaw, ItemStack> BladeRegistry = Maps.newHashMap();
 	private static final BladeLoader instance = new BladeLoader();
     private BladeLoader() {
@@ -55,6 +61,10 @@ public class BladeLoader {
     	ItemLoader.getInstance().registerItem(wrapper_bamboo);
     	ItemLoader.getInstance().registerItem(blade);
     	ItemLoader.getInstance().registerItem(bladeNamed);
+    	
+    	ItemLoader.getInstance().registerItem(bladeHandmade);
+    	ItemLoader.getInstance().registerItem(bladeSayaHandmade);
+    	
 		weapon = new ItemSlashBladeTLS(ToolMaterial.IRON, 4 + ToolMaterial.DIAMOND.getAttackDamage())
 				.setRepairMaterial(new ItemStack(Items.IRON_INGOT))
 				.setRepairMaterialOreDic("ingotSteel", "nuggetSteel")
@@ -110,7 +120,7 @@ public class BladeLoader {
     		ForgeRegistries.ITEMS.register(windBlade);
     		voidBlade = (new ItemSlashBladeVoid(ThaumcraftMaterials.TOOLMAT_VOID, 4.0F)).setRegistryName("slashblade_void");
     		ForgeRegistries.ITEMS.register(voidBlade);
-    		crimsonBlade = (new ItemSlashBladeVoid(ItemCrimsonBlade.toolMatCrimsonVoid, 4.0F)).setRegistryName("slashblade_crimson");
+    		crimsonBlade = (new ItemSlashBladeCrimson(ItemCrimsonBlade.toolMatCrimsonVoid, 4.0F)).setRegistryName("slashblade_crimson");
     	    ForgeRegistries.ITEMS.register(crimsonBlade);
     	}
        if(Loader.isModLoaded(IC2.MODID)){
@@ -123,6 +133,9 @@ public class BladeLoader {
     
     @SideOnly(Side.CLIENT)
     public void renderSlashBlade() {
+    	setSlashBladeRender(bladeHandmade);
+    	setSlashBladeRender(bladeSayaHandmade);
+    	
     	setSlashBladeRender(blade);
     	setSlashBladeRender(bladeNamed);
     	setSlashBladeRender(wrapper);

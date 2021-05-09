@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "lastsmith:items/blade_blue_steel_unfinished_2"
+  }
+}

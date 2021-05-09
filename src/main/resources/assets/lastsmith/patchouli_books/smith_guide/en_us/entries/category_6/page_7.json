@@ -1,11 +1,15 @@
 {
-   "name" : "酒石酸菌的日耀剑「光日」",
+   "name" : "Tartaric_Acid's Nichiyo",
    "icon" : "flammpfeil.slashblade:slashbladenamed{ModelName: \"named/sange/sange\", TextureName: \"named/arthurs/texture_943\"}",
    "category" : "category_6",
    "pages" : [
       {
          "type" : "text",
-         "text" : "日耀拔刀！！！$(br2)酒石酸菌，没错，就是那个车万女仆的作者，以及国内模组汉化及教程制作者——酒石酸菌$(br2)他为TLS做了早期的宣传片，也曾经为拔刀剑写过文字教程，所以在此为他留下了一振刀。$(br2)材质是他本人要求的，现在全世界都会知道他其实是个桑尼厨了。"
+         "text" : "Nichiyo Battou!$(br2)Tartaric_Acid, the developer of Touhou Little Maid Mod, who has been devoted so much to Minecraft Mods' localization and game tutorial videos making."
+      },
+      {
+         "type" : "text",
+         "text" : "He has made a promotional video for TLS Mod, and also written some text tutorials for SlashBlade Mod. So he deserves a Blade of his own.$(br2)Its texture is requested by him. Now everyone knows he loves Sunny Milk."
       },
       {
          "type" : "crafting",

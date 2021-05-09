@@ -1,0 +1,35 @@
+{
+   "display" : {
+      "title" : {
+         "translate" : "achievement.lastsmith.bamboolight.title"
+      },
+      "description" : {
+         "translate" : "achievement.lastsmith.bamboolight.desc",
+         "with" : [ "\n" ]
+      },
+      "icon" : {
+         "item" : "flammpfeil.slashblade:slashbladeBambooLight"
+      },
+      "frame" : "goal"
+   },
+   "parent" : "lastsmith:root",
+   "criteria" : {
+      "crafting" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade:slashbladeBambooLight"
+               }
+            ]
+         }
+      },
+      "blade" : {
+         "trigger" : "lastsmith:has_advancement",
+         "conditions" : {
+            "advancement": "lastsmith:root"
+         }
+      }
+   }
+}

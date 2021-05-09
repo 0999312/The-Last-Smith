@@ -1,5 +1,6 @@
 package cn.mmf.lastsmith.se;
 
+import cn.mmf.lastsmith.TLSConfig;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.specialeffect.ISpecialEffect;
 import mods.flammpfeil.slashblade.specialeffect.SpecialEffects;
@@ -50,6 +51,8 @@ public class SESharpness implements ISpecialEffect {
 		NBTTagCompound tag = ItemSlashBlade.getItemTagCompound(event.blade);
 		float damage = ItemSlashBlade.BaseAttackModifier.get(tag, 10F) + ItemSlashBlade.RepairCount.get(tag, 0)
 				+ (2.5F * EnchantmentHelper.getEnchantmentLevel(Enchantments.SHARPNESS, event.blade));
+		if(TLSConfig.advanced_mode)
+			damage -= TLSConfig.extra_sharpness_damage;
 		DamageSource ds = new EntityDamageSource("sharpness_blade", player);
 		event.target.attackEntityFrom(ds, damage);
 		player.onEnchantmentCritical(event.target);
@@ -94,12 +97,12 @@ public class SESharpness implements ISpecialEffect {
 
 	@Override
 	public int getDefaultRequiredLevel() {
-		return 30;
+		return 40;
 	}
 
 	@Override
 	public String getEffectKey() {
-		return "extreme_sharpness";
+		return "bewitched_sharpness";
 	}
 
 }

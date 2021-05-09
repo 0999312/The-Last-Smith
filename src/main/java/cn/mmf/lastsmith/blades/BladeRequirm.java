@@ -25,7 +25,7 @@ public class BladeRequirm {
 		ItemStack customblade = new ItemStack(BladeLoader.bladeNamed, 1, 0);
 		NBTTagCompound tag = new NBTTagCompound();
 		customblade.setTagCompound(tag);
-		BladeUtil.IsFakeBlade.set(tag, true);
+		BladeUtil.getInstance().IsFakeBlade.set(tag, true);
 		ItemSlashBladeNamed.CurrentItemName.set(tag, "flammpfeil.slashblade.named.scorn_rust");
 		ItemSlashBladeNamed.CustomMaxDamage.set(tag, 20);
 		ItemSlashBlade.setBaseAttackModifier(tag, 4.0F);
@@ -49,7 +49,7 @@ public class BladeRequirm {
 		NBTTagCompound tag2 = new NBTTagCompound();
 		customblade2.setTagCompound(tag2);
 		ItemSlashBladeNamed.IsDefaultBewitched.set(tag2, true);
-		BladeUtil.IsBewitchedActived.set(tag2, true);
+		BladeUtil.getInstance().IsBewitchedActived.set(tag2, true);
 		ItemSlashBladeNamed.CurrentItemName.set(tag2, "flammpfeil.slashblade.named.scorn");
 		ItemSlashBladeNamed.CustomMaxDamage.set(tag2, 60);
 		ItemSlashBlade.setBaseAttackModifier(tag2, 9.0F);
@@ -73,9 +73,8 @@ public class BladeRequirm {
 				BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.scorn_rust"), true);
 		ItemStack custombladeReqired = BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.scorn_rust");
 		NBTTagCompound reqTag = ItemSlashBlade.getItemTagCompound(custombladeReqired);
-		ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(500));
-		ItemSlashBlade.ProudSoul.set(reqTag, Integer.valueOf(10000));
-		ItemSlashBlade.RepairCount.set(reqTag, Integer.valueOf(5));
+		ItemSlashBlade.KillCount.set(reqTag, Integer.valueOf(100));
+		ItemSlashBlade.ProudSoul.set(reqTag, Integer.valueOf(1000));
 		ItemStack itemSphereBladeSoul = SlashBlade.findItemStack("flammpfeil.slashblade", "sphere_bladesoul", 1);
 
 		RecipesUtil.getInstance().addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.scorn_sealed",new RecipeAwakeBladeTLS(new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.scorn_sealed"),
@@ -90,9 +89,9 @@ public class BladeRequirm {
 		}));
 		ItemStack custombladeReqired1 = BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.scorn_sealed");
 		NBTTagCompound reqTag1 = ItemSlashBlade.getItemTagCompound(custombladeReqired1);
-		ItemSlashBlade.KillCount.set(reqTag1, Integer.valueOf(1000));
-		ItemSlashBlade.ProudSoul.set(reqTag1, Integer.valueOf(50000));
-		ItemSlashBlade.RepairCount.set(reqTag1, Integer.valueOf(10));
+		ItemSlashBlade.KillCount.set(reqTag1, Integer.valueOf(500));
+		ItemSlashBlade.ProudSoul.set(reqTag1, Integer.valueOf(5000));
+		ItemSlashBlade.RepairCount.set(reqTag1, Integer.valueOf(1));
 		RecipesUtil.getInstance().addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.scorn",new RecipeAwakeBladeTLS(new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.scorn"),
 			"bewitched_blade", BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.scorn"), custombladeReqired1,
 			new Object[] {

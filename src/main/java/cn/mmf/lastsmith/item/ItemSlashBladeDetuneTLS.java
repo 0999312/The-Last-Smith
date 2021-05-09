@@ -4,6 +4,7 @@ package cn.mmf.lastsmith.item;
 import java.util.EnumSet;
 import java.util.List;
 
+import cn.mmf.lastsmith.TLSConfig;
 import cn.mmf.lastsmith.blades.BladeLoader;
 import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.util.ReflectionAccessHelper;
@@ -19,7 +20,7 @@ public class ItemSlashBladeDetuneTLS extends ItemSlashBladeTLS{
 	public ItemSlashBladeDetuneTLS(ToolMaterial par2EnumToolMaterial, float baseAttackModifiers) {
 		super(par2EnumToolMaterial, baseAttackModifiers);
 	}
-//	
+	
 	public ResourceLocationRaw model = new ResourceLocationRaw(SlashBlade.modid, "model/blade.obj");
 	
 	@Override
@@ -51,7 +52,11 @@ public class ItemSlashBladeDetuneTLS extends ItemSlashBladeTLS{
         if (this == BladeLoader.bladeSilverBambooLight) {
         	NBTTagCompound tag = getItemTagCompound(arg0);
             int killCount = KillCount.get(tag);
-        	if(IsBroken.get(tag)&&killCount>=100) {
+            int require_kill_count = 100;
+            if(TLSConfig.advanced_mode) {
+            	require_kill_count = (int) (require_kill_count * (TLSConfig.kill_count_multiplier / 100F));
+            }
+        	if(IsBroken.get(tag)&&killCount >= require_kill_count) {
         		ReflectionAccessHelper.setItem(arg0, SlashBlade.wrapBlade);
         		arg0.setItemDamage(0);
             }
@@ -60,6 +65,15 @@ public class ItemSlashBladeDetuneTLS extends ItemSlashBladeTLS{
 	}
     @Override
     public boolean isDestructable(ItemStack stack) {
+    	if (this == BladeLoader.bladeSilverBambooLight) {
+    		NBTTagCompound tag = getItemTagCompound(stack);
+            int killCount = KillCount.get(tag);
+            int require_kill_count = 100;
+            if(TLSConfig.advanced_mode) {
+            	require_kill_count = (int) (require_kill_count * (TLSConfig.kill_count_multiplier / 100F));
+            }
+    		return killCount < require_kill_count;
+    	}
         return super.isDestructable(stack) || isDestructable;
     }
     

@@ -1,0 +1,37 @@
+{
+   "display" : {
+      "title" : {
+         "translate" : "achievement.lastsmith.smith.final.title"
+      },
+      "description" : {
+         "translate" : "achievement.lastsmith.smith.final.desc",
+         "with" : [ "\n" ]
+      },
+      "icon" : {
+         "item" : "flammpfeil.slashblade:slashbladenamed",
+         "data" : 0,
+         "nbt" : "{ench: [{lvl:1,id:35}], ModelName: \"named/smith/model\", TextureName: \"named/smith/texture_final\"}"
+      },
+      "frame" : "challenge"
+   },
+   "parent" : "lastsmith:amagumo",
+   "criteria" : {
+      "crafting" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.smith.final"
+               }
+            ]
+         }
+      },
+      "blade" : {
+         "trigger" : "lastsmith:has_advancement",
+         "conditions" : {
+            "advancement" : "lastsmith:amagumo"
+         }
+      }
+   }
+}

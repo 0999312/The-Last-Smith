@@ -1,0 +1,68 @@
+{
+   "display" : {
+      "title" : {
+         "translate" : "achievement.lastsmith.thaumic_katana.title"
+      },
+      "description" : {
+         "translate" : "achievement.lastsmith.thaumic_katana.desc",
+         "with" : [ "\n" ]
+      },
+      "icon" : {
+         "item" : "flammpfeil.slashblade:slashbladenamed",
+         "data" : 0,
+         "nbt" : "{ench: [{lvl:1,id:35}], ModelName: \"named/smith/model\", TextureName: \"named/thaum/texture_thaumium\"}"
+      },
+      "frame" : "goal"
+   },
+   "parent" : "lastsmith:slashblade_white",
+   "criteria" : {
+      "crafting" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.fortress.thaumium"
+               }
+            ]
+         }
+      },
+      "crafting2" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.fortress.elemental"
+               }
+            ]
+         }
+      },
+      "crafting3" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.fortress.void"
+               }
+            ]
+         }
+      },
+      "blade" : {
+         "trigger" : "lastsmith:has_advancement",
+         "conditions" : {
+            "advancement" : "lastsmith:slashblade_white"
+         }
+      }
+   },
+   "conditions" : [
+      {
+         "type" : "forge:mod_loaded",
+         "modid" : "thaumcraft"
+      }
+   ],
+   "rewards" : {
+      "loot" : [ "lastsmith:advancements/thaumium" ]
+   }
+}

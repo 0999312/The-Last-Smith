@@ -1,17 +1,17 @@
 {
-   "name" : "「枯石之大刀」",
+   "name" : "Koseki the WitherBlade",
    "icon" : "flammpfeil.slashblade:slashbladenamed{ModelName: \"named/dios/dios\", TextureName: \"named/dios/koseki\"}",
    "category" : "category_4",
    "pages" : [
       {
          "type" : "text",
-         "text" : "被凋灵之力侵蚀的大刀。$(br2)来自于散华和凋灵的共同作用使得这振刀拥有凋灵的力量……$(br2)极有可能反噬自身……"
+         "text" : "A Blade corroded by the power of the Wither. Energy from The Sange Blade and the Wither has made the Blade gain the Wither power.$(br2)It may harm the swordman who is wielding it.$(br2)Make a BladeStand with BladeSoulIngot, place the Anonymity-Nameless- Blade on it, then summon the Wither near it."
       },
       {
          "type" : "entity",
          "entity" : "minecraft:wither",
          "scale" : 1,
-         "text" : "在耀魂铁锭构筑的刀挂台上安放无铭之刃，召唤凋灵，冲击引起刀刃的共鸣达到进化……"
+         "text" : "Let the Wither's explosion shock waves strike the Blade, making it resonate and gain the Wither power."
       }
    ],
    "advancement":"lastsmith:bewitched_blade",

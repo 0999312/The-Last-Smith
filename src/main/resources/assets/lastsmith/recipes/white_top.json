@@ -1,0 +1,22 @@
+{
+   "type" : "minecraft:crafting_shaped",
+   "pattern" : [ "  S", " H ", "# D" ],
+   "key" : {
+      "#" : {
+         "item" : "flammpfeil.slashblade:slashbladeWood"
+      },
+      "S" : {
+         "item" : "lastsmith:wooden_saya"
+      },
+      "D" : {
+         "item" : "#TOOLFORGINGHAMMER"
+      },
+      "H" : {
+         "item" : "lastsmith:blade",
+         "data" : 2
+      }
+   },
+   "result" : {
+      "item" : "lastsmith:white_top"
+   }
+}

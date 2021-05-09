@@ -1,0 +1,22 @@
+{
+   "type" : "minecraft:crafting_shaped",
+   "pattern" : [ 
+	"FFF",
+	"FSF",
+	"FFF" 
+	],
+   "key" : {
+      "S" : {
+		"item" : "flammpfeil.slashblade:proudsoul",
+		"data" : 0
+      },
+      "F" : {
+         "type" : "forge:ore_dict",
+         "ore" : "leafSakura"
+      }
+   },
+   "result" : {
+      "item" : "lastsmith:materials",
+	  "data" : 4
+   }
+}

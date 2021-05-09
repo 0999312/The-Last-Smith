@@ -1,0 +1,24 @@
+{
+   "conditions" : [
+      {
+         "type" : "forge:mod_loaded",
+         "modid" : "patchouli"
+      }
+   ],
+   "result" : {
+      "item" : "patchouli:guide_book",
+      "nbt" : "{\"patchouli:book\":\"lastsmith:smith_guide\"}"
+   },
+   "ingredients" : [
+      [
+         {
+            "item" : "lastsmith:materials",
+            "data" : 3
+         }
+      ],
+      {
+         "item" : "minecraft:book"
+      }
+   ],
+   "type" : "minecraft:crafting_shapeless"
+}

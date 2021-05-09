@@ -1,0 +1,44 @@
+{
+   "conditions" : [
+      {
+         "type" : "forge:mod_loaded",
+         "modid" : "twilightforest"
+      }
+   ],
+   "result" : {
+      "item" : "lastsmith:scroll",
+      "data" : 12,
+      "count" : 1
+   },
+   "ingredients" : [
+      {
+         "item" : "lastsmith:scroll",
+         "data" : 3
+      },
+      {
+         "item" : "lastsmith:scroll",
+         "data" : 4
+      },
+      {
+         "item" : "lastsmith:scroll",
+         "data" : 5
+      },
+      {
+         "item" : "lastsmith:scroll",
+         "data" : 7
+      },
+      {
+         "item" : "lastsmith:scroll",
+         "data" : 8
+      },
+      {
+         "item" : "lastsmith:scroll",
+         "data" : 9
+      },
+      {
+         "item" : "lastsmith:scroll",
+         "data" : 10
+      }
+   ],
+   "type" : "forge:ore_shapeless"
+}

@@ -1,0 +1,29 @@
+{
+       "conditions" : [
+          {
+                "type" : "forge:mod_loaded",
+                "modid" : "tfc"
+          }
+       ],
+   "type" : "tfc:damage_item_shaped",
+   "pattern" : [
+	" S#",
+	"S#S",
+	"#SW"
+	],
+   "key" : {
+      "#" : {
+         "item" : "#LOGWOOD"
+      },
+      "S" : {
+         "item" : "#PLANKWOOD"
+      },
+      "W" : {
+      "type": "forge:ore_dict",
+      "ore": "saw"
+      }
+   },
+   "result" : {
+      "item" : "lastsmith:wooden_saya"
+   }
+}

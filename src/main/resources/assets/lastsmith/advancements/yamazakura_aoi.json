@@ -1,0 +1,40 @@
+{
+   "display" : {
+      "title" : {
+         "translate" : "achievement.lastsmith.yamazakura.aoi.title"
+      },
+      "description" : {
+         "translate" : "achievement.lastsmith.yamazakura.aoi.desc",
+         "with" : [ "\n" ]
+      },
+      "icon" : {
+         "item" : "flammpfeil.slashblade:slashbladenamed",
+         "data" : 0,
+         "nbt" : "{ench: [{lvl:1,id:35}], ModelName: \"named/yamazakura/model\", TextureName: \"named/yamazakura/yamazakura_aoi\"}"
+      },
+      "frame" : "goal"
+   },
+   "parent" : "lastsmith:bewitched_blade",
+   "criteria" : {
+      "crafting" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.yamazakura.aoi"
+               }
+            ]
+         }
+      },
+      "blade" : {
+         "trigger" : "lastsmith:has_advancement",
+         "conditions" : {
+            "advancement" : "lastsmith:bewitched_blade"
+         }
+      }
+   },
+   "rewards" : {
+      "loot" : [ "lastsmith:advancements/yamazakura_aoi" ]
+   }
+}

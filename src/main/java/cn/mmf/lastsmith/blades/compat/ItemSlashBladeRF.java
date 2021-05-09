@@ -9,7 +9,6 @@ import cn.mmf.lastsmith.ClientProxy;
 import cn.mmf.lastsmith.item.ItemSlashBladeNamedTLS;
 import cn.mmf.lastsmith.util.BladeUtil;
 import cn.mmf.lastsmith.util.IMultiModeBlade;
-import mods.flammpfeil.slashblade.TagPropertyAccessor;
 import mods.flammpfeil.slashblade.ability.StylishRankManager;
 import mods.flammpfeil.slashblade.entity.EntityDrive;
 import mods.flammpfeil.slashblade.item.ItemSlashBlade;
@@ -33,14 +32,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemSlashBladeRF extends ItemSlashBladeNamedTLS implements IEnergyContainerItem, IMultiModeBlade {
-	public static final TagPropertyAccessor.TagPropertyInteger MAXENERGY = new TagPropertyAccessor.TagPropertyInteger(
-			"maxEnergy");
-	public static final TagPropertyAccessor.TagPropertyInteger MAXTRANSFER = new TagPropertyAccessor.TagPropertyInteger(
-			"maxTransfer");
-	public static final TagPropertyAccessor.TagPropertyInteger ENERGYPERUSE = new TagPropertyAccessor.TagPropertyInteger(
-			"energyPerUse");
-	public static final TagPropertyAccessor.TagPropertyInteger ENERGYPERUSECHARGED = new TagPropertyAccessor.TagPropertyInteger(
-			"energyPerUseCharged");
+
 
 	public ItemSlashBladeRF(ToolMaterial par2EnumToolMaterial, float baseAttackModifiers) {
 		super(par2EnumToolMaterial, baseAttackModifiers);
@@ -53,7 +45,7 @@ public class ItemSlashBladeRF extends ItemSlashBladeNamedTLS implements IEnergyC
 			getItemTagCompound(container).setInteger("Energy", 0);
 		int stored = Math.min(container.getTagCompound().getInteger("Energy"), getMaxEnergyStored(container));
 		int receive = Math.min(maxReceive,
-				Math.min(getMaxEnergyStored(container) - stored, MAXTRANSFER.get(tag, 20000)));
+				Math.min(getMaxEnergyStored(container) - stored, BladeUtil.getInstance().MAXTRANSFER.get(tag, 20000)));
 		if (!simulate) {
 			stored += receive;
 			container.getTagCompound().setInteger("Energy", stored);
@@ -86,7 +78,7 @@ public class ItemSlashBladeRF extends ItemSlashBladeNamedTLS implements IEnergyC
 	@Override
 	public int getMaxEnergyStored(ItemStack container) {
 		NBTTagCompound tag = getItemTagCompound(container);
-		return MAXENERGY.get(tag, 2000000);
+		return BladeUtil.getInstance().MAXENERGY.get(tag, 2000000);
 	}
 
 	@Override
@@ -97,12 +89,12 @@ public class ItemSlashBladeRF extends ItemSlashBladeNamedTLS implements IEnergyC
 			if (IsBroken.get(tag).booleanValue()) {
 				cancel = true;
 			}
-			if (BladeUtil.Username.exists(tag)) {
-				if (!player.getName().toString().trim().equals(BladeUtil.Username.get(tag).trim())) {
+			if (BladeUtil.getInstance().Username.exists(tag)) {
+				if (!player.getName().toString().trim().equals(BladeUtil.getInstance().Username.get(tag).trim())) {
 					cancel = true;
 				}
 			} else {
-				BladeUtil.Username.set(tag, player.getName().toString());
+				BladeUtil.getInstance().Username.set(tag, player.getName().toString());
 			}
 			if (cancel) {
 				player.world.playSound(null, player.getPosition(), SoundEvents.BLOCK_NOTE_BASS, SoundCategory.PLAYERS,
@@ -121,7 +113,7 @@ public class ItemSlashBladeRF extends ItemSlashBladeNamedTLS implements IEnergyC
 
 	public boolean isEmpowered(ItemStack stack) {
 		NBTTagCompound tag = getItemTagCompound(stack);
-		return getMode(stack) == 1 && getEnergyStored(stack) >= ENERGYPERUSECHARGED.get(tag, 800);
+		return getMode(stack) == 1 && getEnergyStored(stack) >= BladeUtil.getInstance().ENERGYPERUSECHARGED.get(tag, 800);
 	}
 
 	@Override
@@ -129,8 +121,8 @@ public class ItemSlashBladeRF extends ItemSlashBladeNamedTLS implements IEnergyC
 		NBTTagCompound tag = getItemTagCompound(par1ItemStack);
 		ResourceLocationRaw result = ((ItemSlashBladeNamedTLS) par1ItemStack.getItem()).getModelTexture();
 		if (isEmpowered(par1ItemStack)) {
-			if (BladeUtil.TextureOnName.exists(tag)) {
-				String textureName = BladeUtil.TextureOnName.get(tag);
+			if (BladeUtil.getInstance().TextureOnName.exists(tag)) {
+				String textureName = BladeUtil.getInstance().TextureOnName.get(tag);
 				ResourceLocationRaw loc;
 				if (!textureMap.containsKey(textureName)) {
 					loc = new ResourceLocationRaw("flammpfeil.slashblade", "model/" + textureName + ".png");
@@ -159,8 +151,8 @@ public class ItemSlashBladeRF extends ItemSlashBladeNamedTLS implements IEnergyC
 		NBTTagCompound tag = getItemTagCompound(par1ItemStack);
 		ResourceLocationRaw result = ((ItemSlashBladeNamedTLS) par1ItemStack.getItem()).getModel();
 		if (isEmpowered(par1ItemStack)) {
-			if (BladeUtil.ModelOnName.exists(tag)) {
-				String textureName = BladeUtil.ModelOnName.get(tag);
+			if (BladeUtil.getInstance().ModelOnName.exists(tag)) {
+				String textureName = BladeUtil.getInstance().ModelOnName.get(tag);
 				ResourceLocationRaw loc;
 				if (!modelMap.containsKey(textureName)) {
 					loc = new ResourceLocationRaw("flammpfeil.slashblade", "model/" + textureName + ".obj");
@@ -188,7 +180,7 @@ public class ItemSlashBladeRF extends ItemSlashBladeNamedTLS implements IEnergyC
 	public boolean hitEntity(ItemStack stack, EntityLivingBase entity, EntityLivingBase player) {
 		NBTTagCompound tag = getItemTagCompound(stack);
 		int rank = StylishRankManager.getStylishRank(player);
-		int usage = (int) (ENERGYPERUSE.get(tag, 100) * Math.pow(2.0D, rank));
+		int usage = (int) (BladeUtil.getInstance().ENERGYPERUSE.get(tag, 500) * Math.pow(2.0D, rank));
 		if ((isEmpowered(stack)) && (extractEnergy(stack, usage, false) == usage)) {
 			entity.hurtResistantTime = 0;
 			entity.attackEntityFrom(new EntityDamageSource("forge_flux", player).setDamageBypassesArmor().setFireDamage(), rank);
@@ -202,7 +194,7 @@ public class ItemSlashBladeRF extends ItemSlashBladeNamedTLS implements IEnergyC
 		if ((isEmpowered(sitem)) && (par3Entity != null) && (par2World.getTotalWorldTime() % 10L == 0L)
 				&& ((!isCurrent) || (OnClick.get(tag).booleanValue()) || (((par3Entity instanceof EntityPlayer))))) {
 			if (!par2World.isRemote) {
-				int runingCost = ENERGYPERUSE.get(tag, 100);
+				int runingCost = BladeUtil.getInstance().ENERGYPERUSE.get(tag, 500);
 				extractEnergy(sitem, runingCost, false);
 				int rankPoint = StylishRankManager.getTotalRankPoint(par3Entity);
 				int aRankPoint = (int) (StylishRankManager.RankRange * 7D);
@@ -212,8 +204,8 @@ public class ItemSlashBladeRF extends ItemSlashBladeNamedTLS implements IEnergyC
 				}
 			}
 
-			if ((BladeUtil.Username.exists(tag))
-					&& (!par3Entity.getName().toString().trim().equals(BladeUtil.Username.get(tag).trim()))) {
+			if ((BladeUtil.getInstance().Username.exists(tag))
+					&& (!par3Entity.getName().toString().trim().equals(BladeUtil.getInstance().Username.get(tag).trim()))) {
 				setMode(sitem, 0);
 			}
 			double d0 = itemRand.nextGaussian() * 0.02D;
@@ -232,7 +224,7 @@ public class ItemSlashBladeRF extends ItemSlashBladeNamedTLS implements IEnergyC
 
 	protected int getEnergyPerUse(ItemStack stack) {
 		NBTTagCompound tag = getItemTagCompound(stack);
-		return isEmpowered(stack) ? ENERGYPERUSECHARGED.get(tag, 800) : ENERGYPERUSE.get(tag, 100);
+		return isEmpowered(stack) ? BladeUtil.getInstance().ENERGYPERUSECHARGED.get(tag, 800) : BladeUtil.getInstance().ENERGYPERUSE.get(tag, 100);
 	}
 
 	public void onStartupEmpowered(EntityPlayer player, ItemStack stack) {
@@ -304,12 +296,12 @@ public class ItemSlashBladeRF extends ItemSlashBladeNamedTLS implements IEnergyC
 			float az = tag.getFloat(adjustZStr);
 			tooltip.add(String.format("adjust x:%.1f y:%.1f z:%.1f", ax, ay, az));
 		}
-		if (BladeUtil.getname(tag) != null) {
+		if (BladeUtil.getInstance().getname(tag) != null) {
 			tooltip.add(TextFormatting.GOLD + I18n.format("blades.crafter") + ":" + TextFormatting.GRAY
-					+ BladeUtil.getname(tag));
+					+ BladeUtil.getInstance().getname(tag));
 		}
 		if (StringUtil.displayShiftForDetail && !StringUtil.getInstance().isShiftKeyDown()) {
-			tooltip.add(I18n.format("info.cofh.holdShiftForDetails"));
+			tooltip.add(I18n.format("info.flammpfeil.slashblade.hold_shift_for_details"));
 		}
 		if (!StringUtil.getInstance().isShiftKeyDown()) {
 			return;
@@ -317,21 +309,21 @@ public class ItemSlashBladeRF extends ItemSlashBladeNamedTLS implements IEnergyC
 		if (stack.getTagCompound() == null) {
 			getItemTagCompound(stack).setInteger("Energy", 0);
 		}
-		tooltip.add(StringUtil.getInstance().localize("info.cofh.charge") + ": " + StringUtil.getInstance().getScaledNumber(getEnergyStored(stack))
+		tooltip.add(StringUtil.getInstance().localize("info.flammpfeil.slashblade.charge") + ": " + StringUtil.getInstance().getScaledNumber(getEnergyStored(stack))
 				+ " / " + StringUtil.getInstance().getScaledNumber(getMaxEnergyStored(stack)) + " RF");
 		tooltip.add(StringUtil.ORANGE + getEnergyPerUse(stack) + " "
-				+ StringUtil.getInstance().localize("info.flammpfeil.slashblade.tool.energyPerUse") + StringUtil.END);
+				+ StringUtil.getInstance().localize("info.flammpfeil.slashblade.tool.energy_per_use") + StringUtil.END);
 		tooltip.add(StringUtil.RED + StringUtil.getInstance().localize("info.flammpfeil.slashblade.tool.user") + ": "
-				+ BladeUtil.Username.get(ItemSlashBlade.getItemTagCompound(stack)));
+				+ BladeUtil.getInstance().Username.get(ItemSlashBlade.getItemTagCompound(stack)));
 		addEmpoweredTip(this, stack, tooltip);
 	}
 
 	public void addEmpoweredTip(IMultiModeBlade item, ItemStack stack, List<String> tooltip) {
 		if (!isEmpowered(stack)) {
-			tooltip.add(StringUtil.getInstance().localizeFormat("info.flammpfeil.slashblade.tool.chargeOn",
+			tooltip.add(StringUtil.getInstance().localizeFormat("info.flammpfeil.slashblade.tool.charge_on",
 					StringUtil.getInstance().getKeyName(ClientProxy.ChangeMode.getKeyCode())));
 		} else {
-			tooltip.add(StringUtil.getInstance().localizeFormat("info.flammpfeil.slashblade.tool.chargeOff",
+			tooltip.add(StringUtil.getInstance().localizeFormat("info.flammpfeil.slashblade.tool.charge_off",
 					StringUtil.getInstance().getKeyName(ClientProxy.ChangeMode.getKeyCode())));
 		}
 	}

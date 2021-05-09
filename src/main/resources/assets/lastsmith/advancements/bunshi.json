@@ -1,0 +1,41 @@
+{
+   "display" : {
+      "title" : {
+         "translate" : "achievement.lastsmith.bunshi.title"
+      },
+      "description" : {
+         "translate" : "achievement.lastsmith.bunshi.desc",
+         "with" : [ "\n" ]
+      },
+      "icon" : {
+         "item" : "flammpfeil.slashblade:slashbladenamed",
+         "data" : 0,
+         "nbt" : "{ench: [{lvl:1,id:35}], ModelName: \"named/rf_roukan/model\", TextureName: \"named/rf_roukan/texture_on\"}"
+      },
+      "frame" : "goal",
+      "hidden" : true
+   },
+   "parent" : "lastsmith:roukan_hakurou",
+   "criteria" : {
+      "crafting" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.roukan_tech"
+               }
+            ]
+         }
+      },
+      "blade" : {
+         "trigger" : "lastsmith:has_advancement",
+         "conditions" : {
+            "advancement" : "lastsmith:roukan_hakurou"
+         }
+      }
+   },
+   "rewards" : {
+      "loot" : [ "lastsmith:advancements/bunshi" ]
+   }
+}

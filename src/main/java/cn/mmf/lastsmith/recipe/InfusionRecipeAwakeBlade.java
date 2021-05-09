@@ -3,6 +3,7 @@ package cn.mmf.lastsmith.recipe;
 import java.util.List;
 import java.util.Map;
 
+import cn.mmf.lastsmith.TLSConfig;
 import cn.mmf.lastsmith.blades.BladeLoader;
 import mods.flammpfeil.slashblade.ItemSlashBladeNamed;
 import mods.flammpfeil.slashblade.item.ItemProudSoul;
@@ -124,8 +125,10 @@ public class InfusionRecipeAwakeBlade extends InfusionRecipe {
 	public boolean matches(List<ItemStack> input, ItemStack central, World world, EntityPlayer player) {
 		if (!ThaumcraftCapabilities.getKnowledge(player).isResearchKnown(this.research))
 			return false;
+		
 		if (RecipeMatcher.findMatches(input, getComponents()) == null)
 			return false;
+		
 		if (!central.isEmpty() && central.getItem() instanceof ItemSlashBlade && central.hasTagCompound()) {
 			Map<Enchantment, Integer> oldItemEnchants = EnchantmentHelper.getEnchantments(requiredStateBlade);
 			for (Map.Entry<Enchantment, Integer> enchant : oldItemEnchants.entrySet()) {
@@ -140,13 +143,19 @@ public class InfusionRecipeAwakeBlade extends InfusionRecipe {
 
 			if (!central.getUnlocalizedName().equals(requiredStateBlade.getUnlocalizedName()))
 				return false;
-
-			if (ItemSlashBlade.ProudSoul.get(reqTag) > ItemSlashBlade.ProudSoul.get(srcTag))
-				return false;
-			if (ItemSlashBlade.KillCount.get(reqTag) > ItemSlashBlade.KillCount.get(srcTag))
-				return false;
-			if (ItemSlashBlade.RepairCount.get(reqTag) > ItemSlashBlade.RepairCount.get(srcTag))
-				return false;
+			
+            int require_kill_count = ItemSlashBlade.KillCount.get(reqTag);
+            if(TLSConfig.advanced_mode) {
+            	require_kill_count *= (TLSConfig.kill_count_multiplier/100);
+            }
+            
+            if(ItemSlashBlade.ProudSoul.get(reqTag) > ItemSlashBlade.ProudSoul.get(srcTag))
+                return false;
+            if(require_kill_count > ItemSlashBlade.KillCount.get(srcTag))
+                return false;
+            if(ItemSlashBlade.RepairCount.get(reqTag) > ItemSlashBlade.RepairCount.get(srcTag))
+                return false;
+            
 		} else {
 			return false;
 		}

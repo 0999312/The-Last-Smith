@@ -1,0 +1,27 @@
+{
+   "conditions" : [
+      {
+         "type" : "forge:not",
+         "value" : {
+            "type" : "forge:mod_loaded",
+            "modid" : "slashblade_addon"
+         }
+      }
+   ],
+   "result" : {
+      "item" : "lastsmith:scroll",
+      "data" : 6,
+      "count" : 1
+   },
+   "ingredients" : [
+      {
+         "item" : "lastsmith:scroll",
+         "data" : 0
+      },
+      {
+         "item" : "lastsmith:scroll",
+         "data" : 1
+      }
+   ],
+   "type" : "forge:ore_shapeless"
+}

@@ -25,13 +25,13 @@ public class BladeMMFGroup {
 		NBTTagCompound tag1 = new NBTTagCompound();
 		customblade.setTagCompound(tag1);
 		ItemSlashBladeNamed.IsDefaultBewitched.set(tag1, true);
-		BladeUtil.IsBewitchedActived.set(tag1, true);
+		BladeUtil.getInstance().IsBewitchedActived.set(tag1, true);
 		ItemSlashBladeNamed.CurrentItemName.set(tag1, "flammpfeil.slashblade.named.mmf.zheng");
 		ItemSlashBladeNamed.CustomMaxDamage.set(tag1, 40);
 		ItemSlashBlade.AttackAmplifier.set(tag1, 3F);
 		ItemSlashBlade.setBaseAttackModifier(tag1, 10.0F);
 		ItemSlashBlade.SpecialAttackType.set(tag1, 266);
-		BladeUtil.CrafterName.set(tag1, "Syameimaru_Zheng");
+		BladeUtil.getInstance().CrafterName.set(tag1, "Syameimaru_Zheng");
 		customblade.addEnchantment(Enchantments.POWER, 1);
 		customblade.addEnchantment(Enchantments.SHARPNESS, 3);
 		customblade.addEnchantment(Enchantments.SMITE, 2);
@@ -46,7 +46,7 @@ public class BladeMMFGroup {
 		ItemSlashBladeNamed.CurrentItemName.set(tag2, "flammpfeil.slashblade.named.mmf.r_liu");
 		ItemSlashBlade.TextureName.set(tag2, "named/arthurs/texture_0");
 		ItemSlashBlade.ModelName.set(tag2, "named/arthurs/model_0");
-		BladeUtil.CrafterName.set(tag2, "R_Liu");
+		BladeUtil.getInstance().CrafterName.set(tag2, "R_Liu");
 		BladeLoader.getInstance().registerCustomItemStack("flammpfeil.slashblade.named.mmf.r_liu", customblade1);
 		ItemSlashBladeNamedTLS.NamedBlades.add("flammpfeil.slashblade.named.mmf.r_liu");
 		ItemStack customblade2 = new ItemStack(BladeLoader.bladeNamed, 1, 0);
@@ -54,7 +54,7 @@ public class BladeMMFGroup {
 		ItemSlashBladeNamed.CurrentItemName.set(tag3, "flammpfeil.slashblade.named.mmf.limuness");
 		ItemSlashBlade.TextureName.set(tag3, "named/arthurs/texture_pear");
 		ItemSlashBlade.ModelName.set(tag3, "named/arthurs/model_pear");
-		BladeUtil.CrafterName.set(tag3, "limuness");
+		BladeUtil.getInstance().CrafterName.set(tag3, "limuness");
 		BladeLoader.getInstance().registerCustomItemStack("flammpfeil.slashblade.named.mmf.limuness", customblade2);
 		ItemSlashBladeNamedTLS.NamedBlades.add("flammpfeil.slashblade.named.mmf.limuness");
 		ItemStack customblade3 = new ItemStack(BladeLoader.bladeNamed, 1, 0);
@@ -62,7 +62,7 @@ public class BladeMMFGroup {
 		ItemSlashBladeNamed.CurrentItemName.set(tag4, "flammpfeil.slashblade.named.mmf.fox");
 		ItemSlashBlade.TextureName.set(tag4, "named/arthurs/texture_fox");
 		ItemSlashBlade.ModelName.set(tag4, "named/arthurs/model_fox");
-		BladeUtil.CrafterName.set(tag4, "GodFox");
+		BladeUtil.getInstance().CrafterName.set(tag4, "GodFox");
 		BladeLoader.getInstance().registerCustomItemStack("flammpfeil.slashblade.named.mmf.fox", customblade3);
 		ItemSlashBladeNamedTLS.NamedBlades.add("flammpfeil.slashblade.named.mmf.fox");
 		ItemStack customblade4 = new ItemStack(BladeLoader.bladeNamed, 1, 0);
@@ -70,7 +70,7 @@ public class BladeMMFGroup {
 		ItemSlashBladeNamed.CurrentItemName.set(tag5, "flammpfeil.slashblade.named.mmf.lrsoft");
 		ItemSlashBlade.TextureName.set(tag5, "named/arthurs/texture_irsoft");
 		ItemSlashBlade.ModelName.set(tag5, "named/arthurs/model_irsort");
-		BladeUtil.CrafterName.set(tag5, "lrsoft");
+		BladeUtil.getInstance().CrafterName.set(tag5, "lrsoft");
 		BladeLoader.getInstance().registerCustomItemStack("flammpfeil.slashblade.named.mmf.lrsoft", customblade4);
 		ItemSlashBladeNamedTLS.NamedBlades.add("flammpfeil.slashblade.named.mmf.lrsoft");
 		ItemStack customblade5 = new ItemStack(BladeLoader.bladeNamed, 1, 0);
@@ -78,7 +78,7 @@ public class BladeMMFGroup {
 		ItemSlashBladeNamed.CurrentItemName.set(tag6, "flammpfeil.slashblade.named.mmf.nethop");
 		ItemSlashBlade.TextureName.set(tag6, "named/arthurs/texture_grand");
 		ItemSlashBlade.ModelName.set(tag6, "named/arthurs/model_grand");
-		BladeUtil.CrafterName.set(tag6, "Nethop");
+		BladeUtil.getInstance().CrafterName.set(tag6, "Nethop");
 		BladeLoader.getInstance().registerCustomItemStack("flammpfeil.slashblade.named.mmf.nethop", customblade5);
 		ItemSlashBladeNamedTLS.NamedBlades.add("flammpfeil.slashblade.named.mmf.nethop");
 		ItemStack customblade6 = new ItemStack(BladeLoader.bladeNamed, 1, 0);
@@ -86,7 +86,7 @@ public class BladeMMFGroup {
 		ItemSlashBladeNamed.CurrentItemName.set(tag7, "flammpfeil.slashblade.named.mmf.tartaric_acid");
 		ItemSlashBlade.TextureName.set(tag7, "named/arthurs/texture_943");
 		ItemSlashBlade.ModelName.set(tag7, "named/sange/sange");
-		BladeUtil.CrafterName.set(tag7, "tartaric_acid");
+		BladeUtil.getInstance().CrafterName.set(tag7, "tartaric_acid");
 		BladeLoader.getInstance().registerCustomItemStack("flammpfeil.slashblade.named.mmf.tartaric_acid", customblade6);
 		ItemSlashBladeNamedTLS.NamedBlades.add("flammpfeil.slashblade.named.mmf.tartaric_acid");
 	}
@@ -96,7 +96,7 @@ public class BladeMMFGroup {
 		ItemStack request = new ItemStack(BladeLoader.blade);
 		NBTTagCompound tag3 = ItemSlashBlade.getItemTagCompound(request);
 		ItemSlashBlade.RepairCount.set(tag3, 10);
-		BladeUtil.IsBewitchedActived.set(tag3, true);
+		BladeUtil.getInstance().IsBewitchedActived.set(tag3, true);
 		RecipesUtil.getInstance().addRecipe(TLSMain.MODID,"flammpfeil.slashblade.named.mmf.tartaric_acid", new RecipeAwakeBladeTLS(
 			new ResourceLocation(TLSMain.MODID, "flammpfeil.slashblade.named.mmf.tartaric_acid"),
 			"final_blade", BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.mmf.tartaric_acid"), request, 

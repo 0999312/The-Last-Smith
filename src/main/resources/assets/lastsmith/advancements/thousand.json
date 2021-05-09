@@ -1,0 +1,38 @@
+{
+   "display" : {
+      "title" : {
+         "translate" : "achievement.lastsmith.thousand.title"
+      },
+      "description" : {
+         "translate" : "achievement.lastsmith.thousand.desc",
+         "with" : [ "\n" ]
+      },
+      "icon" : {
+         "item" : "flammpfeil.slashblade:slashbladenamed",
+         "data" : 0,
+         "nbt" : "{ench: [{lvl:1,id:35}], ModelName: \"named/thousand/model_on\", TextureName: \"named/thousand/texture\"}"
+      },
+      "frame" : "challenge",
+      "hidden" : true
+   },
+   "parent" : "lastsmith:bunshi",
+   "criteria" : {
+      "crafting" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.thousand"
+               }
+            ]
+         }
+      },
+      "blade" : {
+         "trigger" : "lastsmith:has_advancement",
+         "conditions" : {
+            "advancement" : "lastsmith:bunshi"
+         }
+      }
+   }
+}

@@ -1,11 +1,11 @@
 {
-   "name" : "「似蛭」",
+   "name" : "Nihil",
    "icon" : "flammpfeil.slashblade:slashbladenamed{ModelName: \"named/nihil/nihil\", TextureName: \"named/nihil/nihil_bx\"}",
    "category" : "category_5",
    "pages" : [
       {
          "type" : "text",
-         "text" : "红莲的结晶与血染的刀身……$(br2)那是在地狱之底，渴望鲜血的死之欲望，谓之炼狱刀「死念」……$(br2)那不是这个世界的力量……而这股危险的力量，能为我等所利用吗……"
+         "text" : "Condensed from Scarlet Lotus, the Blade covered with blood.$(br2)It is desire of death, buried in the bottom of the Hell. So-called Nihil.$(br2)Not the power of our world. Can we wield such dangerous power?"
       },
       {
          "type" : "crafting",

@@ -9,7 +9,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 
 @Mod(modid = TLSMain.MODID, name = TLSMain.NAME, version = TLSMain.VERSION,
-//   @[1.5.0,) @[1.0.0.0-MC1.12.2,)
+//      @[2.0.0,) @[1.0.0.0-MC1.12.2,)
 dependencies="required-after:flammpfeil.slashblade@[mc1.12-r32,);required-after:mm_lib;after:sakura;after:thaumcraft;after:slashblade_addon")
 public class TLSMain{
     public static final String MODID = "lastsmith";

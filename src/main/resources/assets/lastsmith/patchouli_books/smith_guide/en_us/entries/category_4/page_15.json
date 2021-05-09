@@ -1,19 +1,23 @@
 {
-   "name" : "「不死斩」",
+   "name" : "-Fushigiri-",
    "icon" : "flammpfeil.slashblade:slashbladenamed{ModelName: \"named/sekiro/fushigiri\",TextureName: \"named/sekiro/fushigiri\"}",
    "category" : "category_4",
    "pages" : [
        {
           "type" : "text",
-          "text" : "神话记载，龙神曾给予一些生灵源于自身的力量……$(br2)龙神的不死之力则留给了人类，称之为龙胤；而疾风之力则留给了我等天狗一族……$(br2)太阴历，轮回之始，起始之年，龙神悄然离去并创造了屏障，使得人类与妖怪分隔开来，就这样过去了一个轮回……"
+          "text" : "Legends say that, the Divine Dragon gave his power to some species. He gave the Immortal Power to Humans, so-called Divine Heir. While the Gust Power was given to our Tengu.$(br2)The Beginning Cycle of Lunar Calendar, The year of Origin. The Divine Dragon left quietly and create the Barrier, which separates the Humans and the Youkais. A calendar cycle past."
        },
        {
           "type" : "text",
-          "text" : "而据传说，龙神的离去正是因为斩杀不死之刃——不死斩的诞生……$(br2)「拜泪」一名，据称就是取得龙神之泪而得名……$(br2)足以伤害到龙神的赤色大太刀……$(br2)据传还有第二振，名曰「开门」……$(br2)为何这种力量会在人类的手中……"
+          "text" : "According to the legends, Divine Dragon's leaving was because of Fushigiri, the Blade of Killing the Immortal.$(br2)It was said that, the Blade got its name Hairui because it got the Divine Dragon's tears.$(br2)The crimson tachi which was able to injure the Divine Dragon...$(br2)It is said that there were another Blade called Kaimon."
        },
        {
           "type" : "text",
-          "text" : "龙胤的不死之力如此恐怖，而斩断不死的能力却掌握在持有不死之力者的手中……$(br2)我更是亲眼看见，在赤色大太刀之下那悲惨的景象……$(br2)而如今，它和「楔丸」都在我的手中……$(br2)有一股引力指引着我拔出这振刀，但我并没有这样做……"
+          "text" : "Why is this power owned by Humans...$(br2)The Divine Heir's Immortal Power was so astonishing, however, he also owned the power to slay the Immortal.$(br2)I have witnessed the horrible sight after the owner of the crimson tachi committed massacre.$(br2)But now, the tachi and the Kusabimaru are both in my hand."
+       },
+       {
+         "type" : "text",
+         "text" : "Something is tempting me to unsheathe the two Blade.$(br2)But I do not."
        },
        {
           "type" : "crafting",

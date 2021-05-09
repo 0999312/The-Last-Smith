@@ -1,0 +1,73 @@
+{
+   "display" : {
+      "title" : {
+         "translate" : "achievement.lastsmith.sakura_blade.title"
+      },
+      "description" : {
+         "translate" : "achievement.lastsmith.sakura_blade.desc",
+         "with" : [ "\n" ]
+      },
+      "icon" : {
+         "item" : "flammpfeil.slashblade:slashbladenamed",
+         "data" : 0,
+         "nbt" : "{ench: [{lvl:1,id:35}], ModelName: \"named/sakura/model\", TextureName: \"named/sakura/texture\"}"
+      },
+      "frame" : "goal"
+   },
+   "parent" : "lastsmith:bewitched_blade",
+   "criteria" : {
+      "blade" : {
+         "trigger" : "lastsmith:has_advancement",
+         "conditions" : {
+            "advancement" : "lastsmith:bewitched_blade"
+         }
+      },
+      "crafting" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.sakura"
+               }
+            ]
+         }
+      },
+      "crafting2" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.ginkgo"
+               }
+            ]
+         }
+      },
+      "crafting3" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.yukikage"
+               }
+            ]
+         }
+      },
+      "crafting4" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.kataware"
+               }
+            ]
+         }
+      }
+   },
+   "rewards" : {
+      "loot" : [ "lastsmith:advancements/sakura_blade" ]
+   }
+}

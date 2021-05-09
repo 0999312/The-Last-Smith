@@ -9,16 +9,19 @@
       },
       {
          "type" : "crafting",
+         "flag":"!mod:tfc",
          "recipe" : "lastsmith:blade_unfinished",
          "recipe2" : "lastsmith:blade_2_unfinished"
       },
       {
          "type" : "crafting",
+         "flag":"!mod:tfc",
          "recipe" : "lastsmith:blade_3_unfinished",
          "recipe2" : "lastsmith:blade_unfinished2"
       },
       {
          "type" : "crafting",
+         "flag":"!mod:tfc",
          "recipe" : "lastsmith:blade_2_unfinished2",
          "recipe2" : "lastsmith:blade_3_unfinished2"
       },
@@ -35,16 +38,13 @@
       {
          "type" : "smelting",
          "recipe" : "lastsmith:blade:9",
-         "recipe2" : "lastsmith:blade:10"
+         "recipe2" : "lastsmith:blade:10",
+          "text" : "Burns to a bright red in the furnace ......"
       },
       {
          "type" : "smelting",
-         "recipe" : "lastsmith:blade:11"
-      },
-      {
-         "type" : "crafting",
-         "recipe" : "lastsmith:blade",
-         "recipe2" : "lastsmith:blade_2"
+         "recipe" : "lastsmith:blade:11",
+          "text" : "Burns to a bright red in the furnace ......"
       },
       {
          "type" : "spotlight",
@@ -63,13 +63,20 @@
       },
       {
          "type" : "crafting",
+       "flag":"!mod:tfc",
          "recipe" : "lastsmith:blade",
          "recipe2" : "lastsmith:blade_2"
       },
       {
          "type" : "crafting",
+       "flag":"!mod:tfc",
          "recipe" : "lastsmith:blade_3",
          "recipe2" : "flammpfeil.slashblade:white"
+      },
+      {
+         "type" : "crafting",
+         "flag":"mod:tfc",
+         "recipe" : "flammpfeil.slashblade:white"
       },
       {
          "type" : "crafting",

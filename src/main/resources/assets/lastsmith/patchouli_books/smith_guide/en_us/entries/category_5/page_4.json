@@ -1,15 +1,15 @@
 {
-   "name" : "「天云」",
+   "name" : "Amagumo",
    "icon" : "flammpfeil.slashblade:slashbladenamed{ModelName: \"named/smith/model\", TextureName: \"named/smith/texture_wind\"}",
    "category" : "category_5",
    "pages" : [
       {
          "type" : "text",
-         "text" : "我是一名鸦天狗……$(br2)拿起这个锻造锤的时候，我已经是合格的刀匠了……$(br2)我也是参与「魂樱之长刀」锻造的一员，是我发现了魂樱的妙用之法！$(br2)是为我族，我等天狗一族锻造无上利刃之时了！"
+         "text" : "I am a Tengu, while I am a Reader, too.$(br2)When I hold this forging hammer, I have been professional smith.$(br2)They always kept requiring more power for killing each other, even lost their conscience."
       },
       {
          "type" : "text",
-         "text" : "完成这两振刀已经有一段时间了……$(br2)如果没有记错，今年已经是第三轮回的日与冬与土之年了，时间过去的确实很快呢……$(br2)也是时候锻造第三振刃了……"
+         "text" : "The Sword of Logos, should have been a group who protect all people with their Blades. I hate their ridiculous demands. These two Blades will fight against them. Both for we Tengus, and for we Readers."
       },
       {
          "type" : "crafting",

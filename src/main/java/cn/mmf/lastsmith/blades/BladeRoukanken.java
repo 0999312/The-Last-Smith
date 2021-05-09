@@ -26,7 +26,7 @@ public class BladeRoukanken {
 		ItemStack customblade = new ItemStack(BladeLoader.bladeNamed, 1, 0);
 		NBTTagCompound tag1 = new NBTTagCompound();
 		customblade.setTagCompound(tag1);
-		BladeUtil.IsFakeBlade.set(tag1, true);
+		BladeUtil.getInstance().IsFakeBlade.set(tag1, true);
 		ItemSlashBladeNamed.CurrentItemName.set(tag1, "flammpfeil.slashblade.named.kanrou_fake");
 		ItemSlashBladeNamed.CustomMaxDamage.set(tag1, 70);
 		ItemSlashBlade.setBaseAttackModifier(tag1, 7.0F);
@@ -50,7 +50,7 @@ public class BladeRoukanken {
 		NBTTagCompound tag3 = new NBTTagCompound();
 		customblade3.setTagCompound(tag3);
 		ItemSlashBladeNamed.IsDefaultBewitched.set(tag3, true);
-		BladeUtil.IsBewitchedActived.set(tag3, true);
+		BladeUtil.getInstance().IsBewitchedActived.set(tag3, true);
 		ItemSlashBladeNamed.CurrentItemName.set(tag3, "flammpfeil.slashblade.named.roukan");
 		ItemSlashBladeNamed.CustomMaxDamage.set(tag3, 40);
 		ItemSlashBlade.setBaseAttackModifier(tag3, 15.0F);
@@ -68,7 +68,7 @@ public class BladeRoukanken {
 		NBTTagCompound tag4 = new NBTTagCompound();
 		customblade4.setTagCompound(tag4);
 		ItemSlashBladeNamed.IsDefaultBewitched.set(tag4, true);
-		BladeUtil.IsBewitchedActived.set(tag4, true);
+		BladeUtil.getInstance().IsBewitchedActived.set(tag4, true);
 		ItemSlashBladeNamed.CurrentItemName.set(tag4, "flammpfeil.slashblade.named.roukan_nether");
 		ItemSlashBladeNamed.CustomMaxDamage.set(tag4, 40);
 		ItemSlashBlade.AttackAmplifier.set(tag4, 4F);
@@ -122,7 +122,7 @@ public class BladeRoukanken {
 		}));
 		ItemStack request_3 = BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.kanrou");
 		NBTTagCompound tag3 = ItemSlashBlade.getItemTagCompound(request_3);
-		ItemSlashBlade.KillCount.set(tag3, 1000);
+		ItemSlashBlade.KillCount.set(tag3, 500);
 		ItemSlashBlade.ProudSoul.set(tag3, 5000);
 		ItemSlashBlade.RepairCount.set(tag3, 1);
 		request_3.addEnchantment(Enchantments.SHARPNESS, 1);
@@ -141,7 +141,7 @@ public class BladeRoukanken {
 		}));
 		ItemStack request_4 = BladeLoader.getInstance().getCustomBlade("flammpfeil.slashblade.named.roukan");
 		NBTTagCompound tag4 = ItemSlashBlade.getItemTagCompound(request_4);
-		ItemSlashBlade.KillCount.set(tag4, 2500);
+		ItemSlashBlade.KillCount.set(tag4, 1000);
 		ItemSlashBlade.ProudSoul.set(tag4, 25000);
 		ItemSlashBlade.RepairCount.set(tag4, 5);
 		request_4.addEnchantment(Enchantments.FIRE_ASPECT, 1);

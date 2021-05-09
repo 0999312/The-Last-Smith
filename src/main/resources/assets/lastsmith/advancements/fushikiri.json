@@ -1,0 +1,40 @@
+{
+   "display" : {
+      "title" : {
+         "translate" : "achievement.lastsmith.fushikiri.title"
+      },
+      "description" : {
+         "translate" : "achievement.lastsmith.fushikiri.desc",
+         "with" : [ "\n" ]
+      },
+      "icon" : {
+         "item" : "flammpfeil.slashblade:slashbladenamed",
+         "data" : 0,
+         "nbt" : "{ench: [{lvl:1,id:35}], ModelName: \"named/sekiro/fushigiri\", TextureName: \"named/sekiro/fushigiri\"}"
+      },
+      "frame" : "goal"
+   },
+   "parent" : "lastsmith:sharpness",
+   "criteria" : {
+      "crafting" : {
+         "trigger" : "minecraft:inventory_changed",
+         "conditions" : {
+            "items" : [
+               {
+                  "type" : "lastsmith:slashblade",
+                  "name" : "flammpfeil.slashblade.named.fushikiri"
+               }
+            ]
+         }
+      },
+      "blade" : {
+         "trigger" : "lastsmith:has_advancement",
+         "conditions" : {
+            "advancement" : "lastsmith:sharpness"
+         }
+      }
+   },
+   "rewards" : {
+      "loot" : [ "lastsmith:advancements/fushikiri" ]
+   }
+}

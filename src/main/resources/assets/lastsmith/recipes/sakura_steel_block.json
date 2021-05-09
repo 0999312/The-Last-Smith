@@ -1,0 +1,17 @@
+{
+   "type" : "minecraft:crafting_shaped",
+   "pattern" : [ 
+	"DDD",
+	"DDD",
+	"DDD" 
+	],
+   "key" : {
+      "D" : {
+         "type" : "forge:ore_dict",
+         "ore" : "ingotSakura"
+      }
+   },
+   "result" : {
+      "item" : "lastsmith:sakura_steel_block"
+   }
+}

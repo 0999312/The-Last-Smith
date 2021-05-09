@@ -1,11 +1,11 @@
 {
-   "name" : "无神「无刃」",
+   "name" : "Kirisaya",
    "icon" : "flammpfeil.slashblade:slashbladenamed{ModelName: \"named/kirisaya/kirisaya\", TextureName: \"named/kirisaya/kirisaya\"}",
    "category" : "category_5",
    "pages" : [
       {
          "type" : "text",
-         "text" : "曾在古书之中见到过这句话：$(br2)斩千敌者，无刃亦可切碎万物……$(br)然代价甚高，非凡夫俗子所能企及……$(br2)这也许只有真正的武者才会理解吧……"
+         "text" : "Old legend says, one having slayed thousands of enemies could cut through anything even without a Blade.$(br)However, it is so difficult to reach this state that ordinary swordsman cannot succeed.$(br2)Maybe the true swordsman can understand it."
       },
       {
          "type" : "crafting",
